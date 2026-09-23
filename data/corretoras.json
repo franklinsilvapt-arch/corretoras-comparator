@@ -1,0 +1,1299 @@
+{
+ "verificado": "23 de setembro de 2026",
+ "pressupostos": {
+  "USD_EUR": 0.85,
+  "ETF_PRICE": 100,
+  "US_PRICE_USD": 200
+ },
+ "pares": {
+  "trading212|xtb": "xtb-vs-trading-212",
+  "degiro|xtb": "xtb-vs-degiro",
+  "etoro|xtb": "xtb-vs-etoro",
+  "revolut|xtb": "xtb-vs-revolut",
+  "traderepublic|xtb": "xtb-vs-trade-republic",
+  "ibkr|xtb": "xtb-vs-interactive-brokers",
+  "traderepublic|trading212": "trading-212-vs-trade-republic",
+  "ibkr|trading212": "trading-212-vs-interactive-brokers",
+  "degiro|trading212": "trading-212-vs-degiro",
+  "etoro|trading212": "etoro-vs-trading-212",
+  "degiro|traderepublic": "degiro-vs-trade-republic",
+  "degiro|ibkr": "degiro-vs-interactive-brokers",
+  "degiro|etoro": "etoro-vs-degiro",
+  "revolut|traderepublic": "trade-republic-vs-revolut"
+ },
+ "corretoras": [
+  {
+   "id": "activobank",
+   "name": "ActivoBank",
+   "short": "AB",
+   "color": "#1A1A1A",
+   "type": "Banco português",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.activobank.pt/bolsa"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "src": "https://www.activobank.pt/PDF/precario_op_titulos.pdf",
+   "t": {
+    "etfFee": {
+     "v": "0€ na 1.ª ordem do mês",
+     "s": "Seguintes: 5€ (mercados em euros). Acresce 4% de selo"
+    },
+    "pt": {
+     "v": "0€ na 1.ª ordem do mês",
+     "s": "Seguintes: 5€"
+    },
+    "usFee": {
+     "v": "0$ na 1.ª ordem do mês",
+     "s": "Seguintes: 5$"
+    },
+    "fx": {
+     "v": "Taxa interna do banco",
+     "s": "O ActivoBank não publica a margem cambial"
+    },
+    "custodyTxt": {
+     "v": "3€ + IVA por mês",
+     "s": "Comissão de serviço de bolsa (3,69€ com IVA), cobrada enquanto tiveres títulos"
+    },
+    "inact": {
+     "v": "0€",
+     "s": "Sem comissão de inatividade no preçário"
+    },
+    "transfer": {
+     "v": "0,60% (mín. 48,50€)",
+     "s": "Por ISIN. Acresce IVA"
+    },
+    "interest": {
+     "v": "Não aplicável",
+     "s": "Não remunera o saldo da conta de bolsa"
+    },
+    "entity": {
+     "v": "Banco ActivoBank, S.A."
+    },
+    "regulator": {
+     "v": "Banco de Portugal (n.º 23) e CMVM (n.º 116)"
+    },
+    "presence": {
+     "v": "Banco português"
+    },
+    "protInv": {
+     "v": "Até 25.000€",
+     "s": "Sistema de Indemnização aos Investidores"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Fundo de Garantia de Depósitos"
+    },
+    "tax": {
+     "v": "Sim",
+     "s": "Retém IRS na fonte sobre dividendos e juros de títulos"
+    },
+    "annex": {
+     "v": "Anexo G",
+     "s": "Mais-valias. Dividendos com retenção não precisam de ser declarados"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Não"
+    },
+    "plans": {
+     "v": "Não",
+     "s": "Mas a 1.ª ordem mensal é grátis"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Não",
+     "s": "Tem warrants e certificados"
+    },
+    "iban": {
+     "v": "Sim"
+    }
+   }
+  },
+  {
+   "id": "best",
+   "name": "Banco Best",
+   "short": "Be",
+   "color": "#111827",
+   "type": "Banco (Best Trading Pro)",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.bancobest.pt"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "src": "https://www.bancobest.pt/ptg/bestsite/best_docs/PRE_PRF_titulos.pdf",
+   "t": {
+    "etfFee": {
+     "v": "0,08% (mín. 10€)",
+     "s": "Best Trading Pro (Xetra e Euronext). Acresce 4% de selo. Conta normal: 0,25% (mín. 12€)"
+    },
+    "pt": {
+     "v": "7,90€",
+     "s": "Best Trading Pro. Acresce selo. Conta normal: 6,25€"
+    },
+    "usFee": {
+     "v": "0,05$ por ação (mín. 14$)",
+     "s": "Best Trading Pro, ações acima de 10$. Acresce selo"
+    },
+    "fx": {
+     "v": "0,5%",
+     "s": "Diferencial de 5 por mil sobre o câmbio indicativo"
+    },
+    "custodyTxt": {
+     "v": "0€",
+     "s": "Não se aplica no Best Trading Pro. Conta normal: 6€ + IVA por trimestre"
+    },
+    "inact": {
+     "v": "0€",
+     "s": "Sem posições e com saldo abaixo de 250€, o acesso ao Best Trading Pro é desativado"
+    },
+    "transfer": {
+     "v": "1% + IVA",
+     "s": "Mínimo 30€ + IVA por ISIN (preçário geral do Best)"
+    },
+    "interest": {
+     "v": "Não aplicável",
+     "s": "Não remunera o saldo da conta de bolsa"
+    },
+    "entity": {
+     "v": "Best, Banco Electrónico de Serviço Total, S.A."
+    },
+    "regulator": {
+     "v": "Banco de Portugal e CMVM"
+    },
+    "presence": {
+     "v": "Banco português"
+    },
+    "protInv": {
+     "v": "Até 25.000€",
+     "s": "Sistema de Indemnização aos Investidores"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Fundo de Garantia de Depósitos"
+    },
+    "tax": {
+     "v": "Sim",
+     "s": "Retém IRS na fonte sobre dividendos e juros de títulos"
+    },
+    "annex": {
+     "v": "Anexo G",
+     "s": "Mais-valias. Dividendos com retenção não precisam de ser declarados"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Não"
+    },
+    "plans": {
+     "v": "Não em ações e ETFs",
+     "s": "Tem os Objetivos Best, com transferência mensal automática para uma proposta de investimento"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Não",
+     "s": "Só opções sobre divisas (Opções FX) no Best Trading Pro"
+    },
+    "iban": {
+     "v": "Sim"
+    }
+   }
+  },
+  {
+   "id": "big",
+   "name": "Banco BiG",
+   "short": "BiG",
+   "color": "#003A70",
+   "type": "Banco português",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.big.pt"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "src": "https://www.big.pt/Precario/PrecarioBolsa",
+   "t": {
+    "etfFee": {
+     "v": "11,95€",
+     "s": "Euronext Amesterdão e Paris até 12.000€. ETPs na Alemanha: 14,95€. Acresce 4% de selo"
+    },
+    "pt": {
+     "v": "6,95€",
+     "s": "Ordens até 200.000€. Acresce selo"
+    },
+    "usFee": {
+     "v": "14,95$",
+     "s": "Ordens até 12.500$. Acresce selo"
+    },
+    "fx": {
+     "v": "Cerca de 0,5%",
+     "s": "Spread cambial indicativo face ao câmbio médio"
+    },
+    "custodyTxt": {
+     "v": "6€ + IVA por trimestre",
+     "s": "MyBolsa, site e app. Isento no BiGlobal Trade e no preçário BiG+. Dividendos: 2% (mín. 2,50€)"
+    },
+    "inact": {
+     "v": "0€",
+     "s": "Abertura e manutenção de conta isentas"
+    },
+    "transfer": {
+     "v": "0,25% (mín. 25€)",
+     "s": "Por título. Acresce IVA. Obrigações: 0,5% (mín. 25€)"
+    },
+    "interest": {
+     "v": "Não aplicável",
+     "s": "Não remunera o saldo da conta de bolsa"
+    },
+    "entity": {
+     "v": "Banco de Investimento Global, S.A."
+    },
+    "regulator": {
+     "v": "Banco de Portugal (n.º 61) e CMVM"
+    },
+    "presence": {
+     "v": "Banco português"
+    },
+    "protInv": {
+     "v": "Até 25.000€",
+     "s": "Sistema de Indemnização aos Investidores"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Fundo de Garantia de Depósitos"
+    },
+    "tax": {
+     "v": "Sim",
+     "s": "Retém IRS na fonte sobre dividendos e juros de títulos"
+    },
+    "annex": {
+     "v": "Anexo G",
+     "s": "Mais-valias. Dividendos com retenção não precisam de ser declarados"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Não"
+    },
+    "plans": {
+     "v": "Não"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Sim"
+    },
+    "iban": {
+     "v": "Sim"
+    }
+   }
+  },
+  {
+   "id": "carregosa",
+   "name": "Banco Carregosa",
+   "short": "BC",
+   "color": "#0B3B5B",
+   "type": "Banco português",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.bancocarregosa.com"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "src": "https://www.bancocarregosa.com/pt/repositorio/precarios/precario-de-produtos-financeiros-em-vigor-a-partir-de-1-de-outubro-de-2026.pdf",
+   "t": {
+    "etfFee": {
+     "v": "7€ até 31/12/2026",
+     "s": "GoBulling Investor, ordens < 20.000€ na Euronext. Depois: 0,08% (mín. 10€). Acresce selo"
+    },
+    "pt": {
+     "v": "7€ até 31/12/2026",
+     "s": "Depois: 7,50€ (ordens < 50.000€)"
+    },
+    "usFee": {
+     "v": "7€ até 31/12/2026",
+     "s": "Ordens até 20.000$. Depois: 0,05$/ação (mín. 12,50$). Acresce selo"
+    },
+    "fx": {
+     "v": "0,5%",
+     "s": "Diferencial de +/-0,5% sobre a cotação"
+    },
+    "custodyTxt": {
+     "v": "0€",
+     "s": "GoBulling Investor e Pro, exceto ADRs sem dividendos"
+    },
+    "inact": {
+     "v": "0€",
+     "s": "A GoBulling Investor não tem custos de manutenção"
+    },
+    "transfer": {
+     "v": "0,25% (mín. 10€)",
+     "s": "Por espécie, ações Euronext. Outros valores: mín. 25€"
+    },
+    "interest": {
+     "v": "Não aplicável",
+     "s": "Não remunera o saldo da conta de bolsa"
+    },
+    "entity": {
+     "v": "Banco L. J. Carregosa, S.A."
+    },
+    "regulator": {
+     "v": "Banco de Portugal (n.º 0235) e CMVM (n.º 0169)"
+    },
+    "presence": {
+     "v": "Banco português"
+    },
+    "protInv": {
+     "v": "Até 25.000€",
+     "s": "Sistema de Indemnização aos Investidores"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Fundo de Garantia de Depósitos"
+    },
+    "tax": {
+     "v": "Sim",
+     "s": "Retém IRS na fonte sobre dividendos e juros de títulos"
+    },
+    "annex": {
+     "v": "Anexo G",
+     "s": "Mais-valias. Dividendos com retenção não precisam de ser declarados"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Não"
+    },
+    "plans": {
+     "v": "Não",
+     "s": "Não disponível na GoBulling Investor"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Sim",
+     "s": "Na GoBulling Pro"
+    },
+    "iban": {
+     "v": "Sim"
+    }
+   }
+  },
+  {
+   "id": "degiro",
+   "name": "DEGIRO",
+   "short": "DG",
+   "color": "#00A6E0",
+   "type": "Corretora",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.literaciafinanceira.pt/visita/degiro"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "review": "https://www.literaciafinanceira.pt/artigos/analise-degiro-em-portugal",
+   "src": "https://www.degiro.pt/precario",
+   "t": {
+    "etfFee": {
+     "v": "1€",
+     "s": "ETF Core Selection na Tradegate. Restantes ETFs: 2€ + 1€"
+    },
+    "pt": {
+     "v": "2€",
+     "s": "1€ de comissão + 1€ de manuseamento"
+    },
+    "usFee": {
+     "v": "2€",
+     "s": "1€ de comissão + 1€ de manuseamento"
+    },
+    "fx": {
+     "v": "0,25%",
+     "s": "Auto FX. Conversão manual: 10€ + 0,25%"
+    },
+    "custodyTxt": {
+     "v": "0€",
+     "s": "Conectividade: até 2,50€/ano por bolsa (exceto Euronext Lisboa e Core Selection)"
+    },
+    "inact": {
+     "v": "0€"
+    },
+    "transfer": {
+     "v": "20€ por posição",
+     "s": "Mais custos externos da bolsa"
+    },
+    "interest": {
+     "v": "Não paga"
+    },
+    "entity": {
+     "v": "flatexDEGIRO Bank SE, Dutch Branch"
+    },
+    "regulator": {
+     "v": "BaFin (Alemanha)",
+     "s": "Sucursal registada nos Países Baixos"
+    },
+    "presence": {
+     "v": "Livre prestação de serviços"
+    },
+    "protInv": {
+     "v": "Até 20.000€",
+     "s": "90% dos ativos não devolvidos"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Sistema alemão de garantia de depósitos"
+    },
+    "tax": {
+     "v": "Não",
+     "s": "Não retém IRS em Portugal"
+    },
+    "annex": {
+     "v": "Anexo J",
+     "s": "Dividendos, juros e mais-valias"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Não"
+    },
+    "plans": {
+     "v": "Não",
+     "s": "Cada compra é feita manualmente"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Sim"
+    },
+    "iban": {
+     "v": "Não"
+    }
+   }
+  },
+  {
+   "id": "etoro",
+   "name": "eToro",
+   "short": "eT",
+   "color": "#13C636",
+   "type": "Corretora",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.etoro.com"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "review": "https://www.literaciafinanceira.pt/artigos/etoro-portugal-review",
+   "src": "https://www.etoro.com/trading/fees/",
+   "t": {
+    "etfFee": {
+     "v": "0€"
+    },
+    "pt": {
+     "v": "1$",
+     "s": "Comissão de 1$ em ações (2$ nas bolsas asiáticas)"
+    },
+    "usFee": {
+     "v": "1$",
+     "s": "Por abertura e fecho de posição"
+    },
+    "fx": {
+     "v": "0,75%",
+     "s": "Entre a conta em euros e dólares"
+    },
+    "custodyTxt": {
+     "v": "0€"
+    },
+    "inact": {
+     "v": "0€"
+    },
+    "transfer": {
+     "v": "100$ por ação",
+     "s": "Por cada posição transferida para outra corretora na UE. Informação do apoio ao cliente, não publicada no site"
+    },
+    "interest": {
+     "v": "Não paga em euros",
+     "s": "Só sobre saldo em dólares: 3% com património até 50.000$ e 3,80% acima. Tens de ativar no Club"
+    },
+    "entity": {
+     "v": "eToro (Europe) Ltd"
+    },
+    "regulator": {
+     "v": "CySEC (licença 109/10)"
+    },
+    "presence": {
+     "v": "Livre prestação de serviços"
+    },
+    "protInv": {
+     "v": "Até 20.000€",
+     "s": "Fundo de Compensação de Investidores de Chipre. Membros Platinum ou superior têm ainda um seguro privado"
+    },
+    "protCash": {
+     "v": "Até 20.000€",
+     "s": "Mesmo fundo"
+    },
+    "tax": {
+     "v": "Não",
+     "s": "Não retém IRS em Portugal"
+    },
+    "annex": {
+     "v": "Anexo J",
+     "s": "Dividendos, juros e mais-valias"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Sim"
+    },
+    "plans": {
+     "v": "Sim"
+    },
+    "bonds": {
+     "v": "Não"
+    },
+    "options": {
+     "v": "Não"
+    },
+    "iban": {
+     "v": "Não"
+    }
+   }
+  },
+  {
+   "id": "freedom24",
+   "name": "Freedom24",
+   "short": "F24",
+   "color": "#2DA84F",
+   "type": "Corretora",
+   "cta": {
+    "label": "Mais informações sobre a Freedom24",
+    "href": "https://www.literaciafinanceira.pt/artigos/analise-freedom24-portugal"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "review": "https://www.literaciafinanceira.pt/artigos/analise-freedom24-portugal",
+   "src": "https://freedom24.com",
+   "t": {
+    "etfFee": {
+     "v": "2€ + 0,02€ por unidade",
+     "s": "Plano Smart in EUR. All Inclusive: 0,5% + 0,012€ + 1,2€"
+    },
+    "pt": {
+     "v": "2€ + 0,02€ por ação",
+     "s": "Plano Smart in EUR"
+    },
+    "usFee": {
+     "v": "2$ + 0,02$ por ação",
+     "s": "Plano Smart in EUR"
+    },
+    "fx": {
+     "v": "Sem comissão publicada",
+     "s": "O fee schedule não prevê comissão de câmbio. Confirma a taxa na plataforma antes de converter"
+    },
+    "custodyTxt": {
+     "v": "0€"
+    },
+    "inact": {
+     "v": "0€",
+     "s": "Sem comissão mensal. Com saldo abaixo de 100$ o acesso à plataforma pode ser bloqueado"
+    },
+    "transfer": {
+     "v": "100€",
+     "s": "Transferência externa de títulos. Levantar dinheiro por transferência: 7€"
+    },
+    "interest": {
+     "v": "Não paga"
+    },
+    "entity": {
+     "v": "Freedom Finance Europe Ltd"
+    },
+    "regulator": {
+     "v": "CySEC (Chipre)"
+    },
+    "presence": {
+     "v": "Livre prestação de serviços"
+    },
+    "protInv": {
+     "v": "Até 20.000€",
+     "s": "Fundo de Compensação de Investidores de Chipre"
+    },
+    "protCash": {
+     "v": "Até 20.000€",
+     "s": "Mesmo fundo"
+    },
+    "tax": {
+     "v": "Não",
+     "s": "Não retém IRS em Portugal"
+    },
+    "annex": {
+     "v": "Anexo J",
+     "s": "Dividendos, juros e mais-valias"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Não"
+    },
+    "plans": {
+     "v": "Sim",
+     "s": "Plano de investimento em ETFs"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Sim"
+    },
+    "iban": {
+     "v": "Não"
+    }
+   }
+  },
+  {
+   "id": "ibkr",
+   "name": "Interactive Brokers",
+   "short": "IB",
+   "color": "#D81222",
+   "type": "Corretora",
+   "hasPlan": true,
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.literaciafinanceira.pt/visita/ib"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "review": "https://www.literaciafinanceira.pt/artigos/analise-interactive-brokers-portugal",
+   "src": "https://www.interactivebrokers.ie/en/pricing/commissions-stocks-europe.php",
+   "t": {
+    "etfFee": {
+     "v": "Fixed: 0,05% (mín. 3€) | Tiered: 0,05% (mín. 1,25€)",
+     "s": "Fixed na Xetra já inclui taxas (na Euronext acresce 0,75€ por execução em ETFs). Tiered: máx. 29€ + taxas de bolsa, compensação e regulatórias"
+    },
+    "pt": {
+     "v": "Fixed: 0,15% (mín. 6€) | Tiered: 0,05% (mín. 1,25€)",
+     "s": "Euronext Lisboa. No Tiered acrescem taxas de bolsa (máx. 29€ de comissão)"
+    },
+    "usFee": {
+     "v": "Fixed: 0,005$/ação (mín. 1$) | Tiered: 0,0035$/ação (mín. 0,35$)",
+     "s": "Máximo de 1% do valor da ordem. No Fixed só acrescem taxas regulatórias, no Tiered também de bolsa e compensação"
+    },
+    "fx": {
+     "v": "0,03%",
+     "s": "Conversão automática. Manual: 0,002% (mín. 2$)"
+    },
+    "custodyTxt": {
+     "v": "0€"
+    },
+    "inact": {
+     "v": "0€"
+    },
+    "transfer": {
+     "v": "0€",
+     "s": "Transferência Basic FOP. O banco ou corretora de destino pode cobrar"
+    },
+    "interest": {
+     "v": "1,858%",
+     "s": "Acima de 10.000€ (taxa de referência - 0,5 p.p.). Proporcional se o património for inferior a 100.000$"
+    },
+    "entity": {
+     "v": "Interactive Brokers Ireland Limited"
+    },
+    "regulator": {
+     "v": "Banco Central da Irlanda (C423427)"
+    },
+    "presence": {
+     "v": "Livre prestação de serviços"
+    },
+    "protInv": {
+     "v": "Até 20.000€",
+     "s": "Irish Investor Compensation Scheme (90%)"
+    },
+    "protCash": {
+     "v": "Até 20.000€",
+     "s": "Mesmo sistema"
+    },
+    "tax": {
+     "v": "Não",
+     "s": "Não retém IRS em Portugal"
+    },
+    "annex": {
+     "v": "Anexo J",
+     "s": "Dividendos, juros e mais-valias"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Sim"
+    },
+    "plans": {
+     "v": "Sim",
+     "s": "Investimentos recorrentes"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Sim"
+    },
+    "iban": {
+     "v": "Não"
+    }
+   }
+  },
+  {
+   "id": "lightyear",
+   "name": "Lightyear",
+   "short": "LY",
+   "color": "#1B1B1B",
+   "type": "Corretora",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.literaciafinanceira.pt/visita/lightyear"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "review": "https://www.literaciafinanceira.pt/artigos/analise-lightyear-em-portugal",
+   "src": "https://lightyear.com/en-eu/pricing",
+   "t": {
+    "etfFee": {
+     "v": "0€"
+    },
+    "pt": {
+     "v": "1€",
+     "s": "Ações em euros: 1€ por ordem"
+    },
+    "usFee": {
+     "v": "0,1% (máx. 1$)"
+    },
+    "fx": {
+     "v": "0,35%",
+     "s": "Evitável com a conta multimoeda"
+    },
+    "custodyTxt": {
+     "v": "0€"
+    },
+    "inact": {
+     "v": "0€"
+    },
+    "transfer": {
+     "v": "0€",
+     "s": "Do lado da Lightyear"
+    },
+    "interest": {
+     "v": "Não paga em Portugal"
+    },
+    "entity": {
+     "v": "Lightyear Europe AS"
+    },
+    "regulator": {
+     "v": "Finantsinspektsioon (Estónia)"
+    },
+    "presence": {
+     "v": "Livre prestação de serviços"
+    },
+    "protInv": {
+     "v": "Até 20.000€",
+     "s": "Fundo de proteção dos investidores da Estónia. Ações dos EUA também têm SIPC (até 500.000$)"
+    },
+    "protCash": {
+     "v": "Até 20.000€",
+     "s": "Mesmo fundo, em conjunto com os investimentos. Dinheiro segregado em fundos monetários e bancos"
+    },
+    "tax": {
+     "v": "Não",
+     "s": "Não retém IRS em Portugal"
+    },
+    "annex": {
+     "v": "Anexo J",
+     "s": "Dividendos, juros e mais-valias"
+    },
+    "ptStocks": {
+     "v": "Sim",
+     "s": "12 ações, como EDP, BCP e Galp"
+    },
+    "fractions": {
+     "v": "Sim"
+    },
+    "plans": {
+     "v": "Sim",
+     "s": "Plans"
+    },
+    "bonds": {
+     "v": "Sim",
+     "s": "Obrigações em euros: 1€ por ordem"
+    },
+    "options": {
+     "v": "Não"
+    },
+    "iban": {
+     "v": "Não"
+    }
+   }
+  },
+  {
+   "id": "openbank",
+   "name": "Openbank",
+   "short": "OB",
+   "color": "#E4002B",
+   "type": "Banco (Grupo Santander)",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.openbank.pt/comprar-acoes"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "src": "https://www.openbank.pt/assets/static/pt/pdf/Investments/TarifasBroker-versaocompleta.pdf",
+   "t": {
+    "etfFee": {
+     "v": "1€",
+     "s": "Qualquer mercado e montante"
+    },
+    "pt": {
+     "v": "1€"
+    },
+    "usFee": {
+     "v": "1€"
+    },
+    "fx": {
+     "v": "0,70%",
+     "s": "Passa a 1% a 8/11/2026. Aplicado sobre o fixing do Santander"
+    },
+    "custodyTxt": {
+     "v": "0€",
+     "s": "A partir de 1 de outubro de 2026. Cobrança de dividendos: 0,25% (mín. 1,50€)"
+    },
+    "inact": {
+     "v": "0€",
+     "s": "Sem comissão de inatividade no tarifário"
+    },
+    "transfer": {
+     "v": "0,30% (máx. 150€)",
+     "s": "Por classe de valor"
+    },
+    "interest": {
+     "v": "Não aplicável"
+    },
+    "entity": {
+     "v": "Open Bank, S.A.",
+     "s": "Grupo Santander"
+    },
+    "regulator": {
+     "v": "Banco de Espanha",
+     "s": "Sede em Madrid"
+    },
+    "presence": {
+     "v": "Livre prestação de serviços",
+     "s": "Opera a partir de Espanha"
+    },
+    "protInv": {
+     "v": "Até 100.000€",
+     "s": "Fundo de garantia espanhol, independente da garantia do dinheiro"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Fundo de garantia de depósitos espanhol"
+    },
+    "tax": {
+     "v": "Não",
+     "s": "Não retém IRS em Portugal"
+    },
+    "annex": {
+     "v": "Anexo J",
+     "s": "Dividendos, juros e mais-valias"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Sim"
+    },
+    "plans": {
+     "v": "Não em ações e ETFs",
+     "s": "Só no Robo-Advisor (fundos), com contribuições periódicas a partir de 1€"
+    },
+    "bonds": {
+     "v": "Não"
+    },
+    "options": {
+     "v": "Não"
+    },
+    "iban": {
+     "v": "Não",
+     "s": "IBAN espanhol"
+    }
+   }
+  },
+  {
+   "id": "revolut",
+   "name": "Revolut",
+   "short": "R",
+   "color": "#191C1F",
+   "type": "Banco digital",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.literaciafinanceira.pt/visita/revolut"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "review": "https://www.literaciafinanceira.pt/artigos/analise-completa-revolut-portugal",
+   "src": "https://help.revolut.com/en-EE/help/wealth/stocks/trading-stocks/trading-fees/what-fees-will-i-be-charged-for-my-trading/",
+   "t": {
+    "etfFee": {
+     "v": "1€",
+     "s": "Planos Standard e Plus. Premium: 5 ordens grátis/mês. Metal e Ultra: 10"
+    },
+    "pt": {
+     "v": "1€",
+     "s": "Por ordem, fora das ordens grátis do plano"
+    },
+    "usFee": {
+     "v": "1€"
+    },
+    "fx": {
+     "v": "0% até 1.000€/mês",
+     "s": "Standard: 1% acima disso e 1% extra ao fim de semana"
+    },
+    "custodyTxt": {
+     "v": "0€"
+    },
+    "inact": {
+     "v": "0€",
+     "s": "Não consta da tabela de comissões"
+    },
+    "transfer": {
+     "v": "35$ por posição",
+     "s": "Frações não podem ser transferidas"
+    },
+    "interest": {
+     "v": "Não no saldo de investimento",
+     "s": "Tem contas poupança à parte"
+    },
+    "entity": {
+     "v": "Revolut Securities Europe UAB"
+    },
+    "regulator": {
+     "v": "Banco da Lituânia"
+    },
+    "presence": {
+     "v": "Livre prestação de serviços",
+     "s": "O banco (Revolut Bank UAB) tem sucursal em Portugal, n.º 3560 no BdP"
+    },
+    "protInv": {
+     "v": "Até 22.000€",
+     "s": "90% do valor coberto"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Depósitos na Revolut Bank UAB"
+    },
+    "tax": {
+     "v": "Não",
+     "s": "Não retém IRS nos investimentos"
+    },
+    "annex": {
+     "v": "Anexo J",
+     "s": "Dividendos e mais-valias"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Sim"
+    },
+    "plans": {
+     "v": "Sim"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Não"
+    },
+    "iban": {
+     "v": "Sim"
+    }
+   }
+  },
+  {
+   "id": "traderepublic",
+   "name": "Trade Republic",
+   "short": "TR",
+   "color": "#000000",
+   "type": "Banco (sucursal em Portugal)",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.literaciafinanceira.pt/visita/trade-republic"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "review": "https://www.literaciafinanceira.pt/artigos/analise-trade-republic-portugal",
+   "src": "https://traderepublic.com/pt-pt",
+   "t": {
+    "etfFee": {
+     "v": "1€",
+     "s": "Taxa de liquidação. 0€ nos planos de poupança"
+    },
+    "pt": {
+     "v": "1€"
+    },
+    "usFee": {
+     "v": "1€",
+     "s": "Ordem com Preço Direto: 2€"
+    },
+    "fx": {
+     "v": "Margem de 0,0014 no EUR/USD",
+     "s": "Cerca de 0,12%. Ações dos EUA negociadas em euros. Aplica-se a rendimentos em dólares"
+    },
+    "custodyTxt": {
+     "v": "0€"
+    },
+    "inact": {
+     "v": "0€"
+    },
+    "transfer": {
+     "v": "0€",
+     "s": "As frações ficam na conta"
+    },
+    "interest": {
+     "v": "3% até 50.000€",
+     "s": "Novos clientes. Restante saldo à taxa de depósito do BCE (2,50%)"
+    },
+    "entity": {
+     "v": "Trade Republic Bank GmbH, Sucursal em Portugal"
+    },
+    "regulator": {
+     "v": "BaFin e Bundesbank",
+     "s": "Sucursal registada no Banco de Portugal (código 0286)"
+    },
+    "presence": {
+     "v": "Sucursal em Portugal",
+     "s": "Desde julho de 2026"
+    },
+    "protInv": {
+     "v": "Até 20.000€",
+     "s": "90% dos ativos não devolvidos"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Sistema alemão de garantia de depósitos"
+    },
+    "tax": {
+     "v": "Sim",
+     "s": "Retém IRS sobre juros e dividendos nas contas com IBAN português"
+    },
+    "annex": {
+     "v": "Anexo G",
+     "s": "As vendas aparecem pré-preenchidas no IRS (contas com IBAN português)"
+    },
+    "ptStocks": {
+     "v": "Sim",
+     "s": "Lisboa é uma das bolsas de referência do Best Price"
+    },
+    "fractions": {
+     "v": "Sim"
+    },
+    "plans": {
+     "v": "Sim"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Não"
+    },
+    "iban": {
+     "v": "Sim",
+     "s": "PT50 para novos clientes"
+    }
+   }
+  },
+  {
+   "id": "trading212",
+   "name": "Trading 212",
+   "short": "212",
+   "color": "#0B78FF",
+   "type": "Corretora",
+   "t212": true,
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.trading212.com/join/LF"
+   },
+   "risk": "Link patrocinado. Ao investir, o teu capital está em risco. Aplicam-se termos.",
+   "review": "https://www.literaciafinanceira.pt/artigos/analise-trading-212-portugal",
+   "src": "https://www.trading212.com/terms/invest",
+   "t": {
+    "etfFee": {
+     "v": "Sem comissões",
+     "s": "Podem aplicar-se outras comissões. Consulta os Termos e Taxas"
+    },
+    "pt": {
+     "v": "Sem comissões",
+     "s": "Podem aplicar-se outras comissões"
+    },
+    "usFee": {
+     "v": "Sem comissões",
+     "s": "Podem aplicar-se outras comissões"
+    },
+    "fx": {
+     "v": "0,15%",
+     "s": "Aplica-se ao converter fundos, sem agravamento ao fim de semana. Podem aplicar-se outras comissões"
+    },
+    "custodyTxt": {
+     "v": "0€"
+    },
+    "inact": {
+     "v": "0€"
+    },
+    "transfer": {
+     "v": "0€",
+     "s": "Só ações inteiras. As frações têm de ser vendidas"
+    },
+    "interest": {
+     "v": "4,20% promocional",
+     "s": "Contas novas abertas até 2/11/2026, durante 4 meses. Contas antigas: 2,50%. Taxas variáveis"
+    },
+    "entity": {
+     "v": "Trading 212 EU GmbH",
+     "s": "Contas antigas: Trading 212 Markets Ltd (CySEC)"
+    },
+    "regulator": {
+     "v": "BaFin (licença 10109603)"
+    },
+    "presence": {
+     "v": "Livre prestação de serviços"
+    },
+    "protInv": {
+     "v": "Até 100.000€",
+     "s": "Contas novas. Contas antigas: até 20.000€"
+    },
+    "protCash": {
+     "v": "Até 100.000€"
+    },
+    "tax": {
+     "v": "Não",
+     "s": "Não retém IRS em Portugal"
+    },
+    "annex": {
+     "v": "Anexo J",
+     "s": "Dividendos, juros e mais-valias"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Sim"
+    },
+    "plans": {
+     "v": "Sim",
+     "s": "Pies e AutoInvest"
+    },
+    "bonds": {
+     "v": "Não"
+    },
+    "options": {
+     "v": "Não"
+    },
+    "iban": {
+     "v": "Não"
+    }
+   }
+  },
+  {
+   "id": "xtb",
+   "name": "XTB",
+   "short": "XTB",
+   "color": "#E30613",
+   "type": "Corretora (sucursal em Portugal)",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.literaciafinanceira.pt/visita/xtb"
+   },
+   "risk": "77% das contas de investidores não profissionais perdem dinheiro quando negoceiam CFD com este distribuidor.",
+   "review": "https://www.literaciafinanceira.pt/artigos/xtb-portugal",
+   "src": "https://www.xtb.com/pt/conta-e-taxas",
+   "t": {
+    "etfFee": {
+     "v": "0%",
+     "s": "Até 100.000€ de volume mensal. Acima: 0,2% (mín. 10€)"
+    },
+    "pt": {
+     "v": "0%",
+     "s": "Até 100.000€ de volume mensal"
+    },
+    "usFee": {
+     "v": "0%",
+     "s": "Até 100.000€ de volume mensal"
+    },
+    "fx": {
+     "v": "0,5%",
+     "s": "0,8% nas transferências entre contas ao fim de semana"
+    },
+    "custodyTxt": {
+     "v": "0€ até 250.000€",
+     "s": "0,02% ao ano sobre o excedente (tabela de 30/09/2026)"
+    },
+    "inact": {
+     "v": "10€/mês",
+     "s": "Só com 365 dias sem operações, 90 dias sem depósitos e sem posições abertas"
+    },
+    "transfer": {
+     "v": "25€ por ISIN",
+     "s": "Títulos espanhóis: 0,10% (mín. 100€)"
+    },
+    "interest": {
+     "v": "2,60% nos primeiros 90 dias",
+     "s": "Até 100.000€. Depois: 1,10% (taxas de 21/09/2026)"
+    },
+    "entity": {
+     "v": "XTB S.A., Sucursal em Portugal"
+    },
+    "regulator": {
+     "v": "KNF (Polónia)",
+     "s": "Sucursal inscrita na CMVM com o n.º 341"
+    },
+    "presence": {
+     "v": "Sucursal em Portugal"
+    },
+    "protInv": {
+     "v": "Até 20.100€",
+     "s": "100% dos primeiros 3.000€ e 90% do excedente"
+    },
+    "protCash": {
+     "v": "Mesmo sistema"
+    },
+    "tax": {
+     "v": "Sim",
+     "s": "Retém IRS sobre juros e dividendos"
+    },
+    "annex": {
+     "v": "Anexo G",
+     "s": "As vendas aparecem pré-preenchidas no IRS"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Sim"
+    },
+    "plans": {
+     "v": "Sim"
+    },
+    "bonds": {
+     "v": "Sim",
+     "s": "Obrigações fracionadas"
+    },
+    "options": {
+     "v": "Sim"
+    },
+    "iban": {
+     "v": "Não",
+     "s": "IBAN alemão (DE)"
+    }
+   }
+  }
+ ]
+}
