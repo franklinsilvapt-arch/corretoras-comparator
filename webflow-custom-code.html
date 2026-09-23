@@ -1,0 +1,14 @@
+<!-- Comparador de corretoras LF: colar no Custom Code da página (Before </body> tag).
+     Na página tem de existir um div nativo com o ID lf-cc.
+     No staging (webflow.io) carrega os ficheiros -staging; em produção os normais.
+     Ao mudar CSS ou JS, sobe o v= para limpar a cache. -->
+<script>
+(function(){
+  var b='https://franklinsilvapt-arch.github.io/corretoras-comparator/', v='1';
+  var s=location.hostname.indexOf('webflow.io')>-1?'-staging':'';
+  var l=document.createElement('link'); l.rel='stylesheet'; l.href=b+'comparador-corretoras'+s+'.css?v='+v; document.head.appendChild(l);
+  var a=document.createElement('script'); a.src=b+'logos.js?v='+v;
+  a.onload=function(){ var j=document.createElement('script'); j.src=b+'comparador-corretoras'+s+'.js?v='+v; document.body.appendChild(j); };
+  document.body.appendChild(a);
+})();
+</script>
