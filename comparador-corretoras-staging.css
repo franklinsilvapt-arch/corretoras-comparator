@@ -115,6 +115,8 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
  #lf-cc .cc-pick-t{display:none}
  #lf-cc .cc-scen-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border:1px solid var(--g300);border-radius:12px;background:#fff;font-size:13px;line-height:18px;color:var(--g700);text-align:left}
  #lf-cc .cc-scen-toggle b{font-weight:600;color:var(--g900)}
+ #lf-cc .cc-sum-2{display:block}
+ #lf-cc .cc-sec-h small{display:block;margin-left:0;margin-top:2px}
  #lf-cc #cc-scen-act{color:var(--brand600);font-weight:500;white-space:nowrap}
  #lf-cc .cc-scen-wrap:not(.is-open) .cc-scen-body{display:none}
  #lf-cc .cc-scen-wrap.is-open .cc-scen-toggle{margin-bottom:14px}
