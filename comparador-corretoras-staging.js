@@ -188,8 +188,8 @@
       root.innerHTML =
         '<p class="cc-lead">Compara custos, juros, segurança e impostos de '+B.length+' corretoras e bancos disponíveis em Portugal. Todos os valores foram verificados nos sites e preçários de cada entidade.</p>'+
         '<div class="cc-meta">'+
-          '<a class="cc-author" href="'+LF+'/autores/franklin-silva"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67922c46c9da6bf5d9bfdf20/683ee0ae5bc67fe0ef48466e_franklin-silva.avif" alt="" onerror="this.parentNode.textContent=\'FS\'"></span><span><span class="cc-al">Autor</span><span class="cc-an">Franklin Silva</span></span></a>'+
-          '<a class="cc-author" href="'+LF+'/autores/pedro-braz"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67922c46c9da6bf5d9bfdf20/683ee0f9b80a20ec1767fab5_Pedro-Braz.avif" alt="" onerror="this.parentNode.textContent=\'PB\'"></span><span><span class="cc-al">Revisor</span><span class="cc-an">Pedro Braz</span></span></a>'+
+          '<a class="cc-author" href="'+LF+'/autores/pedro-braz"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67922c46c9da6bf5d9bfdf20/683ee0f9b80a20ec1767fab5_Pedro-Braz.avif" alt="" onerror="this.parentNode.textContent=\'PB\'"></span><span><span class="cc-al">Autor</span><span class="cc-an">Pedro Braz</span></span></a>'+
+          '<a class="cc-author" href="'+LF+'/autores/franklin-silva"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67922c46c9da6bf5d9bfdf20/683ee0ae5bc67fe0ef48466e_franklin-silva.avif" alt="" onerror="this.parentNode.textContent=\'FS\'"></span><span><span class="cc-al">Revisor</span><span class="cc-an">Franklin Silva</span></span></a>'+
           '<span class="cc-author"><span class="cc-av">'+'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'+'</span><span><span class="cc-al">Última verificação</span><span class="cc-an">'+VERIFIED+'</span></span></span>'+
         '</div>'+
         '<div class="cc-panel">'+
