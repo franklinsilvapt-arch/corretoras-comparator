@@ -319,7 +319,7 @@
   
     function updateSum(){
       var el=document.getElementById('cc-scen-sum'); if(!el) return;
-      el.innerHTML='Compra de <b>'+fmtInt(S.amount)+'€</b> · <b>'+fmtInt(S.monthly)+'€</b>/mês · carteira de <b>'+fmtInt(S.portfolio)+'€</b>';
+      el.innerHTML='Compra de <b>'+fmtInt(S.amount)+'€</b> · <b>'+fmtInt(S.monthly)+'€</b>/mês<span class="cc-sum-2">Carteira de <b>'+fmtInt(S.portfolio)+'€</b></span>';
     }
   
     function renderMini(sel){
