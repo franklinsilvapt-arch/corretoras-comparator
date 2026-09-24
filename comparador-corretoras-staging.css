@@ -68,9 +68,7 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
 #lf-cc .cc-sec-h{display:flex;align-items:center;justify-content:space-between;width:100%;padding:14px 16px;background:var(--g50);border:0;border-top:1px solid var(--g200);font-size:15px;font-weight:600;color:var(--g900);text-align:left}
 #lf-cc .cc-sec-h small{font-weight:400;color:var(--g500);font-size:12.5px;margin-left:8px}
 #lf-cc .cc-sec-h svg{width:18px;height:18px;color:var(--g500);flex-shrink:0}
-#lf-cc .cc-sec-in{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%}
 #lf-cc .cc-sec-t{display:flex;align-items:center;gap:10px;min-width:0}
-#lf-cc .cc-lab-in{display:block}
 #lf-cc .cc-chev{transition:transform .15s}
 #lf-cc .cc-sec.is-closed .cc-chev{transform:rotate(-90deg)}
 #lf-cc .cc-sec.is-closed .cc-sec-b{display:none}
@@ -95,10 +93,10 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
 #lf-cc .cc-notes{margin:20px 0 0;font-size:12px;line-height:18px;color:var(--g600)}
 #lf-cc .cc-notes p{margin:0 0 8px}
 #lf-cc .cc-mini{display:none}
-#lf-cc .cc-mini{position:fixed;left:0;right:0;top:var(--cc-top,0px);z-index:20;overflow:hidden;background:#fff;border-bottom:1px solid var(--g200);box-shadow:0 4px 12px rgba(16,24,40,.06)}
-#lf-cc .cc-mini-in{display:grid;gap:0;padding:8px 0}
-#lf-cc .cc-mini-c{display:flex;align-items:center;gap:8px;min-width:0;padding:0 14px;font-size:13px;line-height:18px}
-#lf-cc .cc-mini-c+.cc-mini-c{border-left:1px solid var(--g200)}
+#lf-cc .cc-mini{position:fixed;left:0;right:0;top:var(--cc-top,0px);z-index:20;background:#fff;border-bottom:1px solid var(--g200);box-shadow:0 4px 12px rgba(16,24,40,.06)}
+#lf-cc .cc-mini-in{display:grid;gap:0;padding:8px 16px}
+#lf-cc .cc-mini-c{display:flex;align-items:center;gap:8px;min-width:0;font-size:13px;line-height:18px}
+#lf-cc .cc-mini-c+.cc-mini-c{padding-left:12px;border-left:1px solid var(--g200)}
 #lf-cc .cc-mini-c b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #lf-cc .cc-mini-c .cc-logo{border-radius:6px}
 #lf-cc .cc-scen-toggle{display:none}
@@ -123,11 +121,7 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
  #lf-cc .cc-scen-wrap:not(.is-open) .cc-scen-body{display:none}
  #lf-cc .cc-scen-wrap.is-open .cc-scen-toggle{margin-bottom:14px}
  #lf-cc .cc-btn{padding:9px 8px;font-size:13px}
- #lf-cc .cc-table{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
  #lf-cc .cc-row{grid-template-columns:repeat(var(--cc-n),minmax(0,1fr))}
- #lf-cc .cc-row,#lf-cc .cc-sec-h{min-width:calc(var(--cc-n) * 160px)}
- #lf-cc .cc-lab-in{position:-webkit-sticky;position:sticky;left:14px;width:calc(var(--cc-vw,100%) - 28px)}
- #lf-cc .cc-sec-in{position:-webkit-sticky;position:sticky;left:16px;width:calc(var(--cc-vw,100%) - 32px)}
  #lf-cc .cc-row>.cc-lab,#lf-cc .cc-hcell:first-child{grid-column:1/-1}
  #lf-cc .cc-hcell:first-child{display:none}
  #lf-cc .cc-lab{padding:12px 14px 0;background:#fff}
