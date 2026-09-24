@@ -64,7 +64,7 @@
      "s": "Por ISIN. Acresce IVA"
     },
     "interest": {
-     "v": "Não aplicável",
+     "v": "0%",
      "s": "Não remunera o saldo da conta de bolsa"
     },
     "entity": {
@@ -156,7 +156,7 @@
      "s": "Mínimo 30€ + IVA por ISIN (preçário geral do Best)"
     },
     "interest": {
-     "v": "Não aplicável",
+     "v": "0%",
      "s": "Não remunera o saldo da conta de bolsa"
     },
     "entity": {
@@ -248,7 +248,7 @@
      "s": "Por título. Acresce IVA. Obrigações: 0,5% (mín. 25€)"
     },
     "interest": {
-     "v": "Não aplicável",
+     "v": "0%",
      "s": "Não remunera o saldo da conta de bolsa"
     },
     "entity": {
@@ -338,7 +338,7 @@
      "s": "Por espécie, ações Euronext. Outros valores: mín. 25€"
     },
     "interest": {
-     "v": "Não aplicável",
+     "v": "0%",
      "s": "Não remunera o saldo da conta de bolsa"
     },
     "entity": {
@@ -430,7 +430,7 @@
      "s": "Mais custos externos da bolsa"
     },
     "interest": {
-     "v": "Não paga"
+     "v": "0%"
     },
     "entity": {
      "v": "flatexDEGIRO Bank SE, Dutch Branch"
@@ -494,7 +494,7 @@
    "src": "https://www.etoro.com/trading/fees/",
    "t": {
     "etfFee": {
-     "v": "0€"
+     "v": "0%"
     },
     "pt": {
      "v": "1$",
@@ -519,8 +519,8 @@
      "s": "Por cada posição transferida para outra corretora na UE. Informação do apoio ao cliente, não publicada no site"
     },
     "interest": {
-     "v": "Não paga em euros",
-     "s": "Só sobre saldo em dólares: 3% com património até 50.000$ e 3,80% acima. Tens de ativar no Club"
+     "v": "0%",
+     "s": "Em euros. Só paga sobre saldo em dólares: 3% com património até 50.000$ e 3,80% acima. Tens de ativar no Club"
     },
     "entity": {
      "v": "eToro (Europe) Ltd"
@@ -609,7 +609,7 @@
      "s": "Transferência externa de títulos. Levantar dinheiro por transferência: 7€"
     },
     "interest": {
-     "v": "Não paga"
+     "v": "0%"
     },
     "entity": {
      "v": "Freedom Finance Europe Ltd"
@@ -763,7 +763,7 @@
    "src": "https://lightyear.com/en-eu/pricing",
    "t": {
     "etfFee": {
-     "v": "0€"
+     "v": "0%"
     },
     "pt": {
      "v": "1€",
@@ -787,7 +787,8 @@
      "s": "Do lado da Lightyear"
     },
     "interest": {
-     "v": "Não paga em Portugal"
+     "v": "0%",
+     "s": "Não paga juros a clientes em Portugal"
     },
     "entity": {
      "v": "Lightyear Europe AS"
@@ -877,7 +878,7 @@
      "s": "Por classe de valor"
     },
     "interest": {
-     "v": "Não aplicável"
+     "v": "0%"
     },
     "entity": {
      "v": "Open Bank, S.A.",
@@ -970,8 +971,8 @@
      "s": "Frações não podem ser transferidas"
     },
     "interest": {
-     "v": "Não no saldo de investimento",
-     "s": "Tem contas poupança à parte"
+     "v": "0%",
+     "s": "No saldo de investimento. Tem contas poupança à parte"
     },
     "entity": {
      "v": "Revolut Securities Europe UAB"
@@ -1055,8 +1056,8 @@
      "v": "0€"
     },
     "transfer": {
-     "v": "0€",
-     "s": "As frações ficam na conta"
+     "v": "25€ por posição",
+     "s": "Mais eventuais custos externos. As frações não são transferidas"
     },
     "interest": {
      "v": "3% até 50.000€",
@@ -1127,16 +1128,16 @@
    "src": "https://www.trading212.com/terms/invest",
    "t": {
     "etfFee": {
-     "v": "Sem comissões",
-     "s": "Podem aplicar-se outras comissões. Consulta os Termos e Taxas"
+     "v": "0%",
+     "s": "Sem comissões. Podem aplicar-se outras comissões. Consulta os Termos e Taxas"
     },
     "pt": {
-     "v": "Sem comissões",
-     "s": "Podem aplicar-se outras comissões"
+     "v": "0%",
+     "s": "Sem comissões. Podem aplicar-se outras comissões"
     },
     "usFee": {
-     "v": "Sem comissões",
-     "s": "Podem aplicar-se outras comissões"
+     "v": "0%",
+     "s": "Sem comissões. Podem aplicar-se outras comissões"
     },
     "fx": {
      "v": "0,15%",
@@ -1167,11 +1168,12 @@
      "v": "Livre prestação de serviços"
     },
     "protInv": {
-     "v": "Até 100.000€",
-     "s": "Contas novas. Contas antigas: até 20.000€"
+     "v": "Até 20.000€",
+     "s": "90% dos ativos não devolvidos. Contas novas e antigas"
     },
     "protCash": {
-     "v": "Até 100.000€"
+     "v": "Até 100.000€",
+     "s": "Contas novas, por banco parceiro. Contas antigas: até 20.000€"
     },
     "tax": {
      "v": "Não",
