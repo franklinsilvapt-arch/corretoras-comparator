@@ -61,7 +61,7 @@
     },
     "transfer": {
      "v": "0,60% (mín. 48,50€)",
-     "s": "Por ISIN. Acresce IVA"
+     "s": "Por posição. Acresce IVA"
     },
     "interest": {
      "v": "0%",
@@ -71,7 +71,7 @@
      "v": "Banco ActivoBank, S.A."
     },
     "regulator": {
-     "v": "Banco de Portugal (n.º 23) e CMVM (n.º 116)"
+     "v": "Banco de Portugal e CMVM"
     },
     "presence": {
      "v": "Banco português"
@@ -153,7 +153,7 @@
     },
     "transfer": {
      "v": "1% + IVA",
-     "s": "Mínimo 30€ + IVA por ISIN (preçário geral do Best)"
+     "s": "Mínimo 30€ + IVA por posição"
     },
     "interest": {
      "v": "0%",
@@ -245,7 +245,7 @@
     },
     "transfer": {
      "v": "0,25% (mín. 25€)",
-     "s": "Por título. Acresce IVA. Obrigações: 0,5% (mín. 25€)"
+     "s": "Por posição. Acresce IVA. Obrigações: 0,5% (mín. 25€)"
     },
     "interest": {
      "v": "0%",
@@ -255,7 +255,7 @@
      "v": "Banco de Investimento Global, S.A."
     },
     "regulator": {
-     "v": "Banco de Portugal (n.º 61) e CMVM"
+     "v": "Banco de Portugal e CMVM"
     },
     "presence": {
      "v": "Banco português"
@@ -335,7 +335,7 @@
     },
     "transfer": {
      "v": "0,25% (mín. 10€)",
-     "s": "Por espécie, ações Euronext. Outros valores: mín. 25€"
+     "s": "Por posição em ações da Euronext. Outros títulos: mín. 25€"
     },
     "interest": {
      "v": "0%",
@@ -345,7 +345,7 @@
      "v": "Banco L. J. Carregosa, S.A."
     },
     "regulator": {
-     "v": "Banco de Portugal (n.º 0235) e CMVM (n.º 0169)"
+     "v": "Banco de Portugal e CMVM"
     },
     "presence": {
      "v": "Banco português"
@@ -419,8 +419,8 @@
      "s": "Auto FX. Conversão manual: 10€ + 0,25%"
     },
     "custodyTxt": {
-     "v": "0€",
-     "s": "Conectividade: até 2,50€/ano por bolsa (exceto Euronext Lisboa e Core Selection)"
+     "v": "2,50€ por ano e por bolsa",
+     "s": "Exceto na Bolsa de Lisboa e Tradegate"
     },
     "inact": {
      "v": "0€"
@@ -515,8 +515,8 @@
      "v": "0€"
     },
     "transfer": {
-     "v": "100$ por ação",
-     "s": "Por cada posição transferida para outra corretora na UE. Informação do apoio ao cliente, não publicada no site"
+     "v": "100$ por posição",
+     "s": "Transferência para outra corretora na UE. Informação do apoio ao cliente, não publicada no site"
     },
     "interest": {
      "v": "0%",
@@ -526,7 +526,7 @@
      "v": "eToro (Europe) Ltd"
     },
     "regulator": {
-     "v": "CySEC (licença 109/10)"
+     "v": "CySEC (Chipre)"
     },
     "presence": {
      "v": "Livre prestação de serviços"
@@ -605,7 +605,7 @@
      "s": "Sem comissão mensal. Com saldo abaixo de 100$ o acesso à plataforma pode ser bloqueado"
     },
     "transfer": {
-     "v": "100€",
+     "v": "100€ por transferência",
      "s": "Transferência externa de títulos. Levantar dinheiro por transferência: 7€"
     },
     "interest": {
@@ -706,7 +706,7 @@
      "v": "Interactive Brokers Ireland Limited"
     },
     "regulator": {
-     "v": "Banco Central da Irlanda (C423427)"
+     "v": "Banco Central da Irlanda"
     },
     "presence": {
      "v": "Livre prestação de serviços"
@@ -875,7 +875,7 @@
     },
     "transfer": {
      "v": "0,30% (máx. 150€)",
-     "s": "Por classe de valor"
+     "s": "Por posição"
     },
     "interest": {
      "v": "0%"
@@ -982,7 +982,7 @@
     },
     "presence": {
      "v": "Livre prestação de serviços",
-     "s": "O banco (Revolut Bank UAB) tem sucursal em Portugal, n.º 3560 no BdP"
+     "s": "O banco (Revolut Bank UAB) tem sucursal em Portugal"
     },
     "protInv": {
      "v": "Até 22.000€",
@@ -1067,8 +1067,8 @@
      "v": "Trade Republic Bank GmbH, Sucursal em Portugal"
     },
     "regulator": {
-     "v": "BaFin e Bundesbank",
-     "s": "Sucursal registada no Banco de Portugal (código 0286)"
+     "v": "BaFin e Bundesbank (Alemanha)",
+     "s": "Sucursal registada no Banco de Portugal"
     },
     "presence": {
      "v": "Sucursal em Portugal",
@@ -1162,7 +1162,8 @@
      "s": "Contas antigas: Trading 212 Markets Ltd (CySEC)"
     },
     "regulator": {
-     "v": "BaFin (licença 10109603)"
+     "v": "BaFin (Alemanha)",
+     "s": "Contas antigas: CySEC (Chipre)"
     },
     "presence": {
      "v": "Livre prestação de serviços"
@@ -1243,7 +1244,7 @@
      "s": "Só com 365 dias sem operações, 90 dias sem depósitos e sem posições abertas"
     },
     "transfer": {
-     "v": "25€ por ISIN",
+     "v": "25€ por posição",
      "s": "Títulos espanhóis: 0,10% (mín. 100€)"
     },
     "interest": {
@@ -1255,7 +1256,7 @@
     },
     "regulator": {
      "v": "KNF (Polónia)",
-     "s": "Sucursal inscrita na CMVM com o n.º 341"
+     "s": "Sucursal registada na CMVM"
     },
     "presence": {
      "v": "Sucursal em Portugal"
