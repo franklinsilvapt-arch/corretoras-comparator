@@ -8,6 +8,9 @@
   var RISK = 'Investir envolve risco de perda de capital.';
   var CONF = 'A confirmar';
   var VERIFIED, USD_EUR, ETF_PRICE, US_PRICE_USD, B, PAIRS, LOGOS = window.LF_CC_LOGOS || {};
+  /* IBKR Tiered na Xetra: comissão 0,05% (mín. 1,25€, máx. 29€) + compensação 0,02€ + 0,0008% (máx. 4,02€) + regulatória 0,01€.
+     Taxa de bolsa isenta nas ordens de retalho encaminhadas pelo SmartRouting (tabela Xetra IBIS da IBKR Ireland). */
+  function ibXetra(a){ return Math.min(29,Math.max(1.25,a*0.0005))+Math.min(4.02,0.02+a*0.000008)+0.01; }
   var CALC = {
     'activobank': {
       etf: function(a){ return {v:0, s:'1.ª ordem do mês grátis (seguintes: 5€)'}; },
@@ -37,7 +40,7 @@
       etf: function(a){ return {v:1, s:'ETF Core Selection (Tradegate): 0€ de comissão + 1€ de manuseamento'}; },
       us: function(a){ return {v:2+a*0.0025, s:'1€ + 1€ de manuseamento + câmbio de 0,25%'}; },
       plan: function(m){ return {v:12, s:'12 ordens de 1€ na ETF Core Selection'}; },
-      custody: function(p){ return {v:0, s:'Conectividade de 2,50€/ano por bolsa, exceto Lisboa e Tradegate'}; }
+      custody: function(p){ return {v:2.5, s:'Exceto na Bolsa de Lisboa e Tradegate'}; }
     },
     'etoro': {
       etf: function(a){ return {v:0, s:'ETFs sem comissão, com conta em euros'}; },
@@ -53,13 +56,13 @@
     },
     'ibkr': {
       etf: function(a,plan){
-          if(plan==='tiered'){ var c=Math.min(29,Math.max(1.25,a*0.0005)); return {v:c, s:'Tiered: 0,05% (mín. 1,25€, máx. 29€ na Xetra) + taxas de bolsa', extra:true}; }
+          if(plan==='tiered'){ return {v:ibXetra(a), s:'Tiered na Xetra: 0,05% (mín. 1,25€, máx. 29€) + compensação e taxa regulatória'}; }
           return {v:Math.max(3,a*0.0005), s:'Fixed na Xetra: 0,05% (mín. 3€), taxas incluídas'}; },
       us: function(a,plan){ var sh=Math.ceil(a/USD_EUR/US_PRICE_USD);
-          if(plan==='tiered'){ return {v:Math.max(0.35,0.0035*sh)*USD_EUR+a*0.0003, s:'Tiered: 0,0035$/ação (mín. 0,35$) + taxas + câmbio de 0,03%', extra:true}; }
+          if(plan==='tiered'){ var com=Math.max(0.35,0.0035*sh); return {v:(com+0.003*sh+0.0002*sh+0.000003*sh+0.000735*com)*USD_EUR+a*0.0003, s:'Tiered: 0,0035$/ação (mín. 0,35$) + bolsa, compensação e taxas regulatórias (ordem a mercado) + câmbio de 0,03%'}; }
           return {v:Math.max(1,0.005*sh)*USD_EUR+a*0.0003, s:'Fixed: 0,005$/ação (mín. 1$) + câmbio de 0,03%'}; },
       plan: function(m,plan){
-          if(plan==='tiered'){ return {v:12*Math.max(1.25,m*0.0005), s:'12 ordens a 1,25€ + taxas de bolsa', extra:true}; }
+          if(plan==='tiered'){ return {v:12*ibXetra(m), s:'12 ordens na Xetra, com compensação e taxa regulatória'}; }
           return {v:12*3, s:'12 ordens a 3€'}; },
       custody: function(p){ return {v:0}; }
     },
@@ -268,7 +271,7 @@
         var h='<div class="cc-hcell"><div class="cc-hname">'+logo(b,32)+'<span><b>'+esc(b.name)+'</b><small>'+esc(b.type)+'</small></span></div>';
         h+='<div class="cc-hextra">'+(b.hasPlan?'<div class="cc-pills" role="group" aria-label="Plano de comissões"><button type="button" class="cc-pill'+(S.ibkr==='fixed'?' is-on':'')+'" data-plan="fixed">Fixed</button><button type="button" class="cc-pill'+(S.ibkr==='tiered'?' is-on':'')+'" data-plan="tiered">Tiered</button></div>':'')+'</div>';
         h+='<a class="cc-btn" href="'+b.cta.href+'" target="_blank" rel="noopener sponsored">'+esc(b.cta.label)+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
-        if(b.review) h+='<a class="cc-review" href="'+b.review+'" target="_blank" rel="noopener">Ler a análise</a>';
+        if(b.review) h+='<a class="cc-review" href="'+b.review+'" target="_blank" rel="noopener">Ler análise completa</a>';
         return h+'</div>';
       }).join('')+'</div>';
   
@@ -325,7 +328,7 @@
     window.addEventListener('resize',onScroll);
   
     function alignHead(){
-      var els=root.querySelectorAll('.cc-head .cc-hname, .cc-head .cc-hextra'), groups={};
+      var els=root.querySelectorAll('.cc-head .cc-hname, .cc-head .cc-hextra, .cc-head .cc-risk'), groups={};
       Array.prototype.forEach.call(els,function(el){ el.style.minHeight=''; var k=el.className; (groups[k]=groups[k]||[]).push(el); });
       Object.keys(groups).forEach(function(k){ var mx=0; groups[k].forEach(function(el){ mx=Math.max(mx,el.offsetHeight); }); groups[k].forEach(function(el){ el.style.minHeight=mx+'px'; }); });
     }
@@ -343,7 +346,7 @@
     function notesHtml(){
       return '<div class="cc-notes">'+
         '<p><b>Como calculamos os custos:</b> cada cenário usa o percurso mais barato que a corretora oferece para esse produto, com a comissão, as taxas fixas e o custo de câmbio. Comissões em dólares convertidas a 1$ = 0,85€. Para comissões por unidade assumimos um ETF a 100€ e uma ação americana a 200$. Os bancos portugueses incluem 4% de Imposto do Selo sobre a comissão. Spreads de mercado e custos dos próprios ETFs (TER) não estão incluídos.</p>'+
-        '<p><b>Interactive Brokers:</b> usa o seletor Fixed/Tiered no topo da coluna. No Tiered os valores aparecem com "+ taxas" porque as taxas de bolsa, compensação e regulatórias variam com a bolsa e não entram no cálculo. O glossário tem exemplos de quando cada plano compensa.</p>'+
+        '<p><b>Interactive Brokers:</b> usa o seletor Fixed/Tiered no topo da coluna. No Tiered somamos as taxas de compensação e regulatórias da tabela da Interactive Brokers. Na Xetra a taxa de bolsa é isenta nas ordens de retalho encaminhadas pelo SmartRouting. Nas ações dos EUA assumimos uma ordem a mercado, que paga a taxa de bolsa. O glossário tem exemplos de quando cada plano compensa.</p>'+
         '<p><b>Trading 212:</b> link patrocinado. Para obter ações fracionadas gratuitas no valor de até 100€, podes abrir conta na Trading 212 através deste link ou com o código "LF". Aplicam-se termos e condições. Ao investir, o teu capital está em risco e poderás receber menos do que o montante investido. Rendibilidades passadas não garantem resultados futuros. Se ativares os juros, a Trading 212 manterá o teu dinheiro em fundos do mercado monetário elegíveis e em bancos; caso contrário, o teu dinheiro será mantido apenas em bancos. Os juros aplicam-se ao dinheiro numa conta de investimento. As taxas apresentadas podem já não estar em vigor: consulta a página de <a href="https://www.trading212.com/terms/invest" target="_blank" rel="noopener">Termos e Taxas</a>. Termos da taxa promocional: <a href="https://www.trading212.com/legal-documentation/t212-de/Promotional-Terms_PT.pdf" target="_blank" rel="noopener">documento da Trading 212</a>.</p>'+
         '<p><b>Freedom24:</b> a comissão de 0% no plano de investimento em ETFs aplica-se exclusivamente à função de investimento recorrente. As restantes operações seguem a tabela de comissões da Freedom24.</p>'+
       '</div>';
