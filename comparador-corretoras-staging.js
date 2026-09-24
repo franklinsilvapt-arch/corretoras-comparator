@@ -147,7 +147,7 @@
         {k:'tax', label:'Retém IRS em Portugal'},
         {k:'annex', label:'Onde declaras no IRS'}
       ]},
-      { id:'produtos', title:'Produtos e conta', open:false, rows:[
+      { id:'produtos', title:'Produtos e conta', open:true, rows:[
         {k:'ptStocks', label:'Ações da Euronext Lisboa'},
         {k:'fractions', label:'Frações de ações e ETFs'},
         {k:'plans', label:'Planos de investimento automático'},
@@ -189,7 +189,6 @@
           '<a class="cc-author" href="'+LF+'/autores/pedro-braz"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67922c46c9da6bf5d9bfdf20/683ee0f9b80a20ec1767fab5_Pedro-Braz.avif" alt="" onerror="this.parentNode.textContent=\'PB\'"></span><span><span class="cc-al">Revisor</span><span class="cc-an">Pedro Braz</span></span></a>'+
           '<span class="cc-author"><span class="cc-av">'+'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'+'</span><span><span class="cc-al">Última verificação</span><span class="cc-an">'+VERIFIED+'</span></span></span>'+
         '</div>'+
-        '<div class="cc-stats"><span class="cc-stat"><b>'+B.length+'</b> corretoras e bancos</span><span class="cc-stat"><b>'+NCRIT+'</b> critérios</span><span class="cc-stat">Dados de <b>setembro de 2026</b></span></div>'+
         '<div class="cc-panel">'+
           '<p class="cc-step">Escolhe até <span id="cc-max">3</span> para comparar</p>'+
           '<p class="cc-hint">Por ordem alfabética. Se já tiveres o máximo escolhido, a mais antiga sai. A seleção inicial são as três corretoras mais pesquisadas em Portugal.</p>'+
@@ -208,7 +207,7 @@
         '<div class="cc-table" id="cc-table"></div>'+
         '<div class="cc-pairs" id="cc-pairs"></div>'+
         notesHtml()+
-        faqHtml();
+        '<div class="cc-mini" id="cc-mini" aria-hidden="true"></div>';
     }
   
     function field(id,label,val,note){
@@ -292,9 +291,38 @@
       var srcRow='<div class="cc-row" style="border-top:1px solid #e9ecf1"><div class="cc-lab">Fontes<small>Preçários e páginas oficiais</small></div>'+sel.map(function(b){ return '<div class="cc-cell"><a class="cc-src" style="margin-left:0" href="'+b.src+'" target="_blank" rel="noopener">Preçário de '+esc(b.name)+'</a></div>'; }).join('')+'</div>';
   
       t.innerHTML=head+body+srcRow;
+      renderMini(sel);
       alignHead();
+      onScroll();
       renderPairs(sel);
     }
+  
+    function renderMini(sel){
+      var m=document.getElementById('cc-mini'); if(!m) return;
+      m.innerHTML='<div class="cc-mini-in" style="grid-template-columns:repeat('+sel.length+',minmax(0,1fr))">'+sel.map(function(b){ return '<div class="cc-mini-c">'+logo(b,24)+'<b>'+esc(b.name)+'</b></div>'; }).join('')+'</div>';
+    }
+  
+    function navBottom(){
+      var n=document.querySelector('.nav_fixed'); if(!n) return 0;
+      var r=n.getBoundingClientRect(); return r.bottom>0?Math.round(r.bottom):0;
+    }
+  
+    var ticking=false;
+    function onScroll(){
+      if(ticking) return; ticking=true;
+      requestAnimationFrame(function(){
+        ticking=false;
+        var top=navBottom();
+        root.style.setProperty('--cc-top',top+'px');
+        var t=document.getElementById('cc-table'), h=root.querySelector('.cc-head'), m=document.getElementById('cc-mini');
+        if(!t||!h||!m) return;
+        var tr=t.getBoundingClientRect(), hr=h.getBoundingClientRect();
+        var show=isMobile() && hr.bottom<top && tr.bottom>top+80;
+        m.classList.toggle('is-on',show);
+      });
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',onScroll);
   
     function alignHead(){
       var els=root.querySelectorAll('.cc-head .cc-hname, .cc-head .cc-hextra'), groups={};
@@ -319,20 +347,6 @@
         '<p><b>Trading 212:</b> link patrocinado. Para obter ações fracionadas gratuitas no valor de até 100€, podes abrir conta na Trading 212 através deste link ou com o código "LF". Aplicam-se termos e condições. Ao investir, o teu capital está em risco e poderás receber menos do que o montante investido. Rendibilidades passadas não garantem resultados futuros. Se ativares os juros, a Trading 212 manterá o teu dinheiro em fundos do mercado monetário elegíveis e em bancos; caso contrário, o teu dinheiro será mantido apenas em bancos. Os juros aplicam-se ao dinheiro numa conta de investimento. As taxas apresentadas podem já não estar em vigor: consulta a página de <a href="https://www.trading212.com/terms/invest" target="_blank" rel="noopener">Termos e Taxas</a>. Termos da taxa promocional: <a href="https://www.trading212.com/legal-documentation/t212-de/Promotional-Terms_PT.pdf" target="_blank" rel="noopener">documento da Trading 212</a>.</p>'+
         '<p><b>Freedom24:</b> a comissão de 0% no plano de investimento em ETFs aplica-se exclusivamente à função de investimento recorrente. As restantes operações seguem a tabela de comissões da Freedom24.</p>'+
       '</div>';
-    }
-  
-    function faqHtml(){
-      function q(t,a){ return '<h3>'+t+'</h3><p>'+a+'</p>'; }
-      return '<section class="cc-faq"><h2>Glossário</h2>'+
-        q('Como é que este comparador calcula os custos?','Em vez de juntar comissões com regras diferentes (por ação, em percentagem ou fixas), simulamos o que pagas em quatro situações comuns: comprar um ETF europeu, comprar ações dos EUA, investir todos os meses num ETF e manter a carteira durante um ano. Podes mudar os valores no teu cenário e os custos são recalculados.')+
-        q('Fixed ou Tiered: que plano escolher na Interactive Brokers?','No plano Fixed pagas um valor fechado que já inclui as taxas da bolsa. No Tiered a comissão é mais baixa, mas as taxas de bolsa, de compensação e regulatórias são cobradas à parte. Alguns exemplos com os preços da Interactive Brokers Ireland:<br>&zwj;<br><strong>ETF de 500€ na Xetra:</strong> 3€ no Fixed contra 1,25€ + taxas no Tiered. O Tiered só compensa se as taxas ficarem abaixo de 1,75€.<br><strong>ETF de 10.000€ na Xetra:</strong> 5€ nos dois planos (0,05%), mas o Tiered soma as taxas, por isso o Fixed sai mais barato.<br><strong>ETF de 100.000€ na Xetra:</strong> 50€ no Fixed contra o máximo de 29€ + taxas no Tiered. Aqui o Tiered compensa.<br><strong>Ações portuguesas, ordem de 1.000€:</strong> 6€ no Fixed (0,15%, mín. 6€) contra 1,25€ + taxas no Tiered, que tende a compensar na Euronext Lisboa.<br><strong>1.000 ações americanas a 25$:</strong> 5$ no Fixed contra 3,50$ + taxas no Tiered.<br>&zwj;<br>Na prática, o Fixed é mais previsível para ordens pequenas e médias em ETFs europeus. O Tiered ganha em ordens muito grandes e em mercados onde o Fixed tem mínimos altos, como Lisboa.')+
-        q('Porque é que o câmbio pesa tanto nas ações dos EUA?','Quando compras uma ação cotada em dólares com euros, a corretora converte o dinheiro e cobra uma margem sobre a taxa de câmbio. Numa ordem de 1.000€, uma margem de 0,5% custa 5€, mais do que a comissão de muitas corretoras. Na venda voltas a pagar a conversão.')+
-        q('Sucursal em Portugal ou livre prestação de serviços: o que muda?','Uma corretora com sucursal em Portugal tem presença física e responde também perante os supervisores portugueses. Em livre prestação de serviços, a corretora está autorizada noutro país da União Europeia e presta serviços em Portugal sob a supervisão do regulador de origem. Explicamos as diferenças no artigo sobre as <a href="'+LF+'/artigos/melhores-corretoras-em-portugal">melhores corretoras em Portugal</a>.')+
-        q('Como declaro os investimentos de uma corretora estrangeira no IRS?','Se a corretora não retém imposto em Portugal, declaras os dividendos, os juros e as mais-valias no anexo J da declaração de IRS. Nos bancos portugueses, os dividendos e juros de títulos já têm retenção na fonte de 28% e as mais-valias vão para o anexo G.')+
-        q('O que acontece ao meu dinheiro se a corretora falir?','Os títulos ficam segregados do património da corretora. Se não forem devolvidos, os sistemas de indemnização aos investidores cobrem até um limite, que varia com o país da entidade. Lê como funciona o <a href="'+LF+'/artigos/como-funciona-o-sistema-de-indemnizacao-aos-investidores">sistema de indemnização aos investidores</a>.')+
-        q('Porque não aparecem CFDs?','Este comparador foca-se em investir em ações, ETFs e obrigações reais. Os CFDs são instrumentos alavancados com uma lógica de custos diferente, e compará-los lado a lado com a compra de ações distorcia os resultados.')+
-        '<div class="cc-disc">Este comparador tem fins meramente informativos e não constitui aconselhamento financeiro nem recomendação de investimento. Os preçários mudam com frequência: confirma sempre as condições no site da corretora antes de abrir conta. Investir envolve risco de perda de capital.</div>'+
-      '</section>';
     }
   
     /* ---------- Eventos ---------- */
