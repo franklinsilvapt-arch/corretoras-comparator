@@ -177,7 +177,20 @@
   
     /* ---------- Render ---------- */
     var root = document.getElementById('lf-cc');
-    var CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+    function ico(p){ return '<svg class="cc-sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+p+'</svg>'; }
+    var CHEV = '<svg class="cc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+    var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>';
+    /* Ícones no estilo Lucide: calculadora, percentagem, mealheiro, escudo, recibo, camadas */
+    var ICONS = {
+      custos: ico('<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01M8 10h.01M12 10h.01M16 10h.01"/>'),
+      comissoes: ico('<path d="M19 5L5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>'),
+      juros: ico('<path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/><path d="M2 9v1c0 1.1.9 2 2 2h1"/><path d="M16 11h.01"/>'),
+      seguranca: ico('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>'),
+      impostos: ico('<path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>'),
+      produtos: ico('<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>')
+    };
+    var ART = { activobank:'o', best:'o', big:'o', carregosa:'o', openbank:'o' };
+    function ctaLabel(b){ return b.cta.label==='Abrir conta' ? 'Ir para '+(ART[b.id]||'a')+' '+b.name : b.cta.label; }
   
     function logo(b,size){
       var st=(size?'width:'+size+'px;height:'+size+'px;':'');
@@ -186,7 +199,6 @@
   
     function shell(){
       root.innerHTML =
-        '<p class="cc-lead">Compara custos, juros, segurança e impostos de '+B.length+' corretoras e bancos disponíveis em Portugal. Todos os valores foram verificados nos sites e preçários de cada entidade.</p>'+
         '<div class="cc-meta">'+
           '<a class="cc-author" href="'+LF+'/autores/pedro-braz"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67922c46c9da6bf5d9bfdf20/683ee0f9b80a20ec1767fab5_Pedro-Braz.avif" alt="" onerror="this.parentNode.textContent=\'PB\'"></span><span><span class="cc-al">Autor</span><span class="cc-an">Pedro Braz</span></span></a>'+
           '<a class="cc-author" href="'+LF+'/autores/franklin-silva"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67922c46c9da6bf5d9bfdf20/683ee0ae5bc67fe0ef48466e_franklin-silva.avif" alt="" onerror="this.parentNode.textContent=\'FS\'"></span><span><span class="cc-al">Revisor</span><span class="cc-an">Franklin Silva</span></span></a>'+
@@ -197,6 +209,9 @@
           '<p class="cc-hint">Por ordem alfabética. Se já tiveres o máximo escolhido, a mais antiga sai. A seleção inicial são as três corretoras mais pesquisadas em Portugal.</p>'+
           '<div class="cc-picker" id="cc-picker"></div>'+
           '<div class="cc-divider"></div>'+
+          '<div class="cc-scen-wrap" id="cc-scen-wrap">'+
+          '<button type="button" class="cc-scen-toggle" id="cc-scen-toggle" aria-expanded="false"><span id="cc-scen-sum"></span><span id="cc-scen-act">Alterar</span></button>'+
+          '<div class="cc-scen-body">'+
           '<p class="cc-step">Ajusta o teu cenário</p>'+
           '<p class="cc-hint">Os custos da primeira secção são recalculados com estes valores.</p>'+
           '<div class="cc-scen">'+
@@ -204,6 +219,7 @@
             field('cc-monthly','Investimento mensal',S.monthly,'Para o plano automático em ETFs')+
             field('cc-portfolio','Valor da carteira',S.portfolio,'Para a custódia anual')+
           '</div>'+
+          '</div></div>'+
         '</div>'+
         '<div class="cc-bar"><span class="cc-count" id="cc-count"></span>'+
           '<button type="button" class="cc-switch" id="cc-diff" aria-pressed="false"><i></i>Mostrar só diferenças</button></div>'+
@@ -270,7 +286,7 @@
       var head='<div class="cc-row cc-head"><div class="cc-hcell"></div>'+sel.map(function(b){
         var h='<div class="cc-hcell"><div class="cc-hname">'+logo(b,32)+'<span><b>'+esc(b.name)+'</b><small>'+esc(b.type)+'</small></span></div>';
         h+='<div class="cc-hextra">'+(b.hasPlan?'<div class="cc-pills" role="group" aria-label="Plano de comissões"><button type="button" class="cc-pill'+(S.ibkr==='fixed'?' is-on':'')+'" data-plan="fixed">Fixed</button><button type="button" class="cc-pill'+(S.ibkr==='tiered'?' is-on':'')+'" data-plan="tiered">Tiered</button></div>':'')+'</div>';
-        h+='<a class="cc-btn" href="'+b.cta.href+'" target="_blank" rel="noopener sponsored">'+esc(b.cta.label)+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
+        h+='<a class="cc-btn" href="'+b.cta.href+'" target="_blank" rel="noopener sponsored"><span>'+esc(ctaLabel(b))+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
         if(b.review) h+='<a class="cc-review" href="'+b.review+'" target="_blank" rel="noopener">Ler análise completa</a>';
         return h+'</div>';
       }).join('')+'</div>';
@@ -288,16 +304,22 @@
           return '<div class="cc-row'+(same?' is-same':'')+'"><div class="cc-lab">'+esc(row.label)+(note?'<small>'+esc(note)+'</small>':'')+'</div>'+sel.map(function(b){ return cellHtml(b,row,best); }).join('')+'</div>';
         }).join('');
         var closed=!S.open[sec.id];
-        return '<div class="cc-sec'+(closed?' is-closed':'')+'"><button type="button" class="cc-sec-h" data-sec="'+sec.id+'" aria-expanded="'+(!closed)+'"><span>'+esc(sec.title)+(sec.sub?'<small>'+esc(sec.sub)+'</small>':'')+'</span>'+CHEV+'</button><div class="cc-sec-b">'+rows+'</div></div>';
+        return '<div class="cc-sec'+(closed?' is-closed':'')+'"><button type="button" class="cc-sec-h" data-sec="'+sec.id+'" aria-expanded="'+(!closed)+'"><span class="cc-sec-t">'+(ICONS[sec.id]||'')+'<span>'+esc(sec.title)+(sec.sub?'<small>'+esc(sec.sub)+'</small>':'')+'</span></span>'+CHEV+'</button><div class="cc-sec-b">'+rows+'</div></div>';
       }).join('');
   
       var srcRow='<div class="cc-row" style="border-top:1px solid #e9ecf1"><div class="cc-lab">Fontes<small>Preçários e páginas oficiais</small></div>'+sel.map(function(b){ return '<div class="cc-cell"><a class="cc-src" style="margin-left:0" href="'+b.src+'" target="_blank" rel="noopener">Preçário de '+esc(b.name)+'</a></div>'; }).join('')+'</div>';
   
       t.innerHTML=head+body+srcRow;
+      updateSum();
       renderMini(sel);
       alignHead();
       onScroll();
       renderPairs(sel);
+    }
+  
+    function updateSum(){
+      var el=document.getElementById('cc-scen-sum'); if(!el) return;
+      el.innerHTML='Compra de <b>'+fmtInt(S.amount)+'€</b> · <b>'+fmtInt(S.monthly)+'€</b>/mês · carteira de <b>'+fmtInt(S.portfolio)+'€</b>';
     }
   
     function renderMini(sel){
@@ -328,7 +350,7 @@
     window.addEventListener('resize',onScroll);
   
     function alignHead(){
-      var els=root.querySelectorAll('.cc-head .cc-hname, .cc-head .cc-hextra, .cc-head .cc-risk'), groups={};
+      var els=root.querySelectorAll('.cc-head .cc-hname, .cc-head .cc-hextra, .cc-head .cc-btn, .cc-head .cc-risk'), groups={};
       Array.prototype.forEach.call(els,function(el){ el.style.minHeight=''; var k=el.className; (groups[k]=groups[k]||[]).push(el); });
       Object.keys(groups).forEach(function(k){ var mx=0; groups[k].forEach(function(el){ mx=Math.max(mx,el.offsetHeight); }); groups[k].forEach(function(el){ el.style.minHeight=mx+'px'; }); });
     }
@@ -363,6 +385,7 @@
         if(h){ var sid=h.getAttribute('data-sec'); S.open[sid]=!S.open[sid]; renderTable(); return; }
         var pl=e.target.closest('.cc-pill');
         if(pl){ S.ibkr=pl.getAttribute('data-plan'); renderTable(); return; }
+        if(e.target.closest('#cc-scen-toggle')){ var w=document.getElementById('cc-scen-wrap'), open=!w.classList.contains('is-open'); w.classList.toggle('is-open',open); document.getElementById('cc-scen-toggle').setAttribute('aria-expanded',open); document.getElementById('cc-scen-act').textContent=open?'Fechar':'Alterar'; return; }
         if(e.target.closest('#cc-diff')){ S.diff=!S.diff; document.getElementById('cc-diff').setAttribute('aria-pressed',S.diff); renderTable(); }
       });
       [['cc-amount','amount'],['cc-monthly','monthly'],['cc-portfolio','portfolio']].forEach(function(f){
