@@ -124,11 +124,11 @@
   function start(){
   /* ---------- Linhas ---------- */
     var SECTIONS = [
-      { id:'custos', title:'Quanto pagas', sub:'Calculado com os valores acima', open:true, rows:[
-        {k:'etf', calc:true, label:'Comprar um ETF europeu', note:function(){ return 'Ordem de '+fmtInt(S.amount)+'€, pelo percurso mais barato'; }},
-        {k:'us', calc:true, label:'Comprar ações dos EUA', note:function(){ return 'Ordem de '+fmtInt(S.amount)+'€, com câmbio incluído'; }},
-        {k:'plan', calc:true, label:'Plano mensal em ETFs', note:function(){ return fmtInt(S.monthly)+'€ por mês, custo num ano'; }},
-        {k:'custody', calc:true, label:'Manter a carteira', note:function(){ return 'Carteira de '+fmtInt(S.portfolio)+'€, custo num ano'; }}
+      { id:'custos', title:'Quanto pagas num ano', sub:'Calculado com os valores acima', open:true, rows:[
+        {k:'etf', calc:true, label:'Comprar um ETF europeu à mão', note:function(){ return '12 compras de '+fmtInt(S.monthly)+'€, uma por mês'; }},
+        {k:'plan', calc:true, label:'Plano automático em ETFs', note:function(){ return fmtInt(S.monthly)+'€ por mês, programado na app'; }},
+        {k:'us', calc:true, label:'Comprar ações dos EUA', note:function(){ return '12 compras de '+fmtInt(S.monthly)+'€, com câmbio incluído'; }},
+        {k:'custody', calc:true, label:'Manter a carteira', note:function(){ return 'Carteira de '+fmtInt(S.portfolio)+'€'; }}
       ]},
       { id:'comissoes', title:'Comissões em detalhe', open:true, rows:[
         {k:'etfFee', label:'ETFs europeus'},
@@ -165,7 +165,7 @@
     var NCRIT = SECTIONS.reduce(function(n,s){ return n+s.rows.length; },0);
   
     /* ---------- Estado ---------- */
-    var S = { sel:TOP.slice(0), amount:1000, monthly:100, portfolio:10000, ibkr:'fixed', diff:false, open:{} };
+    var S = { sel:TOP.slice(0), monthly:250, portfolio:10000, flash:null, ibkr:'fixed', diff:false, open:{} };
     SECTIONS.forEach(function(s){ S.open[s.id]=s.open; });
   
     function isMobile(){ return window.matchMedia('(max-width:767px)').matches; }
@@ -216,11 +216,10 @@
           '<button type="button" class="cc-scen-toggle" id="cc-scen-toggle" aria-expanded="false"><span id="cc-scen-sum"></span><span id="cc-scen-act">Alterar</span></button>'+
           '<div class="cc-scen-body">'+
           '<p class="cc-step">Ajusta o teu cenário</p>'+
-          '<p class="cc-hint">Os custos da primeira secção são recalculados com estes valores.</p>'+
+          '<p class="cc-hint">A primeira secção da tabela mostra quanto pagarias num ano em cada corretora com estes dois valores.</p>'+
           '<div class="cc-scen">'+
-            field('cc-amount','Valor de cada compra',S.amount,'Assume que é a única ordem do mês')+
-            field('cc-monthly','Investimento mensal',S.monthly,'Para o plano automático em ETFs')+
-            field('cc-portfolio','Valor da carteira',S.portfolio,'Para a custódia anual')+
+            field('cc-monthly','Quanto investes por mês?',S.monthly,'Entra nas compras de ETFs, no plano automático e nas ações dos EUA')+
+            field('cc-portfolio','Quanto tens investido?',S.portfolio,'Entra no custo de manter a carteira')+
           '</div>'+
           '</div></div>'+
         '</div>'+
@@ -245,10 +244,12 @@
       }).join('');
     }
   
+    /* Compras à mão: uma por mês durante um ano. O texto (s) continua a descrever o custo de cada ordem */
+    function x12(d){ var o={}; for(var key in d){ if(d.hasOwnProperty(key)) o[key]=d[key]; } o.v=d.v*12; return o; }
     function calcFor(b,k){
       var plan=b.hasPlan?S.ibkr:null;
-      if(k==='etf') return b.calc.etf(S.amount,plan);
-      if(k==='us') return b.calc.us(S.amount,plan);
+      if(k==='etf') return x12(b.calc.etf(S.monthly,plan));
+      if(k==='us') return x12(b.calc.us(S.monthly,plan));
       if(k==='plan') return b.calc.plan(S.monthly,plan);
       return b.calc.custody(S.portfolio,plan);
     }
@@ -304,7 +305,8 @@
           }
           var note=typeof row.note==='function'?row.note():row.note;
           var same=sameValues(sel,row);
-          return '<div class="cc-row'+(same?' is-same':'')+'"><div class="cc-lab">'+esc(row.label)+(note?'<small>'+esc(note)+'</small>':'')+'</div>'+sel.map(function(b){ return cellHtml(b,row,best); }).join('')+'</div>';
+          var fl=S.flash&&S.flash.indexOf(row.k)>-1;
+          return '<div class="cc-row'+(same?' is-same':'')+(fl?' is-flash':'')+'" data-k="'+row.k+'"><div class="cc-lab">'+esc(row.label)+(note?'<small>'+esc(note)+'</small>':'')+'</div>'+sel.map(function(b){ return cellHtml(b,row,best); }).join('')+'</div>';
         }).join('');
         var closed=!S.open[sec.id];
         return '<div class="cc-sec'+(closed?' is-closed':'')+'"><button type="button" class="cc-sec-h" data-sec="'+sec.id+'" aria-expanded="'+(!closed)+'"><span class="cc-sec-t">'+(ICONS[sec.id]||'')+'<span>'+esc(sec.title)+(sec.sub?'<small>'+esc(sec.sub)+'</small>':'')+'</span></span>'+CHEV+'</button><div class="cc-sec-b">'+rows+'</div></div>';
@@ -322,7 +324,7 @@
   
     function updateSum(){
       var el=document.getElementById('cc-scen-sum'); if(!el) return;
-      el.innerHTML='Compra de <b>'+fmtInt(S.amount)+'€</b> · <b>'+fmtInt(S.monthly)+'€</b>/mês<span class="cc-sum-2">Carteira de <b>'+fmtInt(S.portfolio)+'€</b></span>';
+      el.innerHTML='Investes <b>'+fmtInt(S.monthly)+'€</b> por mês<span class="cc-sum-2">Carteira de <b>'+fmtInt(S.portfolio)+'€</b></span>';
     }
   
     function renderMini(sel){
@@ -370,7 +372,7 @@
   
     function notesHtml(){
       return '<div class="cc-notes">'+
-        '<p><b>Como calculamos os custos:</b> cada cenário usa o percurso mais barato que a corretora oferece para esse produto, com a comissão, as taxas fixas e o custo de câmbio. Comissões em dólares convertidas a 1$ = 0,85€. Para comissões por unidade assumimos um ETF a 100€ e uma ação americana a 200$. Os bancos portugueses incluem 4% de Imposto do Selo sobre a comissão. Spreads de mercado e custos dos próprios ETFs (TER) não estão incluídos.</p>'+
+        '<p><b>Como calculamos os custos:</b> as compras de ETFs e de ações dos EUA assumem uma compra por mês do valor que indicas, feita à mão, durante um ano. O plano automático investe o mesmo valor todos os meses através da funcionalidade própria da corretora, quando existe. Cada cenário usa o percurso mais barato que a corretora oferece para esse produto, com a comissão, as taxas fixas e o custo de câmbio. Comissões em dólares convertidas a 1$ = 0,85€. Para comissões por unidade assumimos um ETF a 100€ e uma ação americana a 200$. Os bancos portugueses incluem 4% de Imposto do Selo sobre a comissão. Spreads de mercado e custos dos próprios ETFs (TER) não estão incluídos.</p>'+
         '<p><b>Interactive Brokers:</b> usa o seletor Fixed/Tiered no topo da coluna. No Tiered somamos as taxas de compensação e regulatórias da tabela da Interactive Brokers. Na Xetra a taxa de bolsa é isenta nas ordens de retalho encaminhadas pelo SmartRouting. Nas ações dos EUA assumimos uma ordem a mercado, que paga a taxa de bolsa. O glossário tem exemplos de quando cada plano compensa.</p>'+
         '<p><b>Trading 212:</b> link patrocinado. Para obter ações fracionadas gratuitas no valor de até 100€, podes abrir conta na Trading 212 através deste link ou com o código "LF". Aplicam-se termos e condições. Ao investir, o teu capital está em risco e poderás receber menos do que o montante investido. Rendibilidades passadas não garantem resultados futuros. Se ativares os juros, a Trading 212 manterá o teu dinheiro em fundos do mercado monetário elegíveis e em bancos; caso contrário, o teu dinheiro será mantido apenas em bancos. Os juros aplicam-se ao dinheiro numa conta de investimento. As taxas apresentadas podem já não estar em vigor: consulta a página de <a href="https://www.trading212.com/terms/invest" target="_blank" rel="noopener">Termos e Taxas</a>. Termos da taxa promocional: <a href="https://www.trading212.com/legal-documentation/t212-de/Promotional-Terms_PT.pdf" target="_blank" rel="noopener">documento da Trading 212</a>.</p>'+
         '<p><b>Freedom24:</b> a comissão de 0% no plano de investimento em ETFs aplica-se exclusivamente à função de investimento recorrente. As restantes operações seguem a tabela de comissões da Freedom24.</p>'+
@@ -391,9 +393,16 @@
         if(e.target.closest('#cc-scen-toggle')){ var w=document.getElementById('cc-scen-wrap'), open=!w.classList.contains('is-open'); w.classList.toggle('is-open',open); document.getElementById('cc-scen-toggle').setAttribute('aria-expanded',open); document.getElementById('cc-scen-act').textContent=open?'Fechar':'Alterar'; return; }
         if(e.target.closest('#cc-diff')){ S.diff=!S.diff; document.getElementById('cc-diff').setAttribute('aria-pressed',S.diff); renderTable(); }
       });
-      [['cc-amount','amount'],['cc-monthly','monthly'],['cc-portfolio','portfolio']].forEach(function(f){
+      /* Ao mexer num campo, as linhas da tabela que ele altera ficam destacadas por instantes */
+      var FLASH={ monthly:['etf','plan','us'], portfolio:['custody'] }, flashT=null;
+      function flash(key){
+        S.flash=FLASH[key]; clearTimeout(flashT);
+        flashT=setTimeout(function(){ S.flash=null; Array.prototype.forEach.call(root.querySelectorAll('.cc-row.is-flash'),function(r){ r.classList.remove('is-flash'); }); },1600);
+      }
+      [['cc-monthly','monthly'],['cc-portfolio','portfolio']].forEach(function(f){
         var el=document.getElementById(f[0]);
-        el.addEventListener('input',function(){ var n=parseNum(el.value); if(n>0){ S[f[1]]=n; renderTable(); } });
+        el.addEventListener('focus',function(){ flash(f[1]); renderTable(); });
+        el.addEventListener('input',function(){ var n=parseNum(el.value); if(n>0){ S[f[1]]=n; flash(f[1]); renderTable(); } });
         el.addEventListener('blur',function(){ el.value=fmtInt(S[f[1]]); });
       });
       var mq=window.matchMedia('(max-width:767px)');
