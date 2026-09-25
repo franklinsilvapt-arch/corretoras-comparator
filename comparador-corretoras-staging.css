@@ -29,7 +29,7 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
 #lf-cc .cc-logo{width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:0;color:#fff;flex-shrink:0}
 #lf-cc .cc-logo.has-img{background:#fff;border:1px solid var(--g200);overflow:hidden}#lf-cc .cc-logo img{width:100%;height:100%;object-fit:contain;display:block}
 #lf-cc .cc-divider{height:1px;background:var(--g200);margin:22px 0 18px}
-#lf-cc .cc-scen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#lf-cc .cc-scen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 #lf-cc .cc-label{display:block;font-size:14px;font-weight:500;line-height:20px;color:var(--g700);margin-bottom:6px}
 #lf-cc .cc-iw{position:relative}
 #lf-cc .cc-input{width:100%;padding:10px 32px 10px 12px;font:inherit;font-size:16px;line-height:24px;color:var(--g900);background:#fff;border:1px solid var(--g300);border-radius:12px;outline:none}
@@ -135,8 +135,3 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
  #lf-cc .cc-v.is-big{font-size:16px}
 }
 @media (prefers-reduced-motion:reduce){#lf-cc *{transition:none!important}}
-
-/* Destaque das linhas alteradas por um campo do cenário */
-@keyframes ccFlash{0%,35%{background-color:var(--brand50)}100%{background-color:transparent}}
-#lf-cc .cc-row.is-flash>.cc-lab,#lf-cc .cc-row.is-flash>.cc-cell{animation:ccFlash 1.6s ease-out}
-@media (prefers-reduced-motion:reduce){#lf-cc .cc-row.is-flash>.cc-lab,#lf-cc .cc-row.is-flash>.cc-cell{animation:none;background-color:var(--brand50)}}
