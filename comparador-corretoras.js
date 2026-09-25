@@ -11,7 +11,8 @@
   /* IBKR Tiered na Xetra: comissão 0,05% (mín. 1,25€, máx. 29€) + compensação 0,02€ + 0,0008% (máx. 4,02€) + regulatória 0,01€.
      Taxa de bolsa isenta nas ordens de retalho encaminhadas pelo SmartRouting (tabela Xetra IBIS da IBKR Ireland). */
   function ibXetra(a){ return Math.min(29,Math.max(1.25,a*0.0005))+Math.min(4.02,0.02+a*0.000008)+0.01; }
-  var CALC = {
+  var TOP = ['xtb','trading212','traderepublic'];
+    var CALC = {
     'activobank': {
       etf: function(a){ return {v:0, s:'1.ª ordem do mês grátis (seguintes: 5€)'}; },
       us: function(a){ return {v:0, s:'1.ª ordem do mês grátis (seguintes: 5$ + selo). Câmbio à taxa interna do banco, não incluído', extra:'+ câmbio'}; },
@@ -112,6 +113,8 @@
         VERIFIED = d.verificado; USD_EUR = d.pressupostos.USD_EUR; ETF_PRICE = d.pressupostos.ETF_PRICE; US_PRICE_USD = d.pressupostos.US_PRICE_USD;
         PAIRS = d.pares;
         B = d.corretoras.filter(function(b){ return CALC[b.id]; }).map(function(b){ b.calc = CALC[b.id]; return b; });
+        /* As pré-selecionadas (mais pesquisadas) aparecem primeiro no seletor, as restantes mantêm a ordem alfabética */
+        B = TOP.map(function(id){ for(var i=0;i<B.length;i++){ if(B[i].id===id) return B[i]; } return null; }).filter(Boolean).concat(B.filter(function(b){ return TOP.indexOf(b.id)<0; }));
         start();
       })
       .catch(function(e){ root0.innerHTML = '<p style="text-align:center;color:#697386">Não foi possível carregar o comparador. Tenta recarregar a página.</p>'; console.error(e); });
@@ -162,7 +165,7 @@
     var NCRIT = SECTIONS.reduce(function(n,s){ return n+s.rows.length; },0);
   
     /* ---------- Estado ---------- */
-    var S = { sel:['xtb','trading212','traderepublic'], amount:1000, monthly:100, portfolio:10000, ibkr:'fixed', diff:false, open:{} };
+    var S = { sel:TOP.slice(0), amount:1000, monthly:100, portfolio:10000, ibkr:'fixed', diff:false, open:{} };
     SECTIONS.forEach(function(s){ S.open[s.id]=s.open; });
   
     function isMobile(){ return window.matchMedia('(max-width:767px)').matches; }
@@ -185,7 +188,7 @@
       custos: ico('<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01M8 10h.01M12 10h.01M16 10h.01"/>'),
       comissoes: ico('<path d="M19 5L5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>'),
       juros: ico('<path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/><path d="M2 9v1c0 1.1.9 2 2 2h1"/><path d="M16 11h.01"/>'),
-      seguranca: ico('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>'),
+      seguranca: ico('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.240-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>'),
       impostos: ico('<path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>'),
       produtos: ico('<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>')
     };
@@ -206,7 +209,7 @@
         '</div>'+
         '<div class="cc-panel">'+
           '<p class="cc-step">Escolhe até <span id="cc-max">3</span> para comparar</p>'+
-          '<p class="cc-hint">Por ordem alfabética. Se já tiveres o máximo escolhido, a mais antiga sai. A seleção inicial são as três corretoras mais pesquisadas em Portugal.</p>'+
+          '<p class="cc-hint">As mais pesquisadas em Portugal aparecem primeiro, as restantes por ordem alfabética. Se já tiveres o máximo escolhido, a mais antiga sai.</p>'+
           '<div class="cc-picker" id="cc-picker"></div>'+
           '<div class="cc-divider"></div>'+
           '<div class="cc-scen-wrap" id="cc-scen-wrap">'+
