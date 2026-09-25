@@ -220,7 +220,7 @@
           '<div class="cc-scen">'+
             field('cc-amount','Valor de cada compra',S.amount,'Assume que é a única ordem do mês')+
             field('cc-monthly','Investimento mensal',S.monthly,'Para o plano automático em ETFs')+
-            field('cc-portfolio','Valor da carteira',S.portfolio,'Para a custódia anual')+
+            field('cc-portfolio','Valor da tua carteira',S.portfolio,'Para a custódia anual')+
           '</div>'+
           '</div></div>'+
         '</div>'+
