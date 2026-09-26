@@ -31,6 +31,12 @@
       plan: function(m){ return {v:11.95*1.04*12, s:'12 ordens por ano'}; },
       custody: function(p){ return {v:29.52, s:'6€ + IVA por trimestre no MyBolsa, site e app'}; }
     },
+    'invest': {
+      etf: function(a){ var c=Math.max(9.5,a*0.001)*1.04; return {v:c, s:'Euronext Amesterdão: 0,10% (mín. 9,50€) + 4% de Imposto do Selo'}; },
+      us: function(a){ var sh=Math.ceil(a/USD_EUR/US_PRICE_USD); var c=Math.max(12.5,0.02*sh)*USD_EUR*1.04+a*0.002; return {v:c, s:'0,02$/ação (mín. 12,50$) + selo + câmbio de 0,20%'}; },
+      plan: function(m){ var c=Math.max(9.5,m*0.001)*1.04*12; return {v:c, s:'12 ordens por ano (sem planos automáticos)'}; },
+      custody: function(p){ return {v:0, s:'Custódia isenta'}; }
+    },
     'carregosa': {
       etf: function(a){ var c=(a<20000?7:Math.max(10,a*0.0008))*1.04; return {v:c, s:'GoBulling Investor, campanha até 31/12/2026: 7€ + 4% de selo'}; },
       us: function(a){ var usd=a/USD_EUR; var c=(usd<20000?7:Math.max(12.5,usd/US_PRICE_USD*0.05)*USD_EUR)*1.04+a*0.005; return {v:c, s:'Campanha até 31/12/2026: 7€ por ordem + selo + câmbio de 0,5%'}; },
@@ -192,12 +198,22 @@
       impostos: ico('<path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>'),
       produtos: ico('<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>')
     };
-    var ART = { activobank:'o', best:'o', big:'o', carregosa:'o', openbank:'o' };
+    var ART = { activobank:'o', best:'o', big:'o', carregosa:'o', invest:'o', openbank:'o' };
+    /* Alguns links de afiliado passam por domínios que os bloqueadores de anúncios (lista EasyList) bloqueiam,
+       como o ojrq.net da Impact. Se o domínio estiver bloqueado neste browser, o botão aponta para o site da corretora. */
+    var BLOCKED=false, probed=false;
+    function ctaHref(b){ return (BLOCKED && b.cta.fallback) ? b.cta.fallback : b.cta.href; }
+    function probeBlock(){
+      if(probed || typeof fetch!=='function') return; probed=true;
+      fetch('https://www.ojrq.net/', {mode:'no-cors', credentials:'omit', cache:'no-store'})
+        .then(function(){}, function(){ BLOCKED=true; renderTable(); });
+    }
     function ctaLabel(b){ return b.cta.label==='Abrir conta' ? 'Ir para '+(ART[b.id]||'a')+' '+b.name : b.cta.label; }
   
     function logo(b,size){
       var st=(size?'width:'+size+'px;height:'+size+'px;':'');
-      if(LOGOS[b.id]) return '<span class="cc-logo has-img" style="'+st+'" aria-hidden="true"><img src="'+LOGOS[b.id]+'" alt=""></span>';
+      var src=LOGOS[b.id]||b.logo;
+      if(src) return '<span class="cc-logo has-img" style="'+st+'" aria-hidden="true"><img src="'+src+'" alt=""></span>';
       return '<span class="cc-logo" style="background:'+b.color+';'+st+'" aria-hidden="true">'+esc(b.short)+'</span>'; }
   
     function shell(){
@@ -289,7 +305,7 @@
       var head='<div class="cc-row cc-head"><div class="cc-hcell"></div>'+sel.map(function(b){
         var h='<div class="cc-hcell"><div class="cc-hname">'+logo(b,32)+'<span><b>'+esc(b.name)+'</b><small>'+esc(b.type)+'</small></span></div>';
         h+='<div class="cc-hextra">'+(b.hasPlan?'<div class="cc-pills" role="group" aria-label="Plano de comissões"><button type="button" class="cc-pill'+(S.ibkr==='fixed'?' is-on':'')+'" data-plan="fixed">Fixed</button><button type="button" class="cc-pill'+(S.ibkr==='tiered'?' is-on':'')+'" data-plan="tiered">Tiered</button></div>':'')+'</div>';
-        h+='<a class="cc-btn" href="'+b.cta.href+'" target="_blank" rel="noopener sponsored"><span>'+esc(ctaLabel(b))+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
+        h+='<a class="cc-btn" href="'+ctaHref(b)+'" target="_blank" rel="noopener sponsored"><span>'+esc(ctaLabel(b))+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
         if(b.review) h+='<a class="cc-review" href="'+b.review+'" target="_blank" rel="noopener">Ler análise completa</a>';
         return h+'</div>';
       }).join('')+'</div>';
@@ -313,6 +329,7 @@
       var srcRow='<div class="cc-row" style="border-top:1px solid #e9ecf1"><div class="cc-lab">Fontes<small>Preçários e páginas oficiais</small></div>'+sel.map(function(b){ return '<div class="cc-cell"><a class="cc-src" style="margin-left:0" href="'+b.src+'" target="_blank" rel="noopener">Preçário de '+esc(b.name)+'</a></div>'; }).join('')+'</div>';
   
       t.innerHTML=head+body+srcRow;
+      if(sel.some(function(b){ return b.cta.fallback; })) probeBlock();
       updateSum();
       renderMini(sel);
       alignHead();
