@@ -179,8 +179,6 @@
         {k:'plans', label:'Planos de investimento automático'},
         {k:'bonds', label:'Obrigações'},
         {k:'options', label:'Opções'},
-        {k:'card', label:'Cartão de débito'},
-        {k:'crypto', label:'Criptomoedas', note:'Compra de moedas reais'},
         {k:'iban', label:'IBAN português'}
       ]}
     ];
