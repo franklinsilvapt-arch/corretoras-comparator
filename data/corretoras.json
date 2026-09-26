@@ -389,6 +389,98 @@
    }
   },
   {
+   "id": "invest",
+   "name": "Banco Invest",
+   "short": "BI",
+   "color": "#1E9BD7",
+   "type": "Banco português",
+   "logo": "data:image/png;base64,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",
+   "cta": {
+    "label": "Abrir conta",
+    "href": "https://www.bancoinvest.pt"
+   },
+   "risk": "Investir envolve risco de perda de capital.",
+   "src": "https://bancoinvest.pt/docs/default-source/precario/precario-de-valores-mobiliarios.pdf",
+   "t": {
+    "etfFee": {
+     "v": "0,10% (mín. 9,50€)",
+     "s": "Euronext Amesterdão, Paris e Bruxelas. Frankfurt: 0,15% (mín. 12,50€). Acresce 4% de selo"
+    },
+    "pt": {
+     "v": "6,75€",
+     "s": "Ordens até 50.000€ (acima: 0,05%). Acresce 4% de selo"
+    },
+    "usFee": {
+     "v": "0,02$ por ação (mín. 12,50$)",
+     "s": "Acresce 4% de selo"
+    },
+    "fx": {
+     "v": "0,20%",
+     "s": "Margem sobre o câmbio de referência da Bloomberg"
+    },
+    "custodyTxt": {
+     "v": "0€",
+     "s": "Dividendos: 2% (mín. 2,50€) + IVA"
+    },
+    "inact": {
+     "v": "7,50€ por trimestre",
+     "s": "Só sem movimentos há mais de 1 ano e património abaixo de 5.000€. Acresce selo"
+    },
+    "transfer": {
+     "v": "0,20% (mín. 20€, máx. 100€)",
+     "s": "Por posição. Acresce IVA e custos da Interbolsa. Não disponível para títulos dos EUA e do Reino Unido"
+    },
+    "interest": {
+     "v": "0%",
+     "s": "Não remunera o saldo da conta de investimento"
+    },
+    "entity": {
+     "v": "Banco Invest, S.A."
+    },
+    "regulator": {
+     "v": "Banco de Portugal e CMVM"
+    },
+    "presence": {
+     "v": "Banco português"
+    },
+    "protInv": {
+     "v": "Até 25.000€",
+     "s": "Sistema de Indemnização aos Investidores"
+    },
+    "protCash": {
+     "v": "Até 100.000€",
+     "s": "Fundo de Garantia de Depósitos"
+    },
+    "tax": {
+     "v": "Sim",
+     "s": "Retém IRS na fonte sobre dividendos e juros de títulos"
+    },
+    "annex": {
+     "v": "Anexo G",
+     "s": "Mais-valias. Dividendos com retenção não precisam de ser declarados"
+    },
+    "ptStocks": {
+     "v": "Sim"
+    },
+    "fractions": {
+     "v": "Não"
+    },
+    "plans": {
+     "v": "Não"
+    },
+    "bonds": {
+     "v": "Sim"
+    },
+    "options": {
+     "v": "Sim",
+     "s": "Na plataforma Invest BTrader Plus"
+    },
+    "iban": {
+     "v": "Sim"
+    }
+   }
+  },
+  {
    "id": "degiro",
    "name": "DEGIRO",
    "short": "DG",
@@ -938,7 +1030,8 @@
    "type": "Banco digital",
    "cta": {
     "label": "Abrir conta",
-    "href": "https://www.literaciafinanceira.pt/visita/revolut"
+    "href": "https://www.literaciafinanceira.pt/visita/revolut",
+    "fallback": "https://www.revolut.com/pt-PT/"
    },
    "risk": "Investir envolve risco de perda de capital.",
    "review": "https://www.literaciafinanceira.pt/artigos/analise-completa-revolut-portugal",
@@ -1028,7 +1121,8 @@
    "type": "Banco (sucursal em Portugal)",
    "cta": {
     "label": "Abrir conta",
-    "href": "https://www.literaciafinanceira.pt/visita/trade-republic"
+    "href": "https://www.literaciafinanceira.pt/visita/trade-republic",
+    "fallback": "https://traderepublic.com/pt-pt"
    },
    "risk": "Investir envolve risco de perda de capital.",
    "review": "https://www.literaciafinanceira.pt/artigos/analise-trade-republic-portugal",
@@ -1080,7 +1174,7 @@
     },
     "protCash": {
      "v": "Até 100.000€",
-     "s": "Sistema alemão de garantia de depósitos"
+     "s": "Só o saldo nos bancos parceiros. Acima do teu limite, o dinheiro vai para fundos monetários, que não têm esta garantia"
     },
     "tax": {
      "v": "Sim",
@@ -1174,7 +1268,7 @@
     },
     "protCash": {
      "v": "Até 100.000€",
-     "s": "Contas novas, por banco parceiro. Contas antigas: até 20.000€"
+     "s": "Contas novas, por banco parceiro. Com juros ativos, parte pode estar em fundos monetários. Contas antigas: até 20.000€"
     },
     "tax": {
      "v": "Não",
