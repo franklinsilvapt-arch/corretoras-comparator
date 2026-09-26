@@ -90,13 +90,6 @@
       "v": "Sim",
       "s": "Na plataforma Invest BTrader Plus"
      },
-     "card": {
-      "v": "Sim",
-      "s": "Cartão Multibanco, só em Portugal. 5€ por ano"
-     },
-     "crypto": {
-      "v": "Só CFDs"
-     },
      "iban": {
       "v": "Sim"
      }
@@ -113,139 +106,16 @@
   }
  },
  "t": {
-  "activobank": {
-   "card": {
-    "v": "Sim",
-    "s": "Gratuito"
-   },
-   "crypto": {
-    "v": "Não"
-   }
-  },
-  "best": {
-   "card": {
-    "v": "Sim",
-    "s": "Grátis no 1.º ano, depois 21€ por ano + selo"
-   },
-   "crypto": {
-    "v": "Só ETN e ETC",
-    "s": "Produtos cotados que acompanham criptomoedas"
-   }
-  },
-  "big": {
-   "card": {
-    "v": "Sim"
-   },
-   "crypto": {
-    "v": "Só CFDs"
-   }
-  },
-  "carregosa": {
-   "card": {
-    "v": "A confirmar",
-    "c": true
-   },
-   "crypto": {
-    "v": "Só CFDs"
-   }
-  },
-  "degiro": {
-   "card": {
-    "v": "Não"
-   },
-   "crypto": {
-    "v": "Sim",
-    "s": "Guardadas na Tangany, custodiante alemão"
-   }
-  },
-  "etoro": {
-   "card": {
-    "v": "Só no Club",
-    "s": "Cartão eToro Money para os níveis Diamond, Platinum e Platinum+"
-   },
-   "crypto": {
-    "v": "Sim"
-   }
-  },
-  "freedom24": {
-   "card": {
-    "v": "Não"
-   },
-   "crypto": {
-    "v": "Só ETN e ETC",
-    "s": "Produtos cotados que acompanham criptomoedas"
-   }
-  },
-  "ibkr": {
-   "card": {
-    "v": "Não"
-   },
-   "crypto": {
-    "v": "Sim",
-    "s": "Através da zerohash, autorizada na Holanda"
-   }
-  },
-  "lightyear": {
-   "card": {
-    "v": "Não"
-   },
-   "crypto": {
-    "v": "Sim"
-   }
-  },
-  "openbank": {
-   "card": {
-    "v": "Sim",
-    "s": "Gratuito"
-   },
-   "crypto": {
-    "v": "Não",
-    "s": "Só disponível em Espanha"
-   }
-  },
-  "revolut": {
-   "card": {
-    "v": "Sim",
-    "s": "Gratuito no plano Standard"
-   },
-   "crypto": {
-    "v": "Sim"
-   }
-  },
   "traderepublic": {
-   "card": {
-    "v": "Sim",
-    "s": "Gratuito. 1% das compras com cartão é investido (Saveback)"
-   },
-   "crypto": {
-    "v": "Sim"
-   },
    "protCash": {
     "v": "Até 100.000€",
     "s": "Só o saldo nos bancos parceiros. Acima do teu limite, o dinheiro vai para fundos monetários, que não têm esta garantia"
    }
   },
   "trading212": {
-   "card": {
-    "v": "Só contas antigas",
-    "s": "Contas novas em Portugal (Trading 212 EU GmbH) ainda sem cartão"
-   },
-   "crypto": {
-    "v": "A confirmar",
-    "c": true
-   },
    "protCash": {
     "v": "Até 100.000€",
     "s": "Contas novas, por banco parceiro. Com juros ativos, parte pode estar em fundos monetários. Contas antigas: até 20.000€"
-   }
-  },
-  "xtb": {
-   "card": {
-    "v": "Sim",
-    "s": "Gratuito. 1% de cashback se fizeres 5 transações em 30 dias na conta de investimento"
-   },
-   "crypto": {
-    "v": "Só CFDs"
    }
   }
  }
