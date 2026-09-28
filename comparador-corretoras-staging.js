@@ -210,7 +210,7 @@
       juros: ico('<path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/><path d="M2 9v1c0 1.1.9 2 2 2h1"/><path d="M16 11h.01"/>'),
       seguranca: ico('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.240-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>'),
       impostos: ico('<path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>'),
-      produtos: ico('<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>')
+      produtos: ico('<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.660 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>')
     };
     var ART = { activobank:'o', best:'o', big:'o', carregosa:'o', invest:'o', openbank:'o' };
     /* Alguns links de afiliado passam por domínios que os bloqueadores de anúncios (lista EasyList) bloqueiam,
@@ -259,7 +259,7 @@
         '<div class="cc-table" id="cc-table"></div>'+
         '<div class="cc-pairs" id="cc-pairs"></div>'+
         notesHtml()+
-        '<div class="cc-mini" id="cc-mini" aria-hidden="true"></div>';
+        '<div class="cc-mini" id="cc-mini"></div>';
     }
   
     function field(id,label,val,note){
@@ -360,7 +360,13 @@
       var m=document.getElementById('cc-mini'); if(!m) return;
       /* Em desktop a barra segue as colunas da tabela (coluna de etiquetas vazia à esquerda) */
       var desk=!isMobile();
-      m.innerHTML='<div class="cc-mini-in" style="grid-template-columns:'+(desk?'var(--cc-cols)':'repeat('+sel.length+',minmax(0,1fr))')+'">'+(desk?'<div class="cc-mini-lab"></div>':'')+sel.map(function(b){ return '<div class="cc-mini-c">'+logo(b,24)+'<b>'+esc(b.name)+'</b></div>'; }).join('')+'</div>';
+      /* Com 2 ou 3 corretoras em comparação, cada coluna leva também o botão e o aviso de risco */
+      var cta=sel.length>1;
+      m.classList.toggle('has-cta',cta);
+      m.innerHTML='<div class="cc-mini-in" style="grid-template-columns:'+(desk?'var(--cc-cols)':'repeat('+sel.length+',minmax(0,1fr))')+'">'+(desk?'<div class="cc-mini-lab"></div>':'')+sel.map(function(b){
+        var c='<div class="cc-mini-c"><div class="cc-mini-n">'+logo(b,24)+'<b>'+esc(b.name)+'</b></div>';
+        if(cta) c+='<a class="cc-btn" href="'+ctaHref(b)+'" target="_blank" rel="noopener sponsored"><span>'+esc(ctaLabel(b))+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
+        return c+'</div>'; }).join('')+'</div>';
     }
   
     function navBottom(){
@@ -378,7 +384,7 @@
         var t=document.getElementById('cc-table'), h=root.querySelector('.cc-head'), m=document.getElementById('cc-mini');
         if(!t||!h||!m) return;
         var tr=t.getBoundingClientRect(), hr=h.getBoundingClientRect();
-        var show=hr.bottom<top && tr.bottom>top+80;
+        var show=hr.bottom<top && tr.bottom>top+(m.classList.contains('has-cta')?160:80);
         if(isMobile()){ m.style.left=''; m.style.width=''; m.style.right=''; }
         else { m.style.left=Math.round(tr.left)+'px'; m.style.width=Math.round(tr.width)+'px'; m.style.right='auto'; }
         m.classList.toggle('is-on',show);
