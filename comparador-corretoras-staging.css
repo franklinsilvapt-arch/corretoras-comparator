@@ -99,7 +99,8 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
 #lf-cc .cc-mini-c+.cc-mini-c{padding-left:12px;border-left:1px solid var(--g200)}
 #lf-cc .cc-mini-n{display:flex;align-items:center;gap:8px;min-width:0}
 #lf-cc .cc-mini-c b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#lf-cc .cc-mini-c .cc-btn{padding:7px 10px}
+#lf-cc .cc-mini-c .cc-btn{padding:6px 10px;background:#fff;color:var(--g700)!important;border:1px solid var(--g300)}
+#lf-cc .cc-mini-c .cc-btn:hover{background:#fff;border-color:var(--g700)}
 #lf-cc .cc-mini-c .cc-risk{margin-top:-4px}
 #lf-cc .cc-mini-c .cc-logo{border-radius:6px}
 #lf-cc .cc-mini.is-on{display:block}
