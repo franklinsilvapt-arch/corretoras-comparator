@@ -151,7 +151,7 @@
     ];
 
     /* ---------- State ---------- */
-    var S = { sel:TOP.slice(0), amount:1000, monthly:100, portfolio:10000, ibkr:'fixed', diff:false, open:{} };
+    var S = { sel:TOP.slice(0), amount:1000, monthly:100, portfolio:10000, ibkr:'fixed', diff:false, more:false, open:{} };
     SECTIONS.forEach(function(s){ S.open[s.id]=s.open; });
 
     function isMobile(){ return window.matchMedia('(max-width:767px)').matches; }
@@ -174,7 +174,7 @@
       custos: ico('<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01M8 10h.01M12 10h.01M16 10h.01"/>'),
       comissoes: ico('<path d="M19 5L5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>'),
       juros: ico('<path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/><path d="M2 9v1c0 1.1.9 2 2 2h1"/><path d="M16 11h.01"/>'),
-      seguranca: ico('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>'),
+      seguranca: ico('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.720a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>'),
       produtos: ico('<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>')
     };
     /* Some affiliate links go through domains that ad blockers (EasyList) block, like Impact's sjv.io and ngih.net.
@@ -208,8 +208,9 @@
         '</div>'+
         '<div class="cc-panel">'+
           '<p class="cc-step">Choose up to <span id="cc-max">3</span> to compare</p>'+
-          '<p class="cc-hint">The most searched brokers in Europe come first, the rest in alphabetical order. If you already have the maximum selected, the oldest one is replaced.</p>'+
+          '<p class="cc-hint">Most searched first, then A to Z. When you reach the maximum, a new pick replaces the oldest one.</p>'+
           '<div class="cc-picker" id="cc-picker"></div>'+
+          '<button type="button" class="cc-more" id="cc-more" aria-expanded="false"></button>'+
           '<div class="cc-divider"></div>'+
           '<div class="cc-scen-wrap" id="cc-scen-wrap">'+
           '<button type="button" class="cc-scen-toggle" id="cc-scen-toggle" aria-expanded="false"><span id="cc-scen-sum"></span><span id="cc-scen-act">Change</span></button>'+
@@ -235,12 +236,19 @@
       return '<div><label class="cc-label" for="'+id+'">'+label+'</label><div class="cc-iw"><span class="cc-unit">€</span><input class="cc-input" id="'+id+'" inputmode="decimal" value="'+fmtInt(val)+'"></div><div class="cc-inote">'+note+'</div></div>';
     }
 
+    /* On mobile only the first 6 brokers (plus any selected one) show until the reader opens the full list */
+    var SHORT=6;
     function renderPicker(){
       var max=maxSel(); document.getElementById('cc-max').textContent=max;
-      document.getElementById('cc-picker').innerHTML = B.map(function(b){
+      var pk=document.getElementById('cc-picker');
+      pk.classList.toggle('is-open',S.more);
+      pk.innerHTML = B.map(function(b,i){
         var on=S.sel.indexOf(b.id)>-1;
-        return '<button type="button" class="cc-pick'+(on?' is-on':'')+'" data-id="'+b.id+'" aria-pressed="'+on+'"'+'>'+logo(b)+'<span>'+esc(b.name)+'</span><span class="cc-pick-t">'+esc(b.type)+'</span></button>';
+        return '<button type="button" class="cc-pick'+(on?' is-on':'')+(i>=SHORT&&!on?' is-extra':'')+'" data-id="'+b.id+'" aria-pressed="'+on+'"'+'>'+logo(b)+'<span>'+esc(b.name)+'</span><span class="cc-pick-t">'+esc(b.type)+'</span></button>';
       }).join('');
+      var mb=document.getElementById('cc-more');
+      mb.textContent=S.more?'Show fewer brokers':'Show all '+B.length+' brokers';
+      mb.setAttribute('aria-expanded',S.more);
     }
 
     function calcFor(b,k){
@@ -251,6 +259,8 @@
       return b.calc.custody(S.portfolio,plan);
     }
 
+    function planData(b,d){ return (d && b.hasPlan && d.plans && d.plans[S.ibkr]) ? d.plans[S.ibkr] : d; }
+
     function cellHtml(b,row,best){
       var d, html;
       if(row.calc){
@@ -260,7 +270,7 @@
         if(best!==null && !d.extra && Math.abs(d.v-best)<0.005) html+='<span class="cc-tag is-best">Cheapest</span>';
         if(d.c) html+='<span class="cc-tag is-conf">'+CONF+'</span>';
       } else {
-        d=b.t[row.k]||{v:CONF,c:true};
+        d=planData(b,b.t[row.k])||{v:CONF,c:true};
         var isConf=d.v===CONF;
         html=isConf?'':'<span class="cc-v">'+esc(d.v)+'</span>';
         if(d.s) html+='<span class="cc-s">'+esc(d.s)+'</span>';
@@ -271,7 +281,7 @@
 
     function sameValues(sel,row){
       if(sel.length<2) return false;
-      var vals=sel.map(function(b){ if(row.calc){ return fmtEur(calcFor(b,row.k).v); } var d=b.t[row.k]||{}; return (d.v||'')+'|'+(d.s||''); });
+      var vals=sel.map(function(b){ if(row.calc){ return fmtEur(calcFor(b,row.k).v); } var d=planData(b,b.t[row.k])||{}; return (d.v||'')+'|'+(d.s||''); });
       return vals.every(function(v){ return v===vals[0]; });
     }
 
@@ -397,6 +407,7 @@
         if(p){ var id=p.getAttribute('data-id'), i=S.sel.indexOf(id);
           if(i>-1) S.sel.splice(i,1); else { if(S.sel.length>=maxSel()) S.sel.shift(); S.sel.push(id); }
           renderPicker(); renderTable(); return; }
+        if(e.target.closest('#cc-more')){ S.more=!S.more; renderPicker(); return; }
         var h=e.target.closest('.cc-sec-h');
         if(h){ var sid=h.getAttribute('data-sec'); S.open[sid]=!S.open[sid]; renderTable(); return; }
         var pl=e.target.closest('.cc-pill');
