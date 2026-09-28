@@ -99,6 +99,13 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
 #lf-cc .cc-mini-c+.cc-mini-c{padding-left:12px;border-left:1px solid var(--g200)}
 #lf-cc .cc-mini-c b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #lf-cc .cc-mini-c .cc-logo{border-radius:6px}
+#lf-cc .cc-mini.is-on{display:block}
+@media (min-width:768px){
+ #lf-cc .cc-head{position:static}
+ #lf-cc .cc-mini{border:1px solid var(--g200);border-top:0;border-radius:0 0 12px 12px;overflow:hidden}
+ #lf-cc .cc-mini-in{padding:0}
+ #lf-cc .cc-mini-c,#lf-cc .cc-mini-c+.cc-mini-c{padding:10px 14px;border-left:1px solid var(--g200);font-size:14px;line-height:20px}
+}
 #lf-cc .cc-scen-toggle{display:none}
 #lf-cc .cc-empty{padding:40px 16px;text-align:center;color:var(--g500);font-size:14px}
 
