@@ -245,7 +245,7 @@
         '<div class="cc-table" id="cc-table"></div>'+
         '<div class="cc-pairs" id="cc-pairs"></div>'+
         notesHtml()+
-        '<div class="cc-mini" id="cc-mini" aria-hidden="true"></div>';
+        '<div class="cc-mini" id="cc-mini"></div>';
     }
   
     function field(id,label,val,note){
@@ -344,7 +344,15 @@
   
     function renderMini(sel){
       var m=document.getElementById('cc-mini'); if(!m) return;
-      m.innerHTML='<div class="cc-mini-in" style="grid-template-columns:repeat('+sel.length+',minmax(0,1fr))">'+sel.map(function(b){ return '<div class="cc-mini-c">'+logo(b,24)+'<b>'+esc(b.name)+'</b></div>'; }).join('')+'</div>';
+      /* Em desktop a barra segue as colunas da tabela (coluna de etiquetas vazia à esquerda) */
+      var desk=!isMobile();
+      /* Com 2 ou 3 corretoras em comparação, cada coluna leva também o botão e o aviso de risco */
+      var cta=sel.length>1;
+      m.classList.toggle('has-cta',cta);
+      m.innerHTML='<div class="cc-mini-in" style="grid-template-columns:'+(desk?'var(--cc-cols)':'repeat('+sel.length+',minmax(0,1fr))')+'">'+(desk?'<div class="cc-mini-lab"></div>':'')+sel.map(function(b){
+        var c='<div class="cc-mini-c"><div class="cc-mini-n">'+logo(b,24)+'<b>'+esc(b.name)+'</b></div>';
+        if(cta) c+='<a class="cc-btn" href="'+ctaHref(b)+'" target="_blank" rel="noopener sponsored"><span>'+esc(ctaLabel(b))+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
+        return c+'</div>'; }).join('')+'</div>';
     }
   
     function navBottom(){
@@ -362,7 +370,9 @@
         var t=document.getElementById('cc-table'), h=root.querySelector('.cc-head'), m=document.getElementById('cc-mini');
         if(!t||!h||!m) return;
         var tr=t.getBoundingClientRect(), hr=h.getBoundingClientRect();
-        var show=isMobile() && hr.bottom<top && tr.bottom>top+80;
+        var show=hr.bottom<top && tr.bottom>top+(m.classList.contains('has-cta')?160:80);
+        if(isMobile()){ m.style.left=''; m.style.width=''; m.style.right=''; }
+        else { m.style.left=Math.round(tr.left)+'px'; m.style.width=Math.round(tr.width)+'px'; m.style.right='auto'; }
         m.classList.toggle('is-on',show);
       });
     }
