@@ -358,7 +358,9 @@
   
     function renderMini(sel){
       var m=document.getElementById('cc-mini'); if(!m) return;
-      m.innerHTML='<div class="cc-mini-in" style="grid-template-columns:repeat('+sel.length+',minmax(0,1fr))">'+sel.map(function(b){ return '<div class="cc-mini-c">'+logo(b,24)+'<b>'+esc(b.name)+'</b></div>'; }).join('')+'</div>';
+      /* Em desktop a barra segue as colunas da tabela (coluna de etiquetas vazia à esquerda) */
+      var desk=!isMobile();
+      m.innerHTML='<div class="cc-mini-in" style="grid-template-columns:'+(desk?'var(--cc-cols)':'repeat('+sel.length+',minmax(0,1fr))')+'">'+(desk?'<div class="cc-mini-lab"></div>':'')+sel.map(function(b){ return '<div class="cc-mini-c">'+logo(b,24)+'<b>'+esc(b.name)+'</b></div>'; }).join('')+'</div>';
     }
   
     function navBottom(){
@@ -376,7 +378,9 @@
         var t=document.getElementById('cc-table'), h=root.querySelector('.cc-head'), m=document.getElementById('cc-mini');
         if(!t||!h||!m) return;
         var tr=t.getBoundingClientRect(), hr=h.getBoundingClientRect();
-        var show=isMobile() && hr.bottom<top && tr.bottom>top+80;
+        var show=hr.bottom<top && tr.bottom>top+80;
+        if(isMobile()){ m.style.left=''; m.style.width=''; m.style.right=''; }
+        else { m.style.left=Math.round(tr.left)+'px'; m.style.width=Math.round(tr.width)+'px'; m.style.right='auto'; }
         m.classList.toggle('is-on',show);
       });
     }
