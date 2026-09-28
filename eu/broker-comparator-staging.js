@@ -12,11 +12,23 @@
   function ibXetra(a){ return Math.min(29,Math.max(1.25,a*0.0005))+Math.min(4.02,0.02+a*0.000008)+0.01; }
   var TOP = ['traderepublic','trading212','ibkr'];
   var CALC = {
+    'bitpanda': {
+      etf: function(a){ return {v:1, s:'€1 per order. Spreads may apply'}; },
+      us: function(a){ return {v:1, s:'€1 per order. Traded in euros, no published FX fee'}; },
+      plan: function(m){ return {v:0, s:'Free for many ETFs under a current promotion (otherwise €1 per order)'}; },
+      custody: function(p){ return {v:0}; }
+    },
+    'bux': {
+      etf: function(a){ return {v:0.99, s:'€0.99 market order on the Basic plan'}; },
+      us: function(a){ return {v:0.99+a*0.0075, s:'€0.99 + 0.75% FX (Basic plan)'}; },
+      plan: function(m){ return {v:0, s:'Free buys in investment plans'}; },
+      custody: function(p){ return {v:p*0.002, s:'0.20% a year on invested assets (Basic plan). Plus: €2.99 a month'}; }
+    },
     'degiro': {
       etf: function(a){ return {v:1, s:'ETF Core Selection on Tradegate: €0 commission + €1 handling fee'}; },
       us: function(a){ return {v:2+a*0.0025, s:'€1 + €1 handling fee + 0.25% AutoFX'}; },
       plan: function(m){ return {v:12, s:'12 orders of €1 in the ETF Core Selection'}; },
-      custody: function(p){ return {v:2.5, s:'One non-home exchange. Not charged on Tradegate or in Germany'}; }
+      custody: function(p){ return {v:2.5, s:'One non-home exchange. €0 if you only hold ETF Core Selection'}; }
     },
     'etoro': {
       etf: function(a){ return {v:0, s:'No commission on ETFs, euro account'}; },
@@ -58,7 +70,7 @@
       etf: function(a){ return {v:Math.max(2,a*0.0008), s:'Classic tier on Euronext: 0.08% (min. €2)'}; },
       us: function(a){ var usd=a/USD_EUR; return {v:Math.max(1,usd*0.0008)*USD_EUR+a*0.0025, s:'Classic tier: 0.08% (min. $1) + 0.25% FX'}; },
       plan: function(m){ return {v:12*Math.max(2,m*0.0008), s:'No savings plans: 12 manual orders at min. €2'}; },
-      custody: function(p){ return {v:p*0.0015*1.25, s:'0.15% a year + 25% VAT (Classic tier). 0% in BE, FR, IT, DK and PL'}; }
+      custody: function(p){ return {v:p*0.0015*1.25, s:'0.15% a year + 25% VAT (Classic tier). 0% in BE, FR, IT, NL, DK and PL'}; }
     },
     'scalable': {
       etf: function(a){ return a>=250 ? {v:0, s:'PRIME ETF from €250 on the European Investor Exchange (Free Broker)'} : {v:0.99, s:'€0.99 per order under €250 (Free Broker)'}; },
