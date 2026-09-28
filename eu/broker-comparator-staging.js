@@ -133,7 +133,7 @@
         {k:'transfer', label:'Transfer securities out'}
       ]},
       { id:'juros', title:'Interest on uninvested cash', open:true, rows:[
-        {k:'interest', label:'Rate on euros'}
+        {k:'interest', label:'Rate on euros', high:true}
       ]},
       { id:'seguranca', title:'Safety and regulation', open:true, rows:[
         {k:'entity', label:'Entity serving EU clients'},
@@ -259,6 +259,9 @@
       return b.calc.custody(S.portfolio,plan);
     }
 
+    /* Highest percentage in a text value, e.g. "2.50% to 3.50%" gives 3.5 */
+    function pctMax(d){ var m=String(d&&d.v||'').match(/\d+(?:\.\d+)?(?=%)/g); return m?Math.max.apply(null,m.map(Number)):0; }
+
     function planData(b,d){ return (d && b.hasPlan && d.plans && d.plans[S.ibkr]) ? d.plans[S.ibkr] : d; }
 
     function cellHtml(b,row,best){
@@ -274,6 +277,7 @@
         var isConf=d.v===CONF;
         html=isConf?'':'<span class="cc-v">'+esc(d.v)+'</span>';
         if(d.s) html+='<span class="cc-s">'+esc(d.s)+'</span>';
+        if(row.high && best!==null && Math.abs(pctMax(d)-best)<0.005) html+='<span class="cc-tag is-best">Highest rate</span>';
         if(d.c) html+='<span class="cc-tag is-conf">'+CONF+'</span>';
       }
       return '<div class="cc-cell">'+html+'</div>';
@@ -309,6 +313,11 @@
             var vals=sel.map(function(b){ var d=calcFor(b,row.k); return d.extra?null:d.v; }).filter(function(v){ return v!==null; });
             var mn=Math.min.apply(null,vals), mx=Math.max.apply(null,vals);
             if(vals.length && mx-mn>0.004) best=mn;
+          }
+          if(row.high && sel.length>1){
+            var hv=sel.map(function(b){ return pctMax(planData(b,b.t[row.k])); });
+            var hmx=Math.max.apply(null,hv), hmn=Math.min.apply(null,hv);
+            if(hmx>0 && hmx-hmn>0.004) best=hmx;
           }
           var note=typeof row.note==='function'?row.note():row.note;
           var same=sameValues(sel,row);
