@@ -95,9 +95,12 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
 #lf-cc .cc-mini{display:none}
 #lf-cc .cc-mini{position:fixed;left:0;right:0;top:var(--cc-top,0px);z-index:20;background:#fff;border-bottom:1px solid var(--g200);box-shadow:0 4px 12px rgba(16,24,40,.06)}
 #lf-cc .cc-mini-in{display:grid;gap:0;padding:8px 16px}
-#lf-cc .cc-mini-c{display:flex;align-items:center;gap:8px;min-width:0;font-size:13px;line-height:18px}
+#lf-cc .cc-mini-c{display:flex;flex-direction:column;gap:8px;min-width:0;font-size:13px;line-height:18px}
 #lf-cc .cc-mini-c+.cc-mini-c{padding-left:12px;border-left:1px solid var(--g200)}
+#lf-cc .cc-mini-n{display:flex;align-items:center;gap:8px;min-width:0}
 #lf-cc .cc-mini-c b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#lf-cc .cc-mini-c .cc-btn{padding:7px 10px}
+#lf-cc .cc-mini-c .cc-risk{margin-top:-4px}
 #lf-cc .cc-mini-c .cc-logo{border-radius:6px}
 #lf-cc .cc-mini.is-on{display:block}
 @media (min-width:768px){
@@ -137,6 +140,7 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
  #lf-cc .cc-hcell{padding:12px}
  #lf-cc .cc-head{position:static}
  #lf-cc .cc-mini.is-on{display:block}
+ #lf-cc .cc-mini.has-cta .cc-mini-c:not(:last-child){padding-right:12px}
  #lf-cc .cc-hcell:nth-child(2){border-left:0}
  #lf-cc .cc-hname b{font-size:14px}
  #lf-cc .cc-v.is-big{font-size:16px}
