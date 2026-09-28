@@ -18,7 +18,7 @@ font-family:'Inter',sans-serif;font-size:16px;color:var(--g900);letter-spacing:-
 #eu-bc .cc-panel{background:#fff;border:1px solid var(--g200);border-radius:16px;padding:24px}
 #eu-bc .cc-step{font-size:16px;font-weight:500;line-height:24px;margin:0 0 4px}
 #eu-bc .cc-hint{font-size:13px;line-height:18px;color:var(--g500);margin:0 0 14px}
-#eu-bc .cc-picker{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+#eu-bc .cc-picker{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
 #eu-bc .cc-pick{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px 10px;border:1px solid var(--g300);border-radius:12px;background:#fff;font-size:12.5px;font-weight:500;line-height:16px;color:var(--g700);text-align:center;position:relative}
 #eu-bc .cc-pick:hover{border-color:var(--g700)}
 #eu-bc .cc-pick:focus-visible,#eu-bc .cc-btn:focus-visible,#eu-bc .cc-sec-h:focus-visible,#eu-bc .cc-pill:focus-visible{outline:none;box-shadow:0 0 0 3px var(--blue100)}
