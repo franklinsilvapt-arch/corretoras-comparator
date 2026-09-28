@@ -365,7 +365,8 @@
       m.classList.toggle('has-cta',cta);
       m.innerHTML='<div class="cc-mini-in" style="grid-template-columns:'+(desk?'var(--cc-cols)':'repeat('+sel.length+',minmax(0,1fr))')+'">'+(desk?'<div class="cc-mini-lab"></div>':'')+sel.map(function(b){
         var c='<div class="cc-mini-c"><div class="cc-mini-n">'+logo(b,24)+'<b>'+esc(b.name)+'</b></div>';
-        if(cta) c+='<a class="cc-btn" href="'+ctaHref(b)+'" target="_blank" rel="noopener sponsored"><span>'+esc(ctaLabel(b))+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
+        /* Em mobile as colunas são estreitas e o nome já está por cima, por isso o botão leva um texto curto */
+        if(cta) c+='<a class="cc-btn" href="'+ctaHref(b)+'" target="_blank" rel="noopener sponsored"><span>'+(desk?esc(ctaLabel(b)):'Ir para o site')+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>';
         return c+'</div>'; }).join('')+'</div>';
     }
   
