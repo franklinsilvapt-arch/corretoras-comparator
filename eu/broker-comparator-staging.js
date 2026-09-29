@@ -192,6 +192,12 @@
     function ctaLabel(b){ return 'Go to '+b.name; }
     function ctaRel(b){ return b.cta.plain ? 'noopener' : 'noopener sponsored'; }
     function ctaHtml(b){ return '<a class="cc-btn" href="'+ctaHref(b)+'" target="_blank" rel="'+ctaRel(b)+'"><span>'+esc(ctaLabel(b))+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>'; }
+    function offerHtml(b){
+      var o=b.offer; if(!o) return '';
+      return '<div class="cc-offer"><span class="cc-offer-b">Sign-up offer</span>'
+        +'<span class="cc-offer-t">'+esc(o.t)+'.'+(o.c?' Use code <b>'+esc(o.c)+'</b>.':'')+'</span>'
+        +'<a class="cc-offer-a" href="'+o.a+'" target="_blank" rel="noopener">How it works</a></div>';
+    }
 
     function logo(b,size){
       var st=(size?'width:'+size+'px;height:'+size+'px;':'');
@@ -302,6 +308,7 @@
         var h='<div class="cc-hcell"><div class="cc-hname">'+logo(b,32)+'<span><b>'+esc(b.name)+'</b><small>'+esc(b.type)+'</small></span></div>';
         h+='<div class="cc-hextra">'+(b.hasPlan?'<div class="cc-pills" role="group" aria-label="Pricing plan"><button type="button" class="cc-pill'+(S.ibkr==='fixed'?' is-on':'')+'" data-plan="fixed">Fixed</button><button type="button" class="cc-pill'+(S.ibkr==='tiered'?' is-on':'')+'" data-plan="tiered">Tiered</button></div>':'')+'</div>';
         h+=ctaHtml(b);
+        h+=offerHtml(b);
         if(b.review) h+='<a class="cc-review" href="'+b.review+'" target="_blank" rel="noopener">Read the full review</a>';
         return h+'</div>';
       }).join('')+'</div>';
