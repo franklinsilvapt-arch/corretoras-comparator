@@ -1,0 +1,800 @@
+{
+ "lang": "pl",
+ "translated_from": "2026-09-28",
+ "note": "Tłumaczenie eu/data/brokers.json oraz opisów kosztów w porównywarce. Źródłem jest angielski: najpierw aktualizuj angielski, potem to tłumaczenie.",
+ "verified": "28 września 2026",
+ "cost": {
+  "€1 per order. Spreads may apply": "€1 za zlecenie. Może wystąpić spread",
+  "€1 per order. Traded in euros, no published FX fee": "€1 za zlecenie. Notowane w euro, brak opublikowanej opłaty za przewalutowanie",
+  "Free for many ETFs under a current promotion (otherwise €1 per order)": "Bezpłatnie dla wielu ETF-ów w ramach trwającej promocji (poza nią €1 za zlecenie)",
+  "€0.99 market order on the Basic plan": "€0,99 za zlecenie rynkowe w planie Basic",
+  "€0.99 + 0.75% FX (Basic plan)": "€0,99 + 0,75% przewalutowania (plan Basic)",
+  "Free buys in investment plans": "Bezpłatne zakupy w planach inwestycyjnych",
+  "0.20% a year on invested assets (Basic plan). Plus: €2.99 a month": "0,20% rocznie od zainwestowanych aktywów (plan Basic). Plus: €2,99 miesięcznie",
+  "ETF Core Selection on Tradegate: €0 commission + €1 handling fee": "ETF Core Selection na Tradegate: €0 prowizji + €1 opłaty manipulacyjnej",
+  "€1 + €1 handling fee + 0.25% AutoFX": "€1 + €1 opłaty manipulacyjnej + 0,25% AutoFX",
+  "12 orders of €1 in the ETF Core Selection": "12 zleceń po €1 w ETF Core Selection",
+  "One non-home exchange. €0 if you only hold ETF Core Selection": "Jedna giełda poza macierzystą. €0, jeśli trzymasz wyłącznie ETF Core Selection",
+  "No commission on ETFs, euro account": "Brak prowizji od ETF-ów, rachunek w euro",
+  "$1 commission + 0.75% EUR/USD conversion": "$1 prowizji + 0,75% przewalutowania EUR/USD",
+  "Recurring investments with no commission": "Inwestowanie cykliczne bez prowizji",
+  "Smart plan: €2 per order + €0.02 per unit": "Plan Smart: €2 za zlecenie + €0,02 za sztukę",
+  "Smart plan: $2 + $0.02 per share. No published FX fee": "Plan Smart: $2 + $0,02 za akcję. Brak opublikowanej opłaty za przewalutowanie",
+  "0% only within the recurring ETF investment plan": "0% wyłącznie w ramach cyklicznego planu inwestycyjnego ETF",
+  "Tiered on Xetra: 0.05% (min. €1.25, max. €29) + clearing and regulatory fees": "Stopniowany na Xetrze: 0,05% (min. €1,25, maks. €29) + opłaty rozliczeniowe i regulacyjne",
+  "Fixed on Xetra: 0.05% (min. €3), fees included": "Stały na Xetrze: 0,05% (min. €3), opłaty w cenie",
+  "Tiered: $0.0035/share (min. $0.35) + exchange, clearing and regulatory fees (market order) + 0.03% FX": "Stopniowany: $0,0035 za akcję (min. $0,35) + opłaty giełdowe, rozliczeniowe i regulacyjne (zlecenie rynkowe) + 0,03% przewalutowania",
+  "Fixed: $0.005/share (min. $1) + 0.03% FX": "Stały: $0,005 za akcję (min. $1) + 0,03% przewalutowania",
+  "12 orders on Xetra, with clearing and regulatory fees": "12 zleceń na Xetrze, z opłatami rozliczeniowymi i regulacyjnymi",
+  "12 orders at €3": "12 zleceń po €3",
+  "No commission on ETFs": "Brak prowizji od ETF-ów",
+  "0.1% (max. $1) + 0.35% FX": "0,1% (maks. $1) + 0,35% przewalutowania",
+  "Plans with no commission on ETFs": "Plany bez prowizji od ETF-ów",
+  "€1 per order on the Standard plan (commission varies by country)": "€1 za zlecenie w planie Standard (prowizja różni się w zależności od kraju)",
+  "€1 + free FX up to €1,000 a month (1% above), on weekdays": "€1 + bezpłatne przewalutowanie do €1 000 miesięcznie (1% powyżej), w dni robocze",
+  "Investment plans in selected ETFs with no commission": "Plany inwestycyjne w wybranych ETF-ach bez prowizji",
+  "Classic tier on Euronext: 0.08% (min. €2)": "Poziom Classic na Euronext: 0,08% (min. €2)",
+  "Classic tier: 0.08% (min. $1) + 0.25% FX": "Poziom Classic: 0,08% (min. $1) + 0,25% przewalutowania",
+  "No savings plans: 12 manual orders at min. €2": "Brak planów oszczędnościowych: 12 zleceń ręcznych po min. €2",
+  "0.15% a year + 25% VAT (Classic tier). 0% in BE, FR, IT, NL, DK and PL": "0,15% rocznie + 25% VAT (poziom Classic). 0% w BE, FR, IT, NL, DK i PL",
+  "PRIME ETF from €250 on the European Investor Exchange (Free Broker)": "ETF PRIME od €250 na European Investor Exchange (Free Broker)",
+  "€0.99 per order under €250 (Free Broker)": "€0,99 za zlecenie poniżej €250 (Free Broker)",
+  "€0.99 on the European Investor Exchange. Traded in euros": "€0,99 na European Investor Exchange. Notowane w euro",
+  "Free savings plans": "Bezpłatne plany oszczędnościowe",
+  "Free Broker. PRIME+ costs €4.99 a month": "Free Broker. PRIME+ kosztuje €4,99 miesięcznie",
+  "€1 per order": "€1 za zlecenie",
+  "€1 per order. US stocks are traded in euros": "€1 za zlecenie. Amerykańskie akcje są notowane w euro",
+  "No commissions. Other fees may apply": "Bez prowizji. Mogą obowiązywać inne opłaty",
+  "No commissions + 0.15% FX": "Bez prowizji + 0,15% przewalutowania",
+  "AutoInvest with no commissions": "AutoInvest bez prowizji",
+  "0% up to €100,000 monthly volume": "0% do €100 000 obrotu miesięcznie",
+  "0% commission + 0.5% FX": "0% prowizji + 0,5% przewalutowania",
+  "Investment plans with no commission": "Plany inwestycyjne bez prowizji",
+  "€0 up to €250,000 (0.02% a year above)": "€0 do €250 000 (0,02% rocznie powyżej)"
+ },
+ "brokers": {
+  "traderepublic": {
+   "type": "Bank",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "t": {
+    "etfFee": {
+     "s": "€0 w planach oszczędnościowych"
+    },
+    "usFee": {
+     "s": "Amerykańskie akcje są notowane w euro"
+    },
+    "fx": {
+     "v": "Tylko spread",
+     "s": "Brak wyraźnej opłaty za przewalutowanie, bo amerykańskie akcje są notowane w euro"
+    },
+    "transfer": {
+     "s": "Trade Republic nie pobiera opłaty, ale mogą wystąpić opłaty podmiotów trzecich. Ułamków nie da się przenieść"
+    },
+    "interest": {
+     "v": "2,50%",
+     "s": "Stopa depozytowa EBC, wypłacana miesięcznie. Nowi klienci w większości krajów dostają 3% do €50 000. Niemcy: 2,50% bez limitu"
+    },
+    "entity": {
+     "s": "Ten sam niemiecki bank obsługuje każdy kraj"
+    },
+    "regulator": {
+     "v": "BaFin i Bundesbank (Niemcy)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Niemiecki system rekompensat dla inwestorów, 90% niezwróconych aktywów"
+    },
+    "protCash": {
+     "v": "Do €100 000",
+     "s": "Poprzez gwarancję depozytów banków partnerskich. Część środków może być ulokowana w funduszach rynku pieniężnego"
+    },
+    "available": {
+     "v": "18 krajów",
+     "s": "DE, AT, FR, ES, IT, NL, BE, LU, FI, IE, GR, PT, EE, LV, LT, SI, SK i PL"
+    },
+    "fractions": {
+     "v": "Tak"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Bezpłatne plany oszczędnościowe"
+    },
+    "bonds": {
+     "v": "Tak"
+    },
+    "options": {
+     "v": "Nie"
+    }
+   }
+  },
+  "trading212": {
+   "type": "Broker",
+   "risk": "Link sponsorowany. Inwestowanie wiąże się z ryzykiem utraty kapitału. Obowiązują warunki.",
+   "offer": {
+    "t": "Darmowy ułamkowy udział o wartości do €100"
+   },
+   "t": {
+    "etfFee": {
+     "s": "Bez prowizji. Mogą obowiązywać inne opłaty. Zobacz warunki i opłaty"
+    },
+    "usFee": {
+     "s": "Bez prowizji. Mogą obowiązywać inne opłaty"
+    },
+    "fx": {
+     "v": "0,15%",
+     "s": "Obowiązuje przy przewalutowaniu środków, także w weekendy. Mogą obowiązywać inne opłaty"
+    },
+    "transfer": {
+     "s": "Tylko całe akcje. Niedostępne dla klientów Trading 212 EU GmbH mieszkających w Niemczech"
+    },
+    "interest": {
+     "v": "2,50% do 3,50%",
+     "s": "EU GmbH: 3,50% (2,80% od 1 lis 2026). Markets Ltd: 2,50%. Nowi klienci EU GmbH dostają 4,20% przez 4 miesiące na rachunkach otwartych do 2 lis 2026. Stawki są zmienne"
+    },
+    "entity": {
+     "v": "Trading 212 EU GmbH albo Trading 212 Markets Ltd",
+     "s": "EU GmbH w DE, AT, DK, FI, FR, IE, LU, NL, PT, ES i SE. Markets Ltd w IT, GR, PL, CZ, RO i innych krajach UE Europy Wschodniej i Południowej"
+    },
+    "regulator": {
+     "v": "BaFin (Niemcy) albo CySEC (Cypr)",
+     "s": "Zależy od podmiotu"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Niemiecki albo cypryjski system rekompensat dla inwestorów"
+    },
+    "protCash": {
+     "v": "Do €100 000",
+     "s": "Na bank partnerski dla klientów EU GmbH. Klienci Markets Ltd: do €20 000 (fundusz cypryjski). Przy włączonych odsetkach część środków trafia do funduszy rynku pieniężnego"
+    },
+    "available": {
+     "v": "EOG poza Belgią",
+     "s": "Niedostępne dla mieszkańców Belgii"
+    },
+    "fractions": {
+     "v": "Tak"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Pies i AutoInvest"
+    },
+    "bonds": {
+     "v": "Nie"
+    },
+    "options": {
+     "v": "Nie"
+    }
+   }
+  },
+  "xtb": {
+   "type": "Broker",
+   "risk": "76-83% detalicznych rachunków CFD traci pieniądze.",
+   "offer": {
+    "t": "Darmowa akcja w niektórych krajach, zależnie od lokalnej kampanii"
+   },
+   "t": {
+    "etfFee": {
+     "s": "Do €100 000 obrotu miesięcznie. Powyżej: 0,2% (min. €10)"
+    },
+    "usFee": {
+     "s": "Do €100 000 obrotu miesięcznie"
+    },
+    "fx": {
+     "v": "0,5%"
+    },
+    "custodyTxt": {
+     "v": "€0 do €250 000",
+     "s": "0,02% rocznie od wartości powyżej €250 000"
+    },
+    "inact": {
+     "v": "€10/mies.",
+     "s": "Dopiero po 365 dniach bez transakcji i 90 dniach bez wpłat"
+    },
+    "transfer": {
+     "v": "€25 za pozycję",
+     "s": "Papiery hiszpańskie: 0,10% (min. €100)"
+    },
+    "interest": {
+     "v": "1,10%",
+     "s": "Do €100 000. W niektórych krajach wyższa stawka przez pierwsze 90 dni, na przykład 3,50% w DE, FR i ES. Stawki są zmienne"
+    },
+    "entity": {
+     "s": "Lokalne oddziały w DE, FR, ES, IT, PT, PL, CZ, SK, RO i HU. Pozostałe kraje: XTB Limited (CySEC)"
+    },
+    "regulator": {
+     "v": "KNF (Polska)",
+     "s": "XTB Limited: CySEC (Cypr)"
+    },
+    "protInv": {
+     "v": "Do €20 100",
+     "s": "System polski: 100% pierwszych €3 000 i 90% powyżej"
+    },
+    "protCash": {
+     "v": "Do €20 100",
+     "s": "Ten sam system. Środki są trzymane na rachunkach wydzielonych"
+    },
+    "available": {
+     "v": "Większość krajów UE",
+     "s": "Przez lokalne oddziały albo XTB Limited"
+    },
+    "fractions": {
+     "v": "Tak"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Plany inwestycyjne"
+    },
+    "bonds": {
+     "v": "Tak"
+    },
+    "options": {
+     "v": "Tak"
+    }
+   }
+  },
+  "ibkr": {
+   "type": "Broker",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "t": {
+    "etfFee": {
+     "v": "Stały: 0,05% (min. €3) | Stopniowany: 0,05% (min. €1,25)",
+     "s": "Stały na Xetrze zawiera opłaty. Stopniowany: maks. €29 plus opłaty giełdowe, rozliczeniowe i regulacyjne",
+     "plans": {
+      "fixed": {
+       "v": "0,05% (min. €3)",
+       "s": "Plan stały na Xetrze, opłaty giełdowe i rozliczeniowe w cenie"
+      },
+      "tiered": {
+       "v": "0,05% (min. €1,25)",
+       "s": "Plan stopniowany na Xetrze, maks. €29, plus opłaty giełdowe, rozliczeniowe i regulacyjne"
+      }
+     }
+    },
+    "usFee": {
+     "v": "Stały: $0,005 za akcję (min. $1) | Stopniowany: $0,0035 za akcję (min. $0,35)",
+     "s": "Maks. 1% wartości transakcji. Stopniowany dolicza opłaty giełdowe i rozliczeniowe",
+     "plans": {
+      "fixed": {
+       "v": "$0,005 za akcję (min. $1)",
+       "s": "Plan stały. Maks. 1% wartości transakcji, opłaty giełdowe i rozliczeniowe w cenie"
+      },
+      "tiered": {
+       "v": "$0,0035 za akcję (min. $0,35)",
+       "s": "Plan stopniowany. Maks. 1% wartości transakcji, plus opłaty giełdowe, rozliczeniowe i regulacyjne"
+      }
+     }
+    },
+    "fx": {
+     "v": "0,03%",
+     "s": "Przewalutowanie automatyczne. Ręczne: 0,002% (min. $2)"
+    },
+    "transfer": {
+     "s": "Podstawowy transfer FOP. Broker przyjmujący może pobrać opłatę"
+    },
+    "interest": {
+     "v": "1,93%",
+     "s": "Od sald powyżej €10 000 (stopa referencyjna minus 0,5 pkt proc.). Proporcjonalnie niższa, jeśli rachunek jest poniżej $100 000"
+    },
+    "regulator": {
+     "v": "Central Bank of Ireland"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Irlandzki system rekompensat dla inwestorów (90%)"
+    },
+    "protCash": {
+     "v": "Do €20 000",
+     "s": "Ten sam system"
+    },
+    "available": {
+     "v": "EOG",
+     "s": "UE plus Islandia, Liechtenstein i Norwegia"
+    },
+    "fractions": {
+     "v": "Tak"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Inwestowanie cykliczne"
+    },
+    "bonds": {
+     "v": "Tak"
+    },
+    "options": {
+     "v": "Tak"
+    }
+   }
+  },
+  "degiro": {
+   "type": "Broker",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "offer": {
+    "t": "Zwrot do €/£100 opłat transakcyjnych dla nowych klientów, do 30 września 2026"
+   },
+   "t": {
+    "etfFee": {
+     "s": "ETF Core Selection na Tradegate. Pozostałe ETF-y: €2 + €1"
+    },
+    "usFee": {
+     "s": "€1 prowizji + €1 opłaty manipulacyjnej"
+    },
+    "fx": {
+     "v": "0,25%",
+     "s": "AutoFX. Przewalutowanie ręczne: €10 + 0,25%"
+    },
+    "custodyTxt": {
+     "v": "€2,50 za giełdę rocznie",
+     "s": "Opłata za dostęp, maks. 0,25% wartości rachunku. Nie pobierana na giełdzie macierzystej ani za ETF Core Selection"
+    },
+    "transfer": {
+     "v": "€20 za pozycję",
+     "s": "Plus koszty zewnętrzne. Bezpłatnie w Niemczech"
+    },
+    "regulator": {
+     "v": "BaFin (Niemcy)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Niemiecki system rekompensat dla inwestorów (90%)"
+    },
+    "protCash": {
+     "v": "Do €100 000",
+     "s": "Niemiecki system gwarantowania depozytów"
+    },
+    "available": {
+     "v": "22 kraje UE",
+     "s": "Cała UE poza Austrią, Chorwacją, Cyprem, Węgrami i Maltą. Nowi klienci z Austrii trafiają do flatex"
+    },
+    "fractions": {
+     "v": "Nie"
+    },
+    "plans": {
+     "v": "Nie",
+     "s": "Każdy zakup składasz ręcznie"
+    },
+    "bonds": {
+     "v": "Tak"
+    },
+    "options": {
+     "v": "Tak"
+    }
+   }
+  },
+  "etoro": {
+   "type": "Broker",
+   "risk": "51% detalicznych rachunków inwestorów traci pieniądze przy handlu CFD u tego dostawcy.",
+   "offer": {
+    "t": "Darmowy składnik aktywów o wartości do $500, w progach zależnych od pierwszej wpłaty"
+   },
+   "t": {
+    "usFee": {
+     "s": "Za zlecenie otwarcia i zamknięcia. $1 albo $2 w zależności od kraju zamieszkania i giełdy"
+    },
+    "fx": {
+     "v": "0,75%",
+     "s": "Z rachunku w euro"
+    },
+    "transfer": {
+     "v": "$100 za pozycję",
+     "s": "Według wsparcia eToro, nieopublikowane na stronie"
+    },
+    "interest": {
+     "s": "Tylko od sald w dolarach: 3% do $50 000 i 3,80% powyżej"
+    },
+    "regulator": {
+     "v": "CySEC (Cypr)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Investor Compensation Fund"
+    },
+    "protCash": {
+     "v": "Do €20 000",
+     "s": "Ten sam fundusz"
+    },
+    "available": {
+     "v": "EOG"
+    },
+    "fractions": {
+     "v": "Tak",
+     "s": "Min. $10"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Inwestowanie cykliczne, min. $25 miesięcznie"
+    },
+    "bonds": {
+     "v": "Nie"
+    },
+    "options": {
+     "v": "Nie"
+    }
+   }
+  },
+  "freedom24": {
+   "type": "Broker",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "offer": {
+    "t": "Do 20 darmowych akcji za rejestrację i zasilenie rachunku, wymagany kod promocyjny"
+   },
+   "t": {
+    "etfFee": {
+     "v": "€2 + €0,02 za akcję",
+     "s": "Plan Smart w EUR"
+    },
+    "usFee": {
+     "v": "$2 + $0,02 za akcję",
+     "s": "Plan Smart"
+    },
+    "fx": {
+     "v": "Brak opublikowanej opłaty",
+     "s": "Sprawdź kurs na platformie przed przewalutowaniem"
+    },
+    "transfer": {
+     "v": "€100 za transfer"
+    },
+    "regulator": {
+     "v": "CySEC (Cypr)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Investor Compensation Fund"
+    },
+    "protCash": {
+     "v": "Do €20 000",
+     "s": "Ten sam fundusz"
+    },
+    "available": {
+     "v": "UE/EOG",
+     "s": "Brak publicznej listy krajów"
+    },
+    "fractions": {
+     "v": "Nie"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Prowizja 0% wyłącznie w ramach cyklicznego planu inwestycyjnego ETF"
+    },
+    "bonds": {
+     "v": "Tak"
+    },
+    "options": {
+     "v": "Tak"
+    }
+   }
+  },
+  "lightyear": {
+   "type": "Broker",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "offer": {
+    "t": "Darmowy ułamkowy udział o wartości do €100"
+   },
+   "t": {
+    "usFee": {
+     "v": "0,1% (maks. $1)",
+     "s": "Min. $0,10"
+    },
+    "fx": {
+     "v": "0,35%",
+     "s": "Do uniknięcia dzięki rachunkowi wielowalutowemu"
+    },
+    "transfer": {
+     "s": "Każda pozycja musi być warta co najmniej €1 000. Ułamków nie da się przenieść"
+    },
+    "interest": {
+     "s": "Brak odsetek od niezainwestowanych euro. Fundusz rynku pieniężnego Savings płaci 2,42% do 2,43% rocznie, po opłatach (nie w Belgii)"
+    },
+    "regulator": {
+     "v": "EFSA (Estonia)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Estoński fundusz ochrony inwestorów"
+    },
+    "protCash": {
+     "v": "Do €20 000",
+     "s": "Ten sam fundusz. Środki nie są depozytem bankowym"
+    },
+    "available": {
+     "v": "24 kraje UE i Norwegia",
+     "s": "Niedostępne w Czechach, Polsce i Rumunii"
+    },
+    "fractions": {
+     "v": "Tak"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Plany i zlecenia powtarzalne"
+    },
+    "bonds": {
+     "v": "Tak",
+     "s": "Obligacje w euro: €1 za zlecenie"
+    },
+    "options": {
+     "v": "Nie"
+    }
+   }
+  },
+  "revolut": {
+   "type": "Bank cyfrowy",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "offer": {
+    "t": "€10 do €30 w nagrodach powitalnych"
+   },
+   "t": {
+    "etfFee": {
+     "s": "Plan Standard w FR, ES, PT i AT. DE, IE, IT i BE: 0,25% (min. €1) z 1 darmowym zleceniem miesięcznie. NL: 0,10%. Premium: 5 darmowych zleceń miesięcznie"
+    },
+    "usFee": {
+     "s": "Ta sama prowizja co przy ETF-ach, różni się w zależności od kraju"
+    },
+    "fx": {
+     "v": "Bezpłatnie do €1 000/mies.",
+     "s": "Plan Standard: 1% powyżej (0,5% w niektórych krajach) i 1% w weekendy"
+    },
+    "transfer": {
+     "v": "$35 za pozycję",
+     "s": "Akcje ułamkowe mogą wymagać sprzedaży przed transferem"
+    },
+    "interest": {
+     "s": "Na rachunku inwestycyjnym. Konta oszczędnościowe są osobne"
+    },
+    "regulator": {
+     "v": "Bank Litwy"
+    },
+    "protInv": {
+     "v": "Do €22 000",
+     "s": "System litewski, 100% straty, środki i papiery łącznie"
+    },
+    "protCash": {
+     "v": "Do €22 000",
+     "s": "Ten sam limit, łącznie z papierami"
+    },
+    "available": {
+     "v": "EOG",
+     "s": "Opłaty różnią się w zależności od kraju"
+    },
+    "fractions": {
+     "v": "Tak"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Bezpłatnie na wybranych ETF-ach"
+    },
+    "bonds": {
+     "v": "Tak"
+    },
+    "options": {
+     "v": "Nie"
+    }
+   }
+  },
+  "saxo": {
+   "type": "Bank",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "t": {
+    "etfFee": {
+     "v": "0,08% (min. €2)",
+     "s": "Poziom Classic na Euronext. Xetra: min. €3. Ceny różnią się w zależności od kraju"
+    },
+    "usFee": {
+     "v": "0,08% (min. $1)",
+     "s": "Poziom Classic"
+    },
+    "fx": {
+     "v": "0,25%"
+    },
+    "custodyTxt": {
+     "v": "0,15% rocznie + VAT",
+     "s": "Poziom Classic, plus 25% duńskiego VAT. 0% dla mieszkańców BE, FR, IT, NL, DK i PL"
+    },
+    "transfer": {
+     "v": "€50 za pozycję (maks. €160)"
+    },
+    "interest": {
+     "s": "Odsetki od środków dostają tylko klienci VIP"
+    },
+    "entity": {
+     "s": "Albo lokalny podmiot lub oddział Saxo we FR, NL, BE, IT i CZ"
+    },
+    "regulator": {
+     "v": "Duński FSA (Dania)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Duński fundusz gwarancyjny"
+    },
+    "protCash": {
+     "v": "Do €100 000",
+     "s": "Duński fundusz gwarancyjny"
+    },
+    "available": {
+     "v": "27 krajów UE/EOG"
+    },
+    "fractions": {
+     "v": "Nie"
+    },
+    "plans": {
+     "v": "Nie",
+     "s": "AutoInvest tylko w Danii"
+    },
+    "bonds": {
+     "v": "Tak"
+    },
+    "options": {
+     "v": "Tak"
+    }
+   }
+  },
+  "scalable": {
+   "type": "Bank",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "t": {
+    "etfFee": {
+     "s": "ETF-y PRIME od €250 na European Investor Exchange. Pozostałe ETF-y: €0,99. Xetra i gettex: €1,99"
+    },
+    "usFee": {
+     "v": "€0,99",
+     "s": "Amerykańskie akcje są notowane w euro. PRIME+: €0 od €250"
+    },
+    "fx": {
+     "v": "Tylko spread",
+     "s": "Brak wyraźnej opłaty za przewalutowanie, bo amerykańskie akcje są notowane w euro"
+    },
+    "custodyTxt": {
+     "s": "Free Broker. PRIME+ kosztuje €4,99 miesięcznie"
+    },
+    "transfer": {
+     "s": "Brak opłaty za transfer w tabeli kosztów"
+    },
+    "interest": {
+     "v": "2,60%",
+     "s": "Na osobnym rachunku Overnight, bez limitu. Zmienne"
+    },
+    "regulator": {
+     "v": "BaFin i Bundesbank (Niemcy)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Niemiecki system rekompensat dla inwestorów (EdW), 90% do €20 000"
+    },
+    "protCash": {
+     "v": "Do €100 000",
+     "s": "Na bank. W Free Broker część środków może być ulokowana w funduszach rynku pieniężnego"
+    },
+    "available": {
+     "v": "6 krajów",
+     "s": "DE, AT, FR, IT, ES i NL"
+    },
+    "fractions": {
+     "v": "Tylko w planach oszczędnościowych"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Bezpłatnie, od €1"
+    },
+    "bonds": {
+     "v": "Tak"
+    },
+    "options": {
+     "v": "Nie"
+    }
+   }
+  },
+  "bux": {
+   "type": "Broker",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "t": {
+    "etfFee": {
+     "v": "€0,99",
+     "s": "Zlecenie rynkowe w planie Basic. €0 w planach inwestycyjnych"
+    },
+    "usFee": {
+     "v": "€0,99",
+     "s": "Zlecenie rynkowe"
+    },
+    "fx": {
+     "v": "0,75%",
+     "s": "Plan Basic. Plus: 0,25%. Prime: 0,20%"
+    },
+    "custodyTxt": {
+     "v": "0,20% rocznie",
+     "s": "Plan Basic, od zainwestowanych aktywów. Plus: €2,99 miesięcznie. Prime: €7,99 miesięcznie"
+    },
+    "transfer": {
+     "v": "Niemożliwe",
+     "s": "BUX nie przenosi portfeli do innych brokerów"
+    },
+    "interest": {
+     "s": "Plan Basic. Plus: 1,75%, a Prime: 2,00% do €100 000"
+    },
+    "entity": {
+     "s": "Część ABN AMRO. Środki są trzymane w ABN AMRO Clearing Bank"
+    },
+    "regulator": {
+     "v": "AFM (Holandia)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Holenderski system rekompensat dla inwestorów"
+    },
+    "protCash": {
+     "v": "Do €100 000",
+     "s": "Holenderski system gwarantowania depozytów, przez ABN AMRO Clearing Bank"
+    },
+    "available": {
+     "v": "8 krajów",
+     "s": "NL, BE, FR, DE, ES, IT, AT i IE"
+    },
+    "fractions": {
+     "v": "Tak",
+     "s": "Od €5, tylko zlecenia rynkowe"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Bezpłatne zakupy w planach inwestycyjnych"
+    },
+    "bonds": {
+     "v": "Nie"
+    },
+    "options": {
+     "v": "Nie"
+    }
+   }
+  },
+  "bitpanda": {
+   "type": "Aplikacja inwestycyjna",
+   "risk": "Inwestowanie wiąże się z ryzykiem straty.",
+   "t": {
+    "etfFee": {
+     "s": "Za zlecenie. Może wystąpić spread"
+    },
+    "usFee": {
+     "s": "Za zlecenie. Amerykańskie akcje są notowane w euro"
+    },
+    "fx": {
+     "v": "Tylko spread",
+     "s": "Brak opublikowanej opłaty za przewalutowanie, bo akcje są notowane w euro"
+    },
+    "transfer": {
+     "v": "€30 za pozycję",
+     "s": "Tylko całe akcje. Bezpłatnie dla klientów niemieckiego oddziału"
+    },
+    "interest": {
+     "s": "Cash Plus (produkt oparty na funduszu rynku pieniężnego) to osobna opcja"
+    },
+    "entity": {
+     "s": "Środki są trzymane jako pieniądz elektroniczny w Bitpanda Payments GmbH"
+    },
+    "regulator": {
+     "v": "FMA (Austria)"
+    },
+    "protInv": {
+     "v": "Do €20 000",
+     "s": "Austriacki system rekompensat dla inwestorów"
+    },
+    "protCash": {
+     "v": "Brak",
+     "s": "Pieniądz elektroniczny, nie depozyt bankowy"
+    },
+    "available": {
+     "v": "UE/EOG",
+     "s": "Brak opublikowanej listy krajów dla akcji i ETF-ów"
+    },
+    "fractions": {
+     "v": "Tak"
+    },
+    "plans": {
+     "v": "Tak",
+     "s": "Bezpłatnie dla wielu ETF-ów w ramach trwającej promocji, poza nią €1 za zlecenie"
+    },
+    "bonds": {
+     "v": "Nie"
+    },
+    "options": {
+     "v": "Nie"
+    }
+   }
+  }
+ }
+}

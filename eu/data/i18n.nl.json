@@ -1,0 +1,800 @@
+{
+ "lang": "nl",
+ "translated_from": "2026-09-28",
+ "note": "Vertaling van eu/data/brokers.json en van de kostenteksten in de comparator. Het Engels is de bron: werk eerst het Engels bij en daarna deze vertaling.",
+ "verified": "28 september 2026",
+ "cost": {
+  "€1 per order. Spreads may apply": "€1 per order. Er kan een spread gelden",
+  "€1 per order. Traded in euros, no published FX fee": "€1 per order. Wordt in euro's verhandeld, geen gepubliceerde wisselkosten",
+  "Free for many ETFs under a current promotion (otherwise €1 per order)": "Gratis voor veel ETF's in een lopende actie (anders €1 per order)",
+  "€0.99 market order on the Basic plan": "€0,99 marktorder op het Basic-plan",
+  "€0.99 + 0.75% FX (Basic plan)": "€0,99 + 0,75% wisselkosten (Basic-plan)",
+  "Free buys in investment plans": "Gratis aankopen in beleggingsplannen",
+  "0.20% a year on invested assets (Basic plan). Plus: €2.99 a month": "0,20% per jaar over belegd vermogen (Basic-plan). Plus: €2,99 per maand",
+  "ETF Core Selection on Tradegate: €0 commission + €1 handling fee": "ETF Core Selection op Tradegate: €0 commissie + €1 behandelkosten",
+  "€1 + €1 handling fee + 0.25% AutoFX": "€1 + €1 behandelkosten + 0,25% AutoFX",
+  "12 orders of €1 in the ETF Core Selection": "12 orders van €1 in de ETF Core Selection",
+  "One non-home exchange. €0 if you only hold ETF Core Selection": "Eén beurs buiten je thuisbeurs. €0 als je alleen ETF Core Selection aanhoudt",
+  "No commission on ETFs, euro account": "Geen commissie op ETF's, eurorekening",
+  "$1 commission + 0.75% EUR/USD conversion": "$1 commissie + 0,75% omwisseling EUR/USD",
+  "Recurring investments with no commission": "Periodiek beleggen zonder commissie",
+  "Smart plan: €2 per order + €0.02 per unit": "Smart-plan: €2 per order + €0,02 per stuk",
+  "Smart plan: $2 + $0.02 per share. No published FX fee": "Smart-plan: $2 + $0,02 per aandeel. Geen gepubliceerde wisselkosten",
+  "0% only within the recurring ETF investment plan": "0% alleen binnen het periodieke ETF-beleggingsplan",
+  "Tiered on Xetra: 0.05% (min. €1.25, max. €29) + clearing and regulatory fees": "Gestaffeld op Xetra: 0,05% (min. €1,25, max. €29) + clearing- en toezichtkosten",
+  "Fixed on Xetra: 0.05% (min. €3), fees included": "Vast op Xetra: 0,05% (min. €3), kosten inbegrepen",
+  "Tiered: $0.0035/share (min. $0.35) + exchange, clearing and regulatory fees (market order) + 0.03% FX": "Gestaffeld: $0,0035 per aandeel (min. $0,35) + beurs-, clearing- en toezichtkosten (marktorder) + 0,03% wisselkosten",
+  "Fixed: $0.005/share (min. $1) + 0.03% FX": "Vast: $0,005 per aandeel (min. $1) + 0,03% wisselkosten",
+  "12 orders on Xetra, with clearing and regulatory fees": "12 orders op Xetra, met clearing- en toezichtkosten",
+  "12 orders at €3": "12 orders van €3",
+  "No commission on ETFs": "Geen commissie op ETF's",
+  "0.1% (max. $1) + 0.35% FX": "0,1% (max. $1) + 0,35% wisselkosten",
+  "Plans with no commission on ETFs": "Plannen zonder commissie op ETF's",
+  "€1 per order on the Standard plan (commission varies by country)": "€1 per order op het Standard-plan (de commissie verschilt per land)",
+  "€1 + free FX up to €1,000 a month (1% above), on weekdays": "€1 + gratis wisselen tot €1.000 per maand (1% daarboven), op werkdagen",
+  "Investment plans in selected ETFs with no commission": "Beleggingsplannen in geselecteerde ETF's zonder commissie",
+  "Classic tier on Euronext: 0.08% (min. €2)": "Classic-niveau op Euronext: 0,08% (min. €2)",
+  "Classic tier: 0.08% (min. $1) + 0.25% FX": "Classic-niveau: 0,08% (min. $1) + 0,25% wisselkosten",
+  "No savings plans: 12 manual orders at min. €2": "Geen spaarplannen: 12 handmatige orders van min. €2",
+  "0.15% a year + 25% VAT (Classic tier). 0% in BE, FR, IT, NL, DK and PL": "0,15% per jaar + 25% btw (Classic-niveau). 0% in BE, FR, IT, NL, DK en PL",
+  "PRIME ETF from €250 on the European Investor Exchange (Free Broker)": "PRIME-ETF vanaf €250 op de European Investor Exchange (Free Broker)",
+  "€0.99 per order under €250 (Free Broker)": "€0,99 per order onder €250 (Free Broker)",
+  "€0.99 on the European Investor Exchange. Traded in euros": "€0,99 op de European Investor Exchange. Wordt in euro's verhandeld",
+  "Free savings plans": "Gratis spaarplannen",
+  "Free Broker. PRIME+ costs €4.99 a month": "Free Broker. PRIME+ kost €4,99 per maand",
+  "€1 per order": "€1 per order",
+  "€1 per order. US stocks are traded in euros": "€1 per order. Amerikaanse aandelen worden in euro's verhandeld",
+  "No commissions. Other fees may apply": "Geen commissies. Er kunnen andere kosten gelden",
+  "No commissions + 0.15% FX": "Geen commissies + 0,15% wisselkosten",
+  "AutoInvest with no commissions": "AutoInvest zonder commissies",
+  "0% up to €100,000 monthly volume": "0% tot €100.000 volume per maand",
+  "0% commission + 0.5% FX": "0% commissie + 0,5% wisselkosten",
+  "Investment plans with no commission": "Beleggingsplannen zonder commissie",
+  "€0 up to €250,000 (0.02% a year above)": "€0 tot €250.000 (0,02% per jaar daarboven)"
+ },
+ "brokers": {
+  "traderepublic": {
+   "type": "Bank",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "t": {
+    "etfFee": {
+     "s": "€0 in spaarplannen"
+    },
+    "usFee": {
+     "s": "Amerikaanse aandelen worden in euro's verhandeld"
+    },
+    "fx": {
+     "v": "Alleen de spread",
+     "s": "Geen expliciete wisselkosten omdat Amerikaanse aandelen in euro's noteren"
+    },
+    "transfer": {
+     "s": "Trade Republic rekent niets, maar er kunnen kosten van derden gelden. Fracties kunnen niet worden overgeboekt"
+    },
+    "interest": {
+     "v": "2,50%",
+     "s": "Depositorente van de ECB, maandelijks uitbetaald. Nieuwe klanten krijgen in de meeste landen 3% tot €50.000. Duitsland: 2,50% zonder plafond"
+    },
+    "entity": {
+     "s": "Dezelfde Duitse bank bedient elk land"
+    },
+    "regulator": {
+     "v": "BaFin en Bundesbank (Duitsland)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Duits beleggerscompensatiestelsel, 90% van de niet-teruggegeven activa"
+    },
+    "protCash": {
+     "v": "Tot €100.000",
+     "s": "Via de depositogarantie van de partnerbanken. Een deel van het geld kan in geldmarktfondsen staan"
+    },
+    "available": {
+     "v": "18 landen",
+     "s": "DE, AT, FR, ES, IT, NL, BE, LU, FI, IE, GR, PT, EE, LV, LT, SI, SK en PL"
+    },
+    "fractions": {
+     "v": "Ja"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Gratis spaarplannen"
+    },
+    "bonds": {
+     "v": "Ja"
+    },
+    "options": {
+     "v": "Nee"
+    }
+   }
+  },
+  "trading212": {
+   "type": "Broker",
+   "risk": "Gesponsorde link. Beleggen brengt risico voor je kapitaal met zich mee. Voorwaarden van toepassing.",
+   "offer": {
+    "t": "Gratis fractioneel aandeel ter waarde van maximaal €100"
+   },
+   "t": {
+    "etfFee": {
+     "s": "Geen commissies. Er kunnen andere kosten gelden. Zie de voorwaarden en kosten"
+    },
+    "usFee": {
+     "s": "Geen commissies. Er kunnen andere kosten gelden"
+    },
+    "fx": {
+     "v": "0,15%",
+     "s": "Geldt bij het omwisselen van geld, ook in het weekend. Er kunnen andere kosten gelden"
+    },
+    "transfer": {
+     "s": "Alleen hele aandelen. Niet beschikbaar voor klanten van Trading 212 EU GmbH die in Duitsland wonen"
+    },
+    "interest": {
+     "v": "2,50% tot 3,50%",
+     "s": "EU GmbH: 3,50% (2,80% vanaf 1 nov 2026). Markets Ltd: 2,50%. Nieuwe klanten van EU GmbH krijgen 4,20% gedurende 4 maanden op rekeningen geopend tot 2 nov 2026. De rentes zijn variabel"
+    },
+    "entity": {
+     "v": "Trading 212 EU GmbH of Trading 212 Markets Ltd",
+     "s": "EU GmbH in DE, AT, DK, FI, FR, IE, LU, NL, PT, ES en SE. Markets Ltd in IT, GR, PL, CZ, RO en andere Oost- en Zuid-Europese EU-landen"
+    },
+    "regulator": {
+     "v": "BaFin (Duitsland) of CySEC (Cyprus)",
+     "s": "Hangt af van de entiteit"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Duits of Cypriotisch beleggerscompensatiestelsel"
+    },
+    "protCash": {
+     "v": "Tot €100.000",
+     "s": "Per partnerbank voor klanten van EU GmbH. Klanten van Markets Ltd: tot €20.000 (Cypriotisch fonds). Met rente aan staat een deel van het geld in geldmarktfondsen"
+    },
+    "available": {
+     "v": "EER, behalve België",
+     "s": "Niet beschikbaar voor inwoners van België"
+    },
+    "fractions": {
+     "v": "Ja"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Pies en AutoInvest"
+    },
+    "bonds": {
+     "v": "Nee"
+    },
+    "options": {
+     "v": "Nee"
+    }
+   }
+  },
+  "xtb": {
+   "type": "Broker",
+   "risk": "76-83% van de particuliere CFD-rekeningen verliest geld.",
+   "offer": {
+    "t": "Gratis aandeel in sommige landen, afhankelijk van de lokale campagne"
+   },
+   "t": {
+    "etfFee": {
+     "s": "Tot €100.000 volume per maand. Daarboven: 0,2% (min. €10)"
+    },
+    "usFee": {
+     "s": "Tot €100.000 volume per maand"
+    },
+    "fx": {
+     "v": "0,5%"
+    },
+    "custodyTxt": {
+     "v": "€0 tot €250.000",
+     "s": "0,02% per jaar over de waarde boven €250.000"
+    },
+    "inact": {
+     "v": "€10/maand",
+     "s": "Pas na 365 dagen zonder transacties en 90 dagen zonder stortingen"
+    },
+    "transfer": {
+     "v": "€25 per positie",
+     "s": "Spaanse effecten: 0,10% (min. €100)"
+    },
+    "interest": {
+     "v": "1,10%",
+     "s": "Tot €100.000. In sommige landen een hogere rente de eerste 90 dagen, bijvoorbeeld 3,50% in DE, FR en ES. De rentes zijn variabel"
+    },
+    "entity": {
+     "s": "Lokale bijkantoren in DE, FR, ES, IT, PT, PL, CZ, SK, RO en HU. Overige landen: XTB Limited (CySEC)"
+    },
+    "regulator": {
+     "v": "KNF (Polen)",
+     "s": "XTB Limited: CySEC (Cyprus)"
+    },
+    "protInv": {
+     "v": "Tot €20.100",
+     "s": "Pools stelsel: 100% van de eerste €3.000 en 90% daarboven"
+    },
+    "protCash": {
+     "v": "Tot €20.100",
+     "s": "Hetzelfde stelsel. Het geld staat op gescheiden rekeningen"
+    },
+    "available": {
+     "v": "De meeste EU-landen",
+     "s": "Via lokale bijkantoren of XTB Limited"
+    },
+    "fractions": {
+     "v": "Ja"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Beleggingsplannen"
+    },
+    "bonds": {
+     "v": "Ja"
+    },
+    "options": {
+     "v": "Ja"
+    }
+   }
+  },
+  "ibkr": {
+   "type": "Broker",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "t": {
+    "etfFee": {
+     "v": "Vast: 0,05% (min. €3) | Gestaffeld: 0,05% (min. €1,25)",
+     "s": "Vast op Xetra is inclusief kosten. Gestaffeld: max. €29 plus beurs-, clearing- en toezichtkosten",
+     "plans": {
+      "fixed": {
+       "v": "0,05% (min. €3)",
+       "s": "Vast plan op Xetra, beurs- en clearingkosten inbegrepen"
+      },
+      "tiered": {
+       "v": "0,05% (min. €1,25)",
+       "s": "Gestaffeld plan op Xetra, max. €29, plus beurs-, clearing- en toezichtkosten"
+      }
+     }
+    },
+    "usFee": {
+     "v": "Vast: $0,005 per aandeel (min. $1) | Gestaffeld: $0,0035 per aandeel (min. $0,35)",
+     "s": "Max. 1% van de orderwaarde. Gestaffeld telt beurs- en clearingkosten erbij",
+     "plans": {
+      "fixed": {
+       "v": "$0,005 per aandeel (min. $1)",
+       "s": "Vast plan. Max. 1% van de orderwaarde, beurs- en clearingkosten inbegrepen"
+      },
+      "tiered": {
+       "v": "$0,0035 per aandeel (min. $0,35)",
+       "s": "Gestaffeld plan. Max. 1% van de orderwaarde, plus beurs-, clearing- en toezichtkosten"
+      }
+     }
+    },
+    "fx": {
+     "v": "0,03%",
+     "s": "Automatisch omwisselen. Handmatig: 0,002% (min. $2)"
+    },
+    "transfer": {
+     "s": "Basis-FOP-overboeking. De ontvangende broker kan kosten rekenen"
+    },
+    "interest": {
+     "v": "1,93%",
+     "s": "Over saldi boven €10.000 (benchmark min 0,5 procentpunt). Naar rato als je rekening onder $100.000 blijft"
+    },
+    "regulator": {
+     "v": "Central Bank of Ireland"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Iers beleggerscompensatiestelsel (90%)"
+    },
+    "protCash": {
+     "v": "Tot €20.000",
+     "s": "Hetzelfde stelsel"
+    },
+    "available": {
+     "v": "EER",
+     "s": "De EU plus IJsland, Liechtenstein en Noorwegen"
+    },
+    "fractions": {
+     "v": "Ja"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Periodiek beleggen"
+    },
+    "bonds": {
+     "v": "Ja"
+    },
+    "options": {
+     "v": "Ja"
+    }
+   }
+  },
+  "degiro": {
+   "type": "Broker",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "offer": {
+    "t": "Tot €/£100 aan transactiekosten vergoed voor nieuwe klanten, tot 30 september 2026"
+   },
+   "t": {
+    "etfFee": {
+     "s": "ETF Core Selection op Tradegate. Andere ETF's: €2 + €1"
+    },
+    "usFee": {
+     "s": "€1 commissie + €1 behandelkosten"
+    },
+    "fx": {
+     "v": "0,25%",
+     "s": "AutoFX. Handmatig omwisselen: €10 + 0,25%"
+    },
+    "custodyTxt": {
+     "v": "€2,50 per beurs per jaar",
+     "s": "Aansluitkosten, max. 0,25% van de rekeningwaarde. Niet op je thuisbeurs of voor de ETF Core Selection"
+    },
+    "transfer": {
+     "v": "€20 per positie",
+     "s": "Plus externe kosten. Gratis in Duitsland"
+    },
+    "regulator": {
+     "v": "BaFin (Duitsland)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Duits beleggerscompensatiestelsel (90%)"
+    },
+    "protCash": {
+     "v": "Tot €100.000",
+     "s": "Duits depositogarantiestelsel"
+    },
+    "available": {
+     "v": "22 EU-landen",
+     "s": "De hele EU behalve Oostenrijk, Kroatië, Cyprus, Hongarije en Malta. Nieuwe Oostenrijkse klanten gaan naar flatex"
+    },
+    "fractions": {
+     "v": "Nee"
+    },
+    "plans": {
+     "v": "Nee",
+     "s": "Elke aankoop plaats je handmatig"
+    },
+    "bonds": {
+     "v": "Ja"
+    },
+    "options": {
+     "v": "Ja"
+    }
+   }
+  },
+  "etoro": {
+   "type": "Broker",
+   "risk": "51% van de particuliere beleggersrekeningen verliest geld bij het handelen in CFD's met deze aanbieder.",
+   "offer": {
+    "t": "Gratis asset ter waarde van maximaal $500, in stappen op basis van je eerste storting"
+   },
+   "t": {
+    "usFee": {
+     "s": "Per order om te openen en te sluiten. $1 of $2, afhankelijk van je land en de beurs"
+    },
+    "fx": {
+     "v": "0,75%",
+     "s": "Vanaf een eurorekening"
+    },
+    "transfer": {
+     "v": "$100 per positie",
+     "s": "Volgens de klantenservice van eToro, niet op de website gepubliceerd"
+    },
+    "interest": {
+     "s": "Alleen op saldi in dollar: 3% tot $50.000 en 3,80% daarboven"
+    },
+    "regulator": {
+     "v": "CySEC (Cyprus)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Investor Compensation Fund"
+    },
+    "protCash": {
+     "v": "Tot €20.000",
+     "s": "Hetzelfde fonds"
+    },
+    "available": {
+     "v": "EER"
+    },
+    "fractions": {
+     "v": "Ja",
+     "s": "Min. $10"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Periodiek beleggen, min. $25 per maand"
+    },
+    "bonds": {
+     "v": "Nee"
+    },
+    "options": {
+     "v": "Nee"
+    }
+   }
+  },
+  "freedom24": {
+   "type": "Broker",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "offer": {
+    "t": "Tot 20 gratis aandelen als je je aanmeldt en de rekening vult, promocode vereist"
+   },
+   "t": {
+    "etfFee": {
+     "v": "€2 + €0,02 per aandeel",
+     "s": "Smart-plan in EUR"
+    },
+    "usFee": {
+     "v": "$2 + $0,02 per aandeel",
+     "s": "Smart-plan"
+    },
+    "fx": {
+     "v": "Geen gepubliceerde kosten",
+     "s": "Controleer de koers op het platform voordat je omwisselt"
+    },
+    "transfer": {
+     "v": "€100 per overboeking"
+    },
+    "regulator": {
+     "v": "CySEC (Cyprus)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Investor Compensation Fund"
+    },
+    "protCash": {
+     "v": "Tot €20.000",
+     "s": "Hetzelfde fonds"
+    },
+    "available": {
+     "v": "EU/EER",
+     "s": "Geen openbare landenlijst"
+    },
+    "fractions": {
+     "v": "Nee"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "0% commissie alleen binnen het periodieke ETF-beleggingsplan"
+    },
+    "bonds": {
+     "v": "Ja"
+    },
+    "options": {
+     "v": "Ja"
+    }
+   }
+  },
+  "lightyear": {
+   "type": "Broker",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "offer": {
+    "t": "Gratis fractioneel aandeel ter waarde van maximaal €100"
+   },
+   "t": {
+    "usFee": {
+     "v": "0,1% (max. $1)",
+     "s": "Min. $0,10"
+    },
+    "fx": {
+     "v": "0,35%",
+     "s": "Te vermijden met de meervaluta-rekening"
+    },
+    "transfer": {
+     "s": "Elke positie moet minstens €1.000 waard zijn. Fracties kunnen niet worden overgeboekt"
+    },
+    "interest": {
+     "s": "Geen rente op niet-belegde euro's. Het geldmarktfonds Savings betaalt 2,42% tot 2,43% per jaar, na kosten (niet in België)"
+    },
+    "regulator": {
+     "v": "EFSA (Estland)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Estisch beleggersbeschermingsfonds"
+    },
+    "protCash": {
+     "v": "Tot €20.000",
+     "s": "Hetzelfde fonds. Het geld is geen bankdeposito"
+    },
+    "available": {
+     "v": "24 EU-landen en Noorwegen",
+     "s": "Niet beschikbaar in Tsjechië, Polen en Roemenië"
+    },
+    "fractions": {
+     "v": "Ja"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Plannen en herhaalorders"
+    },
+    "bonds": {
+     "v": "Ja",
+     "s": "Obligaties in euro: €1 per order"
+    },
+    "options": {
+     "v": "Nee"
+    }
+   }
+  },
+  "revolut": {
+   "type": "Digitale bank",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "offer": {
+    "t": "€10 tot €30 aan welkomstbeloningen"
+   },
+   "t": {
+    "etfFee": {
+     "s": "Standard-plan in FR, ES, PT en AT. DE, IE, IT en BE: 0,25% (min. €1) met 1 gratis order per maand. NL: 0,10%. Premium: 5 gratis orders per maand"
+    },
+    "usFee": {
+     "s": "Dezelfde commissie als bij ETF's, verschilt per land"
+    },
+    "fx": {
+     "v": "Gratis tot €1.000/maand",
+     "s": "Standard-plan: 1% daarboven (0,5% in sommige landen) en 1% in het weekend"
+    },
+    "transfer": {
+     "v": "$35 per positie",
+     "s": "Fractionele aandelen moeten mogelijk worden verkocht voor een overboeking"
+    },
+    "interest": {
+     "s": "Op de beleggingsrekening. Spaarrekeningen staan daar los van"
+    },
+    "regulator": {
+     "v": "Bank of Lithuania"
+    },
+    "protInv": {
+     "v": "Tot €22.000",
+     "s": "Litouws stelsel, 100% van het verlies, geld en effecten samen"
+    },
+    "protCash": {
+     "v": "Tot €22.000",
+     "s": "Dezelfde limiet, samen met de effecten"
+    },
+    "available": {
+     "v": "EER",
+     "s": "De kosten verschillen per land"
+    },
+    "fractions": {
+     "v": "Ja"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Gratis op geselecteerde ETF's"
+    },
+    "bonds": {
+     "v": "Ja"
+    },
+    "options": {
+     "v": "Nee"
+    }
+   }
+  },
+  "saxo": {
+   "type": "Bank",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "t": {
+    "etfFee": {
+     "v": "0,08% (min. €2)",
+     "s": "Classic-niveau op Euronext. Xetra: min. €3. De prijzen verschillen per land"
+    },
+    "usFee": {
+     "v": "0,08% (min. $1)",
+     "s": "Classic-niveau"
+    },
+    "fx": {
+     "v": "0,25%"
+    },
+    "custodyTxt": {
+     "v": "0,15% per jaar + btw",
+     "s": "Classic-niveau, plus 25% Deense btw. 0% voor inwoners van BE, FR, IT, NL, DK en PL"
+    },
+    "transfer": {
+     "v": "€50 per positie (max. €160)"
+    },
+    "interest": {
+     "s": "Alleen VIP-klanten krijgen rente op hun geld"
+    },
+    "entity": {
+     "s": "Of de lokale Saxo-entiteit of het lokale bijkantoor in FR, NL, BE, IT en CZ"
+    },
+    "regulator": {
+     "v": "Deense FSA (Denemarken)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Deens garantiefonds"
+    },
+    "protCash": {
+     "v": "Tot €100.000",
+     "s": "Deens garantiefonds"
+    },
+    "available": {
+     "v": "27 EU/EER-landen"
+    },
+    "fractions": {
+     "v": "Nee"
+    },
+    "plans": {
+     "v": "Nee",
+     "s": "AutoInvest alleen in Denemarken"
+    },
+    "bonds": {
+     "v": "Ja"
+    },
+    "options": {
+     "v": "Ja"
+    }
+   }
+  },
+  "scalable": {
+   "type": "Bank",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "t": {
+    "etfFee": {
+     "s": "PRIME-ETF's vanaf €250 op de European Investor Exchange. Andere ETF's: €0,99. Xetra en gettex: €1,99"
+    },
+    "usFee": {
+     "v": "€0,99",
+     "s": "Amerikaanse aandelen worden in euro's verhandeld. PRIME+: €0 vanaf €250"
+    },
+    "fx": {
+     "v": "Alleen de spread",
+     "s": "Geen expliciete wisselkosten omdat Amerikaanse aandelen in euro's noteren"
+    },
+    "custodyTxt": {
+     "s": "Free Broker. PRIME+ kost €4,99 per maand"
+    },
+    "transfer": {
+     "s": "Geen overboekingskosten in de tarievenlijst"
+    },
+    "interest": {
+     "v": "2,60%",
+     "s": "Op de aparte Overnight-rekening, zonder plafond. Variabel"
+    },
+    "regulator": {
+     "v": "BaFin en Bundesbank (Duitsland)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Duits beleggerscompensatiestelsel (EdW), 90% tot €20.000"
+    },
+    "protCash": {
+     "v": "Tot €100.000",
+     "s": "Per bank. Op Free Broker kan een deel van het geld in geldmarktfondsen staan"
+    },
+    "available": {
+     "v": "6 landen",
+     "s": "DE, AT, FR, IT, ES en NL"
+    },
+    "fractions": {
+     "v": "Alleen in spaarplannen"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Gratis, vanaf €1"
+    },
+    "bonds": {
+     "v": "Ja"
+    },
+    "options": {
+     "v": "Nee"
+    }
+   }
+  },
+  "bux": {
+   "type": "Broker",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "t": {
+    "etfFee": {
+     "v": "€0,99",
+     "s": "Marktorder op het Basic-plan. €0 in beleggingsplannen"
+    },
+    "usFee": {
+     "v": "€0,99",
+     "s": "Marktorder"
+    },
+    "fx": {
+     "v": "0,75%",
+     "s": "Basic-plan. Plus: 0,25%. Prime: 0,20%"
+    },
+    "custodyTxt": {
+     "v": "0,20% per jaar",
+     "s": "Basic-plan, over belegd vermogen. Plus: €2,99 per maand. Prime: €7,99 per maand"
+    },
+    "transfer": {
+     "v": "Niet mogelijk",
+     "s": "BUX boekt geen portefeuilles over naar andere brokers"
+    },
+    "interest": {
+     "s": "Basic-plan. Plus: 1,75% en Prime: 2,00% tot €100.000"
+    },
+    "entity": {
+     "s": "Onderdeel van ABN AMRO. Het geld staat bij ABN AMRO Clearing Bank"
+    },
+    "regulator": {
+     "v": "AFM (Nederland)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Nederlands beleggerscompensatiestelsel"
+    },
+    "protCash": {
+     "v": "Tot €100.000",
+     "s": "Nederlands depositogarantiestelsel, via ABN AMRO Clearing Bank"
+    },
+    "available": {
+     "v": "8 landen",
+     "s": "NL, BE, FR, DE, ES, IT, AT en IE"
+    },
+    "fractions": {
+     "v": "Ja",
+     "s": "Vanaf €5, alleen marktorders"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Gratis aankopen in beleggingsplannen"
+    },
+    "bonds": {
+     "v": "Nee"
+    },
+    "options": {
+     "v": "Nee"
+    }
+   }
+  },
+  "bitpanda": {
+   "type": "Beleggingsapp",
+   "risk": "Beleggen brengt risico op verlies met zich mee.",
+   "t": {
+    "etfFee": {
+     "s": "Per order. Er kan een spread gelden"
+    },
+    "usFee": {
+     "s": "Per order. Amerikaanse aandelen worden in euro's verhandeld"
+    },
+    "fx": {
+     "v": "Alleen de spread",
+     "s": "Geen gepubliceerde wisselkosten omdat aandelen in euro's noteren"
+    },
+    "transfer": {
+     "v": "€30 per positie",
+     "s": "Alleen hele aandelen. Gratis voor klanten van het Duitse bijkantoor"
+    },
+    "interest": {
+     "s": "Cash Plus (een product op basis van een geldmarktfonds) staat daar los van"
+    },
+    "entity": {
+     "s": "Het geld wordt als elektronisch geld aangehouden bij Bitpanda Payments GmbH"
+    },
+    "regulator": {
+     "v": "FMA (Oostenrijk)"
+    },
+    "protInv": {
+     "v": "Tot €20.000",
+     "s": "Oostenrijks beleggerscompensatiestelsel"
+    },
+    "protCash": {
+     "v": "Geen",
+     "s": "Elektronisch geld, geen bankdeposito"
+    },
+    "available": {
+     "v": "EU/EER",
+     "s": "Geen gepubliceerde landenlijst voor aandelen en ETF's"
+    },
+    "fractions": {
+     "v": "Ja"
+    },
+    "plans": {
+     "v": "Ja",
+     "s": "Gratis voor veel ETF's in een lopende actie, anders €1 per order"
+    },
+    "bonds": {
+     "v": "Nee"
+    },
+    "options": {
+     "v": "Nee"
+    }
+   }
+  }
+ }
+}
