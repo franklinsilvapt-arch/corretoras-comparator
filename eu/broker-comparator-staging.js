@@ -5,7 +5,32 @@
   var scriptEl = document.currentScript;
   var BASE = scriptEl ? scriptEl.src.replace(/[^/]*$/, '') : 'https://franklinsilvapt-arch.github.io/corretoras-comparator/eu/';
   var EU = 'https://www.eupersonalfinance.eu';
-  var CONF = 'To be confirmed';
+  var LANG = (function(){
+    var p = location.pathname;
+    if(/^\/nl(\/|$)/.test(p)) return 'nl';
+    if(/^\/pl(\/|$)/.test(p)) return 'pl';
+    var l = (document.documentElement.lang||'').toLowerCase();
+    if(l.indexOf('nl')===0) return 'nl';
+    if(l.indexOf('pl')===0) return 'pl';
+    return 'en';
+  })();
+  var LOC = {en:'en-GB', nl:'nl-NL', pl:'pl-PL'}[LANG];
+  var STR = {"en":{"conf":"To be confirmed","loadFail":"The comparator could not be loaded. Please reload the page.","secCosts":"What you pay","secCostsSub":"Calculated with the values above","rEtf":"Buy a European ETF","nEtf":" order, cheapest route","rUs":"Buy US stocks","nUs":" order, FX included","rPlan":"Monthly ETF plan","nPlan":" a month, cost over a year","rCustody":"Keep your portfolio","nCustody":" portfolio, cost over a year","secFees":"Fees in detail","rEtfFee":"European ETFs","rUsFee":"US stocks","rFx":"Currency conversion","rCustodyTxt":"Custody","rInact":"Inactivity","rTransfer":"Transfer securities out","secInterest":"Interest on uninvested cash","rInterest":"Rate on euros","secSafety":"Safety and regulation","rEntity":"Entity serving EU clients","rRegulator":"Regulator","rProtInv":"Investor protection","rProtCash":"Cash protection","rAvailable":"Available in","secProducts":"Products and account","rFractions":"Fractional shares and ETFs","rPlans":"Automatic investment plans","rBonds":"Bonds","rOptions":"Options","goTo":"Go to ","offerBadge":"Sign-up offer","useCode":"Use code","howItWorks":"How it works","author":"Author","reviewer":"Reviewer","lastChecked":"Last checked","chooseUpTo":"Choose up to","toCompare":"to compare","pickerHint":"Most searched first, then A to Z. When you reach the maximum, a new pick replaces the oldest one.","change":"Change","close":"Close","setScenario":"Set your scenario","scenarioHint":"The costs in the first section are recalculated with these values.","fAmount":"Amount per purchase","fAmountNote":"Assumes it is the only order that month","fMonthly":"Monthly investment","fMonthlyNote":"For the automatic ETF plan","fPortfolio":"Your portfolio value","fPortfolioNote":"For the yearly custody cost","diffOnly":"Show differences only","showFewer":"Show fewer brokers","showAll1":"Show all ","showAll2":" brokers","plusFees":"+ fees","cheapest":"Cheapest","highestRate":"Highest rate","emptyPick":"Choose at least one broker in the list above to see the comparison.","pricingPlan":"Pricing plan","planFixed":"Fixed","planTiered":"Tiered","readReview":"Read the full review","sources":"Sources","sourcesSub":"Fee schedules and official pages","feesSuffix":" fees","sumBuy":"Purchase of","sumPerMonth":"/month","sumPortfolio":"Portfolio of","fullComparison":"Full comparison:","vs":" vs ","readArticle":"Read article","notes":"<p><b>How we calculate costs:</b> each scenario uses the cheapest route the broker offers for that product, with the commission, fixed fees and currency conversion cost. Dollar fees are converted at $1 = €0.85. For per-unit fees we assume an ETF at €100 and a US share at $200. Market spreads and the ETFs' own costs (TER) are not included. Fees and conditions can vary by country of residence: the table shows the offer for most EU clients.</p><p><b>Taxes:</b> the comparison does not include taxes, because withholding and reporting rules depend on your country.</p><p><b>Interactive Brokers:</b> use the Fixed/Tiered selector at the top of the column. For Tiered we add the clearing and regulatory fees from the Interactive Brokers table. On Xetra the exchange fee is waived for retail orders routed through SmartRouting. For US stocks we assume a market order, which pays the exchange fee.</p><p><b>Trading 212:</b> sponsored link. When investing, your capital is at risk and you may get back less than invested. Past performance doesn't guarantee future results. Other fees may apply, see the <a href=\"https://www.trading212.com/terms/invest\" target=\"_blank\" rel=\"noopener\">terms and fees</a>. If you enable interest, Trading 212 will hold your cash in qualifying money market funds and banks. Otherwise, your cash will be held only in banks. Interest applies on cash in an investment account. Terms apply. The rates shown may no longer be current: check the terms and fees page for the live rates.</p><p><b>Freedom24:</b> the 0% commission on the ETF investment plan applies exclusively to the recurring investment function. Other operations follow the Freedom24 fee schedule.</p>"},"nl":{"conf":"Nog te bevestigen","loadFail":"De vergelijker kon niet worden geladen. Laad de pagina opnieuw.","secCosts":"Wat je betaalt","secCostsSub":"Berekend met de waarden hierboven","rEtf":"Een Europese ETF kopen","nEtf":" order, goedkoopste route","rUs":"Amerikaanse aandelen kopen","nUs":" order, wisselkosten inbegrepen","rPlan":"Maandelijks ETF-plan","nPlan":" per maand, kosten over een jaar","rCustody":"Je portefeuille aanhouden","nCustody":" portefeuille, kosten over een jaar","secFees":"Kosten in detail","rEtfFee":"Europese ETF's","rUsFee":"Amerikaanse aandelen","rFx":"Valutawissel","rCustodyTxt":"Bewaarloon","rInact":"Inactiviteit","rTransfer":"Effecten overboeken","secInterest":"Rente op niet-belegd geld","rInterest":"Rente op euro's","secSafety":"Veiligheid en toezicht","rEntity":"Entiteit voor EU-klanten","rRegulator":"Toezichthouder","rProtInv":"Beleggersbescherming","rProtCash":"Bescherming van je geld","rAvailable":"Beschikbaar in","secProducts":"Producten en rekening","rFractions":"Fractionele aandelen en ETF's","rPlans":"Automatische beleggingsplannen","rBonds":"Obligaties","rOptions":"Opties","goTo":"Naar ","offerBadge":"Welkomstbonus","useCode":"Gebruik code","howItWorks":"Hoe het werkt","author":"Auteur","reviewer":"Gecontroleerd door","lastChecked":"Laatst gecontroleerd","chooseUpTo":"Kies er maximaal","toCompare":"om te vergelijken","pickerHint":"Meest gezocht eerst, daarna van A tot Z. Zit je op het maximum, dan vervangt een nieuwe keuze de oudste.","change":"Wijzigen","close":"Sluiten","setScenario":"Stel je scenario in","scenarioHint":"De kosten in het eerste blok worden met deze waarden herrekend.","fAmount":"Bedrag per aankoop","fAmountNote":"Gaat ervan uit dat dit de enige order van de maand is","fMonthly":"Maandelijkse inleg","fMonthlyNote":"Voor het automatische ETF-plan","fPortfolio":"Waarde van je portefeuille","fPortfolioNote":"Voor het bewaarloon per jaar","diffOnly":"Alleen verschillen tonen","showFewer":"Minder brokers tonen","showAll1":"Alle ","showAll2":" brokers tonen","plusFees":"+ kosten","cheapest":"Goedkoopst","highestRate":"Hoogste rente","emptyPick":"Kies hierboven minstens één broker om de vergelijking te zien.","pricingPlan":"Tariefplan","planFixed":"Vast","planTiered":"Gestaffeld","readReview":"Lees de volledige review","sources":"Bronnen","sourcesSub":"Tarievenlijsten en officiële pagina's","feesSuffix":" tarieven","sumBuy":"Aankoop van","sumPerMonth":"/maand","sumPortfolio":"Portefeuille van","fullComparison":"Volledige vergelijking:","vs":" vs ","readArticle":"Lees het artikel","notes":"<p><b>Hoe we de kosten berekenen:</b> elk scenario gebruikt de goedkoopste route die de broker voor dat product aanbiedt, met de commissie, de vaste kosten en de kosten van de valutawissel. Kosten in dollar rekenen we om tegen $1 = €0,85. Voor kosten per stuk gaan we uit van een ETF van €100 en een Amerikaans aandeel van $200. De spread in de markt en de eigen kosten van de ETF (TER) zitten er niet in. Kosten en voorwaarden kunnen per land van verblijf verschillen: de tabel toont het aanbod voor de meeste klanten in de EU.</p><p><b>Belasting:</b> de vergelijking bevat geen belasting, omdat inhouding en aangifte van je eigen land afhangen.</p><p><b>Interactive Brokers:</b> gebruik de keuze Vast/Gestaffeld boven aan de kolom. Bij Gestaffeld tellen we de clearing- en toezichtkosten uit de tabel van Interactive Brokers mee. Op Xetra vervalt de beurskost voor particuliere orders via SmartRouting. Voor Amerikaanse aandelen gaan we uit van een marktorder, die de beurskost betaalt.</p><p><b>Trading 212:</b> gesponsorde link. Beleggen brengt risico met zich mee en je kunt minder terugkrijgen dan je inlegt. Resultaten uit het verleden bieden geen garantie voor de toekomst. Er kunnen andere kosten gelden, zie de <a href=\"https://www.trading212.com/terms/invest\" target=\"_blank\" rel=\"noopener\">voorwaarden en kosten</a>. Als je rente aanzet, houdt Trading 212 je geld aan in kwalificerende geldmarktfondsen en bij banken. Anders staat je geld alleen bij banken. De rente geldt op geld in een beleggingsrekening. Voorwaarden zijn van toepassing. De getoonde rentes kunnen achterhaald zijn: kijk op de pagina met voorwaarden en kosten voor de actuele stand.</p><p><b>Freedom24:</b> de 0% commissie op het ETF-beleggingsplan geldt uitsluitend voor de functie voor periodiek beleggen. Andere transacties volgen de tarievenlijst van Freedom24.</p>"},"pl":{"conf":"Do potwierdzenia","loadFail":"Nie udało się wczytać porównywarki. Odśwież stronę.","secCosts":"Ile zapłacisz","secCostsSub":"Obliczone na podstawie wartości powyżej","rEtf":"Zakup europejskiego ETF","nEtf":" zlecenie, najtańsza droga","rUs":"Zakup amerykańskich akcji","nUs":" zlecenie, z przewalutowaniem","rPlan":"Miesięczny plan ETF","nPlan":" miesięcznie, koszt w skali roku","rCustody":"Utrzymanie portfela","nCustody":" portfel, koszt w skali roku","secFees":"Opłaty szczegółowo","rEtfFee":"Europejskie ETF-y","rUsFee":"Amerykańskie akcje","rFx":"Przewalutowanie","rCustodyTxt":"Prowadzenie rachunku","rInact":"Brak aktywności","rTransfer":"Transfer papierów na zewnątrz","secInterest":"Odsetki od niezainwestowanych środków","rInterest":"Oprocentowanie euro","secSafety":"Bezpieczeństwo i nadzór","rEntity":"Podmiot obsługujący klientów z UE","rRegulator":"Nadzór","rProtInv":"Ochrona inwestora","rProtCash":"Ochrona środków pieniężnych","rAvailable":"Dostępny w","secProducts":"Produkty i rachunek","rFractions":"Ułamkowe akcje i ETF-y","rPlans":"Automatyczne plany inwestycyjne","rBonds":"Obligacje","rOptions":"Opcje","goTo":"Przejdź do ","offerBadge":"Bonus powitalny","useCode":"Użyj kodu","howItWorks":"Jak to działa","author":"Autor","reviewer":"Recenzent","lastChecked":"Ostatnio sprawdzone","chooseUpTo":"Wybierz maksymalnie","toCompare":"do porównania","pickerHint":"Najczęściej wyszukiwane na początku, dalej od A do Z. Po osiągnięciu maksimum nowy wybór zastępuje najstarszy.","change":"Zmień","close":"Zamknij","setScenario":"Ustaw swój scenariusz","scenarioHint":"Koszty w pierwszej sekcji są przeliczane według tych wartości.","fAmount":"Kwota jednego zakupu","fAmountNote":"Zakładamy, że to jedyne zlecenie w danym miesiącu","fMonthly":"Miesięczna wpłata","fMonthlyNote":"Do automatycznego planu ETF","fPortfolio":"Wartość Twojego portfela","fPortfolioNote":"Do rocznego kosztu prowadzenia rachunku","diffOnly":"Pokaż tylko różnice","showFewer":"Pokaż mniej brokerów","showAll1":"Pokaż wszystkich ","showAll2":" brokerów","plusFees":"+ opłaty","cheapest":"Najtańszy","highestRate":"Najwyższe oprocentowanie","emptyPick":"Wybierz powyżej co najmniej jednego brokera, aby zobaczyć porównanie.","pricingPlan":"Plan cenowy","planFixed":"Stały","planTiered":"Stopniowany","readReview":"Przeczytaj pełną recenzję","sources":"Źródła","sourcesSub":"Tabele opłat i strony oficjalne","feesSuffix":": opłaty","sumBuy":"Zakup za","sumPerMonth":"/mies.","sumPortfolio":"Portfel o wartości","fullComparison":"Pełne porównanie:","vs":" vs ","readArticle":"Przeczytaj artykuł","notes":"<p><b>Jak liczymy koszty:</b> każdy scenariusz korzysta z najtańszej drogi, jaką broker oferuje dla danego produktu, wraz z prowizją, opłatami stałymi i kosztem przewalutowania. Opłaty w dolarach przeliczamy po kursie $1 = €0,85. Przy opłatach za sztukę zakładamy ETF po €100 i amerykańską akcję po $200. Spread rynkowy i własne koszty ETF-ów (TER) nie są uwzględnione. Opłaty i warunki mogą się różnić w zależności od kraju zamieszkania: tabela pokazuje ofertę dla większości klientów w UE.</p><p><b>Podatki:</b> porównanie nie obejmuje podatków, ponieważ zasady poboru i rozliczenia zależą od Twojego kraju.</p><p><b>Interactive Brokers:</b> użyj przełącznika Stały/Stopniowany u góry kolumny. Przy Stopniowanym doliczamy opłaty rozliczeniowe i regulacyjne z tabeli Interactive Brokers. Na Xetrze opłata giełdowa jest zniesiona dla zleceń detalicznych kierowanych przez SmartRouting. Dla amerykańskich akcji zakładamy zlecenie rynkowe, które tę opłatę ponosi.</p><p><b>Trading 212:</b> link sponsorowany. Inwestowanie wiąże się z ryzykiem utraty kapitału i możesz odzyskać mniej, niż zainwestowałeś. Wyniki z przeszłości nie gwarantują wyników w przyszłości. Mogą obowiązywać inne opłaty, zobacz <a href=\"https://www.trading212.com/terms/invest\" target=\"_blank\" rel=\"noopener\">warunki i opłaty</a>. Jeśli włączysz odsetki, Trading 212 będzie trzymał Twoje środki w kwalifikowanych funduszach rynku pieniężnego i w bankach. W przeciwnym razie środki będą trzymane wyłącznie w bankach. Odsetki dotyczą środków na rachunku inwestycyjnym. Obowiązują warunki. Pokazane stawki mogą być nieaktualne: sprawdź bieżące na stronie warunków i opłat.</p><p><b>Freedom24:</b> prowizja 0% w planie inwestycyjnym ETF dotyczy wyłącznie funkcji inwestowania cyklicznego. Pozostałe operacje podlegają tabeli opłat Freedom24.</p>"}};
+  var T = STR[LANG] || STR.en;
+  var TR = {};
+  /* Cost descriptions come out of CALC in English; this swaps in the translation when there is one. */
+  function trs(x){ return (TR.cost && TR.cost[x]) || x; }
+  function nSelected(n){
+    if(LANG==='nl') return n+(n===1?' broker geselecteerd':' brokers geselecteerd');
+    if(LANG==='pl'){
+      var d=n%10, h=n%100;
+      if(n===1) return '1 wybrany broker';
+      if(d>=2 && d<=4 && !(h>=12 && h<=14)) return n+' wybrane brokery';
+      return n+' wybranych brokerów';
+    }
+    return n===1 ? '1 broker selected' : n+' brokers selected';
+  }
+  var CONF = T.conf;
   var VERIFIED, USD_EUR, ETF_PRICE, US_PRICE_USD, B, PAIRS, LOGOS = window.LF_CC_LOGOS || {};
   /* IBKR Tiered on Xetra: commission 0.05% (min. €1.25, max. €29) + clearing €0.02 + 0.0008% (max. €4.02) + regulatory €0.01.
      Exchange fee waived for retail orders routed through SmartRouting (IBKR Ireland Xetra IBIS table). */
@@ -98,11 +123,42 @@
     }
   };
 
+  /* Overwrite the English prose in the data with the translation for this language. */
+  function applyI18n(d, tr){
+    if(!tr) return;
+    TR = tr;
+    if(tr.verified) d.verified = tr.verified;
+    if(!tr.brokers) return;
+    d.brokers.forEach(function(b){
+      var t = tr.brokers[b.id]; if(!t) return;
+      if(typeof t.type === 'string') b.type = t.type;
+      if(typeof t.risk === 'string') b.risk = t.risk;
+      if(b.offer && t.offer && typeof t.offer.t === 'string') b.offer.t = t.offer.t;
+      if(!t.t || !b.t) return;
+      Object.keys(t.t).forEach(function(k){
+        var src = t.t[k], dst = b.t[k]; if(!dst) return;
+        if(typeof src.v === 'string') dst.v = src.v;
+        if(typeof src.s === 'string') dst.s = src.s;
+        if(src.plans && dst.plans) Object.keys(src.plans).forEach(function(pl){
+          if(!dst.plans[pl]) return;
+          if(typeof src.plans[pl].v === 'string') dst.plans[pl].v = src.plans[pl].v;
+          if(typeof src.plans[pl].s === 'string') dst.plans[pl].s = src.plans[pl].s;
+        });
+      });
+    });
+  }
+
   function boot(){
     var root0 = document.getElementById('eu-bc'); if(!root0) return;
-    fetch(BASE + 'data/brokers.json?v=' + Date.now().toString().slice(0,-5), {cache:'no-cache'})
-      .then(function(r){ return r.json(); })
-      .then(function(d){
+    var bust = '?v=' + Date.now().toString().slice(0,-5);
+    var pData = fetch(BASE + 'data/brokers.json' + bust, {cache:'no-cache'}).then(function(r){ return r.json(); });
+    var pTr = LANG === 'en' ? Promise.resolve(null)
+      : fetch(BASE + 'data/i18n.' + LANG + '.json' + bust, {cache:'no-cache'})
+          .then(function(r){ return r.ok ? r.json() : null; }, function(){ return null; });
+    Promise.all([pData, pTr])
+      .then(function(res){
+        var d = res[0];
+        applyI18n(d, res[1]);
         VERIFIED = d.verified; USD_EUR = d.assumptions.USD_EUR; ETF_PRICE = d.assumptions.ETF_PRICE; US_PRICE_USD = d.assumptions.US_PRICE_USD;
         PAIRS = d.pairs;
         B = d.brokers.filter(function(b){ return CALC[b.id]; }).map(function(b){ b.calc = CALC[b.id]; return b; });
@@ -111,42 +167,42 @@
           .concat(B.filter(function(b){ return TOP.indexOf(b.id)<0; }).sort(function(x,y){ return x.name.localeCompare(y.name); }));
         start();
       })
-      .catch(function(e){ root0.innerHTML = '<p style="text-align:center;color:#697386">The comparator could not be loaded. Please reload the page.</p>'; console.error(e); });
+      .catch(function(e){ root0.innerHTML = '<p style="text-align:center;color:#697386">'+T.loadFail+'</p>'; console.error(e); });
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 
   function start(){
   /* ---------- Rows ---------- */
     var SECTIONS = [
-      { id:'custos', title:'What you pay', sub:'Calculated with the values above', open:true, rows:[
-        {k:'etf', calc:true, label:'Buy a European ETF', note:function(){ return '€'+fmtInt(S.amount)+' order, cheapest route'; }},
-        {k:'us', calc:true, label:'Buy US stocks', note:function(){ return '€'+fmtInt(S.amount)+' order, FX included'; }},
-        {k:'plan', calc:true, label:'Monthly ETF plan', note:function(){ return '€'+fmtInt(S.monthly)+' a month, cost over a year'; }},
-        {k:'custody', calc:true, label:'Keep your portfolio', note:function(){ return '€'+fmtInt(S.portfolio)+' portfolio, cost over a year'; }}
+      { id:'custos', title:T.secCosts, sub:T.secCostsSub, open:true, rows:[
+        {k:'etf', calc:true, label:T.rEtf, note:function(){ return '€'+fmtInt(S.amount)+T.nEtf; }},
+        {k:'us', calc:true, label:T.rUs, note:function(){ return '€'+fmtInt(S.amount)+T.nUs; }},
+        {k:'plan', calc:true, label:T.rPlan, note:function(){ return '€'+fmtInt(S.monthly)+T.nPlan; }},
+        {k:'custody', calc:true, label:T.rCustody, note:function(){ return '€'+fmtInt(S.portfolio)+T.nCustody; }}
       ]},
-      { id:'comissoes', title:'Fees in detail', open:true, rows:[
-        {k:'etfFee', label:'European ETFs'},
-        {k:'usFee', label:'US stocks'},
-        {k:'fx', label:'Currency conversion'},
-        {k:'custodyTxt', label:'Custody'},
-        {k:'inact', label:'Inactivity'},
-        {k:'transfer', label:'Transfer securities out'}
+      { id:'comissoes', title:T.secFees, open:true, rows:[
+        {k:'etfFee', label:T.rEtfFee},
+        {k:'usFee', label:T.rUsFee},
+        {k:'fx', label:T.rFx},
+        {k:'custodyTxt', label:T.rCustodyTxt},
+        {k:'inact', label:T.rInact},
+        {k:'transfer', label:T.rTransfer}
       ]},
-      { id:'juros', title:'Interest on uninvested cash', open:true, rows:[
-        {k:'interest', label:'Rate on euros', high:true}
+      { id:'juros', title:T.secInterest, open:true, rows:[
+        {k:'interest', label:T.rInterest, high:true}
       ]},
-      { id:'seguranca', title:'Safety and regulation', open:true, rows:[
-        {k:'entity', label:'Entity serving EU clients'},
-        {k:'regulator', label:'Regulator'},
-        {k:'protInv', label:'Investor protection'},
-        {k:'protCash', label:'Cash protection'},
-        {k:'available', label:'Available in'}
+      { id:'seguranca', title:T.secSafety, open:true, rows:[
+        {k:'entity', label:T.rEntity},
+        {k:'regulator', label:T.rRegulator},
+        {k:'protInv', label:T.rProtInv},
+        {k:'protCash', label:T.rProtCash},
+        {k:'available', label:T.rAvailable}
       ]},
-      { id:'produtos', title:'Products and account', open:true, rows:[
-        {k:'fractions', label:'Fractional shares and ETFs'},
-        {k:'plans', label:'Automatic investment plans'},
-        {k:'bonds', label:'Bonds'},
-        {k:'options', label:'Options'}
+      { id:'produtos', title:T.secProducts, open:true, rows:[
+        {k:'fractions', label:T.rFractions},
+        {k:'plans', label:T.rPlans},
+        {k:'bonds', label:T.rBonds},
+        {k:'options', label:T.rOptions}
       ]}
     ];
 
@@ -158,10 +214,18 @@
     function maxSel(){ return isMobile()?2:3; }
     function byId(id){ for(var i=0;i<B.length;i++){ if(B[i].id===id) return B[i]; } return null; }
 
-    /* ---------- English number format ---------- */
-    function fmtInt(n){ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,','); }
-    function fmtEur(n){ var p=(Math.round(n*100)/100).toFixed(2).split('.'); return '€'+p[0].replace(/\B(?=(\d{3})+(?!\d))/g,',')+'.'+p[1]; }
-    function parseNum(v){ var n=parseFloat(String(v).replace(/[\s,€]/g,'')); return isFinite(n)&&n>0?n:0; }
+    /* ---------- Number format follows the language ---------- */
+    function fmtInt(n){ return Math.round(n).toLocaleString(LOC); }
+    function fmtEur(n){ return '€'+(Math.round(n*100)/100).toLocaleString(LOC,{minimumFractionDigits:2,maximumFractionDigits:2}); }
+    /* Accepts both 1.234,56 and 1,234.56 so a reader can type either way. */
+    function parseNum(v){
+      var t=String(v).replace(/[\s €]/g,'');
+      var lc=t.lastIndexOf(','), ld=t.lastIndexOf('.');
+      if(lc>-1 && ld>-1){ t = lc>ld ? t.replace(/\./g,'').replace(',','.') : t.replace(/,/g,''); }
+      else if(lc>-1){ t = /,\d{1,2}$/.test(t) ? t.replace(',','.') : t.replace(/,/g,''); }
+      else if(ld>-1 && !/\.\d{1,2}$/.test(t)){ t = t.replace(/\./g,''); }
+      var n=parseFloat(t); return isFinite(n)&&n>0?n:0;
+    }
     function esc(s){ return String(s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
     /* ---------- Render ---------- */
@@ -189,14 +253,14 @@
           .then(function(){}, function(){ BLOCKED[u]=true; renderTable(); });
       });
     }
-    function ctaLabel(b){ return 'Go to '+b.name; }
+    function ctaLabel(b){ return T.goTo+b.name; }
     function ctaRel(b){ return b.cta.plain ? 'noopener' : 'noopener sponsored'; }
     function ctaHtml(b){ return '<a class="cc-btn" href="'+ctaHref(b)+'" target="_blank" rel="'+ctaRel(b)+'"><span>'+esc(ctaLabel(b))+'</span>'+ARROW+'</a><span class="cc-risk">'+esc(b.risk)+'</span>'; }
     function offerHtml(b){
       var o=b.offer; if(!o) return '';
-      return '<div class="cc-offer"><span class="cc-offer-b">Sign-up offer</span>'
-        +'<span class="cc-offer-t">'+esc(o.t)+'.'+(o.c?' Use code <b>'+esc(o.c)+'</b>.':'')+'</span>'
-        +'<a class="cc-offer-a" href="'+o.a+'" target="_blank" rel="noopener">How it works</a></div>';
+      return '<div class="cc-offer"><span class="cc-offer-b">'+T.offerBadge+'</span>'
+        +'<span class="cc-offer-t">'+esc(o.t)+'.'+(o.c?' '+T.useCode+' <b>'+esc(o.c)+'</b>.':'')+'</span>'
+        +'<a class="cc-offer-a" href="'+o.a+'" target="_blank" rel="noopener">'+T.howItWorks+'</a></div>';
     }
 
     function logo(b,size){
@@ -208,30 +272,30 @@
     function shell(){
       root.innerHTML =
         '<div class="cc-meta">'+
-          '<a class="cc-author" href="'+EU+'/authors/pedro-braz"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67b3586be7527f75ff1f0179/6899fe27339d0478018a43f6_pedro-braz.jpg" alt="" onerror="this.parentNode.textContent=\'PB\'"></span><span><span class="cc-al">Author</span><span class="cc-an">Pedro Braz</span></span></a>'+
-          '<a class="cc-author" href="'+EU+'/authors/franklin-silva"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67b3586be7527f75ff1f0179/6899fe1f4b3e6c03cba5a6e2_franklin-silva.jpg" alt="" onerror="this.parentNode.textContent=\'FS\'"></span><span><span class="cc-al">Reviewer</span><span class="cc-an">Franklin Silva</span></span></a>'+
-          '<span class="cc-author"><span class="cc-av">'+'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'+'</span><span><span class="cc-al">Last checked</span><span class="cc-an">'+VERIFIED+'</span></span></span>'+
+          '<a class="cc-author" href="'+EU+'/authors/pedro-braz"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67b3586be7527f75ff1f0179/6899fe27339d0478018a43f6_pedro-braz.jpg" alt="" onerror="this.parentNode.textContent=\'PB\'"></span><span><span class="cc-al">'+T.author+'</span><span class="cc-an">Pedro Braz</span></span></a>'+
+          '<a class="cc-author" href="'+EU+'/authors/franklin-silva"><span class="cc-av"><img src="https://cdn.prod.website-files.com/67b3586be7527f75ff1f0179/6899fe1f4b3e6c03cba5a6e2_franklin-silva.jpg" alt="" onerror="this.parentNode.textContent=\'FS\'"></span><span><span class="cc-al">'+T.reviewer+'</span><span class="cc-an">Franklin Silva</span></span></a>'+
+          '<span class="cc-author"><span class="cc-av">'+'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'+'</span><span><span class="cc-al">'+T.lastChecked+'</span><span class="cc-an">'+VERIFIED+'</span></span></span>'+
         '</div>'+
         '<div class="cc-panel">'+
-          '<p class="cc-step">Choose up to <span id="cc-max">3</span> to compare</p>'+
-          '<p class="cc-hint">Most searched first, then A to Z. When you reach the maximum, a new pick replaces the oldest one.</p>'+
+          '<p class="cc-step">'+T.chooseUpTo+' <span id="cc-max">3</span> '+T.toCompare+'</p>'+
+          '<p class="cc-hint">'+T.pickerHint+'</p>'+
           '<div class="cc-picker" id="cc-picker"></div>'+
           '<button type="button" class="cc-more" id="cc-more" aria-expanded="false"></button>'+
           '<div class="cc-divider"></div>'+
           '<div class="cc-scen-wrap" id="cc-scen-wrap">'+
-          '<button type="button" class="cc-scen-toggle" id="cc-scen-toggle" aria-expanded="false"><span id="cc-scen-sum"></span><span id="cc-scen-act">Change</span></button>'+
+          '<button type="button" class="cc-scen-toggle" id="cc-scen-toggle" aria-expanded="false"><span id="cc-scen-sum"></span><span id="cc-scen-act">'+T.change+'</span></button>'+
           '<div class="cc-scen-body">'+
-          '<p class="cc-step">Set your scenario</p>'+
-          '<p class="cc-hint">The costs in the first section are recalculated with these values.</p>'+
+          '<p class="cc-step">'+T.setScenario+'</p>'+
+          '<p class="cc-hint">'+T.scenarioHint+'</p>'+
           '<div class="cc-scen">'+
-            field('cc-amount','Amount per purchase',S.amount,'Assumes it is the only order that month')+
-            field('cc-monthly','Monthly investment',S.monthly,'For the automatic ETF plan')+
-            field('cc-portfolio','Your portfolio value',S.portfolio,'For the yearly custody cost')+
+            field('cc-amount',T.fAmount,S.amount,T.fAmountNote)+
+            field('cc-monthly',T.fMonthly,S.monthly,T.fMonthlyNote)+
+            field('cc-portfolio',T.fPortfolio,S.portfolio,T.fPortfolioNote)+
           '</div>'+
           '</div></div>'+
         '</div>'+
         '<div class="cc-bar"><span class="cc-count" id="cc-count"></span>'+
-          '<button type="button" class="cc-switch" id="cc-diff" aria-pressed="false"><i></i>Show differences only</button></div>'+
+          '<button type="button" class="cc-switch" id="cc-diff" aria-pressed="false"><i></i>'+T.diffOnly+'</button></div>'+
         '<div class="cc-table" id="cc-table"></div>'+
         '<div class="cc-pairs" id="cc-pairs"></div>'+
         notesHtml()+
@@ -253,7 +317,7 @@
         return '<button type="button" class="cc-pick'+(on?' is-on':'')+(i>=SHORT&&!on?' is-extra':'')+'" data-id="'+b.id+'" aria-pressed="'+on+'"'+'>'+logo(b)+'<span>'+esc(b.name)+'</span><span class="cc-pick-t">'+esc(b.type)+'</span></button>';
       }).join('');
       var mb=document.getElementById('cc-more');
-      mb.textContent=S.more?'Show fewer brokers':'Show all '+B.length+' brokers';
+      mb.textContent=S.more?T.showFewer:T.showAll1+B.length+T.showAll2;
       mb.setAttribute('aria-expanded',S.more);
     }
 
@@ -274,16 +338,16 @@
       var d, html;
       if(row.calc){
         d=calcFor(b,row.k);
-        html='<span class="cc-v is-big">'+fmtEur(d.v)+(d.extra?' <span style="font-size:13px;font-weight:500;color:#697386">'+(typeof d.extra==='string'?d.extra:'+ fees')+'</span>':'')+'</span>';
-        if(d.s) html+='<span class="cc-s">'+esc(d.s)+'</span>';
-        if(best!==null && !d.extra && Math.abs(d.v-best)<0.005) html+='<span class="cc-tag is-best">Cheapest</span>';
+        html='<span class="cc-v is-big">'+fmtEur(d.v)+(d.extra?' <span style="font-size:13px;font-weight:500;color:#697386">'+(typeof d.extra==='string'?d.extra:T.plusFees)+'</span>':'')+'</span>';
+        if(d.s) html+='<span class="cc-s">'+esc(trs(d.s))+'</span>';
+        if(best!==null && !d.extra && Math.abs(d.v-best)<0.005) html+='<span class="cc-tag is-best">'+T.cheapest+'</span>';
         if(d.c) html+='<span class="cc-tag is-conf">'+CONF+'</span>';
       } else {
         d=planData(b,b.t[row.k])||{v:CONF,c:true};
         var isConf=d.v===CONF;
         html=isConf?'':'<span class="cc-v">'+esc(d.v)+'</span>';
         if(d.s) html+='<span class="cc-s">'+esc(d.s)+'</span>';
-        if(row.high && best!==null && Math.abs(pctMax(d)-best)<0.005) html+='<span class="cc-tag is-best">Highest rate</span>';
+        if(row.high && best!==null && Math.abs(pctMax(d)-best)<0.005) html+='<span class="cc-tag is-best">'+T.highestRate+'</span>';
         if(d.c) html+='<span class="cc-tag is-conf">'+CONF+'</span>';
       }
       return '<div class="cc-cell">'+html+'</div>';
@@ -298,18 +362,18 @@
     function renderTable(){
       var sel=S.sel.map(byId).filter(Boolean);
       var t=document.getElementById('cc-table');
-      document.getElementById('cc-count').textContent = sel.length? (sel.length===1?'1 broker selected':sel.length+' brokers selected') : '';
-      if(!sel.length){ t.innerHTML='<div class="cc-empty">Choose at least one broker in the list above to see the comparison.</div>'; document.getElementById('cc-pairs').innerHTML=''; renderMini(sel); return; }
+      document.getElementById('cc-count').textContent = sel.length? nSelected(sel.length) : '';
+      if(!sel.length){ t.innerHTML='<div class="cc-empty">'+T.emptyPick+'</div>'; document.getElementById('cc-pairs').innerHTML=''; renderMini(sel); return; }
       root.style.setProperty('--cc-cols','minmax(180px,1.1fr) repeat('+sel.length+',minmax(0,1fr))');
       root.style.setProperty('--cc-n',sel.length);
       root.classList.toggle('show-all',!S.diff);
 
       var head='<div class="cc-row cc-head"><div class="cc-hcell"></div>'+sel.map(function(b){
         var h='<div class="cc-hcell"><div class="cc-hname">'+logo(b,32)+'<span><b>'+esc(b.name)+'</b><small>'+esc(b.type)+'</small></span></div>';
-        h+='<div class="cc-hextra">'+(b.hasPlan?'<div class="cc-pills" role="group" aria-label="Pricing plan"><button type="button" class="cc-pill'+(S.ibkr==='fixed'?' is-on':'')+'" data-plan="fixed">Fixed</button><button type="button" class="cc-pill'+(S.ibkr==='tiered'?' is-on':'')+'" data-plan="tiered">Tiered</button></div>':'')+'</div>';
+        h+='<div class="cc-hextra">'+(b.hasPlan?'<div class="cc-pills" role="group" aria-label="'+T.pricingPlan+'"><button type="button" class="cc-pill'+(S.ibkr==='fixed'?' is-on':'')+'" data-plan="fixed">'+T.planFixed+'</button><button type="button" class="cc-pill'+(S.ibkr==='tiered'?' is-on':'')+'" data-plan="tiered">'+T.planTiered+'</button></div>':'')+'</div>';
         h+=ctaHtml(b);
         h+=offerHtml(b);
-        if(b.review) h+='<a class="cc-review" href="'+b.review+'" target="_blank" rel="noopener">Read the full review</a>';
+        if(b.review) h+='<a class="cc-review" href="'+b.review+'" target="_blank" rel="noopener">'+T.readReview+'</a>';
         return h+'</div>';
       }).join('')+'</div>';
 
@@ -334,7 +398,7 @@
         return '<div class="cc-sec'+(closed?' is-closed':'')+'"><button type="button" class="cc-sec-h" data-sec="'+sec.id+'" aria-expanded="'+(!closed)+'"><span class="cc-sec-t">'+(ICONS[sec.id]||'')+'<span>'+esc(sec.title)+(sec.sub?'<small>'+esc(sec.sub)+'</small>':'')+'</span></span>'+CHEV+'</button><div class="cc-sec-b">'+rows+'</div></div>';
       }).join('');
 
-      var srcRow='<div class="cc-row" style="border-top:1px solid #e9ecf1"><div class="cc-lab">Sources<small>Fee schedules and official pages</small></div>'+sel.map(function(b){ return '<div class="cc-cell"><a class="cc-src" style="margin-left:0" href="'+b.src+'" target="_blank" rel="noopener">'+esc(b.name)+' fees</a></div>'; }).join('')+'</div>';
+      var srcRow='<div class="cc-row" style="border-top:1px solid #e9ecf1"><div class="cc-lab">'+T.sources+'<small>'+T.sourcesSub+'</small></div>'+sel.map(function(b){ return '<div class="cc-cell"><a class="cc-src" style="margin-left:0" href="'+b.src+'" target="_blank" rel="noopener">'+esc(b.name)+T.feesSuffix+'</a></div>'; }).join('')+'</div>';
 
       t.innerHTML=head+body+srcRow;
       probeBlock(sel);
@@ -347,7 +411,7 @@
 
     function updateSum(){
       var el=document.getElementById('cc-scen-sum'); if(!el) return;
-      el.innerHTML='Purchase of <b>€'+fmtInt(S.amount)+'</b> · <b>€'+fmtInt(S.monthly)+'</b>/month<span class="cc-sum-2">Portfolio of <b>€'+fmtInt(S.portfolio)+'</b></span>';
+      el.innerHTML=T.sumBuy+' <b>€'+fmtInt(S.amount)+'</b> · <b>€'+fmtInt(S.monthly)+'</b>'+T.sumPerMonth+'<span class="cc-sum-2">'+T.sumPortfolio+' <b>€'+fmtInt(S.portfolio)+'</b></span>';
     }
 
     function renderMini(sel){
@@ -401,18 +465,13 @@
       var out=[];
       for(var i=0;i<sel.length;i++){ for(var j=i+1;j<sel.length;j++){
         var key=[sel[i].id,sel[j].id].sort().join('|');
-        if(PAIRS[key]) out.push('<a class="cc-pair" href="'+EU+'/articles/'+PAIRS[key]+'" target="_blank" rel="noopener"><span>Full comparison: <b>'+esc(sel[i].name)+' vs '+esc(sel[j].name)+'</b></span><span>Read article</span></a>');
+        if(PAIRS[key]) out.push('<a class="cc-pair" href="'+EU+'/articles/'+PAIRS[key]+'" target="_blank" rel="noopener"><span>'+T.fullComparison+' <b>'+esc(sel[i].name)+T.vs+esc(sel[j].name)+'</b></span><span>'+T.readArticle+'</span></a>');
       }}
       document.getElementById('cc-pairs').innerHTML=out.join('');
     }
 
     function notesHtml(){
-      return '<div class="cc-notes">'+
-        '<p><b>How we calculate costs:</b> each scenario uses the cheapest route the broker offers for that product, with the commission, fixed fees and currency conversion cost. Dollar fees are converted at $1 = €0.85. For per-unit fees we assume an ETF at €100 and a US share at $200. Market spreads and the ETFs\' own costs (TER) are not included. Fees and conditions can vary by country of residence: the table shows the offer for most EU clients.</p>'+
-        '<p><b>Taxes:</b> the comparison does not include taxes, because withholding and reporting rules depend on your country.</p>'+
-        '<p><b>Interactive Brokers:</b> use the Fixed/Tiered selector at the top of the column. For Tiered we add the clearing and regulatory fees from the Interactive Brokers table. On Xetra the exchange fee is waived for retail orders routed through SmartRouting. For US stocks we assume a market order, which pays the exchange fee.</p>'+
-        '<p><b>Trading 212:</b> sponsored link. When investing, your capital is at risk and you may get back less than invested. Past performance doesn\'t guarantee future results. Other fees may apply, see the <a href="https://www.trading212.com/terms/invest" target="_blank" rel="noopener">terms and fees</a>. If you enable interest, Trading 212 will hold your cash in qualifying money market funds and banks. Otherwise, your cash will be held only in banks. Interest applies on cash in an investment account. Terms apply. The rates shown may no longer be current: check the terms and fees page for the live rates.</p>'+
-        '<p><b>Freedom24:</b> the 0% commission on the ETF investment plan applies exclusively to the recurring investment function. Other operations follow the Freedom24 fee schedule.</p>'+
+      return '<div class="cc-notes">'+T.notes+
       '</div>';
     }
 
@@ -428,7 +487,7 @@
         if(h){ var sid=h.getAttribute('data-sec'); S.open[sid]=!S.open[sid]; renderTable(); return; }
         var pl=e.target.closest('.cc-pill');
         if(pl){ S.ibkr=pl.getAttribute('data-plan'); renderTable(); return; }
-        if(e.target.closest('#cc-scen-toggle')){ var w=document.getElementById('cc-scen-wrap'), open=!w.classList.contains('is-open'); w.classList.toggle('is-open',open); document.getElementById('cc-scen-toggle').setAttribute('aria-expanded',open); document.getElementById('cc-scen-act').textContent=open?'Close':'Change'; return; }
+        if(e.target.closest('#cc-scen-toggle')){ var w=document.getElementById('cc-scen-wrap'), open=!w.classList.contains('is-open'); w.classList.toggle('is-open',open); document.getElementById('cc-scen-toggle').setAttribute('aria-expanded',open); document.getElementById('cc-scen-act').textContent=open?T.close:T.change; return; }
         if(e.target.closest('#cc-diff')){ S.diff=!S.diff; document.getElementById('cc-diff').setAttribute('aria-pressed',S.diff); renderTable(); }
       });
       [['cc-amount','amount'],['cc-monthly','monthly'],['cc-portfolio','portfolio']].forEach(function(f){
