@@ -35,7 +35,7 @@
   /* IBKR Tiered on Xetra: commission 0.05% (min. €1.25, max. €29) + clearing €0.02 + 0.0008% (max. €4.02) + regulatory €0.01.
      Exchange fee waived for retail orders routed through SmartRouting (IBKR Ireland Xetra IBIS table). */
   function ibXetra(a){ return Math.min(29,Math.max(1.25,a*0.0005))+Math.min(4.02,0.02+a*0.000008)+0.01; }
-  var TOP = ['traderepublic','trading212','ibkr'];
+  var TOP = ['xtb','trading212','ibkr'];
   var CALC = {
     'bitpanda': {
       etf: function(a){ return {v:1, s:'€1 per order. Spreads may apply'}; },
