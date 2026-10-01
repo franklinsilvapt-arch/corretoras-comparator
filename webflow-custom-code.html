@@ -1,14 +1,31 @@
-<!-- Comparador de corretoras LF: colar no Custom Code da página (Before </body> tag).
+<!-- Comparador de corretoras LF: custom code da página no Webflow (o que lá está desde 1 de outubro de 2026).
      Na página tem de existir um div nativo com o ID lf-cc.
      No staging (webflow.io) carrega os ficheiros -staging; em produção os normais.
-     Ao mudar CSS ou JS, sobe o v= para limpar a cache. -->
+     Ao mudar CSS ou JS, sobe o v= para limpar a cache.
+     Os scripts não podem ser escritos com document.write: o Chrome pode bloquear scripts de outro domínio escritos assim
+     em ligações lentas, no primeiro carregamento, e o comparador ficava em branco até recarregar a página. -->
+
+<!-- 1. Inside <head> tag (o CSS pode continuar em document.write, o bloqueio só se aplica a scripts) -->
+<script>document.write('<link rel="stylesheet" href="https://franklinsilvapt-arch.github.io/corretoras-comparator/comparador-corretoras'+(/\.webflow\.io$/.test(location.hostname)?'-staging':'')+'.css?v=20260928e">')</script>
+
+<!-- 2. Before </body> tag -->
 <script>
-(function(){
-  var b='https://franklinsilvapt-arch.github.io/corretoras-comparator/', v='1';
-  var s=location.hostname.indexOf('webflow.io')>-1?'-staging':'';
-  var l=document.createElement('link'); l.rel='stylesheet'; l.href=b+'comparador-corretoras'+s+'.css?v='+v; document.head.appendChild(l);
-  var a=document.createElement('script'); a.src=b+'logos.js?v='+v;
-  a.onload=function(){ var j=document.createElement('script'); j.src=b+'comparador-corretoras'+s+'.js?v='+v; document.body.appendChild(j); };
-  document.body.appendChild(a);
+(function () {
+  var base = 'https://franklinsilvapt-arch.github.io/corretoras-comparator/';
+  var stg = /\.webflow\.io$/.test(location.hostname) ? '-staging' : '';
+  var alvo = document.getElementById('lf-cc');
+  if (alvo && !alvo.innerHTML.replace(/\s/g, '')) alvo.innerHTML = '<p style="text-align:center;color:#697386">A carregar o comparador...</p>';
+  function carregar(ficheiro, tentativas, principal) {
+    var s = document.createElement('script');
+    s.src = base + ficheiro;
+    s.async = false; /* executa pela ordem de insercao: logos.js primeiro */
+    s.onerror = function () {
+      if (tentativas > 0) setTimeout(function () { carregar(ficheiro, tentativas - 1, principal); }, 1000);
+      else if (principal && alvo) alvo.innerHTML = '<p style="text-align:center;color:#697386">Não foi possível carregar o comparador. Tenta recarregar a página.</p>';
+    };
+    document.body.appendChild(s);
+  }
+  carregar('logos.js?v=20260924g', 1, false);
+  carregar('comparador-corretoras' + stg + '.js?v=20260928e', 2, true);
 })();
 </script>
