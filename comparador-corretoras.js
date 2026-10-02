@@ -111,10 +111,30 @@
     }
   };
 
+  /* Carrega JSON com nova tentativa. Uma falha de rede ou um soluço do GitHub Pages
+     deixava o comparador em branco, porque só havia uma tentativa. A chave de cache
+     passa a mudar de hora a hora e não de 100 em 100 segundos, para a CDN poder
+     servir a maioria dos pedidos em vez de ir sempre à origem. */
+  var LFV = Math.floor(Date.now()/3600000);
+  function lfGet(path){
+    var url = BASE + path;
+    function once(u, opt){
+      return fetch(u, opt).then(function(r){
+        if(!r.ok) throw new Error('HTTP ' + r.status + ' em ' + u);
+        return r.json();
+      });
+    }
+    return once(url + '?v=' + LFV, {cache:'no-cache'})
+      .catch(function(){
+        return new Promise(function(res){ setTimeout(res, 500); })
+          .then(function(){ return once(url + '?v=' + LFV, {cache:'no-cache'}); });
+      })
+      .catch(function(){ return once(url, {}); });
+  }
+
   function boot(){
     var root0 = document.getElementById('lf-cc'); if(!root0) return;
-    fetch(BASE + 'data/corretoras.json?v=' + Date.now().toString().slice(0,-5), {cache:'no-cache'})
-      .then(function(r){ return r.json(); })
+    lfGet('data/corretoras.json')
       .then(function(d){
         VERIFIED = d.verificado; USD_EUR = d.pressupostos.USD_EUR; ETF_PRICE = d.pressupostos.ETF_PRICE; US_PRICE_USD = d.pressupostos.US_PRICE_USD;
         PAIRS = d.pares;
