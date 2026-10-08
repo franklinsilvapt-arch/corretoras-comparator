@@ -47,7 +47,7 @@
       etf: function(a){ return {v:1, s:'ETF Core Selection (Tradegate): 0€ de comissão + 1€ de manuseamento'}; },
       us: function(a){ return {v:2+a*0.0025, s:'1€ + 1€ de manuseamento + câmbio de 0,25%'}; },
       plan: function(m){ return {v:12, s:'12 ordens de 1€ na ETF Core Selection'}; },
-      custody: function(p){ return {v:2.5, s:'Exceto na Bolsa de Lisboa e Tradegate'}; }
+      custody: function(p){ return {v:0, s:'0€ nos ETFs da seleção popular e na Euronext Lisboa. Restantes bolsas: 2,50€ por ano e por bolsa'}; }
     },
     'etoro': {
       etf: function(a){ return {v:0, s:'ETFs sem comissão, com conta em euros'}; },
