@@ -1,0 +1,4314 @@
+{
+ "verified": "10 October 2026",
+ "assumptions": {
+  "PEG": 3.6725,
+  "US_PRICE_USD": 200,
+  "VAT": 0.05,
+  "PIP_USD": 10
+ },
+ "brokers": [
+  {
+   "id": "sarwa",
+   "name": "Sarwa",
+   "short": "S",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68592339f609b0df4b6836bf_Sarwa-icon.svg",
+   "type": "UAE investing app",
+   "order": 1,
+   "score": 4.7,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/sarwa"
+   },
+   "review": "https://www.brokermatch.ae/reviews/sarwa-uae-review",
+   "risk": "All investing involves risk, including the possible loss of money you invest.",
+   "cats": [
+    "stocks",
+    "options",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "$1 or 0.25%, whichever is higher",
+     "s": "Sarwa Trade, per order on US stocks and ETFs. No custody, account or inactivity fees."
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "$4 per contract",
+     "s": "To buy or sell. Options level 1 or 2 after a suitability test. Exercise costs $1 or 0.25%, whichever is higher."
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "1.5% spread, no commission",
+     "s": "Spot crypto inside Sarwa Trade, executed by Alpaca. You buy 1.5% above and sell 1.5% below the market price."
+    },
+    "fx": {
+     "v": "About 0.27% over the peg",
+     "s": "Sarwa converts AED to USD at 3.6823 (peg 3.6725) and USD back to AED at 3.6639. Rates can change."
+    },
+    "deposit": {
+     "v": "Free by local AED transfer",
+     "s": "Debit card: 2.99% + AED 1 (UAE card) or 3.99% + AED 1 (foreign card). International wires: your bank's fees."
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "No Sarwa fee and no transfer fee to a UAE bank in AED. Moving shares out: $125 per ACAT transfer."
+    },
+    "inact": {
+     "v": "None",
+     "s": "Sarwa lists no inactivity fee."
+    },
+    "custody": {
+     "v": "None on Sarwa Trade",
+     "s": "Sarwa Invest (robo): 0.85% a year (min $7 a month) under $100,000, down to 0.4%. Sarwa Save: 0.5% a year."
+    },
+    "interest": {
+     "v": "Save+: 3.8% estimated",
+     "s": "Before Sarwa's 0.5% fee. Save Halal: 4.2% estimated. Not guaranteed. Some Sarwa pages show 3.7% and 4%",
+     "c": true
+    },
+    "entity": {
+     "v": "Sarwa Digital Wealth (Capital)",
+     "s": "Sarwa Digital Wealth (Capital) Limited, ADGM, Abu Dhabi. Trade accounts are held with US broker Alpaca Securities LLC."
+    },
+    "regulator": {
+     "v": "FSRA (ADGM), FSP 190037",
+     "s": "UAE licence since 20 Feb 2020: managing assets, advising and arranging deals. Category 3C with retail endorsement, per Sarwa."
+    },
+    "protection": {
+     "v": "SIPC up to $500,000 (Trade)",
+     "s": "Via Alpaca, incl. $250,000 cash. Trade cash can sweep to FDIC banks up to $1M. Client money held apart from Sarwa's."
+    },
+    "minDep": {
+     "v": "$500 to start trading",
+     "s": "Net deposit needed before the first Sarwa Trade order. Invest: $500 ($2,500 for SRI and crypto portfolios). Save: none."
+    },
+    "assets": {
+     "v": "US stocks, ETFs, options, crypto",
+     "s": "Plus robo portfolios (Invest) and money market funds (Save). No UAE stocks, bonds or listings outside the US."
+    },
+    "ownership": {
+     "v": "Real shares",
+     "s": "Held in your own fully disclosed account at Alpaca Securities LLC."
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "Not available for every stock. Minimum not published."
+    },
+    "islamic": {
+     "v": "Halal products",
+     "s": "Halal Invest portfolio ($500 min), Save Halal and a Shariah screener. Sarwa has no FSRA Islamic Window endorsement."
+    },
+    "aed": {
+     "v": "AED deposits, USD account",
+     "s": "Free AED transfer to Sarwa's Emirates NBD account, converted to USD at 3.6823 per dollar."
+    },
+    "platforms": {
+     "v": "Own app (iOS, Android)"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0.0025,
+      "perShare": 0,
+      "min": 1,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": 0.00267,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "Sarwa Trade default pricing: the greater of $1 or 0.25% of the order. AED converted at 3.6823 vs the 3.6725 peg (0.27%)."
+    },
+    "uae": null,
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "Sarwa Trade has no custody or account fee. Sarwa Invest (robo) charges 0.85% a year with a $7 monthly minimum under $100,000."
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.sarwa.co/en/pricing",
+    "reg": "https://sarwa.co/product/invest"
+   }
+  },
+  {
+   "id": "etoro",
+   "name": "eToro",
+   "short": "E",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68591abfda7f6f17b9a190b7_eToro-icon.svg",
+   "type": "Global investing app",
+   "order": 2,
+   "score": 4.7,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/etoro"
+   },
+   "review": "https://www.brokermatch.ae/reviews/etoro",
+   "risk": "eToro is a multi-asset investment platform. The value of your investments may go up or down. Your capital is at risk. Crypto assets are highly volatile. No consumer protection. Tax on profits may apply.",
+   "cats": [
+    "stocks",
+    "cfd",
+    "uae",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "$1 per trade",
+     "s": "Charged when you buy and again when you sell. ETFs: $0. No markup on the market spread"
+    },
+    "uaeFee": {
+     "v": "$2 per trade",
+     "s": "$2 when you buy and $2 when you sell AED stocks on ADX and DFM. Exchange fees and VAT not stated"
+    },
+    "options": {
+     "v": "Not offered",
+     "s": "Listed options are not in the eToro (ME) client terms"
+    },
+    "forex": {
+     "v": "From 1.1 pips, no commission",
+     "s": "CFDs. eToro charges 0.005% of the price on opening and again on closing EUR/USD. Spreads are variable"
+    },
+    "crypto": {
+     "v": "1% per trade",
+     "s": "Real crypto, 1% to buy and 1% to sell. Lower rates from Platinum Club. Transfer out: 2%"
+    },
+    "fx": {
+     "v": "AED: 0.75% to about 3%",
+     "s": "Instant AED bank transfer: 0.75%. Card or regular bank transfer: 820 pips, about 3% by eToro's formula. Club discounts"
+    },
+    "deposit": {
+     "v": "Free, conversion fee applies",
+     "s": "AED by instant bank transfer, bank transfer or card. No deposit fee, AED is converted to USD"
+    },
+    "withdraw": {
+     "v": "$5",
+     "s": "Per withdrawal from the USD account. Minimum withdrawal $30. Paying out in AED adds the conversion fee"
+    },
+    "inact": {
+     "v": "No fee",
+     "s": "eToro's fees page lists inactivity as free",
+     "c": true
+    },
+    "custody": {
+     "v": "No fee",
+     "s": "Account opening and management are free"
+    },
+    "interest": {
+     "v": "0.75% to 3.8% on USD",
+     "s": "0.75% from $10,000 balance, 2.5% from $25,000, 3.5% from $50,000, 3.8% from $250,000. Uninvested USD, opt in",
+     "c": true
+    },
+    "entity": {
+     "v": "eToro (ME) Limited",
+     "s": "Al Sila Tower, ADGM, Abu Dhabi. UAE residents are classed as retail clients of this entity"
+    },
+    "regulator": {
+     "v": "FSRA (ADGM), FSP 220073",
+     "s": "UAE licence: Financial Services Regulatory Authority of Abu Dhabi Global Market"
+    },
+    "protection": {
+     "v": "None in ADGM",
+     "s": "No compensation scheme stated for eToro (ME) clients. Client money in segregated accounts under FSRA rules",
+     "c": true
+    },
+    "minDep": {
+     "v": "Not confirmed",
+     "s": "eToro sets first deposit minimums by country, from $10 to $10,000. UAE referral terms ask for $100",
+     "c": true
+    },
+    "assets": {
+     "v": "Stocks, ETFs, crypto, CFDs",
+     "s": "Stocks incl. ADX and DFM, ETFs, real crypto, CFDs on forex, indices, commodities. Copy trading, Smart Portfolios"
+    },
+    "ownership": {
+     "v": "Real shares and CFDs",
+     "s": "Unleveraged long stock and ETF trades are real shares. Short or leveraged trades are CFDs"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "From $10 per stock trade"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "For UAE residents, $1,000 minimum deposit. CFD admin fees after 7 days, none on real stocks"
+    },
+    "aed": {
+     "v": "AED deposits, USD account",
+     "s": "AED is converted to USD on deposit and back on withdrawal. No AED account"
+    },
+    "platforms": {
+     "v": "Own web and mobile app"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 1,
+      "pct": 0,
+      "perShare": 0,
+      "min": 0,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": 0.0075,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "Flat $1 per buy order for UAE residents (eToro note 2 country list). AED by instant bank transfer converted at 0.75%; card or regular bank transfer costs 820 pips, about 3%"
+    },
+    "uae": {
+     "adx": {
+      "pct": 0,
+      "min": 0,
+      "fixed": 7.35,
+      "vat": false,
+      "allIn": false,
+      "note": "eToro charges $2 (about AED 7.35) to open AED stocks for clients in its selected country list, which includes the UAE. Exchange and clearing fees not published. VAT treatment not stated. Trade value is converted from USD, so FX costs also apply"
+     },
+     "dfm": {
+      "pct": 0,
+      "min": 0,
+      "fixed": 7.35,
+      "vat": false,
+      "allIn": false,
+      "note": "Same $2 (about AED 7.35) per order as ADX. Exchange and clearing fees not published. VAT treatment not stated"
+     }
+    },
+    "fxlot": {
+     "account": "Standard",
+     "spread": 1.1,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": null
+    },
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody, account or inactivity fee on the fees page"
+    },
+    "withdrawUsd": 5
+   },
+   "src": {
+    "fees": "https://www.etoro.com/trading/fees/",
+    "reg": "https://www.etoro.com/wp-content/uploads/2026/03/etoro_ME_TnC_Publication_2026-08-12_Clean-1.pdf"
+   }
+  },
+  {
+   "id": "ibkr",
+   "name": "Interactive Brokers",
+   "short": "IB",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6859224dea2507ca63c6161d_Interactive%20Brokers-icon.svg",
+   "type": "Global broker",
+   "order": 2,
+   "score": 4.9,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/ib"
+   },
+   "review": "https://www.brokermatch.ae/reviews/interactive-brokers",
+   "risk": "Investing in financial products involves risk. Losses may exceed the value of your original investment.",
+   "cats": [
+    "stocks",
+    "cfd",
+    "uae",
+    "options"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "$0.005 per share, min $1",
+     "s": "IBKR Pro Fixed, max 1% of value. Tiered: $0.0035 per share plus exchange and clearing fees, min $0.35. Lite: $0 for US residents."
+    },
+    "uaeFee": {
+     "v": "ADX 0.10%, DFM 0.25%",
+     "s": "IBKR commission, min AED 5 per order. DFM adds an AED 10 exchange fee per order. Clearing fees and VAT are not itemised.",
+     "c": true
+    },
+    "options": {
+     "v": "$0.65 per contract",
+     "s": "Min $1 per order. Less for premiums under $0.10. Exchange, $0.025 clearing and regulatory fees are added."
+    },
+    "forex": {
+     "v": "From 0.1 pip, 0.002% commission",
+     "s": "Spot FX, IBKR Pro: commission 0.002% of value per side, min $2, about $4.70 per lot round turn. No typical spread published."
+    },
+    "crypto": {
+     "v": "0.18%, min $1.75",
+     "s": "Real coins via Paxos or Zero Hash, max 1% of value, 0.12% at high volume. IBKR does not say if UAE residents qualify.",
+     "c": true
+    },
+    "fx": {
+     "v": "0.002%, min $2",
+     "s": "AED deposits accepted. Manual conversion costs 0.002% of value, min $2. Automatic conversion adds up to 0.03% to the rate."
+    },
+    "deposit": {
+     "v": "Free bank transfer",
+     "s": "Send AED or USD by bank transfer. IBKR charges no deposit fee; your bank may."
+    },
+    "withdraw": {
+     "v": "2 free a month, then $10",
+     "s": "After two free withdrawals a month: USD wire $10, AED bank transfer AED 18."
+    },
+    "inact": {
+     "v": "None",
+     "s": "IBKR lists no inactivity or account maintenance fee."
+    },
+    "custody": {
+     "v": "None",
+     "s": "No custody or account fee. Third parties may charge, for example ADR fees."
+    },
+    "interest": {
+     "v": "3.38% on USD",
+     "s": "On USD above $10,000 when the account is worth $100,000 or more, less for smaller accounts. AED: 3.238% above AED 35,000"
+    },
+    "entity": {
+     "v": "Interactive Brokers (U.K.) Ltd",
+     "s": "Through its DIFC Branch in Dubai. Shares are carried by Interactive Brokers LLC (US), CFDs by IBUK in London.",
+     "c": true
+    },
+    "regulator": {
+     "v": "DFSA (DIFC) and UK FCA",
+     "s": "DIFC Branch: DFSA F008423, Category 4, arranging only. IBUK: FCA 208159. Interactive Brokers LLC: SEC and FINRA."
+    },
+    "protection": {
+     "v": "SIPC up to $500,000",
+     "s": "For assets at Interactive Brokers LLC, incl. $250,000 cash, plus excess cover from Lloyd's. UK FSCS only in limited cases.",
+     "c": true
+    },
+    "minDep": {
+     "v": "$0",
+     "s": "No account minimum for individual accounts."
+    },
+    "assets": {
+     "v": "Stocks, ETFs, options, futures",
+     "s": "Also bonds, funds, spot FX, CFDs and UAE shares on ADX and DFM, across 160+ markets."
+    },
+    "ownership": {
+     "v": "Real shares and CFDs",
+     "s": "Real shares held at Interactive Brokers LLC. CFDs are offered by IBUK to non US residents."
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "US, Canadian and European stocks, from $1 or 0.0001 shares."
+    },
+    "islamic": {
+     "v": "No",
+     "s": "IBKR lists no Islamic or swap free account.",
+     "c": true
+    },
+    "aed": {
+     "v": "AED deposits and balances",
+     "s": "Fund, hold and withdraw AED by bank transfer. ADX and DFM shares trade in AED."
+    },
+    "platforms": {
+     "v": "TWS, IBKR Desktop, IBKR Mobile",
+     "s": "Also Client Portal on the web and APIs."
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0.005,
+      "min": 1,
+      "max": null,
+      "maxPct": 0.01
+     },
+     "fx": {
+      "aed": true,
+      "pct": 2e-05,
+      "fixedUsd": 0,
+      "minUsd": 2
+     },
+     "note": "IBKR Pro Fixed: $0.005 per share, min $1, max 1% of trade value, exchange and clearing fees included (sells also pay the SEC fee)."
+    },
+    "usTiered": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0.0035,
+      "min": 0.35,
+      "max": null,
+      "maxPct": 0.01,
+      "perShareExtra": 0.0032
+     },
+     "fx": {
+      "aed": true,
+      "pct": 2e-05,
+      "fixedUsd": 0,
+      "minUsd": 2
+     },
+     "note": "IBKR Pro Tiered first tier (up to 300,000 shares a month): $0.0035 commission + $0.0030 exchange fee (market order removing liquidity on NYSE, Nasdaq or Arca) + $0.0002 NSCC/DTC clearing + $0.000003 FINRA CAT = $0.0067 per share; NYSE and FINRA pass through (0.074% of commission) is negligible. The $0.35 minimum and 1% cap apply to the IBKR commission only, so very small orders pay about $0.0032 per share on top of $0.35. Sells also pay SEC fee 0.00206% of value; FINRA TAF is $0 from 1 Oct to 31 Dec 2026."
+    },
+    "uae": {
+     "adx": {
+      "pct": 0.001,
+      "min": 5,
+      "fixed": 0,
+      "vat": false,
+      "allIn": false,
+      "note": "IBKR 0.10% of value, min AED 5 (Fixed and Tiered). IBKR's ADX exchange fee table shows Trade Value * 0.00 AED; clearing and SCA fees are not listed, so all in is not confirmed. IBKR says VAT is applied separately where applicable; whether UAE VAT applies is not published."
+     },
+     "dfm": {
+      "pct": 0.0025,
+      "min": 5,
+      "fixed": 10,
+      "vat": false,
+      "allIn": false,
+      "note": "IBKR 0.25% of value, min AED 5, plus DFM exchange fee AED 10 per order from IBKR's DFM fee table. Clearing and SCA fees not listed. VAT applied separately where applicable."
+     },
+     "c": true
+    },
+    "fxlot": {
+     "account": "IBKR Pro spot FX",
+     "spread": 0.1,
+     "spreadKind": "minimum",
+     "commRt": 4.7,
+     "alt": null
+    },
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "IBKR charges no custody or account fee. Optional market data subscriptions are not included."
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://investors.interactivebrokers.com/en/pricing/commissions-stocks.php",
+    "reg": "https://www.dfsa.ae/public-register/firms/interactive-brokers-uk-limited-difc-branch"
+   },
+   "hasPlan": true
+  },
+  {
+   "id": "xtb",
+   "name": "XTB",
+   "short": "X",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68592a612e3e493b4438a744_XTB-icon.svg",
+   "type": "Stocks and CFD broker",
+   "order": 3,
+   "score": 4.8,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/xtb"
+   },
+   "review": "https://www.brokermatch.ae/reviews/xtb",
+   "risk": "The financial instruments we offer, especially CFDs, can be highly risky. Please consider if you understand the risks and can afford the loss of capital.",
+   "cats": [
+    "stocks",
+    "cfd",
+    "uae"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "0% up to €100,000 a month",
+     "s": "Real US stocks and ETFs. Above €100,000 a month: 0.2%, minimum €10. USD account, so no conversion on US trades"
+    },
+    "uaeFee": {
+     "v": "0% + 0.5% conversion",
+     "s": "Some DFM stocks in AED, from AED 100. No commission up to €100,000 a month, 0.5% FX as the account is in USD",
+     "c": true
+    },
+    "options": {
+     "v": "Not offered",
+     "s": "No listed options for XTB MENA clients"
+    },
+    "forex": {
+     "v": "From 0.8 pips, no commission",
+     "s": "Standard account. XTB UAE quotes forex spreads from 0.00008 without naming the pair. VIP PRO raw spreads: pros only",
+     "c": true
+    },
+    "crypto": {
+     "v": "Not offered",
+     "s": "No crypto in XTB MENA's current margin table or UAE site. The terms allow crypto CFDs",
+     "c": true
+    },
+    "fx": {
+     "v": "AED at 3.6730, no fee",
+     "s": "AED deposits are credited in USD at a fixed 3.6730 (peg 3.6725) and paid back at 3.6720. Other currency trades: 0.5%"
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "AED or USD bank transfer and debit card. No minimum. Your bank may charge its own fee"
+    },
+    "withdraw": {
+     "v": "Free from $50",
+     "s": "Bank transfer under $50 costs $30. AED is paid back at a fixed 3.6720 rate"
+    },
+    "inact": {
+     "v": "€10 a month",
+     "s": "Only after 365 days with no trade and 90 days with no deposit"
+    },
+    "custody": {
+     "v": "No fee up to €250,000",
+     "s": "0.2% a year on portfolio value above €250,000, minimum €10 a month"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "XTB MENA terms: interest on client funds belongs to the company. No UAE interest program published"
+    },
+    "entity": {
+     "v": "XTB MENA Limited",
+     "s": "Liberty House, DIFC, Dubai. Subsidiary of XTB S.A. (Warsaw Stock Exchange)"
+    },
+    "regulator": {
+     "v": "DFSA (DIFC), F006316",
+     "s": "UAE licence since 8 July 2021, with retail and client assets endorsements. No CMA licence found"
+    },
+    "protection": {
+     "v": "None in the DIFC",
+     "s": "Client money segregated at UAE banks. XTB's UAE FAQ cites a €20,100 compensation fund without naming it",
+     "c": true
+    },
+    "minDep": {
+     "v": "No minimum",
+     "s": "No minimum deposit. Investment plans start at €15"
+    },
+    "assets": {
+     "v": "Stocks, ETFs, CFDs",
+     "s": "2,500+ US and EU stocks and ETFs, some DFM stocks, CFDs on forex, indices, commodities and stocks"
+    },
+    "ownership": {
+     "v": "Real shares and CFDs",
+     "s": "Real stocks and ETFs, plus CFDs"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "From $1 per US stock order in the specification table. The fees page says $10"
+    },
+    "islamic": {
+     "v": "Yes, 30 days swap free",
+     "s": "Separate account. After 30 days, and on unlisted instruments, normal swaps apply"
+    },
+    "aed": {
+     "v": "AED deposits, USD account",
+     "s": "AED shown in USD at a fixed 3.6730 rate, with no conversion charge"
+    },
+    "platforms": {
+     "v": "xStation 5, MT4",
+     "s": "xStation web and mobile app. MT4 listed for UAE clients"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0,
+      "min": 0,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": 0.00014,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "0% commission up to €100,000 monthly turnover (0.2%, minimum €10 above). AED deposits are credited to the USD account at a fixed 3.6730 against the 3.6725 peg, about 0.014%; US trades in a USD account pay no 0.5% conversion"
+    },
+    "uae": {
+     "adx": null,
+     "dfm": {
+      "pct": 0.005,
+      "min": 0,
+      "fixed": 0,
+      "vat": false,
+      "allIn": false,
+      "note": "0% commission up to €100,000 a month; the 0.5% is XTB's currency conversion, charged because the account is kept in USD and the stock trades in AED. XTB lists .AE stocks (AED, from AED 100) without naming the exchange; the names seen (Air Arabia, Ajman Bank, Amanat, Amlak, Aramex) are DFM listed. Exchange and clearing fees not published"
+     },
+     "c": true
+    },
+    "fxlot": {
+     "account": "Standard",
+     "spread": 0.8,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": null,
+     "c": true
+    },
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "Free up to €250,000; above that 0.2% a year on the excess, minimum €10 a month"
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.xtb.com/ae/account-and-fees",
+    "reg": "https://www.dfsa.ae/public-register/firms/xtb-mena-limited"
+   }
+  },
+  {
+   "id": "trading212",
+   "name": "Trading 212",
+   "short": "T2",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68592696c0c12dd9ae8adc2b_Trading%20212-icon.svg",
+   "type": "Global investing app",
+   "order": 5,
+   "score": 4.7,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/trading212"
+   },
+   "review": "https://www.brokermatch.ae/reviews/trading212",
+   "risk": "When investing, your capital is at risk and you may get back less than invested. Past performance doesn't guarantee future results.",
+   "cats": [
+    "stocks",
+    "cfd"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "$0 commission",
+     "s": "Real US stocks and ETFs. FX fee 0.15% if the account currency is not USD"
+    },
+    "uaeFee": {
+     "v": "Not offered",
+     "s": "No ADX or DFM stocks listed"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Spread not published",
+     "s": "CFD account, no commission. EUR/USD spread is variable and shown only in the app. Overnight interest applies",
+     "c": true
+    },
+    "crypto": {
+     "v": "Not offered",
+     "s": "Crypto account is run by Trading 212 Markets Ltd under EU rules, not listed for UK entity clients",
+     "c": true
+    },
+    "fx": {
+     "v": "No AED: bank converts",
+     "s": "AED is not an account currency. Send USD or pay by card and your bank converts. FX fee between Trading 212 currencies: 0.15%"
+    },
+    "deposit": {
+     "v": "Free by bank transfer",
+     "s": "Card, Apple Pay, Google Pay free up to 2,000 GBP or EUR in total, then 0.7%. No credit cards"
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "No withdrawal fee. Receiving bank may charge"
+    },
+    "inact": {
+     "v": "No fee"
+    },
+    "custody": {
+     "v": "No fee",
+     "s": "No custody or account fee"
+    },
+    "interest": {
+     "v": "Yes, rate not confirmed",
+     "s": "Paid on uninvested cash through money market funds, opt in. Trading 212 shows the rates in the app",
+     "c": true
+    },
+    "entity": {
+     "v": "Trading 212 UK Ltd",
+     "s": "Registered in England and Wales. Serves UAE residents per Trading 212 help centre"
+    },
+    "regulator": {
+     "v": "FCA (UK), FRN 609146",
+     "s": "Foreign licence. In the DIFC it has only a rep office. Trading 212 ME Limited got a DFSA licence on 30 Sep 2026"
+    },
+    "protection": {
+     "v": "UK FSCS up to £85,000",
+     "s": "If eligible. Client money segregated, shares in an omnibus account at Interactive Brokers",
+     "c": true
+    },
+    "minDep": {
+     "v": "Not confirmed",
+     "s": "Minimum deposit depends on region and account type",
+     "c": true
+    },
+    "assets": {
+     "v": "Stocks, ETFs, CFDs",
+     "s": "Stocks and ETFs in the Invest account. CFDs on stocks, indices, forex, commodities",
+     "c": true
+    },
+    "ownership": {
+     "v": "Real shares and CFDs",
+     "s": "Beneficial owner of shares in the Invest account. CFD account is separate"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "Minimum order not published"
+    },
+    "islamic": {
+     "v": "No",
+     "s": "No swap free account on Trading 212's pages",
+     "c": true
+    },
+    "aed": {
+     "v": "No AED account",
+     "s": "Fund in USD or another supported currency. AED card payments are converted by your bank"
+    },
+    "platforms": {
+     "v": "Own web and mobile app"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0,
+      "min": 0,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": false,
+      "pct": 0,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "Commission free. AED is not an account currency, so the client deposits USD (bank converts AED); with a USD account, US trades have no FX fee. Non USD accounts pay 0.15%"
+    },
+    "uae": null,
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody, account or inactivity fee"
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://helpcentre.trading212.com/hc/en-us/articles/11471996799517-What-are-the-fees-in-the-Invest-ISAs-and-SIPP",
+    "reg": "https://www.dfsa.ae/public-register/firms/trading-212-me-limited"
+   }
+  },
+  {
+   "id": "pepperstone",
+   "name": "Pepperstone",
+   "short": "P",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6855740afb674eaf0523e13d_Pepperstone-icon.svg",
+   "type": "CFD and forex broker",
+   "order": 6,
+   "score": 4.5,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/pepperstone"
+   },
+   "review": "https://www.brokermatch.ae/reviews/pepperstone-uae-review",
+   "risk": "Trading CFDs and FX carries significant risk and is not suitable for everyone. You have no ownership of the underlying asset.",
+   "cats": [
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "US share CFDs: $0.02 per share per side. You do not own the shares."
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "1.1 pips, no commission",
+     "s": "Razor account: 0.1 pips + $7 per lot round turn ($6 on cTrader). Average spreads, August 2026."
+    },
+    "crypto": {
+     "v": "BTC/USD spread from $15",
+     "s": "Crypto CFDs, no commission. You do not own the coins. Advertised minimum spread."
+    },
+    "fx": {
+     "v": "AED account, no fee listed",
+     "s": "Deposit AED into an AED account with no conversion. Razor commission is converted from USD at the spot rate."
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Local AED bank transfer (Mashreq), cards from $10, Apple Pay, Google Pay or crypto. No deposit fees."
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "No fee to Mashreq or Barclays bank, card, Apple Pay, Google Pay or crypto. International bank wires cost $20."
+    },
+    "inact": {
+     "v": "None",
+     "s": "Accounts under $10 with no activity for 3 months may be archived, not charged."
+    },
+    "custody": {
+     "v": "None",
+     "s": "CFDs only. Overnight positions pay or earn a swap."
+    },
+    "interest": {
+     "v": "Not published",
+     "s": "No interest on cash is mentioned on the UAE fee pages.",
+     "c": true
+    },
+    "entity": {
+     "v": "Pepperstone Markets Limited",
+     "s": "Nassau, Bahamas. Introduced by Pepperstone Financial Services LLC in Dubai, which arranges the account."
+    },
+    "regulator": {
+     "v": "Bahamas SCB (offshore)",
+     "s": "Bahamas licence SIA-F217. Dubai introducer: CMA 20200000358, introduction and advice only. DFSA entity: professionals only."
+    },
+    "protection": {
+     "v": "No scheme stated",
+     "s": "Client money held in segregated bank accounts. Negative balance protection for retail clients.",
+     "c": true
+    },
+    "minDep": {
+     "v": "No minimum",
+     "s": "Card deposits from $10. Bank transfers have no minimum."
+    },
+    "assets": {
+     "v": "CFDs on 1,350+ markets",
+     "s": "Forex, indices, shares, ETFs, commodities and crypto, all as CFDs."
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only, no real shares."
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "No swaps. An admin fee may apply depending on the market and how long the trade is open. Amounts not shown on UAE pages.",
+     "c": true
+    },
+    "aed": {
+     "v": "AED account and deposits",
+     "s": "AED base currency on Standard and Razor through the CMA route. USD, EUR, GBP and AUD also offered."
+    },
+    "platforms": {
+     "v": "MT4, MT5, cTrader, TradingView",
+     "s": "Plus own web platform and app. Standard: own platform, MT5, cTrader. Razor adds MT4 and TradingView."
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 1.1,
+     "spreadKind": "average",
+     "commRt": 0,
+     "alt": {
+      "account": "Razor",
+      "spread": 0.1,
+      "spreadKind": "average",
+      "commRt": 7
+     }
+    },
+    "custody": null,
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://pepperstone.com/en-ae/markets/forex/pairs-and-spreads",
+    "reg": "https://pepperstone.com/en-ae/intermediate-licence-selection"
+   }
+  },
+  {
+   "id": "swissquote",
+   "name": "Swissquote",
+   "short": "S",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6859212a97e7b879102ce7c2_Swissquote-icon.svg",
+   "type": "Swiss bank broker",
+   "order": 7,
+   "score": 4.5,
+   "cta": {
+    "href": "https://en.swissquote.ae/",
+    "plain": true
+   },
+   "review": "https://www.brokermatch.ae/reviews/swissquote-uae-review",
+   "risk": "CFDs are complex financial instruments and come with a high risk of losing money rapidly due to leverage.",
+   "cats": [
+    "stocks",
+    "cfd",
+    "uae",
+    "crypto",
+    "options"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "0.10%, min $9",
+     "s": "Plus $0.85 per trade for real time data. Local exchange fees or taxes may be added."
+    },
+    "uaeFee": {
+     "v": "DFM only, fee not published",
+     "s": "DFM shares can be traded on eTrading, but the price list has no DFM row. ADX is not mentioned.",
+     "c": true
+    },
+    "options": {
+     "v": "$1.50 per contract",
+     "s": "US stock options, min $5 per order, exchange fees extra. Index options $1.99 per contract."
+    },
+    "forex": {
+     "v": "1.7 pips, no commission",
+     "s": "Standard account, min $1,000. Premium ($10,000) 1.4 pips, Prime ($50,000) 1.1 pips. Minimum spreads, no commission."
+    },
+    "crypto": {
+     "v": "1% per trade",
+     "s": "Real coins on Swissquote's SQX, 52 cryptos. 1% below $6,000 traded in 30 days, lower with volume."
+    },
+    "fx": {
+     "v": "0.95% standard",
+     "s": "AED accounts available. Online exchange costs 0.95%, less for large amounts; call for CHF 50,000 or more.",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free bank transfer",
+     "s": "Incoming wires are free. The first deposit must come from a bank account in your name in the UAE."
+    },
+    "withdraw": {
+     "v": "$10 per transfer",
+     "s": "USD with shared charges ($25 if you pay all fees). AED transfer AED 55."
+    },
+    "inact": {
+     "v": "None",
+     "s": "No inactivity fee listed. Dormant accounts (assets without contact) pay CHF 100 a year."
+    },
+    "custody": {
+     "v": "0.15% a year",
+     "s": "On securities, collected quarterly, min $15 a quarter. Cash is exempt."
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "Swissquote's rate table shows 0% on USD and AED cash at every balance."
+    },
+    "entity": {
+     "v": "Swissquote Bank SA, Switzerland",
+     "s": "The MEA site says Swissquote Bank SA offers all products. Swissquote MEA Ltd (DIFC) and a Dubai office only promote them."
+    },
+    "regulator": {
+     "v": "FINMA (Swiss, foreign)",
+     "s": "Swissquote MEA Ltd holds DFSA licence F001438 for retail clients, but the products come from the FINMA regulated bank."
+    },
+    "protection": {
+     "v": "Not published",
+     "s": "Swissquote's MEA pages do not state deposit or investor protection for UAE clients.",
+     "c": true
+    },
+    "minDep": {
+     "v": "CHF 500",
+     "s": "For UAE residents, from your own UAE bank account. Forex and CFD accounts start at $1,000."
+    },
+    "assets": {
+     "v": "Stocks, ETFs, options, crypto",
+     "s": "Also bonds, funds, futures, forex and CFDs. Stocks on 50+ markets including DFM."
+    },
+    "ownership": {
+     "v": "Real shares and CFDs",
+     "s": "Real shares in the trading account. CFDs in a separate Forex and CFD account."
+    },
+    "fractions": {
+     "v": "Not published",
+     "s": "Swissquote's MEA pages do not mention fractional shares.",
+     "c": true
+    },
+    "islamic": {
+     "v": "Not published",
+     "s": "Swissquote's MEA pages list no Islamic or swap free account.",
+     "c": true
+    },
+    "aed": {
+     "v": "AED cash account",
+     "s": "Hold AED and send AED transfers (AED 55). Exchanging AED to USD costs 0.95% as standard."
+    },
+    "platforms": {
+     "v": "Swissquote app, MT4, MT5, CFXD",
+     "s": "App and web for securities and crypto. MT4, MT5 and CFXD with TradingView charts for forex and CFDs."
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0.85,
+      "pct": 0.001,
+      "perShare": 0,
+      "min": 9.85,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": 0.0095,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "0.10% of value with a $9 minimum, plus a $0.85 real time data charge on every trade (modelled as fixed 0.85 with min 9.85).",
+     "c": true
+    },
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 1.7,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": null
+    },
+    "custody": {
+     "pctYear": 0.0015,
+     "fixedYearUsd": 0,
+     "minYearUsd": 60,
+     "note": "0.15% a year collected quarterly, min $15 a quarter ($60 a year); cash not charged. The help FAQ quotes CHF 20 to 50 a quarter instead."
+    },
+    "withdrawUsd": 10
+   },
+   "src": {
+    "fees": "https://www.swissquote.com/en-mea/private/trade/pricing/commissions",
+    "reg": "https://www.dfsa.ae/public-register/firms/swissquote-mea-ltd"
+   }
+  },
+  {
+   "id": "freedom24",
+   "name": "Freedom24",
+   "short": "F",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/685954b1c114ef0d5892f4d6_Freedom24-icon.svg",
+   "type": "Global broker",
+   "order": 7,
+   "score": 4.5,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/freedom24"
+   },
+   "review": null,
+   "risk": "Investments in securities and other financial instruments always involve the risk of loss of your capital.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  },
+  {
+   "id": "fusion",
+   "name": "Fusion Markets",
+   "short": "FM",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68595597b0086f791b09994e_Fusion-Markets-icon.svg",
+   "type": "CFD and forex broker",
+   "order": 8,
+   "score": 4.4,
+   "cta": {
+    "href": "https://fusionmarkets.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "All financial products involve risk, and you should ensure you understand the risk involved as certain financial products may not be suitable to everyone.",
+   "cats": [
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "About 110 US share CFDs. Commission currently $0, waived for a limited time. Leverage up to 20:1"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "0.92 pips, no commission",
+     "s": "Classic account average. Zero account: from 0.0 pips + $4.50 per lot round turn, about 0.5 pips all in"
+    },
+    "crypto": {
+     "v": "CFDs only",
+     "s": "Crypto CFDs with no commission. Bitcoin spreads from 0.04%. Retail leverage 1:2"
+    },
+    "fx": {
+     "v": "Bank converts",
+     "s": "No AED deposits. Send USD or another listed currency; your bank sets the AED rate"
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Bank wire, cards, PayPal, Skrill, Neteller, crypto. No AED. Sending banks may charge $20 to $30 on wires"
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "Bank wire: no Fusion fee, $35 minimum, 3 to 5 business days. Intermediary bank charges may apply"
+    },
+    "inact": {
+     "v": "Up to $10 a year",
+     "s": "Seychelles entity: after 12 months with no trades. The Vanuatu terms list no inactivity fee",
+     "c": true
+    },
+    "custody": {
+     "v": "None",
+     "s": "CFDs only. Overnight swaps apply to open positions"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "Fusion keeps the interest earned on client money"
+    },
+    "entity": {
+     "v": "Gleneagle Securities (Vanuatu)",
+     "s": "Runs fusionmarkets.com/en. Fusion also has Fusion Markets International Ltd (Seychelles) and does not say which takes UAE clients",
+     "c": true
+    },
+    "regulator": {
+     "v": "VFSC Vanuatu, company 40256",
+     "s": "Offshore, not a UAE licence. The Seychelles entity holds FSA licence SD096. The ASIC entity serves Australians only",
+     "c": true
+    },
+    "protection": {
+     "v": "None",
+     "s": "No compensation scheme. Client money in segregated client accounts. Negative balance protection is discretionary"
+    },
+    "minDep": {
+     "v": "No minimum",
+     "s": "Most deposit methods need $10 or more"
+    },
+    "assets": {
+     "v": "Forex, shares, indices, crypto",
+     "s": "All as CFDs, 250+ in total: forex, metals, indices, energies, softs, crypto and about 110 US shares"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only, no real shares"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "Swap free on request. Admin fee on trades open more than 7 days, varies by instrument"
+    },
+    "aed": {
+     "v": "No AED",
+     "s": "No AED deposits or AED accounts"
+    },
+    "platforms": {
+     "v": "MT4, MT5, cTrader, TradingView",
+     "s": "Also Fusion+ copy trading, DupliTrade and Multi Account Manager"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Classic",
+     "spread": 0.92,
+     "spreadKind": "average",
+     "commRt": 0,
+     "alt": {
+      "account": "Zero",
+      "spread": 0.02,
+      "spreadKind": "average",
+      "commRt": 4.5
+     },
+     "c": true
+    },
+    "custody": null,
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://fusionmarkets.com/static_images/V2_Financial_Product_Service_Terms_EN_VFSC_e35bd4a9e6.pdf",
+    "reg": "https://fusionmarkets.com/About-us/Regulations"
+   }
+  },
+  {
+   "id": "stake",
+   "name": "Stake",
+   "short": "S",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68da87c47940475cd6ab0142_getstake.svg",
+   "type": "Real estate platform",
+   "order": 9,
+   "score": 4.4,
+   "cta": {
+    "href": "https://getstake.com/",
+    "plain": true
+   },
+   "review": "https://www.brokermatch.ae/reviews/stake-uae-review",
+   "risk": "All investments carry risk. Past performance is not a reliable indicator of future results.",
+   "cats": [
+    "property"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "Not offered"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Not offered"
+    },
+    "fx": {
+     "v": "None, AED wallet",
+     "s": "Deposits, investments, rent and withdrawals are in AED. Your bank may charge for transfers from abroad"
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Bank transfer (1 to 2 days locally), debit card (instant) or Wise. Uninvested card deposits pay 2.5% if withdrawn"
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "To any bank account in your name: 1 to 2 business days locally, 5 to 7 abroad. 2.5% on uninvested card money"
+    },
+    "inact": {
+     "v": "None",
+     "s": "No inactivity fee in Stake's fee list"
+    },
+    "custody": {
+     "v": "0.25% a year admin fee",
+     "s": "Plus 0.1% a year KYC fee from year 2. Entry: 1.5% + 0.2% KYC. Exit: 2.5% of sale price. Older listings 0.5% a year"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "The AED wallet earns nothing. Rent is paid out as dividends, net of fees and property costs"
+    },
+    "entity": {
+     "v": "Stake Properties Limited, DIFC",
+     "s": "Dubai. Saudi funds are offered by Stake Financial Technology Company (Riyadh), permit 05-53-2023"
+    },
+    "regulator": {
+     "v": "DFSA (DIFC), ref F005879",
+     "s": "UAE licence since 1 Nov 2020 to run a property crowdfunding platform for retail clients. Saudi arm: Saudi CMA FinTech Lab"
+    },
+    "protection": {
+     "v": "None in the DIFC",
+     "s": "Properties held in DIFC SPVs free of debt. Cash in segregated accounts at Emirates NBD under DFSA client money rules"
+    },
+    "minDep": {
+     "v": "AED 500",
+     "s": "Minimum per property. Retail caps: AED 183,500 per property and AED 367,000 a year"
+    },
+    "assets": {
+     "v": "Dubai property shares",
+     "s": "Shares in Dubai homes held in DIFC SPVs. Saudi real estate funds are run by Stake's Saudi company"
+    },
+    "ownership": {
+     "v": "Shares in property SPVs",
+     "s": "Title deed in the SPV's name, share certificate in yours. Exit windows in May and November after 1 year"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "From AED 500 per property"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "DFSA Islamic window endorsement and a Shariah audit certificate for 2025"
+    },
+    "aed": {
+     "v": "AED wallet",
+     "s": "Fund and withdraw in AED by bank transfer or debit card"
+    },
+    "platforms": {
+     "v": "Own app and website"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0.0025,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "0.25% a year admin fee plus 0.1% a year KYC and AML fee from year 2 (properties listed after 3 Dec 2025), taken from rental income. Entry fees (1.5% + 0.2%) and the 2.5% exit fee are not included."
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://help.getstake.com/en/articles/6768318",
+    "reg": "https://www.dfsa.ae/public-register/firms/stake-properties-limited"
+   }
+  },
+  {
+   "id": "capitalcom",
+   "name": "Capital.com",
+   "short": "C",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68ff4e7f517edf9a8531be95_capital-symbol.svg",
+   "type": "CFD broker",
+   "order": 10,
+   "score": 3.8,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/capitalcom"
+   },
+   "review": "https://www.brokermatch.ae/reviews/capital-com-review",
+   "risk": "All investments carry risk. Past performance is not a reliable indicator of future results.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  },
+  {
+   "id": "plus500",
+   "name": "Plus500",
+   "short": "P",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6855751839df865b40165892_Plus500-icon.svg",
+   "type": "CFD broker",
+   "order": 100,
+   "score": 4.5,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/plus500"
+   },
+   "review": "https://www.brokermatch.ae/reviews/plus500",
+   "risk": "CFDs are complex leverage-based over-the-counter derivatives which carry a high level of risk and are not suitable for everyone.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  },
+  {
+   "id": "xm",
+   "name": "XM",
+   "short": "X",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/685576b580ce974d0b927996_XM-icon.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 4.3,
+   "cta": {
+    "href": "https://www.xm.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Your capital is at risk. Leveraged products may not be suitable for everyone. Please consider its Risk Disclosure.",
+   "cats": [
+    "cfd"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "Stock CFDs with no commission; the cost is in the spread"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "From 0.8 pips",
+     "s": "Minimum spread XM advertises on its UAE site. EUR/USD averages and any Ultra Low commission are not published",
+     "c": true
+    },
+    "crypto": {
+     "v": "Not offered",
+     "s": "No crypto CFDs on XM's UAE (MENA) site"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "XM MENA does not list account currencies or AED conversion costs online",
+     "c": true
+    },
+    "deposit": {
+     "v": "Not published",
+     "s": "XM's UAE site does not list deposit methods or deposit fees",
+     "c": true
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "XM MENA advertises withdrawals with no fees. Bank transfer charges may be deducted",
+     "c": true
+    },
+    "inact": {
+     "v": "Not published",
+     "s": "The client agreement includes a dormant account policy, but no fee is shown on XM's UAE site",
+     "c": true
+    },
+    "custody": {
+     "v": "None",
+     "s": "CFDs only. Overnight swaps apply to open positions"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "Client agreement: no interest on client money unless agreed in writing"
+    },
+    "entity": {
+     "v": "Trading Point MENA Ltd, DIFC",
+     "s": "Operates xm.com/mena from Park Towers, DIFC, Dubai. The global xm.com site is run by XM Global (Belize)"
+    },
+    "regulator": {
+     "v": "DFSA, ref. F003484",
+     "s": "UAE licence in the DIFC since September 2019, with a retail endorsement. Deals as matched principal only"
+    },
+    "protection": {
+     "v": "None in the DIFC",
+     "s": "Client money held in a trust account under DFSA client money rules. Negative balance protection per account"
+    },
+    "minDep": {
+     "v": "$5",
+     "s": "Ultra Low and Professional accounts, or the same amount in another currency"
+    },
+    "assets": {
+     "v": "Forex, stocks, indices, metals",
+     "s": "1,400+ CFDs on forex, stocks, indices, thematic indices, metals and energies. Leverage up to 30:1"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only, no real shares"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "Swap free option is standard on all accounts"
+    },
+    "aed": {
+     "v": "Not published",
+     "s": "AED accounts or AED funding are not mentioned on xm.com/mena",
+     "c": true
+    },
+    "platforms": {
+     "v": "MT5, XM app",
+     "s": "MT4 is not listed on XM's UAE site"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Ultra Low",
+     "spread": 0.8,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": null,
+     "c": true
+    },
+    "custody": null,
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.xm.com/mena",
+    "reg": "https://www.xm.com/mena/regulation"
+   }
+  },
+  {
+   "id": "ig",
+   "name": "IG",
+   "short": "I",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68557767c80500cc58682739_IG-icon.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 4.5,
+   "cta": {
+    "href": "https://www.ig.com/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "CFDs are complex financial instruments and come with a high risk of losing money rapidly due to leverage.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  },
+  {
+   "id": "fxpro",
+   "name": "FxPro",
+   "short": "F",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68591af14c193088f34a6b31_FxPro-icon.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 4.4,
+   "cta": {
+    "href": "https://www.fxpro.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Trading CFDs is risky and may lead to permanent capital loss. Make sure you understand the risks before trading.",
+   "cats": [
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "Share CFDs on MT5 only, no commission; the cost is in the spread"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "From 1.2 pips, no commission",
+     "s": "Standard, minimum spread. Raw+: from 0.0 pips + $7 per lot round turn. cTrader: 0.44 pips average + $35 per $1m each side",
+     "c": true
+    },
+    "crypto": {
+     "v": "CFDs only",
+     "s": "Crypto CFDs. Raw+ has zero spread on Bitcoin and Ethereum since June 2026, plus a commission"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "AED is not an account currency. FxPro does not publish a conversion fee",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "No FxPro fee on deposits by bank wire, card or online wallet. Your bank's charges may apply"
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "No FxPro fee. Withdrawals to online wallets may be charged if you have not traded"
+    },
+    "inact": {
+     "v": "Not published",
+     "s": "Live accounts are disabled after 3 months of inactivity and can be reactivated by email",
+     "c": true
+    },
+    "custody": {
+     "v": "None",
+     "s": "CFDs only. Overnight swaps apply to open positions"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "FxPro does not advertise interest on cash balances",
+     "c": true
+    },
+    "entity": {
+     "v": "FxPro Global Markets Ltd",
+     "s": "Likely entity, based in The Bahamas; FxPro does not say per country. Its DIFC (DFSA) licence was withdrawn in February 2020",
+     "c": true
+    },
+    "regulator": {
+     "v": "SCB Bahamas, SIA-F184",
+     "s": "Offshore licence, not a UAE licence. Other entities: FxPro UK (FCA 509956) and Invemonde Trading (FSA Seychelles SD120)",
+     "c": true
+    },
+    "protection": {
+     "v": "None",
+     "s": "No compensation scheme stated for this entity. Segregated client funds and negative balance protection",
+     "c": true
+    },
+    "minDep": {
+     "v": "No minimum",
+     "s": "FxPro recommends $1,000. Some payment methods set their own minimum"
+    },
+    "assets": {
+     "v": "Forex, shares, indices, crypto",
+     "s": "2,100+ CFDs: forex, US, UK and EU shares, indices, metals, energy, futures, ETFs and crypto"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only, no real shares"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "Swap free for religious reasons. Fees may apply once trades stay open a set number of days"
+    },
+    "aed": {
+     "v": "No AED account",
+     "s": "Account currencies: USD, EUR, GBP, CHF, JPY, PLN, AUD, ZAR. AED deposits not listed",
+     "c": true
+    },
+    "platforms": {
+     "v": "MT4, MT5, cTrader, TradingView",
+     "s": "Also the FxPro app and FxPro WebTrader"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 1.2,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": {
+      "account": "Raw+",
+      "spread": 0.0,
+      "spreadKind": "minimum",
+      "commRt": 7
+     },
+     "c": true
+    },
+    "custody": null,
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.fxpro.com/trading-platforms/comparison",
+    "reg": "https://www.dfsa.ae/public-register/firms/fxpro-global-markets-mena-limited"
+   }
+  },
+  {
+   "id": "saxo",
+   "name": "Saxo",
+   "short": "S",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68591bc6642202cd2dbd806e_Saxo-icon.svg",
+   "type": "Global broker",
+   "order": 100,
+   "score": 4.6,
+   "cta": {
+    "href": "https://www.home.saxo",
+    "plain": true
+   },
+   "review": null,
+   "risk": "CFDs and forex (FX) are complex instruments and come with a high risk of losing money rapidly due to leverage.",
+   "cats": [
+    "stocks",
+    "cfd",
+    "options"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "0.08%, min $1",
+     "s": "Classic tier, US stocks and ETFs. Platinum 0.05%, VIP 0.03%. Saxo says prices vary by country of residence.",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "Not offered",
+     "s": "Saxo's MENA pages do not list ADX or DFM.",
+     "c": true
+    },
+    "options": {
+     "v": "$2 per contract",
+     "s": "Classic tier, US listed options, no minimum. Platinum $1, VIP $0.75."
+    },
+    "forex": {
+     "v": "0.7 pips, no commission",
+     "s": "Classic tier, major pairs. Platinum 0.6, VIP 0.5 pips. Indicative minimum spreads. $3 minimum fee on small trades."
+    },
+    "crypto": {
+     "v": "Crypto ETPs only",
+     "s": "No coins. Crypto FX pairs are for professional clients only. ETPs trade like stocks and ETFs."
+    },
+    "fx": {
+     "v": "Up to 0.5%",
+     "s": "Converts at mid rate plus up to 0.5%. AED deposits are not confirmed on Saxo's UAE pages.",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free bank transfer",
+     "s": "Saxo charges no transfer fee. First deposit must come from a bank account in your name in the UAE."
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "Saxo does not charge for online withdrawals. Intermediary or receiving banks may deduct fees."
+    },
+    "inact": {
+     "v": "None",
+     "s": "Saxo says it charges no inactivity fee."
+    },
+    "custody": {
+     "v": "0.15% a year",
+     "s": "Classic and Platinum, on stocks, ETFs and bonds, charged monthly. VIP 0.05%. No VAT for non EU residents."
+    },
+    "interest": {
+     "v": "Below SOFR, rate not shown",
+     "s": "Classic, USD: SOFR minus a spread and a 2% markdown. Nothing up to $10,000, scaled to $100,000. Platinum markdown 1.5%, VIP 1%.",
+     "c": true
+    },
+    "entity": {
+     "v": "Saxo Bank A/S, Denmark",
+     "s": "Provides the account and services. The Dubai office is a representative office that provides no financial services."
+    },
+    "regulator": {
+     "v": "Danish FSA (foreign)",
+     "s": "Licence no. 1149. Dubai office licensed by CBUAE as a representative office. Saxo's DFSA licences were withdrawn in 2017 and 2019."
+    },
+    "protection": {
+     "v": "EUR 100,000 cash deposits",
+     "s": "Danish Guarantee Fund covers clients of Saxo Bank A/S. Up to EUR 20,000 if Saxo fails to return securities."
+    },
+    "minDep": {
+     "v": "$5,000",
+     "s": "Classic tier. Platinum from $250,000, VIP from $1,250,000, funded within 30 days."
+    },
+    "assets": {
+     "v": "Stocks, ETFs, bonds, options, FX",
+     "s": "Also futures, mutual funds, CFDs and crypto ETPs, on about 50 exchanges."
+    },
+    "ownership": {
+     "v": "Real shares and CFDs",
+     "s": "Real stocks, ETFs and bonds, plus CFDs on stocks, indices, commodities and bonds."
+    },
+    "fractions": {
+     "v": "Not published",
+     "s": "Saxo's MENA pages do not mention fractional shares.",
+     "c": true
+    },
+    "islamic": {
+     "v": "Not published",
+     "s": "Saxo's MENA pages list no Islamic or swap free account.",
+     "c": true
+    },
+    "aed": {
+     "v": "Not published",
+     "s": "AED appears in Saxo's rate tables, but AED deposits and AED accounts are not confirmed on its UAE pages.",
+     "c": true
+    },
+    "platforms": {
+     "v": "SaxoInvestor, SaxoTrader",
+     "s": "Web, mobile and desktop. TradingView integration and OpenAPI."
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0.0008,
+      "perShare": 0,
+      "min": 1,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": 0.005,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "Classic tier: 0.08% of order value with a $1 minimum; currency conversion at mid rate plus up to 0.5%.",
+     "c": true
+    },
+    "uae": null,
+    "fxlot": {
+     "account": "Classic",
+     "spread": 0.7,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": null
+    },
+    "custody": {
+     "pctYear": 0.0015,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "Classic: 0.15% a year on stocks, ETFs and bonds, calculated daily and charged monthly; no VAT for clients outside the EU."
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.home.saxo/en-mena",
+    "reg": "https://www.home.saxo/en-mena"
+   }
+  },
+  {
+   "id": "fpmarkets",
+   "name": "FP Markets",
+   "short": "FM",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6859206172638b08d54fb89c_FP%20Markets-icon.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 4.2,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/fpmarkets"
+   },
+   "review": "https://www.brokermatch.ae/reviews/fp-markets-uae-review",
+   "risk": "Derivative products are highly leveraged, carry a high level of risk and may not be appropriate for all investors.",
+   "cats": [
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "US share CFDs on MT5 Raw: 2 cents per share each side, minimum $2 each side"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "1.2 pips, no commission",
+     "s": "Raw account: 0.1 pips + $6 per lot round turn. Average spreads, September 2026"
+    },
+    "crypto": {
+     "v": "CFDs only",
+     "s": "Crypto CFDs on Bitcoin, Ethereum and other coins. No commission; the cost is in the spread"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "AED deposits are accepted and converted to the account currency. The rate or markup is not published",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Bank wire, Visa, Mastercard, Skrill, Neteller and crypto. AED accepted. Your own bank's fees still apply"
+    },
+    "withdraw": {
+     "v": "Free by bank wire",
+     "s": "No FP Markets fee on bank wire withdrawals. Intermediary and receiving bank fees may apply"
+    },
+    "inact": {
+     "v": "$10 a month",
+     "s": "After 90 days with no trades, deposits, withdrawals or logins, while funds remain. Charged until the balance runs out"
+    },
+    "custody": {
+     "v": "None",
+     "s": "CFDs only. Overnight swaps apply to open positions"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "Client agreement: clients waive interest on client money"
+    },
+    "entity": {
+     "v": "First Prudential Markets Limited",
+     "s": "Seychelles company. It runs FP Markets' UAE website and is the party to the client agreement"
+    },
+    "regulator": {
+     "v": "FSA Seychelles, SD130",
+     "s": "Offshore licence, not a UAE licence. Group also holds ASIC, CySEC and FSCA licences for other regions"
+    },
+    "protection": {
+     "v": "None",
+     "s": "Not a member of any compensation fund. Client money segregated. Negative balance protection"
+    },
+    "minDep": {
+     "v": "No minimum",
+     "s": "Depends on the payment method"
+    },
+    "assets": {
+     "v": "Forex, shares, indices, crypto",
+     "s": "All as CFDs: 70+ FX pairs, share and ETF CFDs, indices, metals, commodities, bonds and crypto"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only, no real shares"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "Swap free Standard and Raw. Admin fee instead of swap: EUR/USD $6 per lot a night after 5 free nights"
+    },
+    "aed": {
+     "v": "AED deposits, no AED account",
+     "s": "AED is a funding currency. Accounts in USD, EUR, GBP, AUD, SGD, CAD, CHF, HKD, JPY or PLN"
+    },
+    "platforms": {
+     "v": "MT4, MT5, cTrader, TradingView",
+     "s": "Also WebTrader, FP Markets app, MAM/PAMM and copy trading"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 1.2,
+     "spreadKind": "average",
+     "commRt": 0,
+     "alt": {
+      "account": "Raw",
+      "spread": 0.1,
+      "spreadKind": "average",
+      "commRt": 6
+     }
+    },
+    "custody": null,
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.fpmarkets.com/en-ae/account-types/forex-account-types/",
+    "reg": "https://www.fpmarkets.com/en-ae/"
+   }
+  },
+  {
+   "id": "cfi",
+   "name": "CFI Financial Group",
+   "short": "CF",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6859218ef6f97de36c5b1cc9_CFI%20Financial%20Group-icon.svg",
+   "type": "CFD and stock broker",
+   "order": 100,
+   "score": 4.5,
+   "cta": {
+    "href": "https://cfi.trade/en/uae",
+    "plain": true
+   },
+   "review": null,
+   "risk": "CFDs are leveraged products that incur a high level of risk.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  },
+  {
+   "id": "baraka",
+   "name": "Baraka",
+   "short": "B",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6859241c97768ba229f3d703_Baraka-icon.svg",
+   "type": "UAE investing app",
+   "order": 100,
+   "score": 4.5,
+   "cta": {
+    "href": "https://getbaraka.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "All investing involves risk, including the possible loss of money you invest.",
+   "cats": [
+    "stocks",
+    "uae",
+    "options"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "From $1 per trade",
+     "s": "Per Baraka's app listing; its website says commission free. Paid plans: Premium AED 37.99, Premium Plus AED 79.99 a month.",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "Not published",
+     "s": "ADX and DFM stocks for eligible UAE residents. Site says commission free; exchange, clearing and VAT charges not published.",
+     "c": true
+    },
+    "options": {
+     "v": "$1 per contract",
+     "s": "Calls and puts on selected US stocks. Regulatory fees not stated."
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Not offered"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "AED deposits go to an AED or USD wallet (USD if you do not choose). Moving money between wallets is not supported yet.",
+     "c": true
+    },
+    "deposit": {
+     "v": "No Baraka fee",
+     "s": "Bank transfer, open banking (Lean), debit card, Apple Pay or Google Pay. Your bank's fees apply. Card fees not published.",
+     "c": true
+    },
+    "withdraw": {
+     "v": "$25 per withdrawal",
+     "s": "Flat fee charged by the US broker's bank under Baraka's terms. Baraka adds no fee of its own.",
+     "c": true
+    },
+    "inact": {
+     "v": "Not published",
+     "s": "Baraka's terms do not mention an inactivity fee.",
+     "c": true
+    },
+    "custody": {
+     "v": "Free plan, paid plans optional",
+     "s": "Premium AED 37.99 a month or AED 369.99 a year. Premium Plus AED 79.99 or AED 799.99. No custody fee in the terms.",
+     "c": true
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "Terms say you give up interest on cash. Interest earned on it is shared by Baraka and DriveWealth."
+    },
+    "entity": {
+     "v": "Baraka Financial Limited",
+     "s": "DIFC, Dubai. US trades are executed and held by DriveWealth LLC (US). Parent: Baraka Technology Holding (ADGM)."
+    },
+    "regulator": {
+     "v": "DFSA (DIFC), ref F006586",
+     "s": "UAE licence since 2 June 2021. Category 3C, with retail client, client assets and Islamic Window endorsements."
+    },
+    "protection": {
+     "v": "SIPC up to $500,000 (US)",
+     "s": "Eligible US securities via DriveWealth, incl. $250,000 cash. None in the DIFC. Client money may sit in a segregated UAE bank account."
+    },
+    "minDep": {
+     "v": "Not published",
+     "s": "Fractional shares from $1. Bonds from $1,000. Private deals (baraka Access) from $25,000.",
+     "c": true
+    },
+    "assets": {
+     "v": "US and UAE stocks, ETFs, options",
+     "s": "Also physical gold and silver, US Treasuries and corporate bonds, and private deals for qualified investors."
+    },
+    "ownership": {
+     "v": "Real shares",
+     "s": "US securities held by DriveWealth LLC."
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "From $1."
+    },
+    "islamic": {
+     "v": "Yes, DFSA Islamic Window",
+     "s": "Shariah board oversight and a Shariah screener (Musaffa data) for stocks and ETFs. Bonds and options are not screened."
+    },
+    "aed": {
+     "v": "AED and USD wallets",
+     "s": "Deposits go to the wallet you pick, USD by default. UAE stocks trade in AED."
+    },
+    "platforms": {
+     "v": "Own app (iOS, Android)"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 1,
+      "pct": 0,
+      "perShare": 0,
+      "min": 1,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": null,
+      "fixedUsd": null,
+      "minUsd": null
+     },
+     "note": "Free plan assumed at the $1 per trade quoted in the app listing; the fee schedule could not be read. AED conversion cost not published (null).",
+     "c": true
+    },
+    "uae": {
+     "adx": {
+      "pct": null,
+      "min": null,
+      "fixed": null,
+      "vat": null,
+      "allIn": null,
+      "note": "Offered to eligible UAE residents. Baraka says commission free but publishes no all in cost."
+     },
+     "dfm": {
+      "pct": null,
+      "min": null,
+      "fixed": null,
+      "vat": null,
+      "allIn": null,
+      "note": "Offered to eligible UAE residents. Baraka says commission free but publishes no all in cost."
+     },
+     "c": true
+    },
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "Free plan. Optional Premium costs AED 369.99 a year (about $100.75) and Premium Plus AED 799.99 a year (about $217.83).",
+     "c": true
+    },
+    "withdrawUsd": 25
+   },
+   "src": {
+    "fees": "https://getbaraka.com/terms",
+    "reg": "https://www.dfsa.ae/public-register/firms/baraka-financial-limited"
+   }
+  },
+  {
+   "id": "amana",
+   "name": "Amana",
+   "short": "A",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6859253e622925b67db67242_Amana%20Capital-icon.svg",
+   "type": "CFD and investing app",
+   "order": 100,
+   "score": 4.3,
+   "cta": {
+    "href": "https://www.brokermatch.ae/visit/amana"
+   },
+   "review": "https://www.brokermatch.ae/reviews/amana-uae-review",
+   "risk": "All investing involves risk, including the possible loss of money you invest.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  },
+  {
+   "id": "deriv",
+   "name": "Deriv",
+   "short": "D",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/685954422fffca3f32c60836_Deriv-icon.svg",
+   "type": "CFD broker",
+   "order": 100,
+   "score": 4.4,
+   "cta": {
+    "href": "https://deriv.com/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "CFDs are complex instruments with a high risk of losing money rapidly due to leverage.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  },
+  {
+   "id": "naga",
+   "name": "NAGA",
+   "short": "N",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/685955164c2bc20cfdfde205_Naga-icon.svg",
+   "type": "Social trading app",
+   "order": 100,
+   "score": 4.3,
+   "cta": {
+    "href": "https://naga.com/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Trading leveraged product involves significant risk of loss.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  },
+  {
+   "id": "vantage",
+   "name": "Vantage Markets",
+   "short": "VM",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/6859563c2c0bdb26bfeaa5af_Vantage%20Markets-icon.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 4.2,
+   "cta": {
+    "href": "https://www.vantagemarkets.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Trading derivatives carries significant risks. It is not suitable for all investors.",
+   "cats": [
+    "cfd"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "US share CFDs advertised at $0 commission, cost in the spread. Some stock and ETF CFDs are excluded from free pricing"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "From 1.1 pips, no commission",
+     "s": "Raw ECN: from 0.0 pips + $6 per lot round turn. Minimum spreads, no typical EUR/USD spread published"
+    },
+    "crypto": {
+     "v": "Bitcoin CFD only",
+     "s": "BTCUSD CFD promoted on Vantage's international site. No crypto category in the instrument list",
+     "c": true
+    },
+    "fx": {
+     "v": "No AED, your bank converts",
+     "s": "AED is not a listed deposit currency. Send USD, or your card issuer converts AED when you pay by card"
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Cards, Apple Pay, Google Pay, Skrill, Neteller and international transfer. No UAE local transfer listed",
+     "c": true
+    },
+    "withdraw": {
+     "v": "$20 by bank wire",
+     "s": "Other methods free. Minimum $30. Intermediary bank fees are extra"
+    },
+    "inact": {
+     "v": "None",
+     "s": "No account keeping fees. Empty accounts are archived after 90 days"
+    },
+    "custody": {
+     "v": "None",
+     "s": "CFDs only, nothing held in custody. Swaps apply to positions held overnight"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "No interest on cash balances mentioned",
+     "c": true
+    },
+    "entity": {
+     "v": "VIG Group, Mauritius",
+     "s": "Introduced by Vantage Global Financial Services LLC (UAE CMA Category 5). Emirati nationals cannot register"
+    },
+    "regulator": {
+     "v": "Mauritius FSC (offshore)",
+     "s": "VIG licence GB20026165. The introducer's CMA licence 20200000445 covers introductions only, not trading"
+    },
+    "protection": {
+     "v": "Insurance up to $1m per client",
+     "s": "Group insurance for VIG Group, claims up to $1m per claimant. No compensation scheme. Client money held separately"
+    },
+    "minDep": {
+     "v": "$50",
+     "s": "Standard STP, Raw ECN and Swap Free. Pro ECN $10,000"
+    },
+    "assets": {
+     "v": "CFDs on 1,000+ products",
+     "s": "Forex, indices, metals, energy, soft commodities, US, UK, EU and AU share CFDs, ETFs and bonds"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "Swap Free account from $50. An admin fee on overnight positions replaces swaps, amount not published",
+     "c": true
+    },
+    "aed": {
+     "v": "No AED account",
+     "s": "Account currencies include USD, EUR and GBP. Deposits in other currencies are converted"
+    },
+    "platforms": {
+     "v": "MT4, MT5, TradingView, own app",
+     "s": "Vantage app, web trader and copy trading"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Standard STP",
+     "spread": 1.1,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": {
+      "account": "Raw ECN",
+      "spread": 0.0,
+      "spreadKind": "minimum",
+      "commRt": 6
+     }
+    },
+    "custody": null,
+    "withdrawUsd": 20
+   },
+   "src": {
+    "fees": "https://uae.vantagehelpcenter.com/hc/en-ae/articles/17028342896143-Does-a-live-trading-account-with-Vantage-cost-anything",
+    "reg": "https://uae.vantagehelpcenter.com/hc/en-ae/articles/17030753694095-Who-regulates-Vantage"
+   }
+  },
+  {
+   "id": "adss",
+   "name": "ADSS",
+   "short": "A",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/685956892f5531d2934c2f32_ADSS-icon.svg",
+   "type": "UAE CFD and stock broker",
+   "order": 100,
+   "score": 4.1,
+   "cta": {
+    "href": "https://www.adss.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "When investing, your capital is at risk and you may get back less than invested. Past performance doesn't guarantee future results.",
+   "cats": [
+    "stocks",
+    "cfd",
+    "uae",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "$0",
+     "s": "Real US shares and ETFs on the ADSS app, from $1. US share CFDs have a variable commission"
+    },
+    "uaeFee": {
+     "v": "No broker commission (promo)",
+     "s": "Exchange, clearing and regulator fees plus VAT come back as CFD credits on orders over AED 500. Standard rate not published",
+     "c": true
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "From 0.8 pips, no commission",
+     "s": "Elite account. Classic spreads not published. Pro: raw spreads plus a commission, rate not published",
+     "c": true
+    },
+    "crypto": {
+     "v": "Bitcoin CFD from $120 spread",
+     "s": "Crypto CFDs only: Bitcoin, Bitcoin Cash, Ethereum and Litecoin"
+    },
+    "fx": {
+     "v": "Up to 1%",
+     "s": "Markup on currency conversions, per ADSS's Sep 2026 schedule of charges",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Local bank transfer, UAEPGS for UAE bank accounts, cards, Apple Pay and Samsung Pay. Card issuers may charge"
+    },
+    "withdraw": {
+     "v": "$15",
+     "s": "Minimum charge per withdrawal in the Sep 2026 schedule of charges. Some ADSS pages say withdrawals are free",
+     "c": true
+    },
+    "inact": {
+     "v": "None listed",
+     "s": "No inactivity fee in the Sep 2026 schedule of charges",
+     "c": true
+    },
+    "custody": {
+     "v": "None listed",
+     "s": "No custody fee in the Sep 2026 schedule of charges",
+     "c": true
+    },
+    "interest": {
+     "v": "Not published",
+     "c": true
+    },
+    "entity": {
+     "v": "ADS Securities LLC SPC",
+     "s": "Abu Dhabi, CI Tower on Corniche Road. Services are only for UAE residents"
+    },
+    "regulator": {
+     "v": "CMA (UAE), onshore licence",
+     "s": "Category 1 licence 305027 and Category 5 licence 20200000217. CMA register record CP-0000786"
+    },
+    "protection": {
+     "v": "Not published",
+     "s": "ADSS publishes no investor compensation cover. Client money rules sit in its terms of business",
+     "c": true
+    },
+    "minDep": {
+     "v": "$100",
+     "s": "Classic account. Elite and Pro need more: ADSS pages give figures from $1,000 to $100,000"
+    },
+    "assets": {
+     "v": "UAE and US shares, CFDs",
+     "s": "Real ADX, DFM and US shares and ETFs. CFDs on forex, indices, commodities, shares, bonds and crypto"
+    },
+    "ownership": {
+     "v": "Real shares and CFDs"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "US shares and ETFs from $1"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "Islamic accounts without swaps are offered. Terms not published"
+    },
+    "aed": {
+     "v": "AED deposits",
+     "s": "Local AED transfers through UAEPGS. AED account currency not stated",
+     "c": true
+    },
+    "platforms": {
+     "v": "Own app, MT4, MT5",
+     "s": "The ADSS platform also covers US and UAE shares. Copy trading available"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0,
+      "min": 0,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": 0.01,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "ADSS platform: real US shares and ETFs with no commission, from $1. Conversion uses ADSS's markup of up to 1% (schedule of charges); exact rate not published.",
+     "c": true
+    },
+    "uae": {
+     "adx": {
+      "pct": 0,
+      "min": 0,
+      "fixed": 0,
+      "vat": false,
+      "allIn": false,
+      "note": "Promotion: no broker commission. Exchange, market, clearing, settlement and regulatory fees plus VAT are charged, then refunded monthly as CFD trading credits on orders over AED 500 (unused credits become cash after 6 months). Standard rate and promotion end date not published."
+     },
+     "dfm": {
+      "pct": 0,
+      "min": 0,
+      "fixed": 0,
+      "vat": false,
+      "allIn": false,
+      "note": "Promotion: no broker commission. Exchange, market, clearing, settlement and regulatory fees plus VAT are charged, then refunded monthly as CFD trading credits on orders over AED 500 (unused credits become cash after 6 months). Standard rate and promotion end date not published."
+     },
+     "c": true
+    },
+    "fxlot": {
+     "account": "Elite",
+     "spread": 0.8,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": null,
+     "c": true
+    },
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody fee in the 28 Sep 2026 schedule of charges; not confirmed elsewhere.",
+     "c": true
+    },
+    "withdrawUsd": 15
+   },
+   "src": {
+    "fees": "https://www.adss.com/en/trade/accounts/",
+    "reg": "https://www.adss.com/en/legal/regulation/"
+   }
+  },
+  {
+   "id": "equiti",
+   "name": "Equiti",
+   "short": "E",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/685956d40a13f4985733a356_Equiti-icon.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 4.2,
+   "cta": {
+    "href": "https://www.equiti.com/uae-en/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Trading in financial markets carries a high degree of risk, can result in losses exceeding deposits and may not be suitable for all investors.",
+   "cats": [
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "US share CFDs: $0 commission advertised. Equiti notes zero commission depends on product and account type"
+    },
+    "uaeFee": {
+     "v": "CFDs only",
+     "s": "UAE share CFDs, long only: ADX 0.17%, DFM 0.275% per side. Min AED 5 (AED account) or $1.40"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "1.4 pips, no commission",
+     "s": "Standard account. Premier: 0.0 pips + $7 per lot round turn. Classic: 1.6 pips, average of all pairs. London and NY hours"
+    },
+    "crypto": {
+     "v": "CFDs, BTC spread from $5",
+     "s": "BTC, ETH, XRP, ADA, SOL, BNB: no commission on Classic and Standard. Other coins 0.08% to 0.10%. Premier: 0.04% on all"
+    },
+    "fx": {
+     "v": "AED base account offered",
+     "s": "Deposit AED into an AED account. Markup when converting to USD or on USD priced trades is not published"
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "AED bank transfer, instant banking, Visa, Mastercard, Apple Pay, Google Pay, Skrill, Neteller. Your bank may charge"
+    },
+    "withdraw": {
+     "v": "Free to domestic banks",
+     "s": "$30 to international banks. Skrill and Neteller: 1% up to $30. No minimum published"
+    },
+    "inact": {
+     "v": "Not published",
+     "s": "Equiti's UAE account, funding and FAQ pages do not mention one",
+     "c": true
+    },
+    "custody": {
+     "v": "No platform fee",
+     "s": "Free to sign up. CFD positions held overnight pay swap (financing) charges"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "Equiti's UAE site mentions no interest on cash balances"
+    },
+    "entity": {
+     "v": "Equiti Securities Currencies Brokers LLC",
+     "s": "Dubai, UAE (registration 1642447). Offices in Dubai and Abu Dhabi"
+    },
+    "regulator": {
+     "v": "UAE CMA, onshore licence",
+     "s": "Category 1 trading broker, licence 20200000026. Category 5 introduction, licence 20200000352. CMA was formerly SCA"
+    },
+    "protection": {
+     "v": "No compensation scheme stated",
+     "s": "Equiti says client money is kept in segregated accounts with banks"
+    },
+    "minDep": {
+     "v": "No minimum (Classic account)",
+     "s": "Standard: $100. Premier: $3,000. TradingView trading uses Premier pricing with no minimum"
+    },
+    "assets": {
+     "v": "CFDs on forex, shares, crypto",
+     "s": "CFDs on forex, indices, commodities, US, European and UAE shares, ETFs, futures and crypto"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "CFDs only, from 0.1 share",
+     "s": "No real shares. Share CFDs can be traded from 0.1 of a share"
+    },
+    "islamic": {
+     "v": "Yes, Standard and Premier",
+     "s": "MT5 only. No swap or admin fees while deposits stay under $25,000, then admin fees after a grace period. $10 per lot on futures CFDs"
+    },
+    "aed": {
+     "v": "AED account and deposits",
+     "s": "Classic in USD or AED. Standard and Premier in USD, AED, GBP or EUR"
+    },
+    "platforms": {
+     "v": "MT4, MT5, TradingView, own app",
+     "s": "Classic: MT5 and web only. Equiti Trader app for Standard and Premier"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 1.4,
+     "spreadKind": "average",
+     "commRt": 0,
+     "alt": {
+      "account": "Premier",
+      "spread": 0.0,
+      "spreadKind": "typical",
+      "commRt": 7
+     }
+    },
+    "custody": null,
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.equiti.com/uae-en/accounts/",
+    "reg": "https://www.equiti.com/uae-en/about-us"
+   }
+  },
+  {
+   "id": "bitoasis",
+   "name": "BitOasis",
+   "short": "B",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68595ab1a5110c46852c60e4_BitOasis-icon.svg",
+   "type": "Crypto exchange",
+   "order": 100,
+   "score": 4.2,
+   "cta": {
+    "href": "https://bitoasis.net",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Trading cryptocurrencies carries a high degree of risk and may not be suitable for all investors.",
+   "cats": [
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "Not offered"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Spread on Lite, tiered on Pro",
+     "s": "Lite: premium built into the quoted AED price. Pro: maker and taker fees that fall as volume rises",
+     "c": true
+    },
+    "fx": {
+     "v": "None, crypto priced in AED",
+     "s": "AED wallet. Buy and sell crypto directly against AED"
+    },
+    "deposit": {
+     "v": "Free by bank transfer",
+     "s": "AED wire and Easy Funding are free. Card and Apple Pay may carry a fee. Minimum AED 100"
+    },
+    "withdraw": {
+     "v": "AED 25",
+     "s": "AED 65 from AED 25,000. Minimum AED 200, only to a bank account in your name"
+    },
+    "inact": {
+     "v": "None listed",
+     "s": "BitOasis's fee overview lists no inactivity fee",
+     "c": true
+    },
+    "custody": {
+     "v": "Free",
+     "s": "No fee to hold crypto. Network and BitOasis fees apply when you send coins out"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "No interest or staking product found in BitOasis's help centre",
+     "c": true
+    },
+    "entity": {
+     "v": "BitOasis Technologies FZE",
+     "s": "Dubai Silicon Oasis, Dubai"
+    },
+    "regulator": {
+     "v": "VARA (Dubai), VL/2024/11/001",
+     "s": "Broker dealer licence issued 29 Nov 2024, active, retail clients allowed. CMA registration CMA-VASP-0100000-0021"
+    },
+    "protection": {
+     "v": "No compensation scheme",
+     "s": "Coins kept in online and offline storage. Segregation terms not published in the help centre"
+    },
+    "minDep": {
+     "v": "AED 100",
+     "s": "Wire, Easy Funding, card and Apple Pay"
+    },
+    "assets": {
+     "v": "68+ cryptocurrencies",
+     "s": "Spot crypto bought and sold against AED"
+    },
+    "ownership": {
+     "v": "Real coins",
+     "s": "You can send coins to an outside wallet"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "Coins can be bought in fractions"
+    },
+    "islamic": {
+     "v": "Not applicable",
+     "s": "Spot crypto has no swaps or overnight interest"
+    },
+    "aed": {
+     "v": "AED deposits and wallet",
+     "s": "Crypto traded directly against AED"
+    },
+    "platforms": {
+     "v": "Own app and website",
+     "s": "BitOasis Lite for simple buy and sell. BitOasis Pro with order book and charts"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No fee to hold crypto on BitOasis; only network and withdrawal fees when coins are sent out."
+    },
+    "withdrawUsd": 6.81
+   },
+   "src": {
+    "fees": "https://support.bitoasis.net/en/support/solutions/articles/29000033124-cash-withdrawal-guide",
+    "reg": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/"
+   }
+  },
+  {
+   "id": "adcb",
+   "name": "ADCB Securities",
+   "short": "AS",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/686e3e5ea472dadad758aeeb_ADCB%20Securities-icon.svg",
+   "type": "UAE bank broker",
+   "order": 100,
+   "score": 3.4,
+   "cta": {
+    "href": "https://adcbsecurities.com/en/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Trading UAE equities involves market risk; you may lose money.",
+   "cats": [
+    "stocks",
+    "uae",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "0.23%, min $2",
+     "s": "US stocks and ETFs via Interactive Brokers in the ADCB app, plus 5% VAT. UK stocks and ETFs 0.25%, min 5"
+    },
+    "uaeFee": {
+     "v": "0.15% ADX, 0.275% + AED 10 DFM",
+     "s": "All in: broker 0.125%, the rest is exchange, clearing and CMA fees. 5% VAT on all but the CMA part. No minimum"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Via Fuze, fee not published",
+     "s": "Real coins through Morpheus Software Technology FZE (Fuze). ADCB Securities only introduces you. Zero platform fees advertised",
+     "c": true
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "Global trading uses a USD investment account funded from your ADCB account, so ADCB converts your AED. Rate not published",
+     "c": true
+    },
+    "deposit": {
+     "v": "From your ADCB account",
+     "s": "ADCB bank account required. The USD global account is funded instantly from it in the ADCB app. No transfer fee listed"
+    },
+    "withdraw": {
+     "v": "No fee listed",
+     "s": "Cash goes back to your ADCB accounts. Global account withdrawals go to any ADCB account in the app"
+    },
+    "inact": {
+     "v": "No fee listed",
+     "s": "AED 50 plus VAT to reactivate a dormant account. Dormancy period not stated"
+    },
+    "custody": {
+     "v": "No custody fee listed",
+     "s": "One off: account opening AED 200, investor number (NIN) AED 50, free direct from ADX or DFM. Plus 5% VAT"
+    },
+    "interest": {
+     "v": "No interest stated",
+     "s": "No interest on trading cash is published. Margin loans cost 10% a year",
+     "c": true
+    },
+    "entity": {
+     "v": "ADCB Securities LLC, UAE",
+     "s": "Wholly owned by Abu Dhabi Commercial Bank. Onboards UAE residents onshore. You need an ADCB bank account"
+    },
+    "regulator": {
+     "v": "UAE CMA (formerly SCA) 604028",
+     "s": "Onshore UAE licence: first category, trading and clearing broker in securities (ref. 604028LIC)"
+    },
+    "protection": {
+     "v": "No compensation scheme stated",
+     "s": "UAE shares sit under your own investor number (NIN) at the exchange depositories. US shares are held via Interactive Brokers"
+    },
+    "minDep": {
+     "v": "Not published",
+     "s": "No minimum deposit on ADCB Securities pages"
+    },
+    "assets": {
+     "v": "UAE, US and UK stocks, ETFs",
+     "s": "ADX, DFM and Nasdaq Dubai shares, margin up to 2x. US and UK stocks and ETFs. Crypto through Fuze"
+    },
+    "ownership": {
+     "v": "Real shares",
+     "s": "No CFDs"
+    },
+    "fractions": {
+     "v": "Yes, some global stocks",
+     "s": "Some stocks and ETFs in the global account, to 4 decimal places. Minimum not published"
+    },
+    "islamic": {
+     "v": "No",
+     "s": "No Sharia compliant account stated"
+    },
+    "aed": {
+     "v": "AED for UAE, USD for global",
+     "s": "UAE shares settle in AED from your ADCB account. Global trading uses a separate USD investment account"
+    },
+    "platforms": {
+     "v": "Web platform, two apps",
+     "s": "ADCB Securities online and mobile app for UAE shares. US and UK in the ADCB Mobile Banking app. Phone orders on 600 50 3325"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0.0023,
+      "perShare": 0,
+      "min": 2,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": null,
+      "fixedUsd": null,
+      "minUsd": null
+     },
+     "note": "Only plan: 0.23% of trade value, minimum $2 per order, plus 5% VAT (not included in pct) and any stamp duty or market charges; trades from a USD account funded from an ADCB account, ADCB converts AED at a rate not published.",
+     "c": true,
+     "vat": true
+    },
+    "uae": {
+     "adx": {
+      "pct": 0.0015,
+      "min": 0,
+      "fixed": 0,
+      "vat": true,
+      "allIn": true,
+      "note": "Broker 0.125% + market 0.025% (ADX 0.020% plus other parties). No fixed fee. 5% VAT on broker and market commission, CMA part excluded."
+     },
+     "dfm": {
+      "pct": 0.00275,
+      "min": 0,
+      "fixed": 10,
+      "vat": true,
+      "allIn": true,
+      "note": "Broker 0.125% + market 0.15% (DFM, clearing and CMA 0.05% each) + AED 10 order fee. 5% VAT on order fee, broker and market commission except the 0.05% CMA part.",
+      "vatExemptPct": 0.0005
+     }
+    },
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody, annual or platform fee in the ADCB Securities schedule (Sept 2026). One off: account opening AED 200, NIN AED 50, plus 5% VAT."
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.adcbsecurities.com/en/Multimedia/PDFs/adcb-securities-sof-commission-fees.pdf",
+    "reg": "https://www.adcbsecurities.com/en/Multimedia/PDFs/adcb-securities-sof-commission-fees.pdf"
+   }
+  },
+  {
+   "id": "adib",
+   "name": "ADIB Securities",
+   "short": "AS",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/686e3e8e78f1bbe86e9b6cb2_ADIB%20Securities-icon.svg",
+   "type": "UAE Islamic broker",
+   "order": 100,
+   "score": 3.4,
+   "cta": {
+    "href": "https://www.adibsecurities.ae/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "All investing involves risk; ensure trades comply with your ethical and financial objectives.",
+   "cats": [
+    "stocks",
+    "uae"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "Fee not confirmed",
+     "s": "Sharia compliant US stocks through the ADIBS Global app or phone brokers. Fee table on the ADIB Securities pricing page",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "0.15% ADX, 0.275% + AED 10 DFM",
+     "s": "All in: broker 0.125% plus exchange, clearing and CMA fees. 5% VAT added on all fees. No minimum on shares"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Not offered"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "Cash comes from your ADIB bank account. Currency and conversion rate for US trades not published",
+     "c": true
+    },
+    "deposit": {
+     "v": "From your ADIB account",
+     "s": "A funded ADIB bank account is required before you trade. No deposit fee listed"
+    },
+    "withdraw": {
+     "v": "No fee listed",
+     "s": "Trades settle against your ADIB bank account"
+    },
+    "inact": {
+     "v": "AED 150 a quarter",
+     "s": "Online and mobile platform fee, charged only in a quarter with no executed order. Plus 5% VAT"
+    },
+    "custody": {
+     "v": "No custody fee listed",
+     "s": "One off: account opening AED 100, investor number (NIN) AED 25, free direct from ADX or DFM. Plus 5% VAT"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "Sharia compliant broker. Cash stays in your ADIB bank account under that account's terms",
+     "c": true
+    },
+    "entity": {
+     "v": "ADIB Securities LLC, Abu Dhabi",
+     "s": "Trades as ADIB Islamic Securities. Subsidiary of Abu Dhabi Islamic Bank. Onboards UAE residents onshore"
+    },
+    "regulator": {
+     "v": "UAE CMA (formerly SCA) 604041",
+     "s": "Onshore UAE licence for financial intermediation (brokerage), licence No. 604041"
+    },
+    "protection": {
+     "v": "No compensation scheme stated",
+     "s": "UAE shares sit under your own investor number (NIN) at the ADX and DFM depositories"
+    },
+    "minDep": {
+     "v": "Not published",
+     "s": "Your ADIB bank account must be funded before you trade"
+    },
+    "assets": {
+     "v": "UAE, Saudi and US stocks",
+     "s": "Sharia compliant shares only: ADX, DFM, Nasdaq Dubai, Saudi Tadawul and US exchanges. Purchases must be fully paid"
+    },
+    "ownership": {
+     "v": "Real shares",
+     "s": "No CFDs"
+    },
+    "fractions": {
+     "v": "Not published"
+    },
+    "islamic": {
+     "v": "Yes, all trading",
+     "s": "Only shares on ADIB's Sharia compliant lists for ADX, DFM, KSA and US can be traded"
+    },
+    "aed": {
+     "v": "AED via ADIB bank account",
+     "s": "UAE trades settle in AED from your ADIB account"
+    },
+    "platforms": {
+     "v": "Web platforms, two apps",
+     "s": "e-trade portal, e-trade plus and e-volution on the web. ADIB Sec UAE and ADIBS Global apps. Phone trading line"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": {
+     "adx": {
+      "pct": 0.0015,
+      "min": 0,
+      "fixed": 0,
+      "vat": true,
+      "allIn": true,
+      "note": "Total commission max 0.150%: broker 0.125% + other market fees 0.025%. No fixed fee listed for ADX. ADIB says 5% VAT applies on all fees."
+     },
+     "dfm": {
+      "pct": 0.00275,
+      "min": 0,
+      "fixed": 10,
+      "vat": true,
+      "allIn": true,
+      "note": "Broker 0.125% (no minimum) + DFM 0.05% + CMA (ESCA) 0.05% + CDS 0.05% + AED 10 market order fee. ADIB says 5% VAT applies on all fees."
+     }
+    },
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody fee. Online platform fee AED 150 (+5% VAT) applies in any quarter with no executed order: up to AED 630 a year (about $172) for a holder who never trades."
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.adibsecurities.ae/en/Pages/pricing_services.aspx",
+    "reg": "https://www.adibsecurities.ae/en/Pages/pricing_services.aspx"
+   }
+  },
+  {
+   "id": "efg",
+   "name": "EFG Hermes UAE",
+   "short": "EH",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/686e3ee1e32a2f281864f00c_EFG%20Hermes%20UAE-icon.svg",
+   "type": "UAE and MENA broker",
+   "order": 100,
+   "score": 3.4,
+   "cta": {
+    "href": "https://www.efghermesone.com/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Market fluctuations can cause capital loss.",
+   "cats": [
+    "uae",
+    "stocks"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "Not published",
+     "s": "US and Europe in the EFG Hermes ONE app via OLT Investment International, Bahrain (CBB). Fees not public",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "ADX 0.15%, DFM 0.275% + AED 10",
+     "s": "EFG does not publish its retail rate. Shown: standard 0.125% broker fee plus exchange fees, plus 5% VAT",
+     "c": true
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Not offered"
+    },
+    "fx": {
+     "v": "None for UAE shares",
+     "s": "Local markets trade in AED or USD. Conversions use the company's bank rate on the day, margin not published"
+    },
+    "deposit": {
+     "v": "Prefunded account",
+     "s": "Account must be funded before you buy. Funding methods and fees not published",
+     "c": true
+    },
+    "withdraw": {
+     "v": "No fee published",
+     "s": "Sale proceeds are credited to your account on settlement day, T+2",
+     "c": true
+    },
+    "inact": {
+     "v": "None published"
+    },
+    "custody": {
+     "v": "None published",
+     "s": "No custody or account fee in the UAE retail agreement or the app FAQ",
+     "c": true
+    },
+    "interest": {
+     "v": "Not published"
+    },
+    "entity": {
+     "v": "EFG Hermes UAE L.L.C.",
+     "s": "One Central, DWTC, Dubai. Signs the UAE retail agreement. Global markets go through OLT Investment International, Bahrain"
+    },
+    "regulator": {
+     "v": "UAE CMA, licence 604019",
+     "s": "Onshore UAE licence from the CMA (formerly SCA), dated 22 Nov 2004. Its DIFC arm (DFSA) serves professionals only"
+    },
+    "protection": {
+     "v": "None published",
+     "s": "No compensation scheme stated. Client accounts are kept separate from EFG's own, per CMA rules",
+     "c": true
+    },
+    "minDep": {
+     "v": "None",
+     "s": "App FAQ: no minimum deposit and no account opening fee"
+    },
+    "assets": {
+     "v": "UAE, MENA and global shares",
+     "s": "ADX, DFM, Nasdaq Dubai. Egypt, Saudi, Kuwait, Oman, US and Europe through other EFG group firms. Margin trading listed"
+    },
+    "ownership": {
+     "v": "Real shares"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "UAE exchanges trade whole shares. Not stated for global markets",
+     "c": true
+    },
+    "islamic": {
+     "v": "Not published"
+    },
+    "aed": {
+     "v": "AED or USD",
+     "s": "Local markets trade in AED or USD. Global account in USD, EUR or GBP"
+    },
+    "platforms": {
+     "v": "EFG Hermes ONE app, Pro desktop",
+     "s": "EFG Hermes ONE app (iOS, Android) and EFG Hermes Pro desktop for trading several markets at once"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": {
+     "adx": {
+      "pct": 0.0015,
+      "min": 0,
+      "fixed": 0,
+      "vat": true,
+      "allIn": true,
+      "note": "EFG publishes no retail tariff. Standard 0.125% broker commission from the ADX Fees List (negotiable) + 0.025% exchange fees (EFG trading guide: 2.5 bps), 5% VAT on both: AED 7.88 on AED 5,000."
+     },
+     "dfm": {
+      "pct": 0.00275,
+      "min": 0,
+      "fixed": 10,
+      "vat": true,
+      "allIn": true,
+      "note": "EFG publishes no retail tariff. Standard 0.125% broker commission + 0.15% market fees (EFG trading guide: 15 bps, VAT on both) + AED 10 a trade DFM fee (from ENBD and Mashreq schedules). About AED 24.81 on AED 5,000.",
+      "vatExemptPct": 0.0005
+     },
+     "c": true
+    },
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody fee published for UAE shares; the retail agreement and FAQ list none.",
+     "c": true
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://app.efghermesone.com/faq",
+    "reg": "https://efgholding.com/en/about/our-presence/uae"
+   }
+  },
+  {
+   "id": "enbd",
+   "name": "Emirates NBD Securities",
+   "short": "EN",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/686e3f4def66080a71229088_Emirates%20NBD%20Securities-icon.svg",
+   "type": "UAE bank broker",
+   "order": 100,
+   "score": 4.0,
+   "cta": {
+    "href": "https://www.emiratesnbdsecurities.com/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Trading equities carries risk.",
+   "cats": [
+    "uae"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "Via Emirates NBD Bank (ENBD X)",
+     "s": "Emirates NBD Securities lists no US market. Emirates NBD Bank in ENBD X: 0.231%, min $15.75 incl. VAT. Promo min $2 to 16 Oct 2026",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "ADX 0.15%, DFM 0.275% + AED 10",
+     "s": "Includes broker 0.125%, exchange, clearing and CMA fees. Plus 5% VAT (not on the 0.05% CMA fee at DFM). No minimum"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Not offered"
+    },
+    "fx": {
+     "v": "None for UAE shares",
+     "s": "AED or USD account. Saudi and GCC trades are converted at the bank's rate, margin not published"
+    },
+    "deposit": {
+     "v": "Linked bank account",
+     "s": "Buys are debited from a linked bank investment account, usually at Emirates NBD or Emirates Islamic. No fee published",
+     "c": true
+    },
+    "withdraw": {
+     "v": "No fee published",
+     "s": "Sale proceeds can be withdrawn on T+2. Same day cash out of sale proceeds available up to a limit",
+     "c": true
+    },
+    "inact": {
+     "v": "None published"
+    },
+    "custody": {
+     "v": "None published for UAE shares",
+     "s": "GCC and Egypt shares held via Emirates NBD Capital: 0.1575% a year, charged monthly",
+     "c": true
+    },
+    "interest": {
+     "v": "Not published",
+     "s": "Cash stays in your linked bank investment account"
+    },
+    "entity": {
+     "v": "Emirates NBD Securities L.L.C.",
+     "s": "Dubai, UAE. Brokerage arm of Emirates NBD. Opens accounts for UAE residents and non residents"
+    },
+    "regulator": {
+     "v": "UAE CMA, licence 604003",
+     "s": "Onshore UAE licence from the Capital Market Authority (formerly SCA), held since 2001"
+    },
+    "protection": {
+     "v": "None published",
+     "s": "No compensation scheme stated. UAE shares sit under your own investor number (NIN), GCC shares in a pooled account",
+     "c": true
+    },
+    "minDep": {
+     "v": "None published",
+     "s": "Buys must be covered by cash in the linked bank investment account"
+    },
+    "assets": {
+     "v": "UAE, Saudi and GCC shares",
+     "s": "ADX, DFM, Nasdaq Dubai. Tadawul 0.1306% + VAT. Kuwait, Qatar, Bahrain, Oman, Egypt 0.20% to 0.40%. Margin offered, rate not published"
+    },
+    "ownership": {
+     "v": "Real shares"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "Whole shares only"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "Emirates NBD Islamic Securities: Sharia screened shares only (Emirates Islamic board). No separate fee schedule"
+    },
+    "aed": {
+     "v": "AED account",
+     "s": "Account in AED or USD. ADX and DFM trade in AED, Nasdaq Dubai in USD or AED"
+    },
+    "platforms": {
+     "v": "Own app, web, desktop, phone",
+     "s": "Emirates NBD Securities app, Securities Online (web), eBrokerMAX desktop and call centre on +971 600 52 3434"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": {
+     "adx": {
+      "pct": 0.0015,
+      "min": 0,
+      "fixed": 0,
+      "vat": true,
+      "allIn": true,
+      "note": "Published as broker 0.125% + other 0.025% = 0.15% + VAT, no minimum, no fixed fee. VAT applies to the whole 0.15%, so all-in is 0.1575%: AED 7.88 on AED 5,000."
+     },
+     "dfm": {
+      "pct": 0.00275,
+      "min": 0,
+      "fixed": 10,
+      "vat": true,
+      "allIn": true,
+      "note": "Broker 0.125% + market 0.05% + CDS 0.05% + CMA 0.05% = 0.275%, plus AED 10.50 a trade (AED 10 + VAT). VAT is on everything except the 0.05% CMA fee: exact all-in on AED 5,000 is AED 24.81 (AED 24.94 if VAT is applied to the full 0.275%).",
+      "vatExemptPct": 0.0005
+     }
+    },
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody fee published for UAE shares held under the client's NIN. GCC and Egypt shares (pooled with Emirates NBD Capital): 0.1575% a year, charged monthly.",
+     "c": true
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.emiratesnbdsecurities.com/en/schedule-of-fees",
+    "reg": "https://www.emiratesnbdsecurities.com/en/about-us"
+   }
+  },
+  {
+   "id": "fab",
+   "name": "FAB Securities",
+   "short": "FS",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/686e3fb7da73f4191b8dbd96_FAB%20Securities-icon.svg",
+   "type": "UAE bank broker",
+   "order": 100,
+   "score": 4.0,
+   "cta": {
+    "href": "https://www.bankfab.com/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Share dealing is subject to market risk.",
+   "cats": [
+    "uae"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "On request, fee not published",
+     "s": "International equities after you sign an international trading agreement. US market and fees not published",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "0.15% ADX, 0.275% + AED 10 DFM",
+     "s": "Total fee incl. exchange, clearing and CMA shares. Plus 5% VAT as applicable. No minimum listed"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Not offered"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "Cash moves from your FAB bank account. Conversion for international trades not published",
+     "c": true
+    },
+    "deposit": {
+     "v": "From your FAB account",
+     "s": "FAB asks you to open a FAB bank account for cash. Move cash in the app or through your broker. No fee listed"
+    },
+    "withdraw": {
+     "v": "No fee listed",
+     "s": "Unused cash returns to your FAB account the same day. Sale proceeds after settlement (T+2)"
+    },
+    "inact": {
+     "v": "Not published",
+     "c": true
+    },
+    "custody": {
+     "v": "Not published",
+     "s": "Account opening and investor number (NIN) are free. FAB publishes no full fee schedule",
+     "c": true
+    },
+    "interest": {
+     "v": "No interest stated",
+     "c": true
+    },
+    "entity": {
+     "v": "FAB Securities, Abu Dhabi",
+     "s": "Brokerage arm of First Abu Dhabi Bank. Onboards UAE residents onshore. Head office on Khalidiya Street, Abu Dhabi"
+    },
+    "regulator": {
+     "v": "UAE CMA (formerly SCA) 604002",
+     "s": "Onshore UAE licence, registration No. 604002. Member of ADX and DFM"
+    },
+    "protection": {
+     "v": "No compensation scheme stated",
+     "s": "UAE shares sit under your own investor number (NIN) at the ADX and DFM depositories"
+    },
+    "minDep": {
+     "v": "Not published"
+    },
+    "assets": {
+     "v": "UAE stocks, bonds and sukuk",
+     "s": "ADX, DFM and Nasdaq Dubai shares, bonds and sukuk, margin. International equities after a separate agreement"
+    },
+    "ownership": {
+     "v": "Real shares",
+     "s": "No CFDs"
+    },
+    "fractions": {
+     "v": "Not published"
+    },
+    "islamic": {
+     "v": "Yes, Sharia option",
+     "s": "Link a Sharia compliant bank account and only approved companies can be traded"
+    },
+    "aed": {
+     "v": "AED via FAB bank account",
+     "s": "UAE trades settle in AED through your FAB account"
+    },
+    "platforms": {
+     "v": "FABS Online, FABS Trade app",
+     "s": "FABS Online web platform (FAB ETrade Plus), FABS Trade app for iOS and Android, and a phone trading desk"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": {
+     "adx": {
+      "pct": 0.0015,
+      "min": 0,
+      "fixed": 0,
+      "vat": true,
+      "allIn": true,
+      "note": "FAB FAQ: 0.15% plus 5% VAT as applicable. Matches the ADX total (broker 0.125% + others 0.025%)."
+     },
+     "dfm": {
+      "pct": 0.00275,
+      "min": 0,
+      "fixed": 10,
+      "vat": true,
+      "allIn": true,
+      "note": "FAB FAQ: 0.275% plus 5% VAT as applicable plus AED 10 per order. Split per market: broker 0.125%, DFM, clearing and CMA 0.05% each.",
+      "vatExemptPct": 0.0005
+     }
+    },
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody or account fee found; FAB FAQ says account opening and NIN are free, but no full fee schedule could be read (unconfirmed).",
+     "c": true
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://bankfab.com/en-ae/subsidiaries/fab-securities/fabs-faqs",
+    "reg": "https://www.bankfab.com/en-ae/subsidiaries/fab-securities/our-products-services"
+   }
+  },
+  {
+   "id": "mashreq",
+   "name": "Mashreq Securities",
+   "short": "MS",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/686e4015692fd1a0ee4076b0_Mashreq%20Securities-icon.svg",
+   "type": "UAE bank broker",
+   "order": 100,
+   "score": 4.0,
+   "cta": {
+    "href": "https://www.mashreqsecurities.com/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Investing in equities involves risk; ensure suitability before trading.",
+   "cats": [
+    "uae"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "Via Mashreq bank app",
+     "s": "Not at Mashreq Securities. Mashreq app via DriveWealth (US broker): 10 free trades a month, then 0.20%, min $1 + VAT"
+    },
+    "uaeFee": {
+     "v": "ADX 0.15%, DFM 0.275% + AED 10",
+     "s": "Includes broker 0.125%, exchange, depository and authority fees. Plus applicable 5% VAT. No minimum"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "Not offered"
+    },
+    "fx": {
+     "v": "None for UAE shares",
+     "s": "ADX and DFM trade in AED from your Mashreq account. Nasdaq Dubai trades in USD, conversion rate not published"
+    },
+    "deposit": {
+     "v": "Mashreq bank account",
+     "s": "Trading is linked to your Mashreq bank account. No deposit fee published",
+     "c": true
+    },
+    "withdraw": {
+     "v": "No fee published",
+     "s": "Funds move through your linked Mashreq bank account",
+     "c": true
+    },
+    "inact": {
+     "v": "None published"
+    },
+    "custody": {
+     "v": "None published",
+     "s": "Schedule of charges lists trading fees only",
+     "c": true
+    },
+    "interest": {
+     "v": "Not published",
+     "s": "Cash stays in your Mashreq bank account"
+    },
+    "entity": {
+     "v": "Mashreq Securities LLC SO",
+     "s": "UAE single owner LLC of the Mashreq group. You need a Mashreq bank account to open it"
+    },
+    "regulator": {
+     "v": "UAE CMA, licence 604013",
+     "s": "Onshore UAE licence from the Capital Market Authority (formerly SCA), first category"
+    },
+    "protection": {
+     "v": "None published",
+     "s": "No compensation scheme stated. UAE shares are held under your own investor number (NIN)",
+     "c": true
+    },
+    "minDep": {
+     "v": "None published",
+     "s": "Needs a Mashreq bank account, a Mashreq Securities account and an investor number (NIN)"
+    },
+    "assets": {
+     "v": "UAE shares",
+     "s": "ADX, DFM and Nasdaq Dubai. Margin trading not mentioned"
+    },
+    "ownership": {
+     "v": "Real shares"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "Whole shares only"
+    },
+    "islamic": {
+     "v": "Yes",
+     "s": "Islamic brokerage: only shares approved by the Unified Committee of Islamic Banks. No separate fees published"
+    },
+    "aed": {
+     "v": "AED via Mashreq account",
+     "s": "ADX and DFM trades settle in AED through your Mashreq bank account"
+    },
+    "platforms": {
+     "v": "Mashreq Trade app, web, phone",
+     "s": "Mashreq Trade app (iOS, Android), online trading platform and phone orders on +971 4 363 2222, 9am to 5pm"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": {
+     "adx": {
+      "pct": 0.0015,
+      "min": 0,
+      "fixed": 0,
+      "vat": true,
+      "allIn": true,
+      "note": "Published as broker 0.125% + exchange 0.025%, subject to VAT, no minimum. All-in 0.1575%: AED 7.88 on AED 5,000."
+     },
+     "dfm": {
+      "pct": 0.00275,
+      "min": 0,
+      "fixed": 10,
+      "vat": true,
+      "allIn": true,
+      "note": "Broker 0.125% + exchange 0.05% + CDS 0.05% + authority 0.05% = 0.275%, plus AED 10 a trade, all 'subject to applicable VAT'. Exact all-in on AED 5,000 is AED 24.81 if the authority fee is outside VAT (as ENBD states), AED 24.94 if not.",
+      "vatExemptPct": 0.0005
+     }
+    },
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody, account or platform fee in the published schedule of charges.",
+     "c": true
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.mashreqsecurities.com/-/jssmedia/pdfs/securities/SOC-Securities.ashx",
+    "reg": "https://www.mashreqsecurities.com/en/home/individual/"
+   }
+  },
+  {
+   "id": "cmc",
+   "name": "CMC Markets",
+   "short": "CM",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/69b80cec5940c7e602869388_Broker%3DCMC%20Markets%2C%20Size%3D32px.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 4.0,
+   "cta": {
+    "href": "https://www.cmcmarkets.com/en-ae",
+    "plain": true
+   },
+   "review": null,
+   "risk": "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage.",
+   "cats": [
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "US share CFDs: $0.02 per share, min $10, charged when you open and when you close"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered",
+     "s": "Option CFDs only, no listed options"
+    },
+    "forex": {
+     "v": "From 0.7 pips, no commission",
+     "s": "Standard account minimum. FX Active: from 0.0 pips plus 0.0025% per side, about $5.60 a lot round turn",
+     "c": true
+    },
+    "crypto": {
+     "v": "Spread only (CFDs)",
+     "s": "Crypto CFDs. Spreads not shown on the fee pages. Daily holding costs apply, weekends included"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "Money in another currency is converted at CMC's variable rate. AED is not listed as an account currency",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Card, bank transfer, Skrill or Neteller. Your bank or card issuer may charge"
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "No CMC fee. Your bank or card issuer may charge"
+    },
+    "inact": {
+     "v": "$15 a month",
+     "s": "After 12 months with no activity"
+    },
+    "custody": {
+     "v": "None (CFDs only)",
+     "s": "Daily holding costs on open positions. Market data fees may apply"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "CMC has no obligation to pay interest on client money. It may pay eligible clients at its discretion"
+    },
+    "entity": {
+     "v": "CMC Markets Bermuda Ltd",
+     "s": "Bermuda. Runs CMC's international retail site, Arabic version included. CMC's DIFC company works with professional clients",
+     "c": true
+    },
+    "regulator": {
+     "v": "BMA Bermuda, offshore",
+     "s": "Bermuda Monetary Authority. CMC Markets Middle East Ltd holds DFSA licence F002740, but its terms are for professional clients",
+     "c": true
+    },
+    "protection": {
+     "v": "No compensation fund",
+     "s": "Client money segregated at UK banks. The Bermuda entity holds professional indemnity insurance instead of a fund",
+     "c": true
+    },
+    "minDep": {
+     "v": "Not stated",
+     "s": "No minimum shown on CMC's international fee pages",
+     "c": true
+    },
+    "assets": {
+     "v": "Forex, indices, shares, crypto",
+     "s": "All as CFDs, plus commodities, ETFs, treasuries and option CFDs"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only"
+    },
+    "islamic": {
+     "v": "No",
+     "s": "No Islamic account in CMC's international terms or fee guide",
+     "c": true
+    },
+    "aed": {
+     "v": "Not listed",
+     "s": "AED is not shown as an account currency on the pages checked",
+     "c": true
+    },
+    "platforms": {
+     "v": "Own app, MT4, MT5, TradingView",
+     "s": "CMC web platform and mobile app"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 0.7,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": {
+      "account": "FX Active",
+      "spread": 0.0,
+      "spreadKind": "minimum",
+      "commRt": 5.6
+     },
+     "c": true
+    },
+    "custody": null,
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://assets.ctfassets.net/vl2kvsmutclx/6EcmIUSdMBPSHs6jCVcPWX/259f292fcf4cadc9ce330d81c1fc0aff/CMC_Bermuda_Financial_Services_Guide_16_August_2025_326626.1_.pdf",
+    "reg": "https://dfsa.ae/public-register/firms/cmc-markets-middle-east-limited"
+   }
+  },
+  {
+   "id": "avatrade",
+   "name": "AvaTrade",
+   "short": "A",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/69b80cde693a596f6f8316dc_Broker%3DAvatrade%2C%20Size%3D32px.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 4.8,
+   "cta": {
+    "href": "https://www.avatrade.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage.",
+   "cats": [
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "Share CFD commission not published. AvaTrade says its trading costs are built into the spread",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered",
+     "s": "FX options on AvaOptions are traded over the counter, not on an exchange"
+    },
+    "forex": {
+     "v": "From 0.9 pips, no commission",
+     "s": "Spread only, no raw account. Swap free accounts may pay slightly wider forex spreads"
+    },
+    "crypto": {
+     "v": "Spread only (CFDs)",
+     "s": "Bitcoin, Ethereum, XRP and more as CFDs. Spreads not published"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "Accounts in USD or EUR. How AED deposits are converted, and at what cost, is not published",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Card, bank wire, Skrill, Neteller or WebMoney. No local AED transfer listed"
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "AvaTrade covers bank transfer fees up to $100. Intermediary bank fees may apply. Wires take up to 10 business days"
+    },
+    "inact": {
+     "v": "$50 every 3 months",
+     "s": "After 3 months with no activity. A $100 administration fee also applies after 12 months inactive"
+    },
+    "custody": {
+     "v": "None (CFDs only)",
+     "s": "Overnight swaps on open positions"
+    },
+    "interest": {
+     "v": "Up to 2.5% a year (USD)",
+     "s": "VIP clients with $10,000+ of own funds: 1% (Silver) to 2.5% (Diamond) on free margin, paid monthly. Not on Islamic accounts"
+    },
+    "entity": {
+     "v": "Ava Trade Middle East Ltd",
+     "s": "Abu Dhabi Global Market, Al Maryah Island. Operates avatrade.ae"
+    },
+    "regulator": {
+     "v": "FSRA (ADGM), UAE licence",
+     "s": "Financial Services Permission 190018, active since 6 Feb 2020"
+    },
+    "protection": {
+     "v": "No compensation scheme",
+     "s": "Client funds segregated. AvaTrade says its entities outside the EU are not covered by an investor compensation scheme"
+    },
+    "minDep": {
+     "v": "$100",
+     "s": "By card or bank wire. AvaTrade recommends $1,000 to $2,000 to start"
+    },
+    "assets": {
+     "v": "Forex, indices, shares, crypto",
+     "s": "All as CFDs, plus commodities, ETFs and bonds. FX options on AvaOptions"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only"
+    },
+    "islamic": {
+     "v": "Yes, on request",
+     "s": "No swaps for up to 5 days. Not for minor pairs or crypto CFDs. Forex spreads may be slightly wider"
+    },
+    "aed": {
+     "v": "No AED account",
+     "s": "Base currency USD or EUR. GBP and AUD only for UK and Australian clients"
+    },
+    "platforms": {
+     "v": "MT4, MT5, WebTrader, own app",
+     "s": "Plus AvaOptions for FX options"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 0.9,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": null
+    },
+    "custody": null,
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.avatrade.ae/trading-info/our-fees-charges",
+    "reg": "https://www.avatrade.ae/"
+   }
+  },
+  {
+   "id": "admirals",
+   "name": "Admirals",
+   "short": "A",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/69b80cbb3eb93f960a340437_Broker%3DAdmiral%20Markets%2C%20Size%3D32px.svg",
+   "type": "CFD and stock broker",
+   "order": 100,
+   "score": 4.0,
+   "cta": {
+    "href": "https://admirals.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Losses can exceed deposits.",
+   "cats": [
+    "stocks",
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "$0.02 per share, min $1",
+     "s": "Real shares on Invest.MT5. One US trade a day has no commission"
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "From 0.5 pips, no commission",
+     "s": "Trade.MT5. Zero.MT5: from 0.0 pips plus up to $3 a lot per side, so $6 round turn",
+     "c": true
+    },
+    "crypto": {
+     "v": "Spread not published (CFDs)",
+     "s": "CFDs on 20+ cryptocurrencies on Trade.MT5. No real coins"
+    },
+    "fx": {
+     "v": "0.3%",
+     "s": "On currency conversions, min 0.01 of the account currency",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Bank transfer or card. Your bank may charge",
+     "c": true
+    },
+    "withdraw": {
+     "v": "1 free a month",
+     "s": "Per payment method. After that, $1 per bank transfer or 1% (min $1) to a card",
+     "c": true
+    },
+    "inact": {
+     "v": "€10 a month",
+     "s": "After 24 months with no trades, only on a positive balance",
+     "c": true
+    },
+    "custody": {
+     "v": "None",
+     "s": "No custody fee listed. Account upkeep is free",
+     "c": true
+    },
+    "interest": {
+     "v": "Not published",
+     "c": true
+    },
+    "entity": {
+     "v": "Admirals SC Ltd",
+     "s": "Seychelles. Admirals MENA Ltd in Abu Dhabi lost its permission on 5 Nov 2025 and could not serve retail clients",
+     "c": true
+    },
+    "regulator": {
+     "v": "FSA Seychelles, offshore",
+     "s": "Securities dealer licence SD073. No UAE licence: FSRA permission 220160 was withdrawn on 5 Nov 2025",
+     "c": true
+    },
+    "protection": {
+     "v": "Not published",
+     "s": "No compensation scheme found for the Seychelles entity. The EU fund (up to €20,000) covers Admirals Europe clients only",
+     "c": true
+    },
+    "minDep": {
+     "v": "$25 (Trade), $1 (Invest)",
+     "s": "Trade CFDs from $25 and invest in shares from $1 or €1, per Admirals' Seychelles site"
+    },
+    "assets": {
+     "v": "Shares, ETFs, forex, crypto",
+     "s": "Real shares and ETFs on Invest.MT5. CFDs on forex, indices, commodities, shares and crypto on Trade.MT5"
+    },
+    "ownership": {
+     "v": "Real shares and CFDs"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "From 1/100 of a share on Invest.MT5, no minimum order"
+    },
+    "islamic": {
+     "v": "Yes, on Trade.MT5",
+     "s": "No swaps. Flat admin fee on trades held over 3 days (1 day for exotic pairs). Not if you hold another Admirals account"
+    },
+    "aed": {
+     "v": "Not published",
+     "s": "AED funding not confirmed for the Seychelles entity",
+     "c": true
+    },
+    "platforms": {
+     "v": "MT4, MT5, WebTrader, own app",
+     "s": "Trade and Zero accounts for CFDs, Invest.MT5 for shares"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0.02,
+      "min": 1,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": false,
+      "pct": 0.0,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "Invest.MT5: $0.02 per share, min $1 per order (Seychelles site). One trade a day without commission is not modelled. AED funding not confirmed, so USD deposit assumed.",
+     "c": true
+    },
+    "uae": null,
+    "fxlot": {
+     "account": "Trade.MT5",
+     "spread": 0.5,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": {
+      "account": "Zero.MT5",
+      "spread": 0.0,
+      "spreadKind": "minimum",
+      "commRt": 6.0
+     },
+     "c": true
+    },
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody fee and free account maintenance on admiralmarkets.com (EU entity). Seychelles fee page could not be read.",
+     "c": true
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://admiralmarkets.sc/",
+    "reg": "https://www.adgm.com/public-registers/fsra/fsf/admirals-mena-ltd"
+   }
+  },
+  {
+   "id": "multibank",
+   "name": "MultiBank Group",
+   "short": "MG",
+   "color": "#3a4454",
+   "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/69b80cd0abe46db32f751dd3_Broker%3DMultibank%20Group%2C%20Size%3D32px.svg",
+   "type": "CFD and forex broker",
+   "order": 100,
+   "score": 3.8,
+   "cta": {
+    "href": "https://www.multibankfx.com",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Trading CFDs carries a high level of risk to your capital and you may lose more than your initial deposit.",
+   "cats": [
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "CFDs only",
+     "s": "US share CFDs. Commission not published",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "Not offered",
+     "s": "UAE share CFDs launched in Feb 2025. No real ADX or DFM shares"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "From 1.5 pips, no commission",
+     "s": "Pro ($1,000): from 0.8 pips, no commission. ECN ($10,000): from 0.0 pips, commission not published. Minimum spreads",
+     "c": true
+    },
+    "crypto": {
+     "v": "Crypto CFDs",
+     "s": "Bitcoin, Ether and other coin CFDs. Spread not published. Spot coins are on the sister exchange MultiBank.io",
+     "c": true
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "MultiBank does not show account currencies or AED conversion costs",
+     "c": true
+    },
+    "deposit": {
+     "v": "Cards, bank transfer, crypto",
+     "s": "Card deposits are instant. BTC and USDT accepted. Fees not shown on the funding page",
+     "c": true
+    },
+    "withdraw": {
+     "v": "Not published",
+     "s": "Request in the client area or by email. No fees or minimums shown",
+     "c": true
+    },
+    "inact": {
+     "v": "Not published",
+     "c": true
+    },
+    "custody": {
+     "v": "None",
+     "s": "CFDs only, nothing held in custody. Swaps apply to positions held overnight"
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "No interest on cash balances mentioned",
+     "c": true
+    },
+    "entity": {
+     "v": "MEX Atlantic Corporation",
+     "s": "Cayman Islands. The UAE sign up page asks you to accept the MEX Atlantic client agreement"
+    },
+    "regulator": {
+     "v": "CIMA (Cayman Islands), offshore",
+     "s": "Licence number not shown by MultiBank. Group company MEX Global Financial Services LLC holds a UAE CMA licence",
+     "c": true
+    },
+    "protection": {
+     "v": "Insurance up to $1m per account",
+     "s": "Lloyd's of London policy for MEX Atlantic clients. Client money kept apart from company money. No compensation scheme"
+    },
+    "minDep": {
+     "v": "$50",
+     "s": "Standard account. Pro $1,000. ECN $10,000"
+    },
+    "assets": {
+     "v": "CFDs on 20,000+ products",
+     "s": "Forex, metals, shares, indices, commodities and crypto, including UAE share CFDs"
+    },
+    "ownership": {
+     "v": "CFDs only"
+    },
+    "fractions": {
+     "v": "No",
+     "s": "CFDs only"
+    },
+    "islamic": {
+     "v": "GCC nationals only",
+     "s": "Swap free with no time limit, limited time offer. Not for other UAE residents. Shares, crypto and JPY pairs keep swaps"
+    },
+    "aed": {
+     "v": "Not published",
+     "c": true
+    },
+    "platforms": {
+     "v": "MT4, MT5, own app",
+     "s": "MultiBank-Plus app, web trader and social trading"
+    }
+   },
+   "calc": {
+    "us": null,
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 1.5,
+     "spreadKind": "minimum",
+     "commRt": 0,
+     "alt": {
+      "account": "Pro",
+      "spread": 0.8,
+      "spreadKind": "minimum",
+      "commRt": 0
+     },
+     "c": true
+    },
+    "custody": null,
+    "withdrawUsd": null
+   },
+   "src": {
+    "fees": "https://multibankfx.com/en/accounts/compare-accounts",
+    "reg": "https://multibankfx.com/en/about/regulations"
+   }
+  },
+  {
+   "id": "tastytrade",
+   "name": "Tastytrade",
+   "short": "tt",
+   "color": "#e8003c",
+   "logo": null,
+   "type": "US options broker",
+   "order": 100,
+   "score": null,
+   "cta": {
+    "href": "https://tastytrade.com/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Options involve risk and are not suitable for all investors.",
+   "cats": [
+    "stocks",
+    "options",
+    "crypto"
+   ],
+   "uaeLic": false,
+   "t": {
+    "us": {
+     "v": "$0 commission",
+     "s": "Clearing fee $0.0008 per share. Sales also pay SEC and FINRA fees; the FINRA fee is waived until 31 Dec 2026."
+    },
+    "uaeFee": {
+     "v": "Not offered"
+    },
+    "options": {
+     "v": "$1 to open, $0 to close",
+     "s": "Per contract, max $10 per leg. Plus $0.10 clearing and $0.02 regulatory fee per contract."
+    },
+    "forex": {
+     "v": "Not published",
+     "s": "Forex is offered by tastyfx LLC, a US dealer. tastytrade does not say if international clients can use it.",
+     "c": true
+    },
+    "crypto": {
+     "v": "1%, BTC and ETH 0.75%",
+     "s": "Real coins held by Zero Hash. Charged to buy and to sell, min $1 per order."
+    },
+    "fx": {
+     "v": "Bank converts, USD only",
+     "s": "tastytrade accepts USD only and does not convert currency, so your UAE bank sets the AED rate."
+    },
+    "deposit": {
+     "v": "Free USD wire",
+     "s": "International wires in USD only, from an account in your name. Stablecoin deposits also accepted."
+    },
+    "withdraw": {
+     "v": "$45 per wire",
+     "s": "International wire to a UAE bank. Domestic US wire $25. Stablecoin withdrawals not yet supported."
+    },
+    "inact": {
+     "v": "None",
+     "s": "No inactivity or account maintenance fee in the fee schedule."
+    },
+    "custody": {
+     "v": "None",
+     "s": "No custody or account fee in the fee schedule."
+    },
+    "interest": {
+     "v": "Not published",
+     "s": "No rate for uninvested cash on tastytrade's pricing pages or fee schedule.",
+     "c": true
+    },
+    "entity": {
+     "v": "tastytrade, Inc., USA",
+     "s": "US broker dealer, formerly tastyworks. Accepts international clients from a list of eligible countries.",
+     "c": true
+    },
+    "regulator": {
+     "v": "FINRA, NFA (US, foreign)",
+     "s": "tastytrade, Inc. is a FINRA, SIPC and NFA member, BrokerCheck CRD 277027. No UAE licence."
+    },
+    "protection": {
+     "v": "SIPC up to $500,000",
+     "s": "Incl. $250,000 cash, plus excess SIPC, also for international clients. Futures and crypto are not covered.",
+     "c": true
+    },
+    "minDep": {
+     "v": "$0",
+     "s": "No minimum for cash or margin accounts. Margin trading needs $2,000."
+    },
+    "assets": {
+     "v": "Stocks, ETFs, options, futures",
+     "s": "Also futures options and crypto."
+    },
+    "ownership": {
+     "v": "Real shares",
+     "s": "Real US stocks and ETFs in an individual or joint account."
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "Full or fractional shares. Minimum not published."
+    },
+    "islamic": {
+     "v": "No",
+     "s": "tastytrade lists no Islamic or swap free account.",
+     "c": true
+    },
+    "aed": {
+     "v": "No, USD only",
+     "s": "Deposits must be in USD from a bank account in your name. Your bank converts AED."
+    },
+    "platforms": {
+     "v": "Own desktop, web and mobile apps",
+     "s": "Also API access and TradingView integration."
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0.0008,
+      "min": 0,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": false,
+      "pct": 0,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "$0 commission; a buy pays only the $0.0008 per share clearing fee."
+    },
+    "uae": null,
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody or account fee in the fee schedule (paper statements $5 each)."
+    },
+    "withdrawUsd": 45
+   },
+   "src": {
+    "fees": "https://tastytrade.com/pricing/",
+    "reg": "https://tastytrade.com/disclosures/"
+   }
+  },
+  {
+   "id": "wio",
+   "name": "Wio Invest",
+   "short": "Wio",
+   "color": "#1c1c1c",
+   "logo": null,
+   "type": "UAE bank app",
+   "order": 100,
+   "score": null,
+   "cta": {
+    "href": "https://wio.io/",
+    "plain": true
+   },
+   "review": null,
+   "risk": "Investing involves risk of loss.",
+   "hidden": true,
+   "pending": "Official site could not be read in the 10 Oct 2026 run"
+  }
+ ]
+}

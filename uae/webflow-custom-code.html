@@ -1,0 +1,30 @@
+<!-- Broker comparator BrokerMatch (brokermatch.ae): page custom code in Webflow.
+     The page needs a native div with the ID bm-bc.
+     On staging (webflow.io) it loads the -staging files; on brokermatch.ae the production files
+     (broker-comparator.js and .css, created from the staging ones only with Franklin's ok).
+     When CSS or JS changes, bump v= to clear the cache.
+     The script is not written with document.write: Chrome can block cross-domain scripts written that way
+     on slow connections and the comparator would stay blank until a reload. -->
+
+<!-- 1. Inside <head> tag (the CSS can stay in document.write, the block only applies to scripts) -->
+<script>document.write('<link rel="stylesheet" href="https://franklinsilvapt-arch.github.io/corretoras-comparator/uae/broker-comparator'+(/\.webflow\.io$/.test(location.hostname)?'-staging':'')+'.css?v=20261010a">')</script>
+
+<!-- 2. Before </body> tag -->
+<script>
+(function () {
+  var base = 'https://franklinsilvapt-arch.github.io/corretoras-comparator/uae/';
+  var stg = /\.webflow\.io$/.test(location.hostname) ? '-staging' : '';
+  var root = document.getElementById('bm-bc');
+  if (root && !root.innerHTML.replace(/\s/g, '')) root.innerHTML = '<p style="text-align:center;color:#697386">Loading the comparator...</p>';
+  function load(file, tries) {
+    var s = document.createElement('script');
+    s.src = base + file;
+    s.onerror = function () {
+      if (tries > 0) setTimeout(function () { load(file, tries - 1); }, 1000);
+      else if (root) root.innerHTML = '<p style="text-align:center;color:#697386">The comparator could not be loaded. Please reload the page.</p>';
+    };
+    document.body.appendChild(s);
+  }
+  load('broker-comparator' + stg + '.js?v=20261010a', 2);
+})();
+</script>
