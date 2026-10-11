@@ -14,5 +14,6 @@ Regra de verificação: cada valor é confirmado no site ou preçário oficial d
 ## Comparador de brokers do BrokerMatch (brokermatch.ae), pasta `uae/`
 
 - `uae/data/brokers.json`: dados de todos os brokers do BrokerMatch. Em `t` está o texto das tabelas e em `calc` os números dos quatro custos calculados (ações dos EUA com a conversão de AED, ações dos EAU no ADX ou DFM, 1 lote de EUR/USD e a carteira durante um ano). `c: true` mostra a etiqueta "To be confirmed". Os brokers com `hidden: true` ainda não aparecem no comparador, porque o site oficial ainda não foi lido. Alterações de dados vão direto para produção.
-- `uae/broker-comparator-staging.js` e `uae/broker-comparator-staging.css`: lógica e estilos (namespace `#bm-bc`). Os ficheiros de produção (`uae/broker-comparator.js` e `.css`) só são criados, a partir dos de staging, com ok do Franklin.
-- `uae/webflow-custom-code.html`: código a colar na página do Webflow do BrokerMatch.
+- `uae/data/brokers-ar.json`: tradução árabe dos textos de cada broker (`type`, `risk` e o `v` e `s` de cada linha de `t`), para a versão em /ar. Só tem texto: os números dos custos vêm sempre do `brokers.json`. Se um texto mudar no `brokers.json`, atualiza também a linha correspondente aqui; o que faltar aparece em inglês.
+- `uae/broker-comparator-staging.js` e `uae/broker-comparator-staging.css`: lógica e estilos (namespace `#bm-bc`). Os textos da interface estão em `TXT.en` e `TXT.ar`; em /ar o comparador muda para árabe e `dir="rtl"`. Os ficheiros de produção (`uae/broker-comparator.js` e `.css`) só são criados, a partir dos de staging, com ok do Franklin.
+- `uae/webflow-custom-code.html`: código a colar na página do Webflow do BrokerMatch (o mesmo serve inglês e árabe).
