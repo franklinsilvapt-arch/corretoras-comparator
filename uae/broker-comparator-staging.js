@@ -52,6 +52,8 @@
       cheapest: 'Cheapest', uaeLic: 'UAE licence', noUaeLic: 'No UAE licence', minSpread: 'Minimum spread',
       plusMarket: '+ market fees', plusBank: '+ bank FX', plusFx: '+ FX',
       notApplicable: 'Not applicable', cfdOnlyCust: 'CFDs only: no custody, overnight financing applies',
+      offerBadge: 'Sign-up bonus', howItWorks: 'How it works', copied: 'Copied',
+      copyCode: function (c) { return 'Copy code ' + c; },
       notPublished: 'Not published', notOn: function (x) { return 'Not on ' + x; },
       visit: function (n) { return 'Visit ' + n; }, readReview: 'Read the full review', score: 'Broker score',
       pricingPlan: 'Pricing plan', planFixed: 'Fixed', planTiered: 'Tiered',
@@ -105,6 +107,8 @@
       cheapest: 'الأرخص', uaeLic: 'ترخيص إماراتي', noUaeLic: 'بدون ترخيص إماراتي', minSpread: 'فارق سعر أدنى',
       plusMarket: '+ رسوم السوق', plusBank: '+ تحويل البنك', plusFx: '+ تحويل العملة',
       notApplicable: 'غير منطبق', cfdOnlyCust: 'عقود فروقات فقط: لا رسوم حفظ، ويُطبَّق تمويل تبييت المراكز',
+      offerBadge: 'مكافأة التسجيل', howItWorks: 'كيف تحصل عليها', copied: 'تم النسخ',
+      copyCode: function (c) { return 'نسخ الكود ' + c; },
       notPublished: 'غير منشور', notOn: function (x) { return 'غير متاح في ' + x; },
       visit: function (n) { return 'زيارة ' + n; }, readReview: 'اقرأ المراجعة الكاملة', score: 'درجة الوسيط',
       pricingPlan: 'خطة التسعير', planFixed: 'ثابتة', planTiered: 'متدرجة',
@@ -140,6 +144,7 @@
       var a = ar.brokers[b.id]; if (!a) return;
       if (a.type) b.type = a.type;
       if (a.risk) b.risk = a.risk;
+      if (a.offer && b.offer) { if (a.offer.t) b.offer.t = a.offer.t; if (a.offer.a) b.offer.a = a.offer.a; }
       if (a.t && b.t) Object.keys(a.t).forEach(function (k) {
         var o = b.t[k], x = a.t[k]; if (!o || !x) return;
         if (x.v) o.v = x.v;
@@ -287,6 +292,8 @@
     function ico(p) { return '<svg class="cc-sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + '</svg>'; }
     var CHEV = '<svg class="cc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
     var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>';
+    var GIFT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>';
+    var COPY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
     var STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>';
     var ICONS = {
       costs: ico('<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01M8 10h.01M12 10h.01M16 10h.01"/>'),
@@ -308,6 +315,22 @@
       return ctaLink(b, 'cc-btn') + (b.risk ? '<span class="cc-risk">' + esc(b.risk) + '</span>' : '');
     }
     function tag(cls, txt) { return '<span class="cc-tag ' + cls + '">' + txt + '</span>'; }
+    function hasOffer(b) { return !!(b.offer && b.offer.t); }
+    /* sign-up bonus: headline, promo code to copy and a link to the article that explains it */
+    function offerHtml(b) {
+      if (!hasOffer(b)) return '';
+      var o = b.offer, href = o.a ? (o.noAr ? o.a : loc(o.a)) : '';
+      var foot = (o.c ? '<button type="button" class="cc-code" data-code="' + esc(o.c) + '" dir="ltr" aria-label="' + esc(T.copyCode(o.c)) + '"><span>' + esc(o.c) + '</span>' + COPY + '</button>' : '')
+        + (href ? '<a class="cc-offer-a" href="' + esc(href) + '" target="_blank" rel="noopener">' + T.howItWorks + '</a>' : '');
+      return '<div class="cc-offer"><span class="cc-offer-b">' + GIFT + T.offerBadge + '</span><span class="cc-offer-t">' + esc(o.t) + '</span>'
+        + (foot ? '<span class="cc-offer-f">' + foot + '</span>' : '') + '</div>';
+    }
+    function copyCode(btn) {
+      var code = btn.getAttribute('data-code'), lab = btn.querySelector('span');
+      var done = function () { btn.classList.add('is-copied'); lab.textContent = T.copied; clearTimeout(btn._t); btn._t = setTimeout(function () { btn.classList.remove('is-copied'); lab.textContent = code; }, 1600); };
+      var legacy = function () { var ta = document.createElement('textarea'); ta.value = code; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '0'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (x) {} document.body.removeChild(ta); done(); };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(code).then(done, legacy); else legacy();
+    }
 
     function shell() {
       var CDN = 'https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/';
@@ -384,7 +407,7 @@
       pk.classList.toggle('is-open', S.more);
       pk.innerHTML = list.length ? list.map(function (b, i) {
         var on = S.sel.indexOf(b.id) > -1;
-        return '<button type="button" class="cc-pick' + (on ? ' is-on' : '') + (i >= short && !on ? ' is-extra' : '') + '" data-id="' + b.id + '" aria-pressed="' + on + '">' + logo(b) + '<span>' + esc(b.name) + '</span><span class="cc-pick-t">' + esc(b.type) + '</span></button>';
+        return '<button type="button" class="cc-pick' + (on ? ' is-on' : '') + (i >= short && !on ? ' is-extra' : '') + '" data-id="' + b.id + '" aria-pressed="' + on + '">' + (hasOffer(b) ? '<span class="cc-pick-gift" title="' + esc(T.offerBadge) + '" aria-hidden="true">' + GIFT + '</span>' : '') + logo(b) + '<span>' + esc(b.name) + '</span><span class="cc-pick-t">' + esc(b.type) + '</span>' + (hasOffer(b) ? '<span class="cc-sr">' + esc(T.offerBadge) + '</span>' : '') + '</button>';
       }).join('') : '<p class="cc-nomatch">' + T.noMatch + '</p>';
       var mb = document.getElementById('cc-more');
       mb.style.display = list.length > short ? '' : 'none';
@@ -446,7 +469,7 @@
     function headCell(b) {
       var h = '<div class="cc-hcell"><div class="cc-hname">' + logo(b, 32) + '<span><b>' + esc(b.name) + '</b><small>' + esc(b.type) + '</small>'
         + (b.score ? '<small class="cc-score">' + STAR + T.score + ' ' + b.score.toFixed(1) + '/5</small>' : '') + '</span></div>';
-      h += '<div class="cc-hextra">' + (b.hasPlan ? '<div class="cc-pills" role="group" aria-label="' + T.pricingPlan + '"><button type="button" class="cc-pill' + (S.ibkr === 'fixed' ? ' is-on' : '') + '" data-plan="fixed">' + T.planFixed + '</button><button type="button" class="cc-pill' + (S.ibkr === 'tiered' ? ' is-on' : '') + '" data-plan="tiered">' + T.planTiered + '</button></div>' : '') + '</div>';
+      h += '<div class="cc-hextra">' + (b.hasPlan ? '<div class="cc-pills" role="group" aria-label="' + T.pricingPlan + '"><button type="button" class="cc-pill' + (S.ibkr === 'fixed' ? ' is-on' : '') + '" data-plan="fixed">' + T.planFixed + '</button><button type="button" class="cc-pill' + (S.ibkr === 'tiered' ? ' is-on' : '') + '" data-plan="tiered">' + T.planTiered + '</button></div>' : '') + offerHtml(b) + '</div>';
       h += ctaHtml(b);
       if (b.review) h += '<a class="cc-review" href="' + esc(loc(b.review)) + '" target="_blank" rel="noopener">' + T.readReview + '</a>';
       return h + '</div>';
@@ -549,6 +572,8 @@
         if (e.target.closest('#cc-more')) { S.more = !S.more; renderPicker(); return; }
         var h = e.target.closest('.cc-sec-h');
         if (h) { var sid = h.getAttribute('data-sec'); S.open[sid] = !S.open[sid]; renderTable(); return; }
+        var cp = e.target.closest('.cc-code');
+        if (cp) { copyCode(cp); return; }
         var pl = e.target.closest('.cc-pill');
         if (pl) { S.ibkr = pl.getAttribute('data-plan'); renderTable(); return; }
         var sg = e.target.closest('.cc-seg-b');
