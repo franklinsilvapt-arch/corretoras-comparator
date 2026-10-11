@@ -36,10 +36,10 @@
       count: function (n) { return n === 1 ? '1 broker selected' : n + ' brokers selected'; },
       secCosts: 'What you pay', secCostsSub: 'Calculated with the values above',
       rUs: 'Buy US stocks', rUae: 'Buy UAE stocks', rFx: 'Trade forex', rCust: 'Keep your portfolio',
-      nUs: function (a) { return 'AED ' + a + ' order, conversion included'; },
-      nUae: function (a, x) { return 'AED ' + a + ' order on ' + x; },
+      nUs: function (a) { return 'AED\u00a0' + a + ' order, conversion included'; },
+      nUae: function (a, x) { return 'AED\u00a0' + a + ' order on ' + x; },
       nFx: '1 lot of EUR/USD, opened and closed',
-      nCust: function (a) { return 'AED ' + a + ' for a year'; },
+      nCust: function (a) { return 'AED\u00a0' + a + ' for a year'; },
       secFees: 'Fees in detail',
       rUsFee: 'US stocks and ETFs', rUaeFee: 'UAE stocks (ADX, DFM)', rOpt: 'Options', rForex: 'Forex (EUR/USD)',
       rCrypto: 'Crypto', rConv: 'AED to USD conversion', rDep: 'Deposits', rWd: 'Withdrawals', rInact: 'Inactivity',
@@ -58,7 +58,7 @@
       sources: 'Sources', sourcesSub: 'Official pages we checked',
       srcFees: function (n) { return n + ' fees'; }, srcReg: function (n) { return n + ' licence'; },
       emptyPick: 'Choose at least one broker in the list above to see the comparison.',
-      sum: function (us, uae, x, port) { return 'US order <b>AED ' + us + '</b> · UAE order <b>AED ' + uae + '</b> on <b>' + x + '</b><span class="cc-sum-2">Portfolio <b>AED ' + port + '</b></span>'; },
+      sum: function (us, uae, x, port) { return 'US order <b>AED&nbsp;' + us + '</b> · UAE order <b>AED&nbsp;' + uae + '</b> on <b>' + x + '</b><span class="cc-sum-2">Portfolio <b>AED&nbsp;' + port + '</b></span>'; },
       usComm: function (c, vat) { return 'Commission ' + c + (vat ? ' incl. VAT' : ''); },
       usBank: '. Send dollars: your bank converts AED', usFxNa: '. AED conversion cost not published',
       usFx: function (a) { return ' + ' + a + ' to convert AED'; }, usNoFx: '. No fee to convert AED',
@@ -89,10 +89,10 @@
       count: function (n) { return n === 1 ? 'وسيط واحد مختار' : n === 2 ? 'وسيطان مختاران' : n + ' وسطاء مختارون'; },
       secCosts: 'كم ستدفع', secCostsSub: 'محسوبة بالقيم أعلاه',
       rUs: 'شراء أسهم أمريكية', rUae: 'شراء أسهم إماراتية', rFx: 'تداول الفوركس', rCust: 'الاحتفاظ بمحفظتك',
-      nUs: function (a) { return 'أمر بقيمة AED ' + a + '، يشمل تحويل العملة'; },
-      nUae: function (a, x) { return 'أمر بقيمة AED ' + a + ' في ' + x; },
+      nUs: function (a) { return 'أمر بقيمة AED\u00a0' + a + '، يشمل تحويل العملة'; },
+      nUae: function (a, x) { return 'أمر بقيمة AED\u00a0' + a + ' في ' + x; },
       nFx: 'لوت واحد من EUR/USD، فتحًا وإغلاقًا',
-      nCust: function (a) { return 'AED ' + a + ' لمدة سنة'; },
+      nCust: function (a) { return 'AED\u00a0' + a + ' لمدة سنة'; },
       secFees: 'الرسوم بالتفصيل',
       rUsFee: 'الأسهم الأمريكية وصناديق المؤشرات', rUaeFee: 'الأسهم الإماراتية (ADX، DFM)', rOpt: 'الخيارات', rForex: 'الفوركس (EUR/USD)',
       rCrypto: 'العملات المشفرة', rConv: 'تحويل الدرهم إلى الدولار', rDep: 'الإيداع', rWd: 'السحب', rInact: 'عدم النشاط',
@@ -111,7 +111,7 @@
       sources: 'المصادر', sourcesSub: 'الصفحات الرسمية التي راجعناها',
       srcFees: function (n) { return 'رسوم ' + n; }, srcReg: function (n) { return 'ترخيص ' + n; },
       emptyPick: 'اختر وسيطًا واحدًا على الأقل من القائمة أعلاه لعرض المقارنة.',
-      sum: function (us, uae, x, port) { return 'أمر أمريكي <b>AED ' + us + '</b> · أمر إماراتي <b>AED ' + uae + '</b> في <b>' + x + '</b><span class="cc-sum-2">المحفظة <b>AED ' + port + '</b></span>'; },
+      sum: function (us, uae, x, port) { return 'أمر أمريكي <b>AED&nbsp;' + us + '</b> · أمر إماراتي <b>AED&nbsp;' + uae + '</b> في <b>' + x + '</b><span class="cc-sum-2">المحفظة <b>AED&nbsp;' + port + '</b></span>'; },
       usComm: function (c, vat) { return 'عمولة ' + c + (vat ? ' شاملة ضريبة القيمة المضافة' : ''); },
       usBank: '. أرسل دولارات: بنكك يحوّل الدرهم', usFxNa: '. تكلفة تحويل الدرهم غير منشورة',
       usFx: function (a) { return ' + ' + a + ' لتحويل الدرهم'; }, usNoFx: '. بدون رسوم لتحويل الدرهم',
@@ -202,7 +202,7 @@
 
     function fmtInt(n) { return Math.round(n).toLocaleString('en-US'); }
     function fmt2(n) { return (Math.round(n * 100) / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
-    function fmtAed(n) { return 'AED ' + fmt2(n); }
+    function fmtAed(n) { return 'AED\u00a0' + fmt2(n); }
     function fmtUsd(n) { return '$' + fmt2(n); }
     function parseNum(v) {
       /* Arabic-Indic and Persian digits, Arabic decimal and thousands separators */
