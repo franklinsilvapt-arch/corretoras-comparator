@@ -1,5 +1,5 @@
 {
- "verified": "11 October 2026",
+ "verified": "12 October 2026",
  "assumptions": {
   "PEG": 3.6725,
   "US_PRICE_USD": 200,
@@ -206,8 +206,7 @@
     },
     "inact": {
      "v": "No fee",
-     "s": "eToro's fees page lists inactivity as free",
-     "c": true
+     "s": "eToro's fees page lists the inactivity fee as free"
     },
     "custody": {
      "v": "No fee",
@@ -215,8 +214,7 @@
     },
     "interest": {
      "v": "0.75% to 3.8% on USD",
-     "s": "0.75% from $10,000 balance, 2.5% from $25,000, 3.5% from $50,000, 3.8% from $250,000. Uninvested USD, opt in",
-     "c": true
+     "s": "Tier set by account equity: 0.75% from $10,000, 2.5% from $25,000, 3.5% from $50,000, 3.8% from $250,000. On uninvested USD, opt in"
     },
     "entity": {
      "v": "eToro (ME) Limited",
@@ -400,8 +398,7 @@
     },
     "protection": {
      "v": "SIPC up to $500,000",
-     "s": "For assets at Interactive Brokers LLC, incl. $250,000 cash, plus excess cover from Lloyd's. UK FSCS only in limited cases.",
-     "c": true
+     "s": "For assets held at Interactive Brokers LLC, incl. $250,000 cash. Lloyd's excess cover adds up to $30 million. UK FSCS only in limited cases"
     },
     "minDep": {
      "v": "$0",
@@ -536,8 +533,7 @@
     },
     "uaeFee": {
      "v": "0% + 0.5% conversion",
-     "s": "Some DFM stocks in AED, from AED 100. No commission up to €100,000 a month, 0.5% FX as the account is in USD",
-     "c": true
+     "s": "DFM stocks in AED from AED 100. No commission up to €100,000 a month, then 0.2% (min €10). 0.5% FX as the account is in USD"
     },
     "options": {
      "v": "Not offered",
@@ -550,8 +546,7 @@
     },
     "crypto": {
      "v": "Not offered",
-     "s": "No crypto in XTB MENA's current margin table or UAE site. The terms allow crypto CFDs",
-     "c": true
+     "s": "No crypto CFDs in XTB MENA's 19 Sep 2026 specification table or on its UAE site"
     },
     "fx": {
      "v": "AED at 3.6730, no fee",
@@ -579,7 +574,8 @@
     },
     "entity": {
      "v": "XTB MENA Limited",
-     "s": "Liberty House, DIFC, Dubai. Subsidiary of XTB S.A. (Warsaw Stock Exchange)"
+     "s": "Liberty House, DIFC, Dubai. Subsidiary of XTB S.A. (Warsaw Stock Exchange)",
+     "c": true
     },
     "regulator": {
      "v": "DFSA (DIFC), F006316",
@@ -645,9 +641,8 @@
       "fixed": 0,
       "vat": false,
       "allIn": false,
-      "note": "0% commission up to €100,000 a month; the 0.5% is XTB's currency conversion, charged because the account is kept in USD and the stock trades in AED. XTB lists .AE stocks (AED, from AED 100) without naming the exchange; the names seen (Air Arabia, Ajman Bank, Amanat, Amlak, Aramex) are DFM listed. Exchange and clearing fees not published"
-     },
-     "c": true
+      "note": "0% commission up to €100,000 of monthly turnover (0.2%, min €10, above that); the 0.5% is XTB's currency conversion, charged because the account is in USD and the stock trades in AED. XTB's 5 Oct 2026 UAE stock table lists .AE stocks in AED from AED 100 without naming the exchange; the names seen (Air Arabia, Ajman Bank, Amanat, Amlak, Aramex) are DFM listed and no ADX names appear. Exchange and clearing fees not published."
+     }
     },
     "fxlot": {
      "account": "Standard",
@@ -753,8 +748,7 @@
     },
     "assets": {
      "v": "Stocks, ETFs, CFDs",
-     "s": "Stocks and ETFs in the Invest account. CFDs on stocks, indices, forex, commodities",
-     "c": true
+     "s": "Stocks and ETFs in the Invest account. CFDs on stocks, ETFs, forex, index and commodity futures"
     },
     "ownership": {
      "v": "Real shares and CFDs",
@@ -766,8 +760,7 @@
     },
     "islamic": {
      "v": "No",
-     "s": "No swap free account on Trading 212's pages",
-     "c": true
+     "s": "Trading 212 says it does not offer Islamic (swap free) accounts"
     },
     "aed": {
      "v": "No AED account",
@@ -1105,7 +1098,7 @@
    "review": null,
    "risk": "Investments in securities and other financial instruments always involve the risk of loss of your capital.",
    "hidden": true,
-   "pending": "Official site could not be read in the 10 Oct 2026 run"
+   "pending": "UAE residents not confirmed on an official Freedom24 page (12 Oct 2026)"
   },
   {
    "id": "fusion",
@@ -1620,7 +1613,7 @@
    "cats": [
     "cfd"
    ],
-   "uaeLic": true,
+   "uaeLic": false,
    "t": {
     "us": {
      "v": "CFDs only",
@@ -1634,8 +1627,7 @@
     },
     "forex": {
      "v": "From 0.8 pips",
-     "s": "Minimum spread XM advertises on its UAE site. EUR/USD averages and any Ultra Low commission are not published",
-     "c": true
+     "s": "Lowest spread XM advertises on its UAE sites, pair not named. EUR/USD averages and Ultra Low commissions are not published"
     },
     "crypto": {
      "v": "Not offered",
@@ -1653,8 +1645,7 @@
     },
     "withdraw": {
      "v": "Free",
-     "s": "XM MENA advertises withdrawals with no fees. Bank transfer charges may be deducted",
-     "c": true
+     "s": "XM's UAE sites say withdrawals have no fees"
     },
     "inact": {
      "v": "Not published",
@@ -1670,12 +1661,14 @@
      "s": "Client agreement: no interest on client money unless agreed in writing"
     },
     "entity": {
-     "v": "Trading Point MENA Ltd, DIFC",
-     "s": "Operates xm.com/mena from Park Towers, DIFC, Dubai. The global xm.com site is run by XM Global (Belize)"
+     "v": "Depends on where you sign up",
+     "s": "xm.ae, for UAE residents: XM International MU Ltd, Mauritius. xm.com/mena: Trading Point MENA Ltd, DIFC",
+     "c": true
     },
     "regulator": {
-     "v": "DFSA, ref. F003484",
-     "s": "UAE licence in the DIFC since September 2019, with a retail endorsement. Deals as matched principal only"
+     "v": "FSC Mauritius or DFSA (DIFC)",
+     "s": "xm.ae: FSC Mauritius GB23202700, via a Dubai introducer with a CMA licence for introduction only. xm.com/mena: DFSA F003484",
+     "c": true
     },
     "protection": {
      "v": "None in the DIFC",
@@ -1735,17 +1728,153 @@
    "short": "I",
    "color": "#3a4454",
    "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68557767c80500cc58682739_IG-icon.svg",
-   "type": "CFD and forex broker",
+   "type": "CFD and stock broker",
    "order": 100,
    "score": 4.5,
    "cta": {
-    "href": "https://www.ig.com/",
+    "href": "https://www.ig.com/ae",
     "plain": true
    },
    "review": null,
    "risk": "CFDs are complex financial instruments and come with a high risk of losing money rapidly due to leverage.",
-   "hidden": true,
-   "pending": "Official site could not be read in the 10 Oct 2026 run"
+   "cats": [
+    "stocks",
+    "cfd",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "$0 up to 100 trades a month",
+     "s": "Real US shares and ETFs: no commission or FX fee up to 100 trades a month, then $5 a trade and 0.7% FX. Share CFDs: 2c a share, min $15"
+    },
+    "uaeFee": {
+     "v": "Not offered",
+     "s": "IG's stock trading covers US, UK, German and Irish shares and ETFs. No ADX or DFM listings"
+    },
+    "options": {
+     "v": "Not offered",
+     "s": "No listed options. IG offers options only as CFDs, priced by the spread"
+    },
+    "forex": {
+     "v": "0.85 pips average, no commission",
+     "s": "IG's UAE figures: 0.6 pips minimum, 0.85 average from 00:00 to 21:00 GMT (12 weeks to Jan 2021). Retail margin 3.33%",
+     "c": true
+    },
+    "crypto": {
+     "v": "CFDs, spread only",
+     "s": "Bitcoin, Ether, XRP, Litecoin and more as CFDs, no commission. Minimum spread 45 points on Bitcoin. Retail margin 50%"
+    },
+    "fx": {
+     "v": "0.5% to convert deposits",
+     "s": "AED bank transfers accepted. Deposits converted to your account currency cost 0.5%. US share trades: no FX fee up to 100 a month, then 0.7%",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Debit card (instant) or bank transfer in AED, USD, EUR or GBP (up to 3 working days). Credit cards for professional clients only"
+    },
+    "withdraw": {
+     "v": "Free",
+     "s": "Bank transfers have no minimum; requests before 2pm Dubai time should arrive the same day. Card refunds from $150"
+    },
+    "inact": {
+     "v": "None listed",
+     "s": "No inactivity fee on IG's UAE pages. Accounts with no trades, dividends or deposits for 24 months are closed"
+    },
+    "custody": {
+     "v": "None",
+     "s": "No custody or annual management fee on IG's UAE stock trading account (stated for up to 100 trades a month)"
+    },
+    "interest": {
+     "v": "None stated",
+     "s": "IG's UAE pages on client money do not mention interest on cash",
+     "c": true
+    },
+    "entity": {
+     "v": "IG Limited, DIFC Dubai",
+     "s": "Runs IG's UAE site with CFDs and real shares. You may choose IG International Ltd (Bermuda, BMA) instead: CFDs only, up to 1:200"
+    },
+    "regulator": {
+     "v": "DFSA (DIFC), F001780",
+     "s": "UAE licence since 10 Jun 2015 with retail client and client assets endorsements. Deals as matched principal only"
+    },
+    "protection": {
+     "v": "None in the DIFC",
+     "s": "Client money held in segregated accounts under trust arrangements. Negative balance protection on CFDs for retail clients",
+     "c": true
+    },
+    "minDep": {
+     "v": "None by bank transfer",
+     "s": "IG's UAE help centre sets no minimum for bank transfers. Its office comparison page lists $300 for Dubai",
+     "c": true
+    },
+    "assets": {
+     "v": "Stocks, ETFs, CFDs",
+     "s": "US, UK, German and Irish shares and ETFs to own, plus CFDs on forex, indices, commodities, crypto, options and bonds"
+    },
+    "ownership": {
+     "v": "Real shares and CFDs"
+    },
+    "fractions": {
+     "v": "Not published",
+     "s": "You can order by amount, but IG's UAE pages do not say if fractional shares are bought",
+     "c": true
+    },
+    "islamic": {
+     "v": "Not published",
+     "s": "No Islamic or swap free account on IG's UAE site"
+    },
+    "aed": {
+     "v": "AED deposits",
+     "s": "Bank transfers accepted in AED, USD, EUR and GBP. IG's UAE pages do not list the account base currencies",
+     "c": true
+    },
+    "platforms": {
+     "v": "Own app, MT4, MT5, TradingView",
+     "s": "IG web platform and iOS and Android apps, plus ProRealTime, L2 Dealer and APIs"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0,
+      "min": 0,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": null,
+      "fixedUsd": null,
+      "minUsd": null
+     },
+     "note": "Stock trading account: $0 commission and no FX fee on US shares up to 100 trades a month ($5 a trade and 0.7% FX above that). IG takes AED transfers, but whether AED is converted at the 0.5% deposit fee depends on the account currency, which IG does not list (pct null).",
+     "c": true
+    },
+    "uae": null,
+    "fxlot": {
+     "account": "Standard",
+     "spread": 0.85,
+     "spreadKind": "average",
+     "commRt": 0,
+     "alt": null,
+     "c": true
+    },
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody or annual management fee on the IG UAE stock trading account (zero fees stated up to 100 trades a month)."
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://www.ig.com/ae/stock-trading/charges-and-fees",
+    "reg": "https://www.dfsa.ae/public-register/firms/ig-limited"
+   }
   },
   {
    "id": "fxpro",
@@ -2806,13 +2935,169 @@
    "order": 100,
    "score": 4.3,
    "cta": {
-    "href": "https://naga.com/",
+    "href": "https://naga.com/ae",
     "plain": true
    },
    "review": null,
    "risk": "Trading leveraged product involves significant risk of loss.",
-   "hidden": true,
-   "pending": "Official site could not be read in the 10 Oct 2026 run"
+   "cats": [
+    "stocks",
+    "cfd",
+    "uae",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "€1 per order",
+     "s": "Real US stocks and ETFs from $50. NAGA advertises zero commission; its costs policy adds a EUR 1 fee per order, plus any exchange fees",
+     "c": true
+    },
+    "uaeFee": {
+     "v": "€1 per order + market fees",
+     "s": "NAGA advertises zero commission on UAE and Saudi stocks. Its costs policy lists a EUR 1 fee per order; exchange fees and VAT not stated",
+     "c": true
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "1.1 pips, no commission listed",
+     "s": "Example spread for Iron to Silver levels. 0.9 pips from Gold (25,000 VIP points) and 0.7 at Crystal (100,000)",
+     "c": true
+    },
+    "crypto": {
+     "v": "Crypto CFDs",
+     "s": "30+ coins as CFDs, incl. Crypto One at 1:1 leverage with overnight fees on short positions only. Spreads not published",
+     "c": true
+    },
+    "fx": {
+     "v": "Up to 2.5% to 3.5%",
+     "s": "Markup when a trade's currency differs from your account currency: up to 2.5% for EUR and USD, 3.5% for others. AED funding not stated",
+     "c": true
+    },
+    "deposit": {
+     "v": "Free",
+     "s": "Cards, bank transfer and local methods. NAGA charges no deposit fee; your payment provider may"
+    },
+    "withdraw": {
+     "v": "Free, minimum $50",
+     "s": "$0 fee at every VIP level. On bank withdrawals of $100 or less, the bank's charges are passed on to you"
+    },
+    "inact": {
+     "v": "$50 a month after 2 months",
+     "s": "Charged monthly when there has been no order for 60 days or more, capped at your remaining balance"
+    },
+    "custody": {
+     "v": "Not published",
+     "s": "No amount listed. NAGA's costs policy says custody and exchange charges may apply to real stocks separately",
+     "c": true
+    },
+    "interest": {
+     "v": "No interest",
+     "s": "NAGA's UAE client agreement says it does not pay interest on client money"
+    },
+    "entity": {
+     "v": "Key Way Markets Ltd, ADGM",
+     "s": "Runs naga.com/ae (ADGM company 000003041). NAGA's global and Arabic sites are run by NAGA Capital Ltd, Seychelles"
+    },
+    "regulator": {
+     "v": "FSRA (ADGM), FSP 190005",
+     "s": "UAE licence since 1 March 2020. Retail clients allowed. Deals as matched principal only"
+    },
+    "protection": {
+     "v": "None in ADGM",
+     "s": "No compensation scheme stated. Client money in segregated accounts at banks in or outside ADGM. Negative balance protection"
+    },
+    "minDep": {
+     "v": "$50",
+     "s": "Minimum deposit on NAGA's UAE stocks page. You can invest in any stock from $50"
+    },
+    "assets": {
+     "v": "Stocks, ETFs, forex, CFDs",
+     "s": "Real stocks and ETFs on 10+ exchanges, incl. 400+ UAE and Saudi stocks. CFDs on forex, indices, commodities and crypto"
+    },
+    "ownership": {
+     "v": "Real shares and CFDs"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "Invest in any stock from $50, by amount",
+     "c": true
+    },
+    "islamic": {
+     "v": "Swap free, with daily fees",
+     "s": "Swap free trading at NAGA's discretion. After 3 days, $15 a lot a day on major forex pairs; stock and crypto CFDs pay from day one"
+    },
+    "aed": {
+     "v": "Not published",
+     "s": "NAGA's UAE pages name USD as a funding currency. AED deposits or AED accounts are not mentioned",
+     "c": true
+    },
+    "platforms": {
+     "v": "NAGA app, web, MT5",
+     "s": "NAGA web and mobile apps with copy trading, TradingView charts and TipRanks. MetaTrader 5"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 1.17,
+      "pct": 0,
+      "perShare": 0,
+      "min": 0,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": false,
+      "pct": 0,
+      "fixedUsd": 0,
+      "minUsd": 0
+     },
+     "note": "EUR 1 execution fee per order (about $1.17) from the Key Way Markets costs policy, version 20, Sep 2026; NAGA advertises zero commission (T&Cs not readable). AED funding not confirmed, so a USD deposit is assumed.",
+     "c": true
+    },
+    "uae": {
+     "adx": {
+      "pct": 0,
+      "min": 0,
+      "fixed": 4.3,
+      "vat": false,
+      "allIn": false,
+      "note": "EUR 1 execution fee per order (about AED 4.3) per the costs policy; NAGA advertises zero commission on UAE stocks. Exchange, clearing and CMA fees and VAT not published. A non AED account pays up to 3.5% conversion, not modelled."
+     },
+     "dfm": {
+      "pct": 0,
+      "min": 0,
+      "fixed": 4.3,
+      "vat": false,
+      "allIn": false,
+      "note": "EUR 1 execution fee per order (about AED 4.3) per the costs policy; NAGA advertises zero commission on UAE stocks. Exchange, clearing and CMA fees and VAT not published. A non AED account pays up to 3.5% conversion, not modelled."
+     },
+     "c": true
+    },
+    "fxlot": {
+     "account": "Standard (Iron to Silver)",
+     "spread": 1.1,
+     "spreadKind": "typical",
+     "commRt": 0,
+     "alt": null,
+     "c": true
+    },
+    "custody": {
+     "pctYear": null,
+     "fixedYearUsd": null,
+     "minYearUsd": null,
+     "note": "Costs policy says custody charges may apply to real stocks separately; no amount is published.",
+     "c": true
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://cms.naga.com/Key_Way_Markets_Costs_and_Charges_DMA_1_EUR_where_applicable_28a72b753e.pdf",
+    "reg": "https://naga.com/ae/legal-documentation"
+   }
   },
   {
    "id": "vantage",
@@ -2971,16 +3256,14 @@
     },
     "uaeFee": {
      "v": "No broker commission (promo)",
-     "s": "Exchange, clearing and regulator fees plus VAT come back as CFD credits on orders over AED 500. Standard rate not published",
-     "c": true
+     "s": "Exchange, clearing and regulator fees plus VAT come back as CFD credits on orders over AED 500. Needs a CFD account too"
     },
     "options": {
      "v": "Not offered"
     },
     "forex": {
      "v": "From 0.8 pips, no commission",
-     "s": "Elite account. Classic spreads not published. Pro: raw spreads plus a commission, rate not published",
-     "c": true
+     "s": "Elite account ($1,000). Classic spreads not published. Pro ($5,000): raw spreads plus a commission, rate not published"
     },
     "crypto": {
      "v": "Bitcoin CFD from $120 spread",
@@ -2988,8 +3271,7 @@
     },
     "fx": {
      "v": "Up to 1%",
-     "s": "Markup on currency conversions, per ADSS's Sep 2026 schedule of charges",
-     "c": true
+     "s": "Markup on currency conversions, per ADSS's schedule of charges"
     },
     "deposit": {
      "v": "Free",
@@ -2997,18 +3279,15 @@
     },
     "withdraw": {
      "v": "$15",
-     "s": "Minimum charge per withdrawal in the Sep 2026 schedule of charges. Some ADSS pages say withdrawals are free",
-     "c": true
+     "s": "Minimum charge per withdrawal in ADSS's schedule of charges. Its UAE stocks page says withdrawals are free"
     },
     "inact": {
      "v": "None listed",
-     "s": "No inactivity fee in the Sep 2026 schedule of charges",
-     "c": true
+     "s": "No inactivity fee in ADSS's schedule of charges"
     },
     "custody": {
      "v": "None listed",
-     "s": "No custody fee in the Sep 2026 schedule of charges",
-     "c": true
+     "s": "No custody fee in ADSS's schedule of charges"
     },
     "interest": {
      "v": "Not published",
@@ -3072,8 +3351,7 @@
       "fixedUsd": 0,
       "minUsd": 0
      },
-     "note": "ADSS platform: real US shares and ETFs with no commission, from $1. Conversion uses ADSS's markup of up to 1% (schedule of charges); exact rate not published.",
-     "c": true
+     "note": "ADSS US stock investing: 'No fee' direct share ownership, fractional shares. Conversion at ADSS's markup of up to 1% (schedule of charges); the exact rate is not published, so 1% is a ceiling. AED funding by free national bank transfer assumed."
     },
     "uae": {
      "adx": {
@@ -3082,7 +3360,7 @@
       "fixed": 0,
       "vat": false,
       "allIn": false,
-      "note": "Promotion: no broker commission. Exchange, market, clearing, settlement and regulatory fees plus VAT are charged, then refunded monthly as CFD trading credits on orders over AED 500 (unused credits become cash after 6 months). Standard rate and promotion end date not published."
+      "note": "Promotion: no broker commission. Exchange, market, clearing, settlement and regulatory fees plus VAT are charged, then credited monthly as CFD trading credits on orders over AED 500 (usable for CFDs only for 6 months, then cash). Needs a CFD account. Promotion period set at account opening; regular rate not published."
      },
      "dfm": {
       "pct": 0,
@@ -3090,24 +3368,21 @@
       "fixed": 0,
       "vat": false,
       "allIn": false,
-      "note": "Promotion: no broker commission. Exchange, market, clearing, settlement and regulatory fees plus VAT are charged, then refunded monthly as CFD trading credits on orders over AED 500 (unused credits become cash after 6 months). Standard rate and promotion end date not published."
-     },
-     "c": true
+      "note": "Promotion: no broker commission. Exchange, market, clearing, settlement and regulatory fees plus VAT are charged, then credited monthly as CFD trading credits on orders over AED 500 (usable for CFDs only for 6 months, then cash). Needs a CFD account. Promotion period set at account opening; regular rate not published."
+     }
     },
     "fxlot": {
      "account": "Elite",
      "spread": 0.8,
      "spreadKind": "minimum",
      "commRt": 0,
-     "alt": null,
-     "c": true
+     "alt": null
     },
     "custody": {
      "pctYear": 0,
      "fixedYearUsd": 0,
      "minYearUsd": 0,
-     "note": "No custody fee in the 28 Sep 2026 schedule of charges; not confirmed elsewhere.",
-     "c": true
+     "note": "No custody fee in ADSS's schedule of charges; its US stock investing page says 'No fee'."
     },
     "withdrawUsd": 15
    },
@@ -4676,13 +4951,11 @@
     },
     "forex": {
      "v": "From 1.5 pips, no commission",
-     "s": "Pro ($1,000): from 0.8 pips, no commission. ECN ($10,000): from 0.0 pips, commission not published. Minimum spreads",
-     "c": true
+     "s": "Standard ($50). Pro ($1,000): from 0.8 pips, no commission. ECN ($10,000): from 0.0 pips, commission not published. Minimum spreads"
     },
     "crypto": {
      "v": "Crypto CFDs",
-     "s": "Bitcoin, Ether and other coin CFDs. Spread not published. Spot coins are on the sister exchange MultiBank.io",
-     "c": true
+     "s": "Bitcoin, Ether, Litecoin and XRP CFDs with no commission and leverage up to 20:1. Spread not published"
     },
     "fx": {
      "v": "Not published",
@@ -4691,8 +4964,7 @@
     },
     "deposit": {
      "v": "Cards, bank transfer, crypto",
-     "s": "Card deposits are instant. BTC and USDT accepted. Fees not shown on the funding page",
-     "c": true
+     "s": "Card deposits are instant. BTC and USDT accepted. Fees not shown on the funding page"
     },
     "withdraw": {
      "v": "Not published",
@@ -4718,8 +4990,7 @@
     },
     "regulator": {
      "v": "CIMA (Cayman Islands), offshore",
-     "s": "Licence number not shown by MultiBank. Group company MEX Global Financial Services LLC holds a UAE CMA licence",
-     "c": true
+     "s": "Licence number not shown by MultiBank. Group company MEX Global Financial Services LLC holds a UAE CMA licence"
     },
     "protection": {
      "v": "Insurance up to $1m per account",
@@ -4766,8 +5037,7 @@
       "spread": 0.8,
       "spreadKind": "minimum",
       "commRt": 0
-     },
-     "c": true
+     }
     },
     "custody": null,
     "withdrawUsd": null
@@ -4846,8 +5116,7 @@
     },
     "entity": {
      "v": "tastytrade, Inc., USA",
-     "s": "US broker dealer, formerly tastyworks. Accepts international clients from a list of eligible countries.",
-     "c": true
+     "s": "US broker dealer, formerly tastyworks. Accepts international clients from a list of eligible countries."
     },
     "regulator": {
      "v": "FINRA, NFA (US, foreign)",
@@ -4855,8 +5124,7 @@
     },
     "protection": {
      "v": "SIPC up to $500,000",
-     "s": "Incl. $250,000 cash, plus excess SIPC, also for international clients. Futures and crypto are not covered.",
-     "c": true
+     "s": "Includes up to $250,000 cash. Futures, event contracts and crypto are not covered"
     },
     "minDep": {
      "v": "$0",
@@ -4926,18 +5194,163 @@
    "name": "Wio Invest",
    "short": "Wio",
    "color": "#1c1c1c",
-   "logo": null,
+   "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABGnSURBVHgB7d0/jB7FGcfxIaLiCogU0nKUoQlIuI1NaTeAQKLDR+lIyI4ooAEMNIkUhC2kUGJcOwIau7Sd1pZIGqfkrgUXpDi3jn/3esXLcb5732d2dua38/1IyCDhu/fP7m+fZ3Zm9rE30v37CQAM/CYBgAkCC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgA0CC4ANAguADQILgI3HE1DQxlMpPfN8Si++nNLvNxf/vopb36Z0+VwCfqHJwHp6c/FPxI/bi39Q13MnFiF1YiulJ55Ka9t4MgG/0mRg6WA/82UK+eKtlG5eSqhE393rHy7+BMbWZGDt/DuFrdpyYFxq/V57EFSnaONQUJOBldPSaZwE01L7/s7XKW1ysUBhTQbW7k8p3fspNvbxzB8TJqSw+uB6fMwRWEezdwl/2I5dsVs+cTSuo/ekUFXrurEUyArpu9sp3bmZ0vaDlvjOjdQ8wgpTazawdv4TbzF0ArVyp1ChdPLsYmznsIrx6bR4vy++svhvvf5rFxa391u860lYoYZmJ466D7wrqHS37PPvH/x5fv32VkHw5oWHf//D1JzTnxFWmF6zgaWWMKr2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",
    "type": "UAE bank app",
    "order": 100,
    "score": null,
    "cta": {
-    "href": "https://wio.io/",
+    "href": "https://wio.io/invest/",
     "plain": true
    },
    "review": null,
    "risk": "Investing involves risk of loss.",
-   "hidden": true,
-   "pending": "Official site could not be read in the 10 Oct 2026 run"
+   "cats": [
+    "stocks",
+    "uae",
+    "crypto"
+   ],
+   "uaeLic": true,
+   "t": {
+    "us": {
+     "v": "0.2%, min $0.50, max $4.95",
+     "s": "Per order on NYSE and Nasdaq (the minimum was $1 before). AED is converted to USD at Wio Bank's rate"
+    },
+    "uaeFee": {
+     "v": "ADX 0.15%, DFM 0.275% + AED 10",
+     "s": "Per order, through partner BHM Capital. Wio does not say if exchange, clearing and CMA fees or VAT are included"
+    },
+    "options": {
+     "v": "Not offered"
+    },
+    "forex": {
+     "v": "Not offered"
+    },
+    "crypto": {
+     "v": "0.5% per order",
+     "s": "Spot crypto through partner Fuze, which charges the fee. Market orders only"
+    },
+    "fx": {
+     "v": "Not published",
+     "s": "Wio Bank converts AED to USD at its prevailing rate for US stocks. The markup is not published",
+     "c": true
+    },
+    "deposit": {
+     "v": "From your Wio account",
+     "s": "You invest straight from your Wio bank account in AED. No funding fee in Wio Invest's FAQ",
+     "c": true
+    },
+    "withdraw": {
+     "v": "None listed",
+     "s": "Sale proceeds return to your Wio account. No fee in Wio Invest's FAQ; the full fee schedule is in the app",
+     "c": true
+    },
+    "inact": {
+     "v": "Possible after 3 years idle",
+     "s": "Wio Securities' terms allow an inactivity fee on accounts with no transactions for 3 years. The amount is not published",
+     "c": true
+    },
+    "custody": {
+     "v": "None listed",
+     "s": "Wio Invest's FAQ lists trading fees only. The full fee schedule is in the Wio app",
+     "c": true
+    },
+    "interest": {
+     "v": "3% a year in Saving Spaces",
+     "s": "Cash stays in your Wio bank account. Its Saving Spaces pay 3% a year on AED and 2.75% on USD, no lock in"
+    },
+    "entity": {
+     "v": "Wio Securities LLC, Abu Dhabi",
+     "s": "Runs Wio Invest inside the Wio app. Separate from Wio Bank PJSC, which is licensed by the Central Bank of the UAE"
+    },
+    "regulator": {
+     "v": "UAE CMA, licence 20200000072",
+     "s": "Onshore UAE licence (the CMA was the SCA) as trading broker. Investment management licence 20200000165"
+    },
+    "protection": {
+     "v": "None stated",
+     "s": "No compensation scheme named. Wio Securities holds no client cash: a clearing broker holds it for UAE trades, an executing broker for US",
+     "c": true
+    },
+    "minDep": {
+     "v": "$1",
+     "s": "Wio says you can start investing from USD 1"
+    },
+    "assets": {
+     "v": "US and UAE stocks, ETFs, crypto",
+     "s": "3,000+ US and UAE stocks, ETFs, crypto via Fuze, managed portfolios and UAE IPOs"
+    },
+    "ownership": {
+     "v": "Real shares"
+    },
+    "fractions": {
+     "v": "Yes",
+     "s": "Fractional shares, investing from USD 1"
+    },
+    "islamic": {
+     "v": "Shariah portfolios",
+     "s": "Shariah compliant portfolios on Wio Wealth, certified by FSAC, a Singapore based Shariah adviser"
+    },
+    "aed": {
+     "v": "AED from your Wio account",
+     "s": "Wio Bank converts AED to USD for US stocks. UAE stocks trade in AED"
+    },
+    "platforms": {
+     "v": "Wio app",
+     "s": "Wio Invest is part of the Wio Bank mobile app"
+    }
+   },
+   "calc": {
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0.002,
+      "perShare": 0,
+      "min": 0.5,
+      "max": 4.95,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": null,
+      "fixedUsd": null,
+      "minUsd": null
+     },
+     "note": "0.20% per order, min $0.50, max $4.95 (Wio Invest FAQ). AED is converted at Wio Bank's prevailing rate; the markup is not published (null).",
+     "c": true
+    },
+    "uae": {
+     "adx": {
+      "pct": 0.0015,
+      "min": 0,
+      "fixed": 0,
+      "vat": false,
+      "allIn": false,
+      "note": "Wio lists 15 bps per order on ADX. It does not say if market, clearing and CMA fees or VAT are included; treated as all in."
+     },
+     "dfm": {
+      "pct": 0.00275,
+      "min": 0,
+      "fixed": 10,
+      "vat": false,
+      "allIn": false,
+      "note": "Wio lists 27.5 bps plus AED 10 per order on DFM. It does not say if market fees or VAT are included; treated as all in."
+     },
+     "c": true
+    },
+    "fxlot": null,
+    "custody": {
+     "pctYear": 0,
+     "fixedYearUsd": 0,
+     "minYearUsd": 0,
+     "note": "No custody, account or subscription fee in Wio Invest's FAQ; the full fee schedule is only in the app.",
+     "c": true
+    },
+    "withdrawUsd": 0
+   },
+   "src": {
+    "fees": "https://wioinvest.io/invest-support",
+    "reg": "https://wioinvest.io/legal-disclosure.pdf"
+   }
   }
  ]
 }
