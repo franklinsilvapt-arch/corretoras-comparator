@@ -51,6 +51,10 @@
      "v": "Taxa interna do banco",
      "s": "O ActivoBank não publica a margem cambial"
     },
+    "venue": {
+     "v": "Bolsas, via Millennium BCP",
+     "s": "Euronext direto. Xetra e EUA através da Pershing, no mercado principal do título"
+    },
     "custodyTxt": {
      "v": "3€ + IVA por mês",
      "s": "Comissão de serviço de bolsa (3,69€ com IVA), cobrada enquanto tiveres títulos"
@@ -142,6 +146,10 @@
     "fx": {
      "v": "0,5%",
      "s": "Diferencial de 5 por mil sobre o câmbio indicativo"
+    },
+    "venue": {
+     "v": "Via Saxo Bank",
+     "s": "No Best Trading Pro, ações e ETFs seguem a política de execução da Saxo Bank"
     },
     "custodyTxt": {
      "v": "0€",
@@ -235,6 +243,10 @@
      "v": "Cerca de 0,5%",
      "s": "Spread cambial indicativo face ao câmbio médio"
     },
+    "venue": {
+     "v": "Bolsas",
+     "s": "Euronext direto. Outras bolsas europeias e EUA através da Virtu Europe"
+    },
     "custodyTxt": {
      "v": "6€ + IVA por trimestre",
      "s": "MyBolsa, site e app. Isento no BiGlobal Trade e no preçário BiG+. Dividendos: 2% (mín. 2,50€)"
@@ -324,6 +336,10 @@
     "fx": {
      "v": "0,5%",
      "s": "Diferencial de +/-0,5% sobre a cotação"
+    },
+    "venue": {
+     "v": "Bolsas",
+     "s": "Euronext direto. Outras ações e ETFs europeus através da Goldman Sachs. Na GoBulling, através da Saxo Bank"
     },
     "custodyTxt": {
      "v": "0€",
@@ -418,6 +434,10 @@
      "v": "0,20%",
      "s": "Margem sobre o câmbio de referência da Bloomberg"
     },
+    "venue": {
+     "v": "Bolsas",
+     "s": "Euronext Lisboa direto. Outros mercados europeus e EUA sobretudo através da Interactive Brokers"
+    },
     "custodyTxt": {
      "v": "0€",
      "s": "Dividendos: 2% (mín. 2,50€) + IVA"
@@ -510,6 +530,10 @@
      "v": "0,25%",
      "s": "Auto FX. Conversão manual: 10€ + 0,25%"
     },
+    "venue": {
+     "v": "Bolsas, direto ou com SOR",
+     "s": "Euronext e Tradegate direto. Ações dos EUA pelo Smart Order Router da Morgan Stanley"
+    },
     "custodyTxt": {
      "v": "2,50€ por ano e por bolsa",
      "s": "Máximo de 0,25% do valor da conta. Exceto na Euronext Lisboa e nos ETFs da seleção popular"
@@ -600,6 +624,10 @@
      "v": "0,75%",
      "s": "Entre a conta em euros e dólares"
     },
+    "venue": {
+     "v": "eToro como contraparte",
+     "s": "A maioria das ordens é executada fora de bolsa, com a eToro como contraparte"
+    },
     "custodyTxt": {
      "v": "0€"
     },
@@ -688,6 +716,10 @@
     "fx": {
      "v": "Sem comissão publicada",
      "s": "O fee schedule não prevê comissão de câmbio. Confirma a taxa na plataforma antes de converter"
+    },
+    "venue": {
+     "v": "Via corretoras do grupo e terceiros",
+     "s": "A Freedom24 transmite as ordens e pode executá-las fora de bolsa. Não indica as bolsas usadas"
     },
     "custodyTxt": {
      "v": "0€"
@@ -780,6 +812,10 @@
      "v": "0,03%",
      "s": "Conversão automática. Manual: 0,002% (mín. 2$)"
     },
+    "venue": {
+     "v": "SmartRouting ou bolsa à escolha",
+     "s": "O SmartRouting compara preços entre bolsas e outros locais. Podes enviar a ordem para uma bolsa específica"
+    },
     "custodyTxt": {
      "v": "0€"
     },
@@ -867,6 +903,10 @@
     "fx": {
      "v": "0,35%",
      "s": "Evitável com a conta multimoeda"
+    },
+    "venue": {
+     "v": "Bolsas na UE, corretora terceira fora",
+     "s": "Euronext, Frankfurt, LSE e Tradegate, entre outras. Ações dos EUA via corretora terceira. Frações fora de bolsa"
     },
     "custodyTxt": {
      "v": "0€"
@@ -956,6 +996,10 @@
     "fx": {
      "v": "0,70%",
      "s": "Passa a 1% a 8/11/2026. Aplicado sobre o fixing do Santander"
+    },
+    "venue": {
+     "v": "Via Banco Santander",
+     "s": "O Openbank não tem acesso direto aos mercados. O Santander escolhe onde executar"
     },
     "custodyTxt": {
      "v": "0€",
@@ -1052,6 +1096,10 @@
      "v": "0% até 1.000€/mês",
      "s": "Standard: 1% acima disso e 1% extra ao fim de semana"
     },
+    "venue": {
+     "v": "Via Upvest e DriveWealth",
+     "s": "Europa através da Upvest, EUA através da DriveWealth ou GTN. Ações dos EUA podem ser executadas fora de bolsa"
+    },
     "custodyTxt": {
      "v": "0€"
     },
@@ -1142,6 +1190,10 @@
     "fx": {
      "v": "Margem de 0,0014 no EUR/USD",
      "s": "Cerca de 0,12%. Ações dos EUA negociadas em euros. Aplica-se a rendimentos em dólares"
+    },
+    "venue": {
+     "v": "Best Price ou bolsa à escolha",
+     "s": "No Best Price executas contra a Trade Republic ao melhor preço das bolsas de referência. No Direct Price escolhes uma de cerca de 30 bolsas"
     },
     "custodyTxt": {
      "v": "0€"
@@ -1237,6 +1289,10 @@
      "v": "0,15%",
      "s": "Aplica-se ao converter fundos, sem agravamento ao fim de semana. Podem aplicar-se outras comissões"
     },
+    "venue": {
+     "v": "Internalização",
+     "s": "As ordens são executadas sobretudo no internalizador sistemático da Trading 212 Markets. Não escolhes a bolsa"
+    },
     "custodyTxt": {
      "v": "0€"
     },
@@ -1328,6 +1384,10 @@
     "fx": {
      "v": "0,5%",
      "s": "0,8% nas transferências entre contas ao fim de semana"
+    },
+    "venue": {
+     "v": "Bolsas ou XTB como contraparte",
+     "s": "Através do KBC ou DriveWealth em bolsas como Euronext, Deutsche Börse, NYSE e Nasdaq. A XTB pode ser contraparte e executa as frações"
     },
     "custodyTxt": {
      "v": "0€ até 250.000€",

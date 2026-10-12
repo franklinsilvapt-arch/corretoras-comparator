@@ -161,6 +161,7 @@
         {k:'pt', label:'Ações portuguesas', note:'Euronext Lisboa'},
         {k:'usFee', label:'Ações dos EUA'},
         {k:'fx', label:'Câmbio'},
+        {k:'venue', label:'Onde são executadas as ordens', note:'Influencia o spread que pagas'},
         {k:'custodyTxt', label:'Custódia'},
         {k:'inact', label:'Inatividade'},
         {k:'transfer', label:'Transferir títulos para outra corretora'}
