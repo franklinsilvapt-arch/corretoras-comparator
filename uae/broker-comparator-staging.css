@@ -151,6 +151,8 @@ font-family:'Inter',Arial,sans-serif;font-size:16px;color:var(--g900);letter-spa
 #bm-bc .cc-mini-c .cc-btn:hover{background:#fff;border-color:var(--g500)}
 #bm-bc .cc-mini-c .cc-logo{border-radius:6px}
 #bm-bc .cc-mini.is-on{display:block}
+/* white strip above the sticky bar: the site nav is transparent at its lower edge, so table text showed through */
+#bm-bc .cc-mini::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:16px;background:#fff;pointer-events:none}
 @media (min-width:768px){
  #bm-bc .cc-head{position:static}
  #bm-bc .cc-mini{border:1px solid var(--g200);border-top:0;border-radius:0 0 12px 12px;overflow:hidden}
