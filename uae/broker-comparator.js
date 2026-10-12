@@ -153,8 +153,21 @@
     });
   }
 
+  /* Arabic FAQ: the /ar page still carries the FAQ of the page it was duplicated from (the Webflow API cannot
+     write embeds in a secondary locale). Until it is pasted in the Designer, swap it for faq-ar.html. */
+  function arabicFaq() {
+    var old = document.getElementById('bm-mortgage-faq');
+    if (!AR || !old || document.getElementById('bm-cmp-faq')) return;
+    fetch(BASE + 'faq-ar.html', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (html) {
+      if (!html || !old.parentNode) return;
+      var box = document.createElement('div'); box.innerHTML = html;
+      old.parentNode.replaceChild(box, old);
+    }).catch(function () {});
+  }
+
   function boot() {
     var root0 = document.getElementById(ROOT_ID); if (!root0) return;
+    arabicFaq();
     var bust = '?v=' + Date.now().toString().slice(0, -5);
     var jobs = [getJSON(BASE + 'data/brokers.json' + bust)];
     if (AR) jobs.push(getJSON(BASE + 'data/brokers-ar.json' + bust).catch(function (e) { console.error(e); return null; }));

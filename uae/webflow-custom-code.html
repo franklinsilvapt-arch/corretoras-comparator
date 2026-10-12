@@ -1,7 +1,7 @@
 <!-- Broker comparator BrokerMatch (brokermatch.ae): page custom code in Webflow.
      The page needs a native div with the ID bm-bc.
      On staging (webflow.io) it loads the -staging files; on brokermatch.ae the production files
-     (broker-comparator.js and .css, created from the staging ones only with Franklin's ok).
+     (broker-comparator.js and .css, copied from the staging ones with Pedro or Franklin's ok).
      English and Arabic: the same code serves both locales. On /ar (or <html lang="ar">) the JS switches
      the interface to Arabic, sets dir="rtl" and also loads data/brokers-ar.json.
      When CSS or JS changes, bump v= to clear the cache.
@@ -9,7 +9,7 @@
      on slow connections and the comparator would stay blank until a reload. -->
 
 <!-- 1. Inside <head> tag (the CSS can stay in document.write, the block only applies to scripts) -->
-<script>document.write('<link rel="stylesheet" href="https://franklinsilvapt-arch.github.io/corretoras-comparator/uae/broker-comparator'+(/\.webflow\.io$/.test(location.hostname)?'-staging':'')+'.css?v=20261011a">')</script>
+<script>document.write('<link rel="stylesheet" href="https://franklinsilvapt-arch.github.io/corretoras-comparator/uae/broker-comparator'+(/\.webflow\.io$/.test(location.hostname)?'-staging':'')+'.css?v=20261012a">')</script>
 
 <!-- 2. Before </body> tag -->
 <script>
@@ -29,6 +29,6 @@
     };
     document.body.appendChild(s);
   }
-  load('broker-comparator' + stg + '.js?v=20261011a', 2);
+  load('broker-comparator' + stg + '.js?v=20261012a', 2);
 })();
 </script>
