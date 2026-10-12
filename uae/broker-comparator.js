@@ -433,14 +433,14 @@
       var html = '';
       if (row.calc) {
         var d = calcFor(b, row.k);
-        if (d === null) {
-          var txt = row.k === 'us' ? b.t.us : row.k === 'uae' ? b.t.uaeFee : row.k === 'fxlot' ? b.t.forex : null;
-          if (txt) { html = '<span class="cc-v">' + esc(txt.v) + '</span>'; if (txt.c) html += tag('is-conf', T.conf); }
+        if (d === null || d.na) {
+          /* no computed cost: show the broker's own wording for that fee (a value it does not publish is a checked fact, not "to be confirmed") */
+          var txt = row.k === 'us' ? b.t.us : row.k === 'uae' ? b.t.uaeFee : row.k === 'fxlot' ? b.t.forex : (d && d.na && row.k === 'custody') ? b.t.custody : null;
+          if (txt) { html = '<span class="cc-v">' + esc(txt.v) + '</span>' + (d && d.na && txt.s ? '<span class="cc-s">' + esc(txt.s) + '</span>' : ''); if (txt.c) html += tag('is-conf', T.conf); }
+          else if (d && d.na) html = '<span class="cc-v">' + T.notPublished + '</span>';
           else html = '<span class="cc-v">' + T.notApplicable + '</span><span class="cc-s">' + T.cfdOnlyCust + '</span>';
         } else if (d.off) {
           html = '<span class="cc-v">' + T.notOn(S.exch.toUpperCase()) + '</span>';
-        } else if (d.na) {
-          html = '<span class="cc-v">' + T.notPublished + '</span>' + tag('is-conf', T.conf);
         } else {
           var ex = d.extra === 'market' ? T.plusMarket : d.extra === 'bank' ? T.plusBank : d.extra === 'fx' ? T.plusFx : '';
           html = '<span class="cc-v is-big">' + fmtAed(d.v) + (ex ? ' <span class="cc-extra">' + ex + '</span>' : '') + '</span>';

@@ -689,9 +689,8 @@
      "s": "CFD account, no commission. EUR/USD spread is variable and shown only in the app. Overnight interest applies"
     },
     "crypto": {
-     "v": "Not offered",
-     "s": "Crypto account is run by Trading 212 Markets Ltd under EU rules, not listed for UK entity clients",
-     "c": true
+     "v": "EU crypto account only",
+     "s": "Spot crypto is run by Trading 212 Markets Ltd (CySEC) only where it can offer it. Trading 212 names no UAE availability"
     },
     "fx": {
      "v": "No AED: bank converts",
@@ -3649,9 +3648,8 @@
    "uaeLic": true,
    "t": {
     "us": {
-     "v": "Fee not confirmed",
-     "s": "Sharia compliant US stocks through the ADIBS Global app or phone brokers. Fee table on the ADIB Securities pricing page",
-     "c": true
+     "v": "1.5 cents per share, min $15 + VAT",
+     "s": "For shares priced above $1. Below $1: min $30, and 0.25% of value on orders above $2,000, plus VAT"
     },
     "uaeFee": {
      "v": "0.15% ADX, 0.275% + AED 10 DFM",
@@ -3731,7 +3729,24 @@
     }
    },
    "calc": {
-    "us": null,
+    "us": {
+     "comm": {
+      "fixed": 0,
+      "pct": 0,
+      "perShare": 0.015,
+      "min": 15,
+      "max": null,
+      "maxPct": null
+     },
+     "fx": {
+      "aed": true,
+      "pct": null,
+      "fixedUsd": null,
+      "minUsd": null
+     },
+     "vat": true,
+     "note": "ADIB Securities US price table (Fees-US-EN-2.jpg on its pricing page): shares above $1, 1.5 cents per share, minimum $15, plus 5% VAT. AED conversion rate not published."
+    },
     "uae": {
      "adx": {
       "pct": 0.0015,
