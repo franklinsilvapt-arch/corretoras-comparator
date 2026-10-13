@@ -149,7 +149,7 @@
     },
     "venue": {
      "v": "Via Saxo Bank",
-     "s": "No Best Trading Pro, ações e ETFs seguem a política de execução da Saxo Bank"
+     "s": "No Best Trading Pro, ações e ETFs seguem a política de execução da Saxo Bank. Conta normal: Euronext Lisboa via Novo Banco, outros mercados via Interactive Brokers"
     },
     "custodyTxt": {
      "v": "0€",
@@ -1098,7 +1098,7 @@
     },
     "venue": {
      "v": "Via Upvest e DriveWealth",
-     "s": "Europa através da Upvest, EUA através da DriveWealth ou GTN. Ações dos EUA podem ser executadas fora de bolsa"
+     "s": "Europa através da Upvest, EUA através da DriveWealth ou GTN. Nas ações dos EUA a Revolut pode ser a contraparte, fora de bolsa"
     },
     "custodyTxt": {
      "v": "0€"
@@ -1291,7 +1291,7 @@
     },
     "venue": {
      "v": "Internalização",
-     "s": "As ordens são executadas sobretudo no internalizador sistemático da Trading 212 Markets. Não escolhes a bolsa"
+     "s": "As ordens são executadas sobretudo no internalizador sistemático do próprio grupo Trading 212. Não escolhes a bolsa"
     },
     "custodyTxt": {
      "v": "0€"
@@ -1387,7 +1387,7 @@
     },
     "venue": {
      "v": "Bolsas ou XTB como contraparte",
-     "s": "Através do KBC ou DriveWealth em bolsas como Euronext, Deutsche Börse, NYSE e Nasdaq. A XTB pode ser contraparte e executa as frações"
+     "s": "Através do KBC ou DriveWealth em bolsas como Euronext, Deutsche Börse, NYSE e Nasdaq. A XTB pode ser contraparte e executa as frações. Não escolhes a bolsa"
     },
     "custodyTxt": {
      "v": "0€ até 250.000€",
