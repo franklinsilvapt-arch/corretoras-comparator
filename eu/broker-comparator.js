@@ -219,7 +219,7 @@
     function fmtEur(n){ return '€'+(Math.round(n*100)/100).toLocaleString(LOC,{minimumFractionDigits:2,maximumFractionDigits:2}); }
     /* Accepts both 1.234,56 and 1,234.56 so a reader can type either way. */
     function parseNum(v){
-      var t=String(v).replace(/[\s €]/g,'');
+      var t=String(v).replace(/[\s €]/g,'');
       var lc=t.lastIndexOf(','), ld=t.lastIndexOf('.');
       if(lc>-1 && ld>-1){ t = lc>ld ? t.replace(/\./g,'').replace(',','.') : t.replace(/,/g,''); }
       else if(lc>-1){ t = /,\d{1,2}$/.test(t) ? t.replace(',','.') : t.replace(/,/g,''); }
