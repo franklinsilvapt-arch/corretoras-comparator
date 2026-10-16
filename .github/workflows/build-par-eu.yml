@@ -1,0 +1,64 @@
+# Copiar para .github/workflows/build-par-eu.yml
+#
+# O comparador de corretoras EU é servido por dois pares de ficheiros:
+#   webflow.io              -> eu/broker-comparator-staging.js e .css
+#   eupersonalfinance.eu    -> eu/broker-comparator.js e .css
+# Qualquer alteração ao JS ou ao CSS tem de ir aos dois, senão produção e
+# staging deixam de se comportar da mesma maneira. Foi o que aconteceu
+# entre 2026-09-29 e 2026-10-16, apanhado só na verificação quinzenal.
+#
+# Só o par eu/ é verificado aqui, de propósito:
+#   - comparador-corretoras.js (PT) diverge por design: o staging aplica
+#     data/corretoras-staging-patch.json por cima dos dados e a produção lê
+#     o JSON direto, além de ter um lfGet com nova tentativa que o staging
+#     não tem. Alinhar esse par parte o staging.
+#   - uae/broker-comparator.css difere só numa linha de comentário.
+
+name: Par EU de produção e staging
+
+on:
+  push:
+    paths:
+      - 'eu/broker-comparator.js'
+      - 'eu/broker-comparator.css'
+      - 'eu/broker-comparator-staging.js'
+      - 'eu/broker-comparator-staging.css'
+      - '.github/workflows/build-par-eu.yml'
+  pull_request:
+    paths:
+      - 'eu/broker-comparator*.js'
+      - 'eu/broker-comparator*.css'
+  workflow_dispatch:
+
+jobs:
+  comparar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JS de produção igual ao de staging
+        run: |
+          if cmp -s eu/broker-comparator.js eu/broker-comparator-staging.js; then
+            echo "OK: eu/broker-comparator.js é igual ao de staging."
+          else
+            echo "::error file=eu/broker-comparator.js::O JS de produção e o de staging divergiram. Qualquer alteração tem de ir aos dois ficheiros."
+            echo "----- diferenças (< produção | > staging) -----"
+            diff eu/broker-comparator.js eu/broker-comparator-staging.js || true
+            echo "----- os mesmos bytes, para apanhar espaços invisíveis -----"
+            diff <(cat -A eu/broker-comparator.js) <(cat -A eu/broker-comparator-staging.js) || true
+            echo
+            echo "Para alinhar, a partir da raiz do repositório:"
+            echo "  cp eu/broker-comparator-staging.js eu/broker-comparator.js   # staging manda"
+            echo "  cp eu/broker-comparator.js eu/broker-comparator-staging.js   # produção manda"
+            exit 1
+          fi
+
+      - name: CSS de produção igual ao de staging
+        run: |
+          if cmp -s eu/broker-comparator.css eu/broker-comparator-staging.css; then
+            echo "OK: eu/broker-comparator.css é igual ao de staging."
+          else
+            echo "::error file=eu/broker-comparator.css::O CSS de produção e o de staging divergiram. Qualquer alteração tem de ir aos dois ficheiros."
+            diff eu/broker-comparator.css eu/broker-comparator-staging.css || true
+            exit 1
+          fi
