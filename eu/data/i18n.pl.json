@@ -128,8 +128,8 @@
      "s": "Tylko całe akcje. Niedostępne dla klientów Trading 212 EU GmbH mieszkających w Niemczech"
     },
     "interest": {
-     "v": "2,50%",
-     "s": "Klienci z Polski są obsługiwani przez Trading 212 Markets Ltd i dostają 2,50% od euro, zgodnie ze stopą depozytową EBC. Promocyjne 4,20% dotyczy tylko nowych klientów Trading 212 EU GmbH (konta otwarte od 16 września do 2 listopada 2026, przez 4 miesiące), a standardowa stawka EU GmbH to 3,50%, od 1 listopada 2026 2,80%. Wypłacane codziennie, bez minimum i bez limitu. Stawki są zmienne"
+     "v": "2,25% (PLN)",
+     "s": "Klienci z Polski są obsługiwani przez Trading 212 Markets Ltd. Od środków w złotych Trading 212 płaci 2,25%, a od euro 2,50%, zgodnie ze stopą depozytową EBC (strona z oprocentowaniem, 21 października 2026). Promocyjne 4,20% dotyczy tylko nowych klientów Trading 212 EU GmbH (konta otwarte od 16 września do 2 listopada 2026, przez 4 miesiące). Wypłacane codziennie, bez minimum i bez limitu. Stawki są zmienne"
     },
     "entity": {
      "v": "Trading 212 EU GmbH albo Trading 212 Markets Ltd",
