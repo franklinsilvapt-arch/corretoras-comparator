@@ -330,7 +330,7 @@
     }
 
     /* Highest percentage in a text value, e.g. "2.50% to 3.50%" gives 3.5 */
-    function pctMax(d){ var m=String(d&&d.v||'').match(/\d+(?:\.\d+)?(?=%)/g); return m?Math.max.apply(null,m.map(Number)):0; }
+    function pctMax(d){ var m=String(d&&d.v||'').match(/\d+(?:[.,]\d+)?(?=\s?%)/g); return m?Math.max.apply(null,m.map(function(x){ return Number(x.replace(',','.')); })):0; }
 
     function planData(b,d){ return (d && b.hasPlan && d.plans && d.plans[S.ibkr]) ? d.plans[S.ibkr] : d; }
 
