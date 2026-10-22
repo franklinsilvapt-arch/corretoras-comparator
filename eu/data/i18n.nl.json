@@ -359,7 +359,7 @@
   },
   "etoro": {
    "type": "Broker",
-   "risk": "51% van de particuliere beleggersrekeningen verliest geld bij het handelen in CFD's met deze aanbieder.",
+   "risk": "55% van de particuliere beleggersrekeningen verliest geld bij het handelen in CFD's met deze aanbieder.",
    "offer": {
     "t": "Gratis asset ter waarde van maximaal $500, in stappen op basis van je eerste storting"
    },
