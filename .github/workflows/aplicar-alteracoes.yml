@@ -1,0 +1,67 @@
+# Copiar para .github/workflows/aplicar-alteracoes.yml no repo corretoras-comparator.
+#
+# Porque existe: cada ronda produz um script de patch com guarda em
+# verificacao/<AAAA-MM-DD>/aplicar.py. Sem isto, o script fica em main sem
+# nunca correr, que foi o que aconteceu na ronda de 1 de novembro de 2026.
+#
+# Isto não decide nada. Aplica um script já revisto e aprovado em PR. O script
+# é que tem as guardas: se o texto antigo não estiver no ficheiro exatamente
+# uma vez, pára e não grava nada.
+
+name: Aplicar alterações às corretoras
+
+on:
+  workflow_dispatch:
+    inputs:
+      script:
+        description: "Caminho do script, ex.: verificacao/2026-11-01/aplicar.py"
+        required: true
+        type: string
+      dry_run:
+        description: "Só mostrar o que mudaria, sem gravar"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: O script existe
+        run: |
+          if [ ! -f "${{ inputs.script }}" ]; then
+            echo "::error::Não existe ${{ inputs.script }}. Confirma o caminho."
+            exit 1
+          fi
+          echo "----- script -----"
+          cat "${{ inputs.script }}"
+
+      - name: Aplicar
+        run: python3 "${{ inputs.script }}" ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Os dois JSON continuam válidos
+        if: ${{ !inputs.dry_run }}
+        run: |
+          python3 -c "import json;json.load(open('data/corretoras.json'));print('data/corretoras.json ok')"
+          python3 -c "import json;json.load(open('eu/data/brokers.json'));print('eu/data/brokers.json ok')"
+
+      - name: Gravar
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "lf-bot"
+          git config user.email "bot@literaciafinanceira.pt"
+          git add data/corretoras.json eu/data/brokers.json
+          if git diff --cached --quiet; then
+            echo "Sem alterações a gravar."
+          else
+            git commit -m "Aplicar ${{ inputs.script }}"
+            git push
+          fi
