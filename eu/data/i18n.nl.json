@@ -129,7 +129,7 @@
     },
     "interest": {
      "v": "4,20%",
-     "s": "Actietarief in euro voor nieuwe Invest-klanten van Trading 212 EU GmbH die tussen 16 september en 2 november 2026 een rekening openen, gedurende 4 maanden na activering. De standaardrente bij EU GmbH is 3,50% en wordt 2,80% vanaf 1 november 2026. Klanten van Trading 212 Markets Ltd (onder meer Polen, Italië en Griekenland) krijgen de actie niet en ontvangen 2,50% op euro's, in lijn met de depositorente van de ECB. Dagelijks uitbetaald, geen minimum en geen plafond. De rentes zijn variabel"
+     "s": "Actietarief in euro voor nieuwe Invest-klanten van Trading 212 EU GmbH die tot en met 30 november 2026 een rekening openen, gedurende 4 maanden na activering. De standaardrente bij EU GmbH is 3,50% en wordt 2,80% vanaf 1 november 2026. Klanten van Trading 212 Markets Ltd (onder meer Polen, Italië en Griekenland) krijgen de actie niet en ontvangen 2,50% op euro's, in lijn met de depositorente van de ECB. Dagelijks uitbetaald, geen minimum. EU GmbH betaalt rente op euro's tot een saldo van €100.000. De rentes zijn variabel"
     },
     "entity": {
      "v": "Trading 212 EU GmbH of Trading 212 Markets Ltd",
