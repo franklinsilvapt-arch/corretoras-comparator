@@ -14,8 +14,7 @@ conferência de imprensa de política monetária foi a 29 de outubro de 2026 e a
 alteração posterior a 16 de setembro. O calendário não tem reunião de política monetária entre 29 de outubro e
 16 de dezembro de 2026.
 
-Não houve movimento do BCE desde a última verificação, por isso não era de esperar mexida nos juros sobre dinheiro
-não investido, e de facto os que se conseguiram ler estão iguais.
+O BCE não mexeu, mas o benchmark da IBKR mexeu. Ver a secção seguinte.
 
 ## Build: produção e staging estão iguais
 
@@ -28,7 +27,21 @@ Os pares são byte a byte idênticos. Não há divergência entre produção e s
 
 ## Mudou
 
-Nada confirmado com fonte primária nos juros ou nas comissões, nem no ficheiro português nem no inglês.
+Uma corretora, nos dois ficheiros.
+
+- **Interactive Brokers, juros sobre dinheiro não investido em euros**: de 2.049% para **1.985%**. A tabela de EUR da
+  página de taxas da IBKR mostra o tier `0 ≤ 10,000` a 0% e o tier `> 10,000` a "1.985% (BM - 0.5%)" na coluna
+  IBKR Pro. O limiar dos €10,000 e o spread de 0,5 pontos percentuais continuam certos, só desceu o número, porque o
+  benchmark da IBKR desceu para perto de 2,485%
+  (interactivebrokers.com/en/accounts/fees/pricing-interest-rates.php, confirmado a 2026-11-16).
+  - Em `eu/data/brokers.json`: o campo `ibkr.t.interest.v` passa de "2.049%" para "1.985%", e a nota `s` diz
+    "Rate as of 1 November 2026", que também tem de mudar.
+  - Em `data/corretoras.json`: o campo de juros da IBKR passa de "2,049%" para "1,985%".
+  - Nota adicional, que não temos em nenhum dos dois: a mesma tabela dá "0.985% (BM - 1.5%)" para IBKR Lite. As nossas
+    entradas são da Pro, por isso 1.985% é o valor certo, mas vale a pena decidir se a distinção merece uma nota.
+  - A mesma correção é precisa na entrada `ibkr-cash` do `data/accounts.json`, no repo savings-comparator.
+
+Nas comissões não mudou nada, em nenhum dos dois ficheiros.
 
 ## Afiliados e ofertas
 
@@ -111,6 +124,8 @@ As entradas com `cta.plain` a true continuam sem afiliado de propósito: Saxo, B
 
 ### Confirmado
 
+- Interactive Brokers: ver a secção "Mudou". Confirmado hoje na tabela de EUR da página de taxas, com o tier
+  `> 10,000` a "1.985% (BM - 0.5%)" na coluna IBKR Pro.
 - XTB, promoção: confirmada na página portuguesa de juros do XTB, lida a 2026-11-16. Texto da página: "A promoção
   aplica-se a novos clientes que abrirem uma conta entre 14.10.2026 e 31.12.2026", "A taxa de juro de boas-vindas é
   válida durante os primeiros 90 dias a contar da celebração do contrato e abrange fundos não investidos até um total
@@ -124,7 +139,8 @@ As entradas com `cta.plain` a true continuam sem afiliado de propósito: Saxo, B
   clientes da XTB Limited e não da sucursal portuguesa, mostra EUR 2,30%, mas não é a fonte certa para este campo.
   Também não se confirmou os 3,50% até 100.000€ para contas abertas antes de 14 de outubro de 2026: a página fala em
   "taxas de juro preferenciais" e em fundos até ao equivalente a 100.000 EUR nos primeiros 90 dias, sem dar o número.
-  Confirmar em xtb.com/pt/juros, na tabela, ou no histórico de taxas.
+  Confirmar em xtb.com/pt/juros, na tabela, ou no histórico de taxas. Com a IBKR a descer, vale a pena olhar para este
+  campo com atenção, porque o 1,10% é do mesmo tipo de taxa variável e pode ter mexido também.
 - Trading 212, 4,20% promocional e 2,50% padrão: nem trading212.com/terms/invest nem trading212.com/interest-on-cash
   abriram. A nota do ficheiro diz que as condições foram confirmadas a 2026-11-03 nos Invest Promo Rate Terms do
   próprio Trading 212, com a fórmula "taxa de facilidade de depósito do BCE mais 1,70 pontos percentuais". Com o BCE
@@ -135,17 +151,13 @@ As entradas com `cta.plain` a true continuam sem afiliado de propósito: Saxo, B
   A página portuguesa abriu mas só traz "Recebe 4 % TANB sobre o seu dinheiro" na meta-descrição, sem limite, sem data
   e sem dizer a quem se aplica. A nota do ficheiro diz "Rates checked on 13 November 2026", o que é recente, e o
   commit do anúncio da campanha é de 2026-11-13. Fica por confirmar hoje, mas não há sinal de ter mudado.
-- Interactive Brokers, 2.049%: a página de taxas da IBKR Irlanda que abriu diz "Rates as of March 20, 2024" e mostra
-  na linha do EUR "3.423% (BM - 0.5%)". Não é a taxa de hoje, é um retrato antigo, por isso não serve nem para
-  confirmar nem para contrariar os nossos 2.049%. As páginas de benchmark e de saldos em dinheiro não abriram.
-  Confirmar à mão. Nota: 2.049% é coerente com um benchmark pouco acima de 2,50%, os 3.423% não são.
 
 ### Sem juros, sem alteração
 
 DEGIRO 0%, eToro 0% em euros com 3% até $50,000 e 3.80% acima em dólares, Freedom24 0%, Lightyear 0% em euros,
 Revolut 0% na conta de investimento, Saxo 0% exceto VIP, Bitpanda 0%. Nada disto mudou nas páginas que abriram.
 As corretoras portuguesas com 0% em `data/corretoras.json` (ActivoBank, Best, BiG, Carregosa, Invest, DEGIRO, eToro,
-Freedom24, Lightyear, Openbank, Revolut) não foram relidas uma a uma, porque nenhuma delas paga juros e o BCE não mexeu.
+Freedom24, Lightyear, Openbank, Revolut) não foram relidas uma a uma, porque nenhuma delas paga juros.
 
 ### Um valor a corrigir fora destes dois ficheiros
 
@@ -176,9 +188,9 @@ continuam a bater certo. Nada a mexer no Webflow.
 
 ## Resumos estáticos por país
 
-Sem alteração pelo lado das corretoras. Se a correção do texto do Lightyear (2.46% para 2.48%) entrar, é texto de nota
-dentro do campo `interest.s` e não entra na lista de corretoras do resumo nem nas contagens, por isso os campos
-Summary e Summary heading da coleção Broker Countries não ficam errados por causa dela.
+Sem alteração pelo lado das corretoras. O resumo da coleção Broker Countries lista corretoras e contagens, e a
+descida da IBKR e a correção do texto do Lightyear são valores dentro de campos de nota, que não entram nessa lista.
+Os campos Summary e Summary heading da coleção Broker Countries continuam a bater certo.
 
 ## Traduções
 
@@ -190,12 +202,16 @@ As duas traduções do broker comparator estão uma ronda atrás do inglês, e i
 
 Linhas já desatualizadas hoje, independentemente do que o Franklin decidir:
 
-- `brokers.ibkr.t.interest` em nl: tem `v` igual a "1,968%" e a nota com "stand op 20 oktober 2026", contra 2.049% e
-  "Rate as of 1 November 2026" no inglês. Está atrasada duas rondas.
+- `brokers.ibkr.t.interest` em nl: tem `v` igual a "1,968%" e a nota com "stand op 20 oktober 2026". Está errada em
+  relação ao inglês de hoje (2.049%) e também em relação ao valor novo (1.985%). Repara que o 1,968% é um terceiro
+  valor, o que mostra que este campo anda a descer de ronda para ronda e que a tradução nunca o apanha a tempo. Vale a
+  pena pensar se a nota em nl e pl deve citar o número ou só a fórmula "benchmark menos 0,5 pontos", como já faz o
+  comparador de poupanças.
 - `brokers.lightyear.t.interest.s` em nl: diz "2,46% APY". Fica errada se o inglês passar a 2.48%.
 
 Linhas que ficam desatualizadas se as alterações propostas entrarem:
 
+- `brokers.ibkr.t.interest` em nl e pl, com a descida para 1.985%.
 - `brokers.etoro.offer` em nl e pl, se o código `4mCuruK` entrar no inglês. O objeto traduzido só tem `t`, por isso o
   código herda do inglês, mas vale a pena confirmar no build.
 - `brokers.freedom24.offer` em nl e pl, pela mesma razão, se os códigos WELCOME entrarem.
@@ -211,7 +227,6 @@ Não foi traduzido nem corrigido nada. Fica para o Franklin decidir.
 - Página de juros da Trade Republic: traderepublic.com/en-de/interest com erro de cliente, e a de apoio redirecionada
   para o suporte genérico.
 - Tabela de taxas do XTB em xtb.com/pt/juros: a página abriu mas a tabela não veio no texto extraído.
-- Taxa atual de juros da IBKR: a única página que abriu está datada de março de 2024.
 - Links de afiliado que não se conseguiram testar. Nenhum deu sinal de estar partido, simplesmente não foi possível
   obter o estado:
   - `https://www.eupersonalfinance.eu/visit/trade-republic`, erro de cliente sem código HTTP.
@@ -226,12 +241,12 @@ Não foi traduzido nem corrigido nada. Fica para o Franklin decidir.
   desaparecido o botão deixa de levar a sítio nenhum. Um `curl -sIL` a partir da máquina do Franklin resolve isto em
   segundos e dá o código de estado que esta sessão não consegue obter.
 - Corretoras portuguesas em `data/corretoras.json`: os preçários em PDF do ActivoBank, Best, BiG, Carregosa, Invest e
-  Openbank não foram lidos nesta ronda. As comissões mudam pouco e o BCE não mexeu, mas a confirmação formal está
-  nesses documentos.
+  Openbank não foram lidos nesta ronda. As comissões mudam pouco, mas a confirmação formal está nesses documentos.
 
 ## Próximo passo
 
-Rever e decidir. Por fonte primária, só há duas coisas prontas a entrar: o código do eToro e os códigos do Freedom24,
-e as duas são decisões editoriais e não correções de dados. O resto é por confirmar ou está igual. As duas datas a ter
-debaixo de olho são 30 de novembro de 2026, que fecha a promoção de 4,20% do Trading 212 e as campanhas locais do XTB
-na Alemanha e na Itália, e 31 de dezembro de 2026, que fecha a promoção de 4,50% do XTB e a campanha portuguesa.
+Rever e decidir. Pronto a entrar, com fonte primária de hoje: a IBKR de 2.049% para 1.985%, nos dois ficheiros deste
+repo mais o `accounts.json` do savings-comparator. Depois, duas decisões editoriais: o código do eToro e os códigos do
+Freedom24. O resto é por confirmar ou está igual. As duas datas a ter debaixo de olho são 30 de novembro de 2026, que
+fecha a promoção de 4,20% do Trading 212 e as campanhas locais do XTB na Alemanha e na Itália, e 31 de dezembro de
+2026, que fecha a promoção de 4,50% do XTB e a campanha portuguesa.
