@@ -1211,7 +1211,7 @@
    "color": "#3a4454",
    "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/68da87c47940475cd6ab0142_getstake.svg",
    "type": "Real estate platform",
-   "order": 9,
+   "order": 100,
    "score": 4.4,
    "cta": {
     "href": "https://getstake.com/",
@@ -2800,14 +2800,14 @@
    "color": "#3a4454",
    "logo": "https://cdn.prod.website-files.com/685135bbeecd35e04c48602f/685955164c2bc20cfdfde205_Naga-icon.svg",
    "type": "Social trading app",
-   "order": 100,
+   "order": 4,
    "score": 4.3,
    "cta": {
     "href": "https://naga.com/ae",
     "plain": true
    },
    "review": null,
-   "risk": "Trading leveraged product involves significant risk of loss.",
+   "risk": "Trading leveraged product involves significant risk of loss. 36.28% of retail investor accounts generate profits when trading leveraged products with this provider.",
    "cats": [
     "stocks",
     "cfd",
