@@ -19,7 +19,8 @@
   "degiro|traderepublic": "degiro-vs-trade-republic",
   "degiro|ibkr": "degiro-vs-interactive-brokers",
   "degiro|etoro": "etoro-vs-degiro",
-  "revolut|traderepublic": "trade-republic-vs-revolut"
+  "revolut|traderepublic": "trade-republic-vs-revolut",
+  "n26|revolut": "n26-vs-revolut"
  },
  "corretoras": [
   {
