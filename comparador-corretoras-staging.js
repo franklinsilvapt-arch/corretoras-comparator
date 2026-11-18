@@ -111,8 +111,29 @@
     }
   };
 
+  /* Garante que o CSS do comparador está aplicado. O <link> do <head> vem do GitHub Pages e, quando esse pedido falha
+     ou expira, a página ficava sem estilos (fotos dos autores enormes, seletor sem formatação). Se o CSS não estiver
+     aplicado, volta a carregá-lo do jsDelivr e, se também falhar, outra vez do GitHub Pages. */
+  function ensureCss(root){
+    var p = document.createElement('span'); p.className = 'cc-av'; p.style.position = 'absolute'; p.style.visibility = 'hidden';
+    root.appendChild(p);
+    var ok = getComputedStyle(p).width === '40px';
+    root.removeChild(p);
+    if(ok) return;
+    var nome = 'comparador-corretoras' + (/-staging\.js/.test(scriptEl ? scriptEl.src : '') ? '-staging' : '') + '.css';
+    var fontes = ['https://cdn.jsdelivr.net/gh/franklinsilvapt-arch/corretoras-comparator@main/' + nome,
+                  BASE + nome + '?r=' + Date.now()];
+    (function tentar(i){
+      if(i >= fontes.length) return;
+      var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = fontes[i];
+      l.onerror = function(){ tentar(i + 1); };
+      document.head.appendChild(l);
+    })(0);
+  }
+
   function boot(){
     var root0 = document.getElementById('lf-cc'); if(!root0) return;
+    ensureCss(root0);
     var ver = Date.now().toString().slice(0,-5);
     function getJson(f){ return fetch(BASE + 'data/' + f + '?v=' + ver, {cache:'no-cache'}).then(function(r){ return r.json(); }); }
     Promise.all([getJson('corretoras.json'), getJson('corretoras-staging-patch.json')])

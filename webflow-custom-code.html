@@ -5,7 +5,8 @@
      Os scripts não podem ser escritos com document.write: o Chrome pode bloquear scripts de outro domínio escritos assim
      em ligações lentas, no primeiro carregamento, e o comparador ficava em branco até recarregar a página. -->
 
-<!-- 1. Inside <head> tag (o CSS pode continuar em document.write, o bloqueio só se aplica a scripts) -->
+<!-- 1. Inside <head> tag (o CSS pode continuar em document.write, o bloqueio só se aplica a scripts).
+     Se este CSS falhar, o comparador-corretoras.js deteta-o e volta a carregá-lo do jsDelivr (ensureCss, desde 18/11/2026). -->
 <script>document.write('<link rel="stylesheet" href="https://franklinsilvapt-arch.github.io/corretoras-comparator/comparador-corretoras'+(/\.webflow\.io$/.test(location.hostname)?'-staging':'')+'.css?v=20260928e">')</script>
 
 <!-- 2. Before </body> tag -->
