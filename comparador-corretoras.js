@@ -79,6 +79,12 @@
       plan: function(m){ return {v:0, s:'Plans sem comissão em ETFs'}; },
       custody: function(p){ return {v:0}; }
     },
+    'n26': {
+      etf: function(a){ return {v:0.9, s:'0,90€ por ordem no plano Standard (Go: 3 ordens grátis por mês, Metal: 10)'}; },
+      us: function(a){ return {v:0.9, s:'0,90€ por ordem. Ações dos EUA negociadas em euros'}; },
+      plan: function(m){ return {v:0, s:'Planos de investimento sem comissão'}; },
+      custody: function(p){ return {v:0}; }
+    },
     'openbank': {
       etf: function(a){ return {v:1, s:'1€ por compra ou venda, em qualquer mercado'}; },
       us: function(a){ return {v:1+a*0.007, s:'1€ + câmbio de 0,70% (1% a partir de 8/11/2026)'}; },
